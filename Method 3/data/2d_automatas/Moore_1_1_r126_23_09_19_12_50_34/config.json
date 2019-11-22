@@ -1,1 +1,0 @@
-{"neighborhoodTypes": {"1": "Moore", "2": "von Neumann"}, "radiousOriginal": 1, "radious": [1, 1], "dimension": [50, 50], "rule": 126, "k": 3, "seed": -1, "timesteps": 50, "neighborhoodType": 1, "percentage": -1, "top": 10, "paddingValue": 0, "paddingType": 1}
