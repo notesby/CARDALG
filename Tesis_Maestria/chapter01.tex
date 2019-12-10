@@ -1,0 +1,67 @@
+\chapter[INTRODUCTION]{\huge INTRODUCTION}
+\baselineskip 1em
+\pagenumbering{arabic}
+In this chapter is introduced a general background of the problem to solve in this work. Then, the problem's implications are stated and detailed by steps to follow. Later, the expected benefits, scopes, and limits are justified. Finally, the hypothesis and objectives for this work are stated at the end of this chapter.
+
+\section{Background}
+BCIs are devices that allow people to command computer-specific tasks through their thoughts. In the case of the automatic speech recognition field, these technologies have been of interest mainly to develop software that could aid people with speech problems in the future. For this reason, it has been tested the feasibility to classify consciously imagined words or phonemes with machine learning algorithms in current researches. These efforts have been made by working with registers from two different mental activities: overt and imagined speech.\\
+
+The registers for such mental activities can be taken with invasive or non-invasive technologies, from which EEG and ECoG are the most used, respectively, in this field. While EEG signals are recorded with a cap of electrodes placed on the scalp, ECoG signals are registered with an electrode grid placed on the brain surface. Indeed, ECoG signals are less susceptible to noise than EEG due to the records taken directly from the brain cortex. However, this and other works consider EEG registers because experiments are less complicated to replicate with new samples from different subjects.\\
+
+It is stated in a standard model that simultaneous postsynaptic potentials of neural populations produce EEG signals, but as mentioned in \cite{cohen2017does}, this does not explain the meaning of EEG content. For this purpose, some computational algorithms have been adapted or created to extract information from EEG signals that helps to analyze and distinguish between different mental behaviors. In the case of imagined and overt speech, these algorithms process the EEG signals and compute certain features that a classifier may differentiate between thought or pronounced phonemes or words.\\
+
+Despite some proposals and experiments performed on the literature review, the classification of sounds with overt and imagined speech registers is still unsolved. This problem has been explored with few methods due to the lack of knowledge of the phenomena. For this reason, the contributions of this work, described in this thesis, are the new methods used with these data to perform and validate the classification that considers their intrinsic spatial and temporal aspects. Besides, some state-of-the-art and new classifiers are used to be compared in these experiments.
+
+\section{Problem Statement}
+The human brain is the most complex organ. For this reason, the development of BCIs, the recording of mental activities, and the interpretation of brain data are non-trivial tasks. Additionally, in the case of EEG data, there is a poor spatial resolution, the registers vary across different subjects and currently it is still unknown the precise identification of activated areas during imagined and overt speech recordings.\\
+
+Despite these problems, technology has improved in EEG acquisition devices. Besides, some capture protocols have been created to analyze data in a controlled environment. However, from a computer science perspective, few methods have been explored to analyze and classify overt and imagined speech data. For this reason, the following general steps are identified to be covered:\\
+\begin{itemize}
+	\item An analysis of the recorded data.
+	\item Processing phases to minimize noise and artifacts inherent in EEG signals.
+	\item The extraction of features able to discriminate different phonological classes.
+	\item Classifications that consider spatial and temporal aspects of the data.
+\end{itemize}
+
+Each related work in the literature review covered some of these steps partially since currently imagined speech is a not broadly researched area.\\
+
+Due to that, it emerges the necessity of using methods across all these steps. Besides,  several experiments are necessary to be performed to provide reliable results.
+
+\section{Justification}
+Classification of overt and imagined speech is an emerging research area. Due to that, currently, it exists a few related works that use EEG data. Because of the limited number of methods used for these classification tasks, it is essential to make some actions for each involved step.\\
+
+Firstly, an analysis of the data is usually not made in many works because the researchers relay on the signal acquisition of the database provider. However, since it does not exist currently databases broadly used and tested for overt and imagined speech, it is convenient to examine the data.\\
+
+Moreover, the sensors (in this case, the electrodes) used to capture the signals are susceptible to noise and errors made during the recordings that sometimes are not noticed when databases are created. For this reason, all the data samples in this work were observed in time to detect and reject those that present some anomalies respecting with other EEG samples.\\
+
+Then, processing steps are necessary for EEG signals to reduce the noise added by the human body or by the capture device. Besides, EEG signals are non-linear and non-stationary (i.e., the amplitudes and lengths across all samples vary over time). Due to these properties, some processing techniques have been used for EEG signals analysis. The wavelet outstands from others because it provides useful spectral and temporal information if a good selection is made.\\
+
+Nevertheless, for overt and imagined speech has not been tested and compared different approaches to compute wavelets, nor founded a particular wavelet proper for such mental activities. Finding a wavelet for these mental activities is out of the scope of this work. However, for this step, two different approaches to compute wavelets have been tested and analyzed.\\
+
+Next, it has been proposed certain features for EEG data in the literature review. However, they are used to characterize specific mental activities or disorders that may not be compatible with overt and imagined speech. For this reason, it is relevant to test numerous sets of features to find some that provide better characterization. In this work, the number of tested sets is limited by one set of features and a subset of the same set to find also if the dimensionality can be reduced without compromising the classification scores.\\
+
+For the classification step, some classifiers that have been used in the\linebreak[4] state-of-the-art can be divided into two group approaches: those that require feature vectors as input (Vector-based) and others that extract the information directly from the EEG signals (Spatio-temporal). The problem with Vector-based classifiers used in some works is that they average the features extracted from all the channels, causing loss of information. While in other related works, all the channel features are concatenated, resulting in a vector of high dimensionality.\\
+
+Working with high dimensional vectors is a problem because it requires more computation in the classifier and assumes that all the channels provide useful\linebreak[4] information for the phenomena. On the other hand, those works that use\linebreak[4] Spatio-temporal classifiers are based on deep learning, which in principle requires several amounts of samples for training and which is not possible with all the current databases available. The proposals to solve these problems are:\\
+\begin{itemize}
+	\item \underline{Vector-based approach}: Classifiers that receive as input static feature vectors from a particular EEG channel signal.
+	\item \underline{Spatio-temporal approach}: Classifiers based on spiking neurons that receive data (EEG signals, feature vectors, or encoded data) from all channels at once.
+\end{itemize}
+
+Finally, it is essential to run several experiments with the same data but with different initialization of the classifier's parameters. Then, compute statistics that provide a broader understanding of the classification results.\\
+
+Performing several experiments is not usually made (or at least not reported) in the literature review, which could provide reliable results and confidence to replicate similar outcomes. For classifiers sensitive to initial parameters, several experiments were performed with the same data to report the average results in this work. Besides, it is avoided unbalanced classes to provide objective scores.
+
+\section{Hypothesis}
+If machine learning techniques that consider spatial and temporal data are used over imagined and overt speech registers, then it could be possible to classify\linebreak[4] phonological categories through EEG signals and provide a computational analysis.
+\section{Objectives}
+Following are presented the objectives stated for this work.
+\subsection{General Objective}
+Perform methods that are new in the classification of EEG-based imagined and overt speech data, and which consider spatial and temporal information.
+\subsection{Specific Objectives}
+\begin{itemize}
+	\item Carry specific processing steps for each imagined and overt speech channel signal.
+	\item Extract signal features suitable for each classifier.
+	\item Perform a robust experimental framework to validate the classification results.
+	\item Make an analysis of imagined and overt speech experiments.
+\end{itemize}

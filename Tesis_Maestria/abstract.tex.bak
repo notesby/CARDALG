@@ -1,0 +1,13 @@
+%\centerline{\underline{\bf ABSTRACT}}
+\chapter*{ABSTRACT}\label{abstract}
+\markboth{ABSTRACT}{} % para que cambie el encabezado, si no, usaría el del último chapter{}
+\addcontentsline{toc}{chapter}{ABSTRACT} % para que se añada en el indice
+
+\baselineskip 1em
+
+Many of the systems we interact with today must operate under certain time constraints to achieve proper operation. In this sense, given the interaction of these systems with the physical world, are considered Real Time Systems. This type of system aims to achieve a high level of efficiency in the execution of the processes for which they are intended, this is achieved from the concurrent execution of instances $j_{i,k}$ that conform to each Real-Time Task $J_i$ making up the system. Analysis of the run-times of each of these instances, allows to model Real-Time Tasks so that they can make improvements or prevent critical failures in the system.\\
+
+This thesis presents a strategy based on the theory of Cellular Automata, for the reconstruction of the run-times of a Real-Time System implemented on a computer with a QNX\textsuperscript{\textregistered} Neutrino\textsuperscript{\textregistered} Operating System. The discrete model implanted arises from the mathematical modeling of a separately excited electrical generator so that said generator is represented in three real-time tasks that result in a recursive discrete model and which performs the measurement of run-times for subsequent reconstruction. To validate the discrete model simulations are performed in Matlab\textsuperscript{\textregistered} Simulink\textsuperscript{\textregistered} to compare their dynamics with the continuum model. Additionally, we compare the obtained simulation in Simulink\textsuperscript{\textregistered} with the results obtained in the simulation of the system in QNX\textsuperscript{\textregistered} Neutrino\textsuperscript{\textregistered}.\\
+
+For the reconstruction of the run-times is used one-dimensional Cellular Automata with two possible values for the cell-state (0 or 1) and its evolution is determined from the initial values and a definite evolution rule, however it is necessary to translate the resulting pattern of real value. Then, to achieve the reconstruction of the run-times is necessary to establish a transition relation $g(X_k)$ heuristically. Throughout this paper, is presented the theoretical background of the modeling and simulation of electric generators, modeling run-times, and modeling and simulation of dynamic systems with Cellular Automata.
+

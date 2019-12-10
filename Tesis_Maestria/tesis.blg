@@ -1,0 +1,12 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: tesis.aux
+The style file: unsrt.bst
+Database file #1: biblio.bib
+Warning--entry type for "marek" isn't style-file defined
+--line 31 of file biblio.bib
+Repeated entry---line 126 of file biblio.bib
+ : @inproceedings{coretto2017open
+ :                               ,
+I'm skipping whatever remains of this entry
+Warning--empty journal in porbadnigk2009eeg
+Warning--empty journal in salinas2017bag
+(There was 1 error message)

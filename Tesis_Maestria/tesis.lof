@@ -1,0 +1,37 @@
+\babel@toc {english}{}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Neurophysiological basis of EEG generation (Figure obtained from \cite {pizzagalli2007electroencephalography}).\relax }}{15}{figure.caption.14}% 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces General block diagram of the methodology followed.\relax }}{18}{figure.caption.15}% 
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Some examples of signals from rejected samples.\relax }}{19}{figure.caption.16}% 
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Downsampling process applied to all signals.\relax }}{20}{figure.caption.19}% 
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Automatic overt speech trimming based on acoustic endpoints.\relax }}{21}{figure.caption.21}% 
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Wavelet decomposition tree with 4 levels.\relax }}{22}{figure.caption.22}% 
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Examples of Wavelet energy analysis by sub-band.\relax }}{23}{figure.caption.23}% 
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Signal decomposition with DWT.\relax }}{24}{figure.caption.24}% 
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Signal decomposition with WPT.\relax }}{25}{figure.caption.25}% 
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Signal framing from DWT decomposition.\relax }}{28}{figure.caption.28}% 
+\contentsline {figure}{\numberline {4.10}{\ignorespaces PCA over features by wavelet coefficient sub-band.\relax }}{29}{figure.caption.29}% 
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Spearman correlation using DWT and 3 features.\relax }}{31}{figure.caption.32}% 
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Architecture for Vector-based classifiers.\relax }}{33}{figure.caption.35}% 
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Selected channels in \cite {zhao2015classifying,zhao2013combining}, and those selected in this work for overt and imagined speech using MLP and SVM (Original Figure taken from \cite {karaone} for its adaptation in this work).\relax }}{35}{figure.caption.37}% 
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Encoded signal examples using SF and BSA.\relax }}{39}{figure.caption.42}% 
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Number of errors per generation during SSN training for overt and imagined speech examples.\relax }}{42}{figure.caption.47}% 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Data used on each step of the validation methodology followed.\relax }}{44}{figure.caption.48}% 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Initial and final firing activity with the NeuCube using overt speech samples.\relax }}{57}{figure.caption.67}% 
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Initial and final firing activity with the NeuCube using imagined speech samples.\relax }}{58}{figure.caption.68}% 
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Initial and final weights with the NeuCube using overt speech samples.\relax }}{59}{figure.caption.69}% 
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Initial and final weights with the NeuCube using imagined speech samples.\relax }}{59}{figure.caption.70}% 
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Initial and final NeuCube connections for overt speech samples.\relax }}{60}{figure.caption.71}% 
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Initial and final NeuCube connections for imagined speech samples.\relax }}{61}{figure.caption.72}% 
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Firing activity per sample class and misclassified samples highlighted after SSN testing for overt speech example.\relax }}{63}{figure.caption.73}% 
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Firing activity per sample class and misclassified samples highlighted after SSN testing for imagined speech example.\relax }}{63}{figure.caption.74}% 
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Accuracies of the best configurations per case for overt speech samples.\relax }}{64}{figure.caption.77}% 
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Accuracies of the best configurations per case for imagined speech samples.\relax }}{65}{figure.caption.78}% 
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Confusion matrices from best overt speech scores.\relax }}{67}{figure.caption.81}% 
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Confusion matrices from best imagined speech scores.\relax }}{68}{figure.caption.82}% 
+\addvspace {10\p@ }

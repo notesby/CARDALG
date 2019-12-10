@@ -1,0 +1,44 @@
+%\input silabas.tex     % mis palabras separadas
+\documentclass[12pt,doublespace,german]{report}
+\input macros.tex       % mis macros que defino
+\input paquetes.tex     % mis paquetes que uso
+\input text_param.tex   % mis parametros de formato de tesis
+\input espanol.tex      % texto renombrado a espanol
+
+\numberwithin{equation}{section}
+
+\begin{document}
+	%\hyphenation{silabas}
+	\pagenumbering{roman} % numeracion de las primeras paginas
+	\thispagestyle{empty} % primera pagina sin numero
+
+    \input portada.tex    % la portada de tesis
+    \input carta.tex
+    \input agradecimientos.tex
+
+	\def\tablename{Tabla} % cambia Table por Tabla.
+	\def\listtablename{\'Indice de tablas}
+
+	\tableofcontents      % crear indice de tablas
+	\listoffigures        % crear lista de figuras
+	\listoftables         % crear lista de tablas
+
+	\baselineskip 2em     % 2em doble espacio, 1em espacio sencillo.
+
+    %\input mgracias.tex   % agradecimientos especiales      % una cita cultural
+    \input abreviaturas.tex
+    \input glosario.tex
+	\input resumen.tex    % resumen de la tesis en espanol
+	\input abstract.tex   % resumen de la tesis en ingles
+	\input capitulo01.tex
+	\input capitulo02.tex
+    \input capitulo03.tex
+    \input capitulo04.tex
+    \input capitulo05.tex
+    \input capitulo06.tex
+    \input conclusiones.tex
+    \input anexos.tex
+    %\input {docs/CIEC_2011.pdf}
+    \input bibliografia.tex
+\end{document}
+

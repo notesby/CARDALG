@@ -1,0 +1,47 @@
+%-----------------------------
+% Nombre: paquetes.tex
+% Paquetes varios
+%-----------------------------
+%\usepackage[dvips]{epsfig}
+\usepackage{picinpar}
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage[font=footnotesize]{caption}
+%\usepackage[font=small]{chapter*}
+%\usepackage{titlesec}
+\usepackage{colortbl}
+\usepackage[table]{xcolor}
+\usepackage{alltt}
+\usepackage{multicol}
+\usepackage{longtable}
+\usepackage{mathtools}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{float}
+\usepackage[spanish]{babel}
+\usepackage[latin1]{inputenc}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+%\usepackage[utf8]{inputenx}
+\decimalpoint
+\usepackage{cancel}
+\usepackage[table]{xcolor}
+\usepackage{subfigure}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{appendix}
+\usepackage{epstopdf} %reconocimiento de archivos eps
+\usepackage[none]{hyphenat} %texto justificado sin romper palabras
+\usepackage{pdfpages}
+%\hyphenrules{nohyphenation}
+%\usepackage{fancyvrb}
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+%\fancyhf{}
+%\fancyhead[LO]{\leftmark} % En las páginas impares, parte izquierda del encabezado, aparecerá el nombre de capítulo
+%\fancyhead[RE]{\rightmark} % En las páginas pares, parte derecha del encabezado, aparecerá el nombre de sección
+\usepackage{hyperref}
+\hypersetup{breaklinks=true, colorlinks=true, linkcolor=black}
+\renewcommand{\labelitemi}{$\bullet$}
+
+%-----------------------------

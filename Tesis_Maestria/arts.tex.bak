@@ -1,0 +1,7 @@
+%\newpage
+%\thispagestyle{empty}
+%\includepdf[offset= 5mm -25mm, page=1309-1312]{articulos/CMP_2012}
+
+\newpage
+\thispagestyle{empty}
+\includepdf[offset= 5mm -25mm, page=1]{tesis}

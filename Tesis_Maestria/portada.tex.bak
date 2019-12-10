@@ -1,0 +1,71 @@
+%% Comandos para la portada
+\newcommand{\titulo}[1]{\def\eltitulo{#1}}
+%* lacarrera corresponde al t��tulo otorgado -Matem�tico-
+%* NO AL NOMBRE DE LA CARRERA -Matem�ticas- --RRP
+\newcommand{\carrera}[1]{\def\lacarrera{#1}}
+\newcommand{\nombre}[1]{\def\elnombre{#1}}    %* Del alumno
+\newcommand{\director}[1]{\def\eldirector{#1}}  %* De tesis
+\newcommand{\fecha}[1]{\def\lafecha{#1}}
+
+%% Llena los siguientes datos (usa MAYÚSCULAS)
+%%Estos datos aparecerán en la portada y los encabezados
+\titulo{RECONSTRUCCI\'ON DE LA DIN\'AMICA DE LOS TIEMPOS DE EJECUCI\'ON PARA TAREAS EN TIEMPO REAL UTILIZANDO AUT\'OMATAS CELULARES UNIDIMENSIONALES}
+\nombre{\uppercase{Ing. C\'esar Alejandro Hern\'andez Calder\'on}}
+\carrera{\uppercase{Maestro en Ciencias de Ingenier\'ia en Microelectr\'onica}}
+\director{\uppercase{Dr. Pedro Guevara L\'opez}}
+\fecha{M\'exico D.F., Diciembre de 2012}
+
+\thispagestyle{empty}
+
+%% Barra izquierda - Escudos
+\begin{figure}[h]
+\hskip-0.5cm
+\begin{minipage}[c][18cm][s]{2cm}
+  \begin{center}
+    \includegraphics[angle=-90]{dibujos/ipn_l.eps}\\[5pt]
+    \hskip2pt\vrule width2pt height14cm\hskip1mm
+    \vrule width1pt height14cm\\[5pt]
+    \includegraphics[height=2.5cm]{dibujos/esime_l.eps}
+  \end{center}
+\end{minipage}\quad
+%\end{figure}
+%% Barra derecha - Títulos
+\begin{minipage}[c][20cm][s]{12cm}
+  \begin{center}
+    % Barra superior
+      \vspace{1cm}
+    {\Large \scshape Instituto Polit\'ecnico Nacional}
+    \vspace{8pt}
+    \hrule height2pt
+    \vspace{.1cm}
+    \hrule height1pt
+    \vspace{.3cm}
+    {\scshape Escuela Superior de Ingenier\'ia Mec\'anica y El\'ectrica\\Unidad Culhuacan\\[16pt]
+    Secci\'on de Estudios de Posgrado e Investigaci\'on}
+
+    % Titulo del trabajo
+    \vspace{62pt}
+
+    {\Large \eltitulo}
+
+    \vspace{62pt}
+
+    % Tipo de trabajo
+    \makebox[8cm][s]{\Huge T E S I S}\\[32pt]
+    {\small QUE PARA OBTENER EL GRADO DE:}\\ [4pt]
+    \mbox{}{\large \lacarrera}\\[32pt]
+    PRESENTA:\\[4pt]
+    {\large \elnombre}
+
+    \vspace{32pt}
+
+    {\small DIRECTOR DE TESIS:\\[4pt]{\large \eldirector}}
+
+    \vspace{32pt}
+
+    \lafecha
+
+  \end{center}
+\end{minipage}
+\end{figure}
+%\newpage 
