@@ -19,6 +19,9 @@ class Gen():
         temp["identifier"] = str(self.identifier)
         temp["value"] = str(self.value)
         return temp
+    
+    def __repr__(self):
+        return "id= "+str(self.identifier)+" ,value= "+str(self.value)
         
 class Chromosome():
     def __init__(self,setup,express,crossover,mutate,generation):
