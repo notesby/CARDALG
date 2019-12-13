@@ -1,4 +1,30 @@
 import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
+plt.rcParams['animation.ffmpeg_path'] = '/usr/local/bin/ffmpeg'
+plt.rcParams["animation.html"] = "jshtml"
+
+def animate(data,cmap = "Set1",size=(20,10)):
+    n_frames = len(data)
+    dims = np.shape(data)
+    colorsData = np.zeros(dims)
+    for i in range(min(dims)):
+        colorsData[i, i] = i
+    fig = plt.figure(figsize=size)
+    plot = plt.matshow(data[n_frames-1], fignum=0,cmap=cmap)
+
+    def init():
+        plot.set_data(data[0])
+        return [plot]
+
+    def update(j):
+        plot.set_data(data[j])
+        return [plot]
+
+    anim = animation.FuncAnimation(fig, update, init_func = init, frames=n_frames, interval = 30, blit=True)
+
+    return anim
+
 
 def encodeKey(index,value):
     return "{},{}".format(index,value)

@@ -3,7 +3,8 @@ import uuid
 import os
 import json
 from datetime import datetime, date, time
-from joblib import Parallel, delayed
+from joblib import Parallel, delayed,parallel_backend
+import time
 
 class Gen():
     def __init__(self,identifier,value):
@@ -87,8 +88,7 @@ class Population():
         self.regulation = regulation
         self.fitness = fitness
         self.goal = goal
-        self.setup = setup
-        self.setup(self)
+        setup(self)
     
     def parallelFitness(self,chromosome,goal):
         chromosome.fitness = self.fitness( -chromosome,goal)
@@ -96,7 +96,8 @@ class Population():
     def nextGeneration(self):
         self.generation += 1
         backend = 'threading'
-        Parallel(n_jobs=4,backend=backend)(delayed(self.parallelFitness)(chromosome,self.goal) for chromosome in self.chromosomes)
+        with parallel_backend(backend):
+            Parallel(n_jobs=4)(delayed(self.parallelFitness)(chromosome,self.goal) for chromosome in self.chromosomes)
         #for chromosome in self.chromosomes:
         #    chromosome.fitness = self.fitness( -chromosome, self.goal)
         childs = []
@@ -117,7 +118,7 @@ class Population():
         if len(self.chromosomes) == 0:
             return -1
         for chromosome in self.chromosomes:
-            res += self.fitness( -chromosome, self.goal)
+            res += chromosome.fitness#self.fitness( -chromosome, self.goal)
         res = res / len(self.chromosomes)
         return res
     
@@ -127,7 +128,7 @@ class Population():
         res = 0
         avg = self.avg()
         for chromosome in self.chromosomes:
-            fitness = self.fitness( -chromosome, self.goal)
+            fitness = chromosome.fitness#self.fitness( -chromosome, self.goal)
             res += pow(avg - fitness, 2)
         res = math.sqrt(res/len(self.chromosomes))
         return res
@@ -145,6 +146,7 @@ class World():
     def __init__(self,setup):
         self.populations = []
         self.generation = 0
+        self.verbose = 0
         self.setup = setup
         self.setup(self)
         
@@ -152,11 +154,25 @@ class World():
         population.nextGeneration()
         
     def nextGeneration(self):
+        start = time.time()
         self.generation += 1
         backend = 'threading'
-        Parallel(n_jobs=4,backend=backend)(delayed(self.nextIteration)(population) for population in self.populations)
-        #for population in self.populations:
-        #    population.nextGeneration()
+        with parallel_backend(backend):
+            Parallel(n_jobs=4)(delayed(self.nextIteration)(population) for population in self.populations)
+        #with Parallel(n_jobs=4,backend=backend) as parallel:
+        #    for population in self.populations:
+        #        population.nextGeneration(parallel)
+        log = {}
+        if self.verbose >= 1:
+            log["generation"] = self.generation
+            log["elapsedTime"]=time.time()-start
+        if self.verbose >= 2:
+            fitness = []
+            for population in self.populations:
+                fitness.append(population.fitness)
+            log["fitness"]= fitness
+        if self.verbose != 0:
+            print(log)
         
     def migrate(self,pi1,pi2):
         pass
@@ -184,7 +200,8 @@ class Experiment():
             os.makedirs(path)
         path = "{}/{}".format(path,fileName)
         with open(path, 'w') as json_file:
-            json.dump(self.world.toDict(), json_file)
+            content = self.world.toDict() 
+            json.dump(content, json_file)
         
     def saveConfig(self):
         path = self.path
