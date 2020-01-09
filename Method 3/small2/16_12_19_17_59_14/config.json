@@ -1,0 +1,1 @@
+{"data": [[[0, 1], [1, 2]], [[1, 2], [2, 0]], [[2, 0], [0, 1]], [[0, 1], [1, 2]]], "radious": 1, "neighborhood": [[-1, -1], [-1, 0], [-1, 1], [0, -1], [0, 0], [0, 1], [1, -1], [1, 0], [1, 1]], "paddingType": 1, "paddingValue": -1, "antMaxSize": 5, "antMinSize": 2, "noChromosomes": 20, "noChilds": 5, "k": 2, "mutationRate": 0.2}
