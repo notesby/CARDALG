@@ -5,6 +5,56 @@ import time
 plt.rcParams['animation.ffmpeg_path'] = '/usr/local/bin/ffmpeg'
 plt.rcParams["animation.html"] = "jshtml"
 
+
+def summarize(matrix):
+    summarized = {}
+    total = 0
+    summarized["total"] = {}
+    for row in matrix:
+        for i,val in enumerate(row[0]):
+            if i not in summarized:
+                summarized[i] = {}
+            if val not in summarized[i]:
+                summarized[i][val] = {}
+            if row[2] not in summarized[i][val]:
+                summarized[i][val][row[2]] = 0
+            if "total" not in summarized[i][val]:
+                summarized[i][val]["total"] = 0
+            if val != -1:
+                summarized[i][val]["total"] += row[1]
+                summarized[i][val][row[2]] += row[1]
+        total += row[1]
+        if row[2] not in summarized["total"]:
+            summarized["total"][row[2]] = 0
+        summarized["total"][row[2]] += row[1]
+    summarized["total"]["total"] = total
+    return summarized
+
+def summarize3(matrix):
+    summarized = {}
+    summarized[total]
+    for row in matrix:
+        for val in row[0]:
+            goal = row[2]
+            if goal not in summarized:
+                summarized[goal] = 0
+            summarized[goal] += row[1]
+
+
+def summarize2(matrix):
+    summarized = {}
+    total = 0
+    for j,row in enumerate(matrix):
+        for i,val in enumerate(row[0]):
+            if i not in summarized:
+                summarized[i] = {}
+            if val not in summarized[i]:
+                summarized[i][val] = {}
+            if row[2] not in summarized[i][val]:
+                summarized[i][val][row[2]] = set()
+            summarized[i][val][row[2]].add(j)
+    return summarized
+
 def animate(data,cmap = "Set1",size=(20,10)):
     n_frames = len(data)
     dims = np.shape(data)

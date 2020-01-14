@@ -27,13 +27,14 @@ class Gen():
 class Chromosome():
     def __init__(self,setup,express,crossover,mutate,generation):
         self.uuid = str(uuid.uuid4())
+        self.expression = None
         self.parents = []
         self.genes = []
         self.generation = generation
         self.crossover = crossover
         self.mutate = mutate
         self.express = express
-        self.fitness = 0
+        self.fitness = None
         self.setup = setup
         self.setup(self)
             
@@ -49,7 +50,9 @@ class Chromosome():
     
     #returns the phenotype
     def __neg__(self):
-        return self.express(self)
+        if self.expression == None:
+            self.expression =  self.express(self)
+        return self.expression
     
     def __lt__(self,other):
         if type(other) == Chromosome:
@@ -76,7 +79,7 @@ class Chromosome():
         temp["uuid"] = self.uuid
         temp["generation"] = self.generation
         temp["genes"] = [gen.toDict() for gen in self.genes]
-        temp["fitness"] = str(self.fitness)
+        temp["fitness"] = str(0 if self.fitness == None else self.fitness)
         temp["parents"] = [str(parent.uuid) for parent in self.parents]
         return temp
     
@@ -94,12 +97,16 @@ class Population():
         chromosome.fitness = self.fitness( -chromosome,goal)
     
     def nextGeneration(self):
+        start = time.time()
+        #print(f"goal = {self.goal}")
         self.generation += 1
         backend = 'threading'
         #with parallel_backend(backend):
         #parallel(delayed(self.parallelFitness)(chromosome,self.goal) for chromosome in self.chromosomes)
         for chromosome in self.chromosomes:
-            chromosome.fitness = self.fitness( -chromosome, self.goal)
+            if chromosome.fitness == None:
+                chromosome.fitness = self.fitness( -chromosome, self.goal)
+        #print(f"Fitness elapsed time: {time.time()-start}")
         childs = []
         for parents in self.selection(self.chromosomes):
             if parents == None:
@@ -107,11 +114,14 @@ class Population():
             if len(parents) != 2:
                 raise Exception('parents length should be 2. The length of parents was: {}'.format(len(parents)))
             childs += parents[0] + parents[1] #crossover
+        #print(f"Crossover elapsed time: {time.time()-start}")
         for child in childs:
             ~child #mutation
             child.fitness = self.fitness(-child,self.goal)
             self.chromosomes.append(child) 
+        #print(f"Fitness 2 elapsed time: {time.time()-start}")
         self.regulation(self)
+        #print(f"Regulation elapsed time: {time.time()-start}")
     
     def best(self):
         if len(self.chromosomes) == 0:
@@ -123,18 +133,20 @@ class Population():
             return -1
         if len(self.chromosomes) % 2 == 0:
             mid = len(self.chromosomes) // 2
-            return (self.chromosomes[mid].fitness + self.chromosomes[mid+1].fitness) / 2
+            fit1 = 0 if self.chromosomes[mid].fitness == None else self.chromosomes[mid].fitness
+            fit2 = 0 if self.chromosomes[mid+1].fitness == None else self.chromosomes[mid+1].fitness
+            return (fit1 + fit2) / 2
         else:
             mid = math.ceil(len(self.chromosomes) / 2)
-            return self.chromosomes[mid].fitness
+            fit = 0 if self.chromosomes[mid].fitness == None else self.chromosomes[mid].fitness
+            return fit
             
-    
     def avg(self):
         res = 0
         if len(self.chromosomes) == 0:
             return -1
         for chromosome in self.chromosomes:
-            res += chromosome.fitness#self.fitness( -chromosome, self.goal)
+            res += 0 if chromosome.fitness == None else chromosome.fitness#self.fitness( -chromosome, self.goal)
         res = res / len(self.chromosomes)
         return res
     
@@ -144,7 +156,7 @@ class Population():
         res = 0
         avg = self.avg()
         for chromosome in self.chromosomes:
-            fitness = chromosome.fitness#self.fitness( -chromosome, self.goal)
+            fitness =  0 if chromosome.fitness == None else chromosome.fitness#self.fitness( -chromosome, self.goal)
             res += pow(avg - fitness, 2)
         res = math.sqrt(res/len(self.chromosomes))
         return res

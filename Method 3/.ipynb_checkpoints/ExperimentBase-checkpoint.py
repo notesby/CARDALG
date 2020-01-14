@@ -97,6 +97,7 @@ class ExperimentBaseModel(Experiment):
         self.problem = self.getProblem()
         print(time.time()-start)
         self.matrix = self.getMatrix()
+        print(np.shape(self.matrix))
         print(time.time()-start)
         self.domain = self.getDomain()
         self.goals = list(self.problem.keys())
@@ -276,6 +277,7 @@ class ExperimentBaseModel(Experiment):
         fileName = "{}.json".format(0)
         self.saveState(fileName)
         for i in range(1,self.noIterations):
+            print(f"iteration {i}")
             fileName = "{}.json".format(i)
             self.world.nextGeneration()
             self.saveState(fileName)
