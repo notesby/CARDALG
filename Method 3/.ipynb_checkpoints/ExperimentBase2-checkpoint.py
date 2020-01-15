@@ -64,7 +64,7 @@ class Transformer():
             for key in terms:
                 if type(terms[key]) == set:
                     if len(terms[key]) > 0:
-                        temp.append(f"(x[{key}] in {terms[key]} if x[{key}] != -1 else True)")
+                        temp.append(f"(x[{key}] in {terms[key]} if x[{key}] != '{self.experiment.paddingValue}' else True)")
             lmstr += " and ".join(temp)
             self.lmstr[goal] = lmstr
             fun = eval(lmstr)
@@ -99,12 +99,13 @@ class ExperimentBaseModel(Experiment):
         self.matrix = self.getMatrix()
         print(np.shape(self.matrix))
         print(time.time()-start)
-        self.summarized = helpers.summarize(self.matrix)
+        self.summarized = helpers.summarize(self.matrix,self.paddingValue)
         print(time.time()-start)
         self.summarized2 = helpers.summarize2(self.matrix)
         print(time.time()-start)
         self.domain = self.getDomain()
         self.goals = list(self.problem.keys())
+        print(f"{len(self.goals)} goals")
         print("end setup")
         
     def getProblemSub2(self,iState,cell,stateSize,currentState):
@@ -185,7 +186,8 @@ class ExperimentBaseModel(Experiment):
                 if col not in domain[j]:
                     domain[j].append(col)
         for key in domain:
-            domain[key].sort()
+            #print(domain[key])
+            domain[key] = sorted(domain[key])
         return domain
     
     def setupWorld(self,world):
