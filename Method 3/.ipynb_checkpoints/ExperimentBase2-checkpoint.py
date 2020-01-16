@@ -64,7 +64,10 @@ class Transformer():
             for key in terms:
                 if type(terms[key]) == set:
                     if len(terms[key]) > 0:
-                        temp.append(f"(x[{key}] in {terms[key]} if x[{key}] != '{self.experiment.paddingValue}' else True)")
+                        pValue = f"{self.experiment.paddingValue}"
+                        if type(self.experiment.paddingValue) == str:
+                            pValue = f"'{self.experiment.paddingValue}'"
+                        temp.append(f"(x[{key}] in {terms[key]} if x[{key}] != {pValue} else True)")
             lmstr += " and ".join(temp)
             self.lmstr[goal] = lmstr
             fun = eval(lmstr)
