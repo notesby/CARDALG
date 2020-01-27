@@ -3,6 +3,7 @@ import helpers
 import numpy as np
 import pandas as pd
 from copy import copy
+from copy import deepcopy
 from genetic import Experiment,Population,Chromosome,Gen
 from joblib import Parallel, delayed,parallel_backend
 import time
@@ -60,7 +61,7 @@ class ExperimentBaseModel(Experiment):
         values = []
         for coord in self.neighborhood:
             newCoord = coord+position
-            if (newCoord[0] <= 0 and newCoord[0] >= stateSize[0]) or (newCoord[1] <= 0 and newCoord[1] >= stateSize[1]):
+            if (newCoord[0] <= 0 or newCoord[0] >= stateSize[0]) or (newCoord[1] <= 0 or newCoord[1] >= stateSize[1]):
                 values.append(-1)
             else:
                 layer = s1[target]
@@ -203,20 +204,21 @@ class ExperimentBaseModel(Experiment):
         return eval(rule)
             
     def getWorldFitness(self,s2,rules,populations):
-        prev = copy(s2)
-        nex = copy(s2)
+        prev = deepcopy(s2)
+        nex = deepcopy(s2)
         for it in range(200):
             for i,row in enumerate(prev):
                 for j,col in enumerate(row):
                     pos = (i,j)
                     values = []
-                    for layer in self.s1:
-                        values.append(layer[pos])
+                    for l,layer in enumerate(self.s1):
+                        print(it,np.shape(layer),l,i,j)
+                        values.append(layer[i,j])
                     values = values + self.getNeighborsValue(self.s1,pos,self.target)
                     for key in rules:
                         if rules[key](values):
                             nex[self.target,i,j] = key
-            prev = copy(nex)
+            prev = deepcopy(nex)
         errors = {}
         for i,row in enumerate(s2[self.target]):
             for j,col in enumerate(row): 
