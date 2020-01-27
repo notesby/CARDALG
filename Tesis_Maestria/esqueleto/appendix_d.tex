@@ -1,0 +1,28 @@
+\chapter{Thesis recipes for Poky Framework}
+This appendix contains all the developed recipes that were used to generate a Dynamic Harware Execution Embeded System.
+
+Listing ** shows a recipe for compiling a kernel module.
+
+\begin{lstlisting}
+DESCRIPTION = "hello-world-mod tests the module.bbclass mechanism."
+LICENSE = "GPLv2"
+LIC_FILES_CHKSUM = "file://COPYING;md5=12f884d2ae1ff87c09e5b7ccc2c4ca7e"
+
+inherit module
+
+PR = r0
+PV = "0.1"
+
+SRC_URI = "file://Makefile \
+           file://hello.c \
+           file://hello.h \
+           file://COPYING \
+          "
+
+S = "${WORKDIR}"
+
+do_install() {
+        install -d ${D}
+        install -m 0644 hello.ko  ${D}
+}
+\end{lstlisting}

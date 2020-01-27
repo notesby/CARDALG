@@ -1,0 +1,849 @@
+% + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+% + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+%  ____    _   _       _   _                                   __   _
+% | __ )  (_) | |__   | | (_)   ___     __ _   _ __    __ _   / _| (_)   __ _
+% |  _ \  | | | '_ \  | | | |  / _ \   / _` | | '__|  / _` | | |_  | |  / _` |
+% | |_) | | | | |_) | | | | | | (_) | | (_| | | |    | (_| | |  _| | | | (_| |
+% |____/  |_| |_.__/  |_| |_|  \___/   \__, | |_|     \__,_| |_|   |_|  \__,_|
+%                                      |___/
+%
+% + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+% + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+%
+% Embedded computing, A VLIM Approach to Architecture, compilers and Tools. Joseph A. Fisher, Paolo Faraboschi, Cliff Young, 2005, by Elsevier Inc. Morgan Kaufmann Publishers. isbn: 1-55860-766-8, printed in USA.
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\cleardoublepage
+\pagebreak
+\addcontentsline{toc}{chapter}{Bibliograf\'{i}a}
+\begin{thebibliography}{99}
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\bibitem{aylor96}
+%Autor:
+Aylor, James H. \textsl{et al}. 
+%  Año de publicación:
+  1996.
+% Título de la publicación:
+  \emph{The codesign of embedded systems: a unified hardware/software representation}
+%%%    [Co-diseño de sistemas empotrados: una representación unificada de hardware/software].
+% Edición:
+  Primera edición.
+% Editorial:
+  Kluwer Academic Publishers.
+% Lugar de publicación:
+  AH Dordrecht. The Netherlands.
+% Otros:
+  \texttt{ISBN~0-7923-9636-7}.
+  Capítulo~2. Páginas 11 y 12.
+% * * * * * * * * * * * * * *
+
+\bibitem{godson_processor}
+%Autor:
+Weiwu Hu. \textsl{et al}. 
+%  Año de publicación:
+  4 de Mayo del 2006.
+% Título de la publicación:
+  \emph{Microarchitecture and Performance Analysis of Godson-2 SMT Processor.}
+% Edición:
+%  Primera edición.
+% Editorial:
+  IEEE.
+% Lugar de publicación:
+  %
+  \url{http://www.cecs.uci.edu/~papers/iccd2006/papers/paper_38.pdf}
+% Otros:
+  %\texttt{ISBN?}.
+  %Capítulo~2. Páginas 11 y 12.
+% * * * * * * * * * * * * * *
+
+\bibitem{godson_500}
+%Autor:
+ Christopher Mims.
+% Año de publicación:
+  22 de Octubre de 2010.
+% Título de la publicación:
+  \emph{Chinese Chip Closes in on Intel, AMD.}
+% Edición:
+  Technology Review.
+% Editorial:
+  ACM.
+% Lugar de publicación:
+  %
+  \url{http://technews.acm.org/archives.cfm?searchterm=godson&fo=2010-10-oct/oct-22-2010.html}
+% Otros:
+% * * * * * * * * * * * * * *
+
+\bibitem{alligator_sp}
+%Autor:
+Laboratorio de microtecnología y sistemas embebidos.
+%  Año de publicación:
+  8 de Febrero del 2008.
+% Título de la publicación:
+  \emph{Alligator\_SP}
+% Editorial:
+  Laboratorio de microtecnología y sistemas embebidos. Centro de Investigación en Computación. Instituto Politécnico Nacional.
+% Lugar de publicación:
+  D.F. México.
+% Otros:
+  \texttt{Proyecto SIP-20070319}.
+  \url{http://www.microse.cic.ipn.mx/files/documents/projects/alligator/reportes_tec/SIP-2007-TR-Alligator.pdf}
+% * * * * * * * * * * * * * *
+
+\bibitem{rob_raul}
+%Autor:
+  José Raúl García Ordaz.
+%  Año de publicación:
+  Enero de 2011.
+% Título de la publicación:
+  \emph{Alligator\_OS}
+% Editorial:
+  Laboratorio de microtecnología y sistemas embebidos. Centro de Investigación en Computación. Instituto Politécnico Nacional.
+% Lugar de publicación:
+  D.F. México.
+% Otros:
+%  \texttt{Proyecto SIP-}.
+% TUTORIAL SISTEMAS EMBEBIDOS ML507
+%  \url{http://www.microse.cic.ipn.mx/files/Alligator/TR-XPS-TFT-Alligator_OS.pdf}
+  %\url{http://www.microse.cic.ipn.mx/proyectos?q=so-emb}
+% * * * * * * * * * * * * * *
+
+\bibitem{alligator_os}
+%Autor:
+  Adrian Alonso Lazcano.
+%  Año de publicación:
+  21 de Enero de 2011.
+% Título de la publicación:
+  \emph{Alligator\_OS}
+% Editorial:
+  Laboratorio de microtecnología y sistemas embebidos. Centro de Investigación en Computación. Instituto Politécnico Nacional.
+% Lugar de publicación:
+  D.F. México.
+% Otros:
+%  \texttt{Proyecto SIP-}.
+% TUTORIAL SISTEMAS EMBEBIDOS ML507
+%  \url{http://www.microse.cic.ipn.mx/files/Alligator/TR-XPS-TFT-Alligator_OS.pdf}
+  \url{http://www.microse.cic.ipn.mx/proyectos?q=so-emb}
+% * * * * * * * * * * * * * *
+
+\bibitem{atom_e600c}
+%Autor:
+  Intel Corporation.
+%  Año de publicación:
+  13 de Septiembre de 2010.
+% Título de la publicación:
+  \emph{Intel Introduces Configurable Intel® Atom™-based Processor.}
+% Editorial:
+  Intel Developer Forum 2010.
+% Lugar de publicación:
+  San Francisco Bay Area, USA.
+% Otros:
+  \url{www.intel.com/idf/}
+% * * * * * * * * * * * * * *
+
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%     Agosto 2011
+
+\bibitem{Hennessy_Patterson}
+%Autor:
+  Hennessy, John L. y Patterson, David A.
+%  Año de publicación:
+  2007.
+% Título de la publicación:
+  \emph{Computer Architecture. A quantitative approach.} 4 Ed.
+% Editorial:
+  Elsevier.
+% Lugar de publicación:
+  Estados Unidos de América.
+% Otros:
+  %\url{}
+% * * * * * * * * * * * * * *
+
+\bibitem{rojas_first_computers}
+%Autor:
+  Rojas, Raúl y Hashagen, Ulf.
+%  Año de publicación:
+  2000.
+% Título de la publicación:
+  \emph{The first computers: history and architectures.}
+% Editorial:
+  MIT Press.
+% Lugar de publicación:
+  Estados Unidos de América.
+% Otros:
+  ISBN 0-262-18197-5
+% * * * * * * * * * * * * * *
+
+
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+\bibitem{free-sw-def}
+Free Software Foundation.
+  \emph{The Free Software Definition} [Definición de software libre].
+  [En línea].
+  Free Software Foundation, Inc.
+  Última actualización: 20 de Marzo de 2008.
+  [Consultado el día 18 de Junio de 2008].
+  \url{http://www.gnu.org/philosophy/free-sw.html}
+% * * * * * * * * * * * * * *
+\bibitem{vhdl-perry}
+Perry, Douglas L. 1998
+  \emph{VHDL}
+  Tercera edición.
+  McGraw-Hill.
+  Singapore.
+  \texttt{ISBN~0-07-04936-3}
+% * * * * * * * * * * * * * *
+\bibitem{abel01}
+Spiegel, Jan Van der.
+  \emph{ABEL Primer} [Principios básicos de ABEL].
+  [En línea].
+  Escuela de Ingeniería y Ciencias Aplicadas de la Universidad de Pensilvania.
+  Filadelfia, Estados Unidos de América.
+  Publicado el 26 de septiembre de 1997, actualizado el 14 de mayo del 2000.
+  Consultado el día 17 de Marzo de 2009.
+  \url{http://www.seas.upenn.edu/~ese201/abel/abel_primer.html}
+% See the reference within this page
+% FPGAS XC40 DIGILAB*
+% * * * * * * * * * * * * * *
+\bibitem{verilog01}
+Thomas, Donald E. \& Moorby, Phillip R. 1991
+  \emph{The Verilog Hardware Description Language} [El lenguaje de descripción hardware Verilog].
+  Kluwer Academic Publishers.
+  Norwell, MA.
+  ISBN~0-7923-8166-1
+% * * * * * * * * * * * * * *
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+\bibitem{murdoca-arq-comp} 
+Murdocca, Miles J. \textsl{et al}.
+  \emph{Principles of computer architecture} [Principios de Arquitectura de Computadoras].
+  Primera edición.
+  Prentice-Hall, Inc.
+  New Jersey, USA.
+  \texttt{ISBN~0-201-43664-7}.
+%  Capítulo10 pagina 264. 
+% ref >> Harvard & Von Neumman
+% * * * * * * * * * * * * * *
+\bibitem{nios2-info}
+Altera Corporation.
+  \emph{Nios II Processor} [Procesador Nois II].
+  [En línea].
+  \url{	http://www.altera.com/ } \\*
+  \url{	http://www.altera.com/products/ip/processors/nios2/ni2-index.html } \\*
+  \url{	http://www.altera.com/literature/hb/nios2/n2cpu_nii5v1.pdf }
+% * * * * * * * * * * * * * *
+\bibitem{microblaze_faq} 
+Xilinx, Inc. 
+  \emph{MicroBlaze Soft Processor v7 Frequently Asked Questions}
+    [Dudas frecuentes del procesador en software MicroBlaze].
+  [En línea].
+  Xilinx, Inc. 
+  %Fecha de publicación 8 de Octubre de 2007.
+%  [Consultado el día 7 de Junio de 2008].
+ \url{http://www.xilinx.com/products/design_resources/proc_central/microblaze_faq.pdf}
+% * * * * * * * * * * * * * *
+\bibitem{mb-ref-guide}
+Xilinx, Inc.
+  \emph{MicroBlaze Processor Reference Guide} [Guía de referencia del procesador MicroBlaze].
+  [En línea].
+  Xilinx, Inc.
+%  Última actualización: 25 de Junio de 2007.
+%  [Consultado el día 7 de Junio de 2008].
+  \url{http://www.xilinx.com/support/documentation/sw_manuals/edk92i_mb_ref_guide.pdf}
+% * * * * * * * * * * * * * *
+\bibitem{openfire-proc}
+Craven, Stephen Douglas.
+  \emph{OpenFire soft processor} [Procesador en software OpenFire].
+  [En línea].
+  Departamento de ingeniería eléctrica y computacional del Tecnológico de Virginia.
+  \url{	http://www.ccm.ece.vt.edu/OpenFire/ } \\*
+  \url{	http://www.csee.umbc.edu/courses/undergraduate/411/spring96/dlx.html }
+% * * * * * * * * * * * * * *
+\bibitem{micro32-lattice}
+Lattice Semiconductor Corporation.
+  \emph{LatticeMico32 Open, Free 32-Bit Soft Processor} [LatticeMicro32, procesador en software abierto y libre]
+  [En línea]
+  \url{	http://www.latticesemi.com/} \\*
+  \url{	http://www.latticesemi.com/products/intellectualproperty/ipcores/mico32/index.cfm }
+% * * * * * * * * * * * * * *
+\bibitem{xtensa-proc}
+Tensilica Inc.
+  \emph{Tensilica's Processor Xtensa} [El procesador de Tesilica, Xtensa]
+  [en línea]
+  Santa Clara California, Estados Unidos de América.
+  \url{	http://www.tensilica.com/index.htm } \\*
+  \url{	http://www.tensilica.com/products/xtensa/index.htm } 
+
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% Referencias a las plataformas hardware y sus plataformas
+DB-FT1
+\bibitem{board-db-ft1}
+%Autor:
+  Advanced Micro Devices (AMD).
+%  Año de publicación:
+  2011.
+% Título de la publicación:
+  AMD DB-FT1 Development Board.
+% Editorial:
+ Advanced Micro Devices, Inc.
+% Lugar de publicación:
+  %Estados Unidos de América.
+% Otros:
+  \url{http://www.amd.com/us/Documents/49286_Embedded_Solutions_Brief_FT1_web.pdf}
+% * * * * * * * * * * * * * *
+
+\bibitem{board-msmst}
+%Autor:
+  Kontron AG.
+%  Año de publicación:
+  2011.
+% Título de la publicación:
+  Kontron MICROSPACE MSMST.
+% Editorial:
+ %
+% Lugar de publicación:
+  %Estados Unidos de América.
+% Otros:
+ \url{http://us.kontron.com/products/boards+and+mezzanines/pc104+sbc+and+peripherals/microspace+pc104+cpus/msmst.html} 
+% * * * * * * * * * * * * * *
+\bibitem{board-pxa270}
+%Autor:
+  HiTech Global, LLC.
+%  Año de publicación:
+  2011.
+% Título de la publicación:
+  Marvell PXA270 development board.
+% Editorial:
+ %
+% Lugar de publicación:
+  %Estados Unidos de América.
+% Otros:
+  \url{http://www.hitechglobal.com/boards/pxa270.htm} 
+% * * * * * * * * * * * * * *
+
+\bibitem{board-beagle-board}
+%Autor:
+  Texas Instruments \textit{employees}.
+%  Año de publicación:
+  2011
+% Título de la publicación:
+  Beagle Board.
+% Editorial:
+ %
+% Lugar de publicación:
+  %Estados Unidos de América.
+% Otros:
+ \url{http://beagleboard.org/}
+% * * * * * * * * * * * * * *
+
+\bibitem{board-pandaboard}
+%Autor:
+  OMAP Community.
+%  Año de publicación:
+  2011
+% Título de la publicación:
+  Pandaboard development system.
+% Editorial:
+ %
+% Lugar de publicación:
+  %Estados Unidos de América.
+% Otros:
+  \url{http://pandaboard.org/}
+% * * * * * * * * * * * * * *
+
+\bibitem{board-ml507}
+%Autor:
+  Xilinx Inc.
+%  Año de publicación:
+  2008
+% Título de la publicación:
+  ML507 development board.
+% Editorial:
+ %
+% Lugar de publicación:
+  %Estados Unidos de América.
+% Otros:
+  \url{http://www.xilinx.com/support/documentation/boards_and_kits/ug348.pdf}
+% * * * * * * * * * * * * * *
+
+
+
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% Referencias para las tablas de sistemas operativos NO-RTOS
+
+\bibitem{so-emdebian}
+%Autor:
+  Comunidad GNU / Linux.
+%  Año de publicación:
+  %2007.
+% Título de la publicación:
+  Sistema operativo Emdebian.
+% Editorial:
+ %
+% Lugar de publicación:
+  %Estados Unidos de América.
+% Otros:
+ \url{	http://www.emdebian.org/ } \\
+ \url{	http://www.emdebian.org/about/index.html } \\
+ \url{	http://www.emdebian.org/about/history.html }\\
+ \url{	http://www.debian.org/ports/}  %  #arquitecturas
+% * * * * * * * * * * * * * *
+
+\bibitem{so-free-bsd}
+%Autor:
+  Universidad de California - Comunidad FBSD.
+%  Año de publicación:
+  %2007.
+% Título de la publicación:
+  Sistema operativo Free-BSD.
+% Editorial:
+ %
+% Lugar de publicación:
+  %Estados Unidos de América.
+% Otros:
+  \url{	http://www.embeddedfreebsd.org/ }\\
+  \url{	http://www.embeddedfreebsd.org/documentation.html } \\
+  \url{	http://www.embeddedfreebsd.org/boards.html } \\
+  \url{	http://www.tinybsd.org/tinybsd  } \\
+  \url{	http://www.freebsd.org/doc/en_US.ISO8859-1/articles/nanobsd/ } \\
+  \url{	http://www.minibsd.org/ }
+% * * * * * * * * * * * * * *
+
+\bibitem{so-net-bsd}
+%Autor:
+  Universidad de California - Comunidad FBSD.
+%  Año de publicación:
+  %2007.
+% Título de la publicación:
+  Sistema operativo Free-BSD.
+% Editorial:
+ %
+% Lugar de publicación:
+  %Estados Unidos de América.
+% Otros:
+ \url{	http://www.netbsd.org/ } \\
+ \url{	http://www.netbsd.org/about/embed.html } \\
+ \url{	http://www.netbsd.org/ports/ }
+% * * * * * * * * * * * * * *
+
+\bibitem{so-petalinux}
+%Autor:
+  John Williams \textsl{et al}.
+%  Año de publicación:
+  %2007.
+% Título de la publicación:
+  Sistema operativo PetaLinux.
+% Editorial:
+  PetaLogix Inc.
+% Lugar de publicación:
+  %Estados Unidos de América.
+% Otros:
+  \url{	http://www.petalogix.com/ } \\
+  \url{	http://developer.petalogix.com/ }
+% * * * * * * * * * * * * * *
+
+\bibitem{so-uclinux}
+%Autor:
+  Dionne, Jeff D., Albanowski, Kenneth, \textsl{et al}.
+%  Año de publicación:
+  %2007.
+% Título de la publicación:
+  Sistema operativo $\mu$CLinux.
+% Editorial:
+  Universidad de Queensland.
+% Lugar de publicación:
+  Australia.
+% Otros:
+  \url{	http://www.uclinux.org }\\
+  \url{	http://www.itee.uq.edu.au/~listarch/microblaze-uclinux/ }
+% * * * * * * * * * * * * * *
+
+\bibitem{so-ususe}
+%Autor:
+  Novel Inc, \textsl{et al}.
+%  Año de publicación:
+  %2007.
+% Título de la publicación:
+  Sistema operativo $\mu$SUSE.
+% Editorial:
+  The Attachmate Corporation.  
+% Lugar de publicación:
+%  Australia.
+% Otros:
+  \url{http://en.opensuse.org/MicroSUSE}
+% * * * * * * * * * * * * * *
+
+\bibitem{so-wince}
+%Autor:
+  Microsoft Corp.
+%  Año de publicación:
+  %2007.
+% Título de la publicación:
+  Sistema operativo Windows Embedded CE.
+% Editorial:
+  %The Attachmate Corporation.  
+% Lugar de publicación:
+%  Australia.
+% Otros:
+  \url{	http://www.microsoft.com/windowsembedded/en-us/products/windowsce/default.mspx } \\
+  \url{	http://www.microsoft.com/windowsembedded/en-us/products/weenterprise/default.mspx } \\
+  \url{	http://www.microsoft.com/windowsembedded/en-us/products/wexpe/default.mspx } \\
+  \url{	http://www.microsoft.com/windowsembedded/en-us/products/westandard/default.mspx } 
+% * * * * * * * * * * * * * *
+
+\bibitem{so-xilkernel}
+%Autor:
+  Xilinx Corp.
+%  Año de publicación:
+  %2007.
+% Título de la publicación:
+  Xilkernel subsistema con funcionalidad limitada.
+% Editorial:
+  %The Attachmate Corporation.  
+% Lugar de publicación:
+%  Australia.
+% Otros:
+\url{	http://www.xilinx.com/support/documentation/sw_manuals/edk10_oslib_rm.pdf }
+
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% Referencias de soft processors y plataformas hardware asociadas
+
+\bibitem{sboard-micro32}
+%Autor:
+  Lattice Semiconductor Corporation.
+%  Año de publicación:
+  %2007.
+% Título de la publicación:
+  LatticeMico32/DSP Development Board.
+% Editorial:
+ %
+% Lugar de publicación:
+  %Estados Unidos de América.
+% Otros:
+  \url{http://www.latticesemi.com/products/developmenthardware/fpgafspcboards/mico32dspdevelopmentboard.cfm} 
+% * * * * * * * * * * * * * *
+
+\bibitem{sboard-nios2}
+%Autor:
+  Terasic Corp.
+%  Año de publicación:
+  2008.
+% Título de la publicación:
+  Altera DE2-115 Development and Education Board.
+% Editorial:
+ %
+% Lugar de publicación:
+  %Estados Unidos de América.
+% Otros:
+  \url{http://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&CategoryNo=139&No=502} 
+% * * * * * * * * * * * * * *
+
+\bibitem{sboard-s3e-starter}
+%Autor:
+  Digilent Inc.
+%  Año de publicación:
+  2008.
+% Título de la publicación:
+  Spartan 3E Starter Board.
+% Editorial:
+ %
+% Lugar de publicación:
+  %Estados Unidos de América.
+% Otros:
+  \url{http://www.digilentinc.com/Products/Detail.cfm?NavPath=2,400,792&Prod=S3EBOARD} 
+% * * * * * * * * * * * * * *
+
+\bibitem{sboard-ml605}
+%Autor:
+  Xilinx Corp.
+%  Año de publicación:
+  2010.
+% Título de la publicación:
+  Virtex-6 FPGA Embedded Kit.
+% Editorial:
+ %
+% Lugar de publicación:
+  %Estados Unidos de América.
+% Otros:
+  \url{http://www.xilinx.com/products/boards-and-kits/DK-V6-EMBD-G.htm} 
+% * * * * * * * * * * * * * *
+
+\bibitem{robert_love}
+%Autor:
+  Robert Love.
+%  Año de publicación:
+  Junio de 2010.
+% Título de la publicación:
+  \emph{Linux kernel development. Third Edition.}
+% Editorial:
+  Addison-Wesley.
+% Lugar de publicación:
+  Estados Unidos.
+% Otros:
+  \texttt{ISBN: 0-672-32946-8}.
+% TUTORIAL SISTEMAS EMBEBIDOS ML507
+%  \url{http://www.microse.cic.ipn.mx/files/Alligator/TR-XPS-TFT-Alligator_OS.pdf}
+  \url{http://informit.com/aw}
+% * * * * * * * * * * * * * *
+
+
+% * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+% * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+% * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+% *                                                                 * 
+% *             Referencias del capítulo 3                          *
+% *                                                                 * 
+% * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+\bibitem{MDE93}
+%Autor:
+  McDermid, J. y Rook P. 
+%  Año de publicación:
+  1993.
+% Título de la publicación:
+  \emph{Software Development Process Models, Engineer’s Reference Book.}
+% Editorial:
+  CRC Press.
+% Lugar de publicación:
+  %Estados Unidos.
+% Otros:
+  pags. 15–28.
+%  \url{http://informit.com/aw}
+% * * * * * * * * * * * * * *
+
+\bibitem{BOE98}
+%Autor:
+  Boehm, B. 
+%  Año de publicación:
+  1998.
+% Título de la publicación:
+  \emph{A Spiral Model for Software Development and Enhancement.}
+% Editorial:
+  CRC Press.
+% Lugar de publicación:
+  %Estados Unidos.
+% Otros:
+  %pags. 15–28.
+%  \url{http://informit.com/aw}
+% * * * * * * * * * * * * * *
+
+\bibitem{xilinx-bsp}
+%Autor:
+  Xilinx Corp.
+%  Año de publicación:
+  2010.
+% Título de la publicación:
+  Board Support Package.
+% Editorial:
+  Xilinx Press.%
+% Lugar de publicación:
+  %Estados Unidos de América.
+% Otros:
+\url{http://www.xilinx.com/ise/embedded/edk91i_docs/standalone_v1_00_a.pdf}
+% * * * * * * * * * * * * * *
+
+\bibitem{xilinx-rm}
+%Autor:
+  Xilinx Corp.
+%  Año de publicación:
+  2010.
+% Título de la publicación:
+  Embedded System Tools Reference Manual.
+% Editorial:
+  Xilinx Press.%
+% Lugar de publicación:
+  %Estados Unidos de América.
+% Otros:
+  Pag. 59, Load Paths, Fig 4-1 y 4-2
+\url{http://www.xilinx.com/support/documentation/sw_manuals/edk10_est_rm.pdf}
+% * * * * * * * * * * * * * *
+
+\bibitem{uboot}
+%Autor:
+  Wolfgang Denk, et al. %DENX Software Engineering.
+%  Año de publicación:
+%  2010.
+% Título de la publicación:
+  Das U-Boot (Universal Bootloader).
+% Editorial:
+  DENX Software Engineering co.%
+% Lugar de publicación:
+  %Estados Unidos de América.
+% Otros:
+\url{http://www.denx.de/wiki/U-Boot/WebHome}
+% * * * * * * * * * * * * * *
+
+\bibitem{s3e-datasheet}
+%Autor:
+  Xilinx Corp.
+%  Año de publicación:
+%  2010.
+% Título de la publicación:
+  Hoja de especificaciones de la familia de FPGAs Spartan 3E.
+% Editorial:
+  Xilinx Press.%
+% Lugar de publicación:
+  %Estados Unidos de América.
+% Otros:
+\url{http://www.xilinx.com/support/documentation/data_sheets/ds312.pdf}
+% * * * * * * * * * * * * * *
+
+\bibitem{Bovet-Cesati}
+%Autor:
+  Daniel P. Bovet y Marco Cesati.
+%  Año de publicación:
+%  2010.
+% Título de la publicación:
+  Understanding the Linux Kernel.
+% Editorial:
+  O'Reilly.%
+% Lugar de publicación:
+  %Estados Unidos de América.
+% Otros:
+  ISBN:0-596-00002-2
+%\url{http://www.xilinx.com/support/documentation/data_sheets/ds312.pdf}
+% * * * * * * * * * * * * * *
+
+\bibitem{cramfs}
+%Autor:
+  Comunidad GNU/Linux.
+%  Año de publicación:
+%  2010.
+% Título de la publicación:
+  Compresed RAM File System.
+% Editorial:
+  %
+% Lugar de publicación:
+  %Estados Unidos de América.
+% Otros:
+\url{http://sourceforge.net/projects/cramfs/}
+% * * * * * * * * * * * * * *
+
+\bibitem{xilinx-ipif}
+%Autor:
+  Xilinx Corp.
+%  Año de publicación:
+  2010.
+% Título de la publicación:
+  PLB IPIF.
+% Editorial:
+  Xilinx Press.%
+% Lugar de publicación:
+  %Estados Unidos de América.
+% Otros:
+\url{http://www.xilinx.com/support/documentation/ip_documentation/plb_ipif.pdf}
+% * * * * * * * * * * * * * *
+
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% * * * * * * * * * * * * * *
+
+% * * * * * * * * * * * * * *
+% 
+% \bibitem{linux-def1}   % * * * CAMBIAR REFERENCIA * * * 
+% Linux Online.
+%   \emph{What is Linux} [Qué es Linux].
+%   [En línea].
+%   Linux Online Inc.
+%   Última actualización: 2 de Junio de 2008.
+%   [Consultado el día 2 de Junio de 2008].
+%   \url{http://www. linux. org/info/index.html}
+% 
+% \bibitem{catalina04}
+% Catalina Gallego, Alfredo \textsl{et al}. 2004.
+%   \emph{Unix/Linux: Iniciación y referencia}.
+%   Segunda edición.
+%   McGraw-Hill.
+%   Madrid, España.
+%   \texttt{ISBN~844-801-400-95}.
+%   Capítulo~1.
+% 
+% \bibitem{admin-man-A}
+% Shah, Steve \textsl{et al}. 2007.
+%   \emph{Manual de administración de Linux}.
+%   Cuarta edición.
+%   McGraw-Hill.
+%   D.F., México.
+%   \texttt{ISBN~970-10-5882-8}.
+%   Capítulo~1. Páginas 5 a la 8.
+% 
+% \bibitem{s3eboard-ug}
+% Digilent, Inc.
+%   \emph{Spartan-3E Starter Kit Board User Guide} 
+%     [Guía de usuario de la tarjeta de desarrollo Spartan- 3E].
+%   Digilent, Inc.
+%   Fecha de publicacion: 9 de Marzo de 2006.
+%   Fecha de consulta 10 de Junio de 2007.
+%   \url{http://www.digilentinc.com/Data/Products/S3EBOARD/S3EStarter_ug230.pdf}
+% 
+% \bibitem{gnu-def}
+% Free Software Foundation.
+%   \emph{What is GNU?} [¿Qué es GNU?].
+%   [En línea].
+%   Free Software Foundation, Inc.
+%   Última actualización: 24 de Junio de 2008.
+%   [Consultado el día 28 de Junio de 2008].
+%   \url{http://www.gnu.org/}
+% 
+% \bibitem{linux-prog}
+% Wall, Kurt \textsl{et al}. 2001. 
+%   \emph{Programación en Linux 2ª Edición. Al descubierto}.
+%     Segunda edición. 
+%   Pearson Educación, S.A. 
+%   Madrid, España.
+%   \texttt{ISBN~84-205-3014-X}.
+%   Capítulo~34. Páginas 809 a la 817.
+% 
+% \bibitem{admin-man-B}
+% Shah, Steve \textsl{et al}. 2007.
+%   \emph{Manual de administración de Linux}.
+%   Cuarta edición.
+%   McGraw-Hill.
+%   D.F., México.
+%   \texttt{ISBN~970-10-5882-8}.
+%   Capítulo~9. Páginas 210 a la 214.
+% 
+% 
+% \bibitem{fsl-doc}
+% Xilinx, Inc.
+%   \emph{Fast Simplex Link (FSL) Bus (v2.11a)}  [conexión simple rápida (FSL)].
+%   [En línea].
+%   Xilinx, Inc.
+%   Última actualización: 25 de Junio de 2007.
+%   [Consultado el día 29 de Junio de 2008].
+%   \url{http://www.xilinx.com/support/documentation/ip_documentation/fsl_v20.pdf}
+% 
+
+% 
+% \bibitem{admin-man-C}
+% Shah, Steve \textsl{et al}. 2007.
+%   \emph{Manual de administración de Linux}.
+%   Cuarta edición.
+%   McGraw-Hill.
+%   D.F., México.
+%   \texttt{ISBN~970-10-5882-8}.
+%   Capítulo~8. Páginas 210 y 211.
+% 
+% \bibitem{microsoft-eula-xp}
+% Microsoft, Inc.
+%   \emph{End User License Agreement} [Acuerdo de Licencia para el Usuario Final].
+%   [En línea].
+%   Microsoft, Inc.
+%   Publicado el día 27 de Julio de 2001.
+%   [Consultado el día 04 de Julio de 2008].
+%   \url{http://download.microsoft.com/documents/useterms/Windows\%20XP_Professional _English_9e8a2f82-c320-4301-869f-839a853868a1.pdf}
+
+\end{thebibliography}

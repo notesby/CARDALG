@@ -1,0 +1,19 @@
+% + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+% + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+%  _____   _                       _
+% |_   _| | |__     __ _   _ __   | | __  ___
+%   | |   | '_ \   / _` | | '_ \  | |/ / / __|
+%   | |   | | | | | (_| | | | | | |   <  \__ \
+%   |_|   |_| |_|  \__,_| |_| |_| |_|\_\ |___/
+% 
+\cleardoublepage
+\section*{Thanks}
+{\noindent
+\textsf{I deeply appreciate the support received by CIC-IPN \ldots% X persona por Y documento, se agradece a Z persona por  la implementación de A. etc
+}} 
+%\\[0.1cm]
+\begin{center}
+\textsf{To my family \ldots}
+\end{center}
+\addcontentsline{toc}{chapter}{Thanks}
+\pagebreak

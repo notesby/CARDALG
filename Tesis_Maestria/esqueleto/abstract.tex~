@@ -1,0 +1,32 @@
+% + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+% + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+% +          _             _                           _            +
+% +   __ _  | |__    ___  | |_   _ __    __ _    ___  | |_          +
+% +  / _` | | '_ \  / __| | __| | '__|  / _` |  / __| | __|         +
+% + | (_| | | |_) | \__ \ | |_  | |    | (_| | | (__  | |_          +
+% +  \__,_| |_.__/  |___/  \__| |_|     \__,_|  \___|  \__|         +
+% +                                                                 +
+% + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+% + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + 
+\pagestyle{plain}
+\pagenumbering{roman}
+\cleardoublepage
+\chapter*{Resumen}
+\addcontentsline{toc}{chapter}{Resumen}
+\bigskip
+\paragraph{Sistemas Empotrados.}
+(en español)
+Un sistema empotrado es el conjunto de elementos hardware y software necesarios para solucionar un problema específico.  \ldots
+
+% + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+% + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+%\vspace*{1cm}
+\bigskip
+\bigskip
+%\cleardoublepage
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+\bigskip
+\paragraph{Embedded Systems.}
+(en Inglés)
+An Embedded system is a set of individual components that are tied together to \ldots

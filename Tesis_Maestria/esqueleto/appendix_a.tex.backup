@@ -1,0 +1,53 @@
+\cleardoublepage
+\pagestyle{plain}
+%\tiny{Página en blanco dejada intencionalmente}
+\addcontentsline{toc}{chapter}{Apéndices}
+
+% * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+\chapter{Tarjeta ML507}
+Los elementos de la tarjeta de desarrollo ML507 que fueron utilizados en la implementación del S.E. se listan a continuación.
+
+
+\begin{itemize}
+\item FPGA XC5VFX70T
+	\begin{itemize}
+	\item PowerPC 440
+	\item 11,200 Slices
+	\item 5,328 Kb
+	\item 128 DSP48E
+	\item 820 Kb D.RAM
+	\item 6 Clk Mng Tiles
+	\item 1 PPC 440
+	\item 3 PCI End Points
+	\item 4 Ethernet MAC
+	\item 16 GTX 
+	\item 19 Bancos cfg
+	\item 640 In/Out
+	\end{itemize}
+
+\item Características
++ 11,200 Slices
++ 5,328 Kb
++ 128 DSP48E
++ 820 Kb D.RAM
++ 6 Clk Mng Tiles
++ 1 PPC 440
++ 3 PCI End Points
++ 4 Ethernet MAC
++ 16 GTX 
++ 19 Bancos cfg
++ 640 In/Out
+  \item Oscilador 100MHz
+  \item Memoria Flash Intel
+  \item Memoria DDR Micron
+  \item Memoria Flash paralela Xilinx 32Mbits.
+\end{itemize}
+
+
+\section{FPGA}
+El FPGA que contiene la tarjeta de desarrollo es\ldots
+
+\section{Paralell Sttrata Flash}
+La memoria flash\ldots
+
+% * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *

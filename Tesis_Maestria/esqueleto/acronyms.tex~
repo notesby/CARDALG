@@ -1,0 +1,10 @@
+% + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+% Índice de acrónimos, abreviaturas y siglas
+\cleardoublepage
+\thispagestyle{headings}
+\markboth{\nomname}{\nomname}
+\addcontentsline{toc}{chapter}{\nomname}
+\makenomenclature
+\printnomenclature %[1.5cm]
+%\addcontentsline{toc}{chapter}{\nomname}
+

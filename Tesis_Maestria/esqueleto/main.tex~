@@ -1,0 +1,79 @@
+%*****************************************************************
+%** Thesis proyect: ''NAME''                                    **
+%**                                                             **
+%** by Alejandro Gómez-Conde                                    **
+%** <alegzc@yahoo.com.mx>                                       **
+%*****************************************************************
+
+\documentclass[letterpaper,12pt,twoside,titlepage,onecolumn,openright,spanish]{book}
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[pdftex]{graphicx}
+\usepackage{rotating}
+\usepackage{float}
+\usepackage{url}
+\usepackage{verbatim}
+\usepackage{listings}
+\usepackage{pdfpages}
+\usepackage[refpage,spanish]{nomencl} % Acrónimos
+\usepackage[spanish]{babel}	% Titulos en español
+% Opciones
+\addto\captionsspanish{\def\tablename{Tabla}}
+\addto\captionsspanish{\def\listtablename{\'{I}ndice de tablas}}
+\addto\captionsspanish{\def\lstlistingname{Listado}}
+\addto\captionsspanish{\def\lstlistlistingname{\'{I}ndice de listados}}
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%\usepackage[pdftex]{hyperref}
+%\hypersetup{%
+%   bookmarks=true%embedded system, partial reconfiguration, hardware function%
+%}
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+\renewcommand{\nomname}{Acr\'onimos, abreviaturas y siglas}
+\makenomenclature
+\renewcommand{\nompreamble}{En éste apartado se listan los acrónimos, abreviaturas y siglas usadas en éste texto. Se incluye una descripción breve, la respectiva traducción en los casos que así lo requieren %entre paréntesis.
+y la página donde aparece citada por primera vez a fin de que el lector pueda conocer el contexto en el que fue enunciada.}
+%\renewcommand{\nompostamble}{findenomenclatura}
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%\setlength{\parindent}{1.5cm}
+%\setlength{\parskip}{}
+%
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% Abreviaturas personales (Inician por 'Z')
+%\newcommand{\zxilinx}{\texttt{Xilinx}\textregistered}
+%\newcommand{\zmicroblaze}{\texttt{MicroBlaze}\texttrademark}
+%\newcommand{\cmd}[1]{\texttt{#1}}
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%\author{Alejandro Gomez-Conde}
+%\date{Dec 2011}
+
+\begin{document}
+
+%\include{portada}
+\includepdf{PortadaTesis.pdf}
+%\include{cesion_derechos} % Carta de cesión de derechos para publicación
+
+\include{abstract}  % to be generated
+\include{summary}   
+\include{thanks}    % to be completed
+\include{acronyms}  
+\include{indexes} 
+\printnomenclature
+\include{chapter1} % Introducción 
+\include{chapter2} % Marco teórico
+\include{chapter3} % Diseño e implementación
+\include{chapter4} % Pruebas y resultados
+\include{chapter5} % Conclusiones y trabajo futuro
+% 
+\include{bibliography}
+\appendix
+\include{appendix_a}
+\include{appendix_b}
+\include{appendix_c}
+\include{appendix_d}
+
+\end{document}

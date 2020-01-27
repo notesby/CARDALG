@@ -1,0 +1,71 @@
+\cleardoublepage
+\pagestyle{plain}
+%\tiny{Página en blanco dejada intencionalmente}
+\addcontentsline{toc}{chapter}{Apéndices}
+
+% * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+\chapter{Tarjeta ML507}
+Los elementos de la tarjeta de desarrollo ML507 que fueron utilizados en la implementación del S.E. se listan a continuación.
+
+
+\begin{itemize}
+  \item FPGA XC5VFX70T
+	\begin{itemize}
+	\item PowerPC 440
+	\item 11,200 Slices
+	\item 5,328 Kb
+	\item 128 DSP48E
+	\item 820 Kb D.RAM
+	\item 6 Clk Mng Tiles
+	\item 1 PPC 440
+	\item 3 PCI End Points
+	\item 4 Ethernet MAC
+	\item 16 GTX 
+	\item 19 Bancos cfg
+	\item 640 In/Out
+	\end{itemize}
+  \item DDR2 SODIMM (256 MB)
+  \item ZBT SRAM (1 MB)
+  \item Linear Flash (32 MB)
+  \item System ACE™ CF technology (CompactFlash)
+  \item Platform Flash
+  \item SPI Flash
+  \item JTAG programming interface
+  \item External clocking (2 differential pairs)
+  \item USB (2) – host and peripheral
+  \item PS/2 (2) – keyboard, mouse
+  \item RJ-45 – 10/100/1000 networking
+  \item RS-232 (Male) – serial port
+  \item Audio In (2) – line, microphone
+  \item Audio Out (2) – line, amp, SPDIF, piezo speaker
+  \item Rotary encoder
+  \item Video Input
+  \item Video (DVI/VGA) output
+  \item Single-ended and differential I/O expansion
+  \item GPIO DIP switch (8), LEDs (8), and push buttons (5)
+  \item MII, GMII, RGMII, and SGMII Ethernet PHY interfaces
+  \item PCI Express® edge connector (x1 Endpoint)
+  \item GTX transceivers
+	\begin{itemize}
+	\item GTX: SFP (1000Base-X)
+	\item GTX: SMA (RX and TX differential pairs)
+	\item GTX: SGMII
+	\item GTX: PCIe™
+	\item GTX: SATA (dual host connections)
+	\item GTX clock synthesis chips
+	\end{itemize}
+  \item Header for second serial port
+  \item Second Platform Flash PROM (32 Mb) for large device
+  \item Mictor trace port
+  \item BDM debug port
+  \item Soft touch port
+\end{itemize}
+
+
+% \section{FPGA}
+% El FPGA que contiene la tarjeta de desarrollo es\ldots
+% 
+% \section{Paralell Sttrata Flash}
+% La memoria flash\ldots
+
+% * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *

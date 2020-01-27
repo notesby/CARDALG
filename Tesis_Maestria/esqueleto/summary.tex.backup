@@ -1,0 +1,50 @@
+
+\cleardoublepage
+\chapter*{Summary}
+\addcontentsline{toc}{chapter}{Summary}
+\noindent
+This thesis has the following organization.
+\begin{description}
+% Introducción
+% \item[Chapter 1] It begins with an introduction to Embedded Systems (E.S.), it sets up 
+% 
+% it sets up the context theory so that other students can replicate this proyect.
+% 
+% the theory context so that a reader can understand the concepts. It also discusses the history of the area, defines the characteristics of such a resolve, it argues the importance of research, presents the objectives of the thesis and concludes with the hypothesis that will solve the problem.
+
+% Introducción
+\item[Capítulo 1] Inicia con una introducción a los sistemas empotrados, comenta los antecedentes del área, define las características del ejemplo a resolver, argumenta la importancia de ésta investigación, presenta los objetivos de la tesis y concluye con la hipótesis que dará solución al problema planteado.
+
+% Fundamento teórico
+\item[Chapter 2] contiene los fundamentos teóricos que sustentan éste trabajo y un análisis del estado del arte relativo a la investigación. %A fin de mejorar el orden de exposición de los conceptos, éstos fueron separados en dos bloques. El primero de ellos expone conceptos de la arquitectura de una plataforma hardware. El segundo bloque explora los conceptos detrás del software presente en un sistema empotrado.
+
+
+%Desarrollo e Implementación
+%\item[Chapter 3] %describe el proceso de %diseño de una plataforma hardware para un sistema empotrado.
+%diseño e implementación de un sistema empotrado. Ello implica la configuración, integración, síntesis y programación de la plataforma hardware y la compilación e integración del sistema operativo.% a la plataforma antes mencionada.
+
+%Desarrollo e Implementación
+\item[Chapter 3] Describe el proceso de diseño del sistema empotrado 
+
+% Pruebas y resultados
+\item[Chapter 4] Este capítulo contiene las pruebas y los resultados de cada una de las etapas en el desarrollo y la implementación del sistema empotrado.
+
+\item[Chapter 5] Conclusiones y trabajo futuro.
+
+\item[bibliography] contiene un índice ordenado alfabéticamente. Las referencias de éste índice permitirán al lector encontrar las fuentes de información que coadyuven a profundizar en los temas expuestos en ésta tesis.
+
+\item[Apéndices A al D.]{ }\hspace*{0.3cm} % # # # # # Usar un espacio negativo   # # # # # # # 
+
+\begin{description}
+\item[A. ]Tarjeta de desarrollo S3EBOARD. Describe los componentes de la tarjeta S3EBOARD utilizados en la  implementación del sistema empotrado.
+
+\item[B. ]Asistente de configuración. Describe el proceso de configuración de una plataforma hardware usando el asistente de configuración de XPS.
+
+\item[C. ]Descripción hardware. Contiene la codificación textual de la plataforma hardware del sistema empotrado.
+
+\item[D. ]Código fuente. Contiene listas de código fuente correspondientes a los programas creados para el sistema empotrado.
+
+\end{description}
+% Fin de la descripción de los apéndices
+
+\end{description}% Fin de la descripción de la organización del documento

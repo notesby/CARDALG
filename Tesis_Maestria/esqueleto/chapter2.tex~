@@ -1,0 +1,229 @@
+% CAP 2
+\chapter{Fundamento teórico}
+Este capítulo presenta ...
+
+\section{Elemento teórico A}
+Un sistema A ...
+
+Los elementos de ... son:
+\begin{itemize}
+\item{Unidad de procesamiento}
+\item{Elemento de almacenamiento de datos}
+\item{Dispositivos de entrada y salida}
+\end{itemize}
+
+La figura \ref{esquema_gral_plat_hw} muestra un esquema detallado con las características comúnmente observadas en estos sistemas. En esta figura se observa la unidad central de procesamiento, la memoria como elemento de almacenamiento y los periféricos como dispositivos de entrada/salida. También se puede observar el modelo híbrido para una arquitectura tipo Harvard dónde los buses para la memoria, las unidades de co-procesamiento, y los periféricos están separados.
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=12cm]{fig/ARQ_SE_DETALLE_1.jpg} 
+  \caption[Esquema general de una plataforma hardware.]%
+  {Esquema general de una plataforma hardware.}
+  \label{esquema_gral_plat_hw}
+\end{figure}
+
+El modelo propuesto de la plataforma hardware para el sistema empotrado de esta tesis se basa en esta arquitectura. A continuación se describirán los detalles más significativos de los elementos hardware a fin de poner en contexto las diferentes tecnologías existentes. Las siguientes sub-secciones describirán las principales características de cada uno de estos elementos.
+
+\subsection{Procesadores}
+Las unidades de procesamiento usadas en sistemas empotrados van desde microcontroladores de 8 bits hasta los procesadores multi núcleo de 64 bits. Ellos pueden dividirse en dos grades tipos. \textsl{Hard Processors} y \textsl{Soft Processors}. Un \textsl{Hard Processors} es aquel que se construye durante el proceso de fabricación del circuito integrado. Un \textsl{Soft Processors} es aquel que se sintetiza en un dispositivo reconfigurable. Este último tipo de procesadores es modelado a través de  su descripción comportamental plasmada mediante un lenguaje de descripción hardware(\texttt{HDL}); estos lenguajes son usados para describir modelos de comportamiento y son mostrados en la tabla \ref{tabla_hdls}.
+
+\begin{table}[ht]
+\begin{center}
+  \begin{tabular}{|l|p{9cm}|}
+    \hline
+    Nombre		& Descripción \\
+    \hline
+    ABEL		& Advanced Boolean Expression Language, adquirido por Xilinx \\
+    \hline
+    AHDL		& Altera HDL. Lenguaje propietario desarrollado por Altera Corporation \\
+    \hline
+    Handel-C		& HDL compatible con C \\
+    \hline
+    MyHDL		& HDL basado en Python \\
+    \hline
+    SystemC		& Conjunto estandarizado de bibliotecas de clases para C++ para diseño hardware \\
+    \hline
+    SystemVerilog	& Un superconjunto de Verilog destinado a mejorar el proceso de diseño y verificación de sistemas \\
+    \hline
+    Verilog		& HDL ampliamente utilizado en el desarrollo de sistemas \\
+    \hline
+    VHDL		& VHSIC HDL \\
+    \hline
+  \end{tabular}
+ \end{center}
+ % \caption[SHORT]{TITLE}
+ \caption[Lenguajes HDL para descripción comportamental de sistemas]{Lenguajes HDL para descripción comportamental de sistemas.}
+ \label{tabla_hdls}
+\end{table}
+
+\nomenclature{ABEL}{Advanced Boolean Expression Language\\(\textsl{Lenguaje avanzado de expresiones boleanas})}%[lenguaje de descripción hardware}
+\nomenclature{AHDL}{Altera HDL}
+\nomenclature{Hard Processor}{\textsl{Circuito integrado que contiene un procesador}}
+\nomenclature{Soft Processor}{\textsl{Procesador sintetizado en un dispositivo reconfigurable}}
+\nomenclature{HDL}{Hardware Description Language \\(\textsl{Lenguaje de descripción hardware}) } % (lenguaje de descripción hardware)}
+\nomenclature{VHDL}{VHSIC Hardware Description Language\\(\textsl{Lenguaje de descripción hardware para circuitos integrados de muy alta velocidad})}
+% \nomenclature{VHSIC}{Very High Speed Integrated Circuit\\(\textsl{Circuito integrado de muy alta velocidad})}
+\nomenclature{Verilog}{Lenguaje de descripción hardware}
+
+\subsubsection{Procesadores hardware}
+Los procesadores hardware usados en los sistema empotrados abarcan un amplio espectro de dispositivos con muy diversas características. Podemos encontrar dispositivos que implementan un modelo de arquitectura tipo Von Neuman o tipo Harvard,\cite{murdoca-arq-comp} o que ejecutan un conjunto de instrucciones reducidas(RISC) o un conjunto de instrucciones complejo(CISC), de cualquier forma, tamaño o tipo los procesadores hardware para S.E. pretenden proveer la capacidad de computo necesaria para un sistema específico. Es así como encontramos diversos fabricantes con dispositivos similares. Las diferencias están en que algunos fabricantes incluyen módulos hardware para hacer mas eficiente el consumo de energía, otros proveen recursos hardware para encriptación, para el procesamiento de vídeo, otros ofrecen encapsulados mas pequeños y livianos, etc.
+\nomenclature{RISC}{Reduced Instruction Set Computer
+			\\(\textsl{Computadora con un conjunto de instrucciones reducidas})}
+\nomenclature{CISC}{Complex Instruction Set Computer
+			\\(\textsl{Computadora con un conjunto de instrucciones complejas})}
+
+Entre los principales fabricantes de procesadores hardware para sistemas empotrados encontramos  ADC, AMCC, AMD, Analog Devices, ARC, ARM, Atmel, BAE Systems, Broadcom, Cirrus Logic, Freescale Semiconductor, Fujitsu, IBM, IDT, Infineon, Intel, LSILogic, Luminary Micro, Marvell, Microchip, MIPS Technologies, Motorola, National Semconductor, NEC, NXP, Renesas, SHARP Microelectronics, Rabbit Semiconductor, Samsung, STMicroelectronics, Texas Instruments, Toshiba y ZiLOG. El  cuadro \ref{tabla_cpus_plat_hw} muestra un breve listado de procesadores y plataformas hardware donde se encuentran integrados.
+
+\begin{table}[ht]
+\begin{center}
+  \begin{tabular}{|l|l|l|}
+    \hline
+    CPU	& Fabricante 	 & Plataforma hardware\\
+    \hline
+    AMD G-T56N\cite{board-db-ft1}	& AMD	 & DB-FT1 Development Board \\
+    \hline
+    Atom E600c\cite{board-msmst}	& Intel  & Kontron MICROSPACE MSMST  \\
+    \hline
+    PXA270\cite{board-pxa270}& Intel  & Marvell PXA270 \\
+    \hline
+%     Nios II	& Altera & P0306 Embedded Evaluation Kit\\
+%     \hline
+    OMAP3530\cite{board-beagle-board}&Texas Instruments & Beagle Board \\
+    \hline
+    OMAP4430\cite{board-pandaboard}& Texas Instruments & Pandaboard\\
+    \hline
+%     Spartan 3E	& Xilinx & S3EBOARD \\
+%     \hline
+    PowerPC\cite{board-ml507}& Xilinx & ML507 \\
+    \hline
+%     Virtex 6	& Xilinx & ML605 \\
+%     \hline
+  \end{tabular}
+ \end{center}
+ % \caption[SHORT]{TITLE}
+ \caption[Lista de procesadores y plataformas hardware]{Lista de procesadores y plataformas hardware}
+ \label{tabla_cpus_plat_hw}
+\end{table}
+
+\subsubsection{Procesadores software}
+Los \textsl{soft processors} se obtiene tras la síntesis de código HDL. 
+Su implementación se realiza en dispositivos programables como CPLDs o FPGAs.
+
+\paragraph{FPGA} El arreglo de compuertas programables en campo o \textmd{FPGA} por sus siglas en inglés(\textsl{Field Programmable Gate Array}), contiene lógica programable por el usuario a través de bloques lógicos configurables o \textsf{CLB}(Configurable Logic Block). Éstos CLBs permiten emular el funcionamiento de dispositivos hardware a través de sus elementos lógicos. En FPGAs de media y alta densidad es posible implementar un \textsl{soft processor} junto con los elementos necesarios para la creación de un plataforma hardware básica. El número de elementos lógicos necesarios para su implementación depende del tipo de procesador usado y de las características de los demás elementos. La figura \ref{fpga-arch} muestra los principales elementos de un FPGA, los bloques lógicos, de entrada / salida y la matriz de interconexiones.
+\nomenclature{FPGA}{Field Programmable Gate Array
+			\\(\textsl{Arreglo de compuertas programable en campo})}
+\nomenclature{CLB}{Configurable Logic Block
+			\\(\textsl{Bloque lógico configurable})}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=11cm]{fig/fpga02.jpg} 
+  \caption[Diagrama a bloques de la estructura interna del FPGA.]%
+  {Diagrama a bloques de la estructura interna del FPGA.}
+  \label{fpga-arch}
+\end{figure}
+
+Al realizar el diseño de un soft processor se tiene la capacidad para modificar la funcionalidad del mismo y adaptarla a los requerimientos de plataformas hardware para problemas específicos. Ésto permite al desarrollador incluir los elementos necesarios para dar solución a su problema al ser capaz de parametrizar los componentes del sistema y con ello dar versatilidad a la implantación. La síntesis es el proceso automático mediante el cual código HDL es interpretado y transformado en código de bajo nivel que contiene la descripción comportamental equivalente.[ref-a] Dicha descripción puede estar codificada en un nivel de transferencia de registros(RTL - Register Transfer Level) o contener una lista de interconexión de compuertas. El último proceso en la síntesis es la traducción RTL (o de interconexión de compuertas) a un código de configuración específico para cada dispositivo. Ésta traducción se basa en bibliotecas definidas por los fabricantes y desarrolladas en función de los elementos internos de cada dispositivo. Generalmente los fabricantes de dispositivos reconfigurables proporcionan las herramientas software necesarias para realizar ésta síntesis. Sin embargo, en algunas ocasiones el compilador de código HDL no infiere correctamente el funcionamiento de algún determinado elemento hardware. Para solucionar ésto y a fin de reducir el tiempo de síntesis, los fabricantes proveen instrucciones especiales que tienen la finalidad de utilizar recursos hardware específicos que se encuentran en los dispositivos. Al utilizar éstas instrucciones especiales, el código HDL se hace dependiente del dispositivo. Algunos fabricantes de dispositivos programables han desarrollado soft processors a fin de que los consumidores puedan incorporarlos en sus diseños. El dispositivo que se utiliza con mayor frecuencia para la síntesis de éstos procesadores es el FPGA por su estructura interna y la cantidad de elementos lógicos disponibles los cuales van desde unos cuantos miles a varios millones. Sin embargo no es el único dispositivo, existen otros dispositivos que son capaces de contener la síntesis de un elemento procesador. La tabla t1* muestra las principales características de los soft processors de 32 bits y el desarrollador o creador del del mismo. Además del soft processor, el FPGA sintetiza diversos elementos necesarios para generar la plataforma hardware. Entre ellos podemos mencionar a buses de interconexión, árbitro de acceso al bus, circuitería para el control de transferencia de datos de los periféricos, Interfaz de acceso a memoria, multiplicadores hardware elementos para la administración de las diversas señales de sincronización, interfaz de conexión con otros dispositivos externos, serialización y des-serialización de las comunicaciones y arquitecturas lógicas definidas por el usuario que implantan alguna función especializada.
+
+La tabla \ref{tabla_soft_cpus_plat_hw} presenta cinco plataformas de desarrollo para \textsl{soft processors} con el nombre de la plataforma hardware de desarrollo.
+
+\begin{table}[ht]
+\begin{center}
+  \begin{tabular}{|l|l|l|}
+    \hline
+    CPU	& Fabricante & Plataforma hardware\\
+    \hline
+    Micro32\cite{sboard-micro32} & Lattice &  LatticeMico32/DSP Development Board \\
+    \hline
+     Nios II\cite{sboard-nios2}& Altera  & DE2-115 board\\
+    \hline
+     MicroBlaze\cite{sboard-s3e-starter}& Xilinx  & S3EBOARD \\
+    \hline
+    PowerPC\cite{board-ml507}& Xilinx & ML507 Virtex-5 FPGA Embedded Kit \\
+    \hline
+    Soft ARM IP\cite{sboard-ml605}& Xilinx & ML605 Virtex-6 FPGA Embedded Kit \\
+    \hline
+  \end{tabular}
+ \end{center}
+ % \caption[SHORT]{TITLE}
+ \caption[Lista de \textsl{soft processors} y plataformas hardware]{Lista de \textsl{soft processors} y plataformas hardware asociadas}
+ \label{tabla_soft_cpus_plat_hw}
+\end{table}
+
+\subsection{Elementos de almacenamiento}
+Los elementos de almacenamiento de datos en un S.E. pueden clasificarse en dos tipo: volátiles y no-volátiles. Dentro del primer tipo se encuentran la memoria RAM, DDR, SDRAM, FBDDR y otros.
+Dentro de los tipos no-volátiles encontramos la memoria ROM, EPROM, EEPROM, NOR--FLASH, NAND--FLASH y otras.
+La gran diversidad de dispositivos se debe en parte a las características del bus de comunicación y el método de acceso a la información. Las memorias tipo SPI implementan un protocolo de comunicación serial, pero no son los únicos, el IIC(Inter-Integrated Circuit),\footnote{También llamado I\textsuperscript{2}C} también implementa una interfaz serial. 
+\nomenclature{SPI}{Serial Peripheral Interface
+			\\(\textsl{Interfaz periférica serial})}
+\nomenclature{IIC}{Inter-Integrated Circuit
+			\\(\textsl{Circuito inter-integrado})}
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+\subsection{Dispositivos de entrada y salida}
+Los dispositivos de entrada y salida están presentes en todo S.E.
+A través de ellos podemos comunicarnos con ellos. Generalmente se utiliza un protocolo de digital de comunicaciones pudiendo ser ésta serial o paralela, con elementos de entrada acompañados por interfaces hardware/software que permiten la interacción con el ser humano. %, e.g. switch, botón, led, Display, LCD, teclado, ratón, etc. Su variedad es muy amplia por ello sólo se menciona el concepto general de ellos.
+%\nomenclature{LCD}{Liquid Crystal Display
+%			\\(\textsl{Pantalla de cristal líquido})}
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+\subsection{Reloj}
+Los sistemas con procesadores requieren de señales de sincronización de ahí que un sistema empotrado implemente las señales de sincronización a través de un administrador de señales de reloj. Ésta base de tiempo puede ser generada por un oscilador de cuarzo, por elementos RC, o por alguna otra fuente. El reloj principal del sistema es utilizado para establecer tiempos máximos de operación, para asignar tiempo de ejecución a los procesos en la cola de trabajos, se utiliza como referencia de tiempo por el planificador de procesos del sistema operativo, sincroniza interrupciones, coadyuva en la sincro-transmisión de datos y vigila la operación de sistema a través del \texttt{watchdog timer} en los casos en que éste último se implemente como parte de la plataforma.
+
+
+% * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+\section{Elementos software}
+
+El software de un sistema empotrado puede simplemente ser un programa escrito en ensamblador. Con mucha frecuencia es necesario que dichos sistemas interactúen con otros dispositivos o usuarios por lo que a estos sistemas se integran servicios de comunicación y/o procesamiento de datos. 
+
+A fin de disminuir el tiempo de desarrollo y la complejidad de los proyectos, con frecuencia se incorporan sistemas de comunicación, criptografía o administración de tareas para dotar al sistema  con las capacidades de comunicación que su entorno requiera y en los casos que se requiera  incluir en el sistema un administrador de procesos para ejecutar procesos en un orden de prioridad preestablecido.
+
+
+El sistema operativo es un conjunto de subsistemas que proveen servicios a capas superiores de software para su interacción con el mundo exterior (periféricos, disp. de almacenamiento, interfaz de E/S, etc). Atiende interrupciones, ejecuta procesos, administra el orden de ejecución de procesos, controla el acceso a puertos de E/S, provee servicios de almacenamiento, control de acceso, etc.
+La clasificación de los sistemas operativos es tan variada como lo son sus características, pues cada uno de ellos se ha desarrollado para coadyuvar en la solución de un problema determinado. Un parámetro importante es el tiempo de ejecución garantizado para un proceso. Esta característica ha diferenciado a un sistema de \textit{tiempo real} de uno que no lo es. Este tipo de sistemas también tiene la habilidad de aislar un proceso; si un proceso llegara a generar un fallo en su ejecución, los otros procesos no verían alterado su ciclo de operación - ejecución. En base a ello se creó la clasificación \textsl{Real Time Operating System} o \textsl{RTOS} por sus siglas en inglés. Aún dentro de los RTOS existen dos sub-clasificaciones, los \textsl{Soft RTOS}\nomenclature{Soft-RTOS}{Soft Real Time Operating System \\(\textsl{Sistema operativo de tiempo real ligero})} y los \textsl{Hard RTOS}\nomenclature{Hard-RTOS}{Hard Real Time Operating System \\(\textsl{Sistema operativo de tiempo real duro})}. El primero de ellos se refiere a un tipo de sistema operativo que cumple la mayor parte de las veces con la periodicidad de asignación de tiempo de ejecución para un proceso, sin embargo, esta condición no  se garantiza aunque puede obtenerse un análisis estadístico para determinar los ciclos de operación. La mayoría de los sistemas basados en el kernel Linux pueden adaptarse para lograr ser clasificados como sistemas \textsl{Soft RTOS}. Un \textsl{Hard RTOS} es aquel que garantiza bajo cualquier circunstancia de operación la asignación de tiempo del procesador para ejecutar una tarea de manera periódica, estas restricciones son muy difíciles de cumplir y por lo general sólo se aplican en la solución a problemas críticos dónde el tiempo de respuesta es un factor determinante para la correcta operación del sistema.  
+
+\subsection{Sistemas Operativos no-RTOS}
+Un sistema \textsl{no-RTOS} no puede garantizar la asignación de tiempo del procesador de manera periódica a un proceso en particular, sin embargo si puede garantizar que el proceso recibirá eventualmente tiempo de ejecución en el procesador. Esta flexibilidad simplifica la operación del planificador de procesos y de las estructuras y servicios software asociados a la administración de procesos dentro del sistema operativo.
+
+***
+
+El desarrollo de sistemas empotrados requiere pleno acceso al código fuente del sistema operativo así como un acceso a los detalles de la plataforma hardware. Con la información de configuración de la plataforma hardware se puede configurar el kernel Linux para una plataforma de desarrollo como las empleadas en sistemas empotrados. Esta es la principal motivación al seleccionar a Linux como sistema operativo de la plataforma hardware. De entre los diversos proyectos de desarrollo de sistemas operativos libres, tipo Linux, accesibles y portados para la arquitectura MicroBlaze destacan uCLinux\cite{so-uclinux} y PetaLinux\cite{so-petalinux}. El primero de ellos se desarrolló en la universidad de Queensland en Australia por el grupo de desarrollo de Dionne, Jeff D., Albanowski, Kenneth, a este proyecto se portó el conjunto de librerías de uCLibc para adaptarlo al \textsl{soft processor} MicroBlaze. La plataforma de desarrollo no incluía una MMU por ello las funciones de biblioteca relacionadas a la administración de memoria fueron modificas. Algunas de ellas emulan funciones de un control de acceso como las presentes en un MMU. 
+PetaLinux es un conjunto de herramientas que generan un sistema operativo. Este proyecto se derivó de uCLinux y ha mantenido un activo desarrollo hardware/software para las plataformas de Xilinx. John Williams creo la empresa PetaLogix y es desarrollador del sistema operativo PetaLinux. Una de las principales ventajas de este sistema operativo es la creación de un ambiente controlado de desarrollo, esto significa que el entorno de desarrollo de un sistema operativo PetaLinux utiliza sus propias herramientas, compiladores, scripts, periféricos, etc., para la generación del kernel del sistema. Este ambiente controlado coadyuva en el proceso de desarrollo, configuración, compilación y extensión de un sistema operativo empotrado. Por ello este sistema fue seleccionado para implantarse en la plataforma hardware y generar así un sistema empotrado con una funcionalidad básica. 
+
+\textsl{uCLib} es un conjunto de bibliotecas optimizadas para arquitecturas con recursos hardware limitados. Estas características son ideales para los sistemas empotrados. Las comidad GNU/Linux ha portado uCLibc para ejecutarse en ARM, i386, MIPS, PowerPC, SH, SH64, TIC6x y X86\_64. El conjunto de bibliotecas de uCLibc es mucho mas pequeño que las librerías que encontramos en Libc para arquitecturas populares como las basadas en x86. Actualmente el desarrollo de estas librerías es mantenido por Erik Andersen. 
+
+
+El \textsl{kernel Linux}\nomenclature{Kernel Linux}{Núcleo del sistema operativo Linux} es un conjunto de capas software que proveen servicios a los programas de usuario. Tiene la finalidad de abstraer los detalles de interacción entre el mundo real y facilitar el uso de los recursos hardware y software. La figura \ref{capas-sistema} muestra un esquema en capas de la conformación de un sistema empotrado. Para abstraer las particularidades del hardware se han desarrollado diversos subsistemas;  el sub-sistema de almacenamiento de información provee servicios de alojamiento, creación, eliminación, adición, etc. a los programas que necesitan almacenar información. Sólo basta con invocar una llamada al sistema para que ésta se encargue de las operaciones y los detalles de interconexión con los dispositivos de almacenamiento. Una tarea que el usuario ya no tendrá que atender. El kernel provee servicios de acceso a dispositivos, administración de memoria, planificación de procesos, atención de interrupciones, verificación de permisos de ejecución, asignación de tiempo de ejecución, atención de llamadas al sistema, etc. La figura \ref{kernel-layers} muestra un esquema en el que se aprecia la interacción existente entre los programas de usuario, el kernel del sistema operativo y los dispositivos hardware.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=10cm]{fig/capas_del_so.png} 
+  \caption[Representación en capas de la conformación de un sistema.]%
+  {Representación en capas de la conformación de un sistema.}
+  \label{capas-sistema}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=10cm]{fig/app_ker_hw.png} 
+  \caption[Capas de la interfaz del kernel de Linux.]%
+  {Capas de la interfaz del kernel de Linux.}
+  \label{kernel-layers}
+\end{figure}
+
+
+Los \textsl{módulos} del kernel Linux son un mecanismo para insertar y remover código a nivel de kernel en tiempo de ejecución. Para ello se ha desarrollado una serie de reglas a través de las cuales se agrega o remueve alguna funcionalidad del kernel o núcleo del sistema. Aún cuando existen reglas bien definidas, estructuras de datos arbóreas, prototipos de funciones, mecanismos de sincronización, \textit{spin locks}, Mutexes, semáforos, creación de procesos no evacuables, \textit{memory barriers}, etc.,  los errores de código a este nivel podrían causar que, ante un error, el sistema operativo no pueda autorecuperarse derivando ello en la necesidad de re-iniciar el sistema en su totalidad. Existe  mecanismos de protección del kernel que en algunos casos impiden su colapso, tiene la misión de monitorear las funciones mas vitales del kernel. Los hilos de ejecución de kernel\footnote{También llamados kernel threads} son un tipo especial de hilo; a través de ellos se ejecutan tareas de muy alta prioridad como la planificación de tareas, la sincronización de estructuras de internas del kernel, las llamadas al sistema, etc., son las encargadas de ejecutar código de nivel kernel a nombre del usuario ello  implica el uso de mecanismos de protección y sincronización. Cuando el núcleo del kernel se enfrenta a problemas insoslayables utiliza un último mecanismo de operación a través de una llamada a \texttt{show\_trace\_task()} para generar la traza de ejecución de código que generó el error; esta funcionalidad se denomina \textit{kernel back trace}. El cuadro \ref{kernel-backtrace} muestra la traza de ejecución derivada del error de paginación causado por un controlador de dispositivo que intenta acceder a una región de memoria para la cual no tiene permisos de lectura / escritura. 
+
+Los avances logrados por la comunidad de desarrolladores GNU/Linux para reducir la complejidad en el proceso de configuración y compilación del kernel y con la automatización en la compilación del ecosistema de aplicaciones y utilerías alrededor del kernel, ha permitido adaptar este sistema operativo en plataformas hardware emergentes.
+
+En la actualidad existen herramientas de desarrollo para sistemas empotrados que asisten al desarrollador en el proceso de configuración de una plataforma hardware. Un ejemplo de ellas es \textsl{Suse Estudio} en la que simplemente se seleccionan los elementos que integrarán el sistema; la aplicación se encarga de compilar, integrar, y empaquetar el sistema operativo para una plataforma x86 compatible. Sin embargo problemas como el descrito por la traza de ejecución del cuadro \ref{kernel-backtrace} muestran que el desarrollo es complejo y en ocasiones \textit{obscuro}\footnote{Concepto genérico que engloba definiciones como: ininteligible, confuso, sin documentación, difícil de interpretar o depurar, etc.}.
+
+\begin{table}
+\begin{tabular}{p{4.5in}}
+\begin{verbatim}
+ HHOOLAA;\
+\end{verbatim}
+\end{tabular}
+\caption[Kernel trace]{Kernel Back Trace generado por un error en el controlador de dispositivo.}
+\label{kernel-backtrace}
+\end{table}

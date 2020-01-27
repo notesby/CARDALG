@@ -1,0 +1,77 @@
+% + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+% + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+%  ____    _   _       _   _                                   __   _
+% | __ )  (_) | |__   | | (_)   ___     __ _   _ __    __ _   / _| (_)   __ _
+% |  _ \  | | | '_ \  | | | |  / _ \   / _` | | '__|  / _` | | |_  | |  / _` |
+% | |_) | | | | |_) | | | | | | (_) | | (_| | | |    | (_| | |  _| | | | (_| |
+% |____/  |_| |_.__/  |_| |_|  \___/   \__, | |_|     \__,_| |_|   |_|  \__,_|
+%                                      |___/
+%
+% + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+% + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+%
+% Embedded computing, A VLIM Approach to Architecture, compilers and Tools. Joseph A. Fisher, Paolo Faraboschi, Cliff Young, 2005, by Elsevier Inc. Morgan Kaufmann Publishers. isbn: 1-55860-766-8, printed in USA.
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\cleardoublepage
+\pagebreak
+\addcontentsline{toc}{chapter}{Bibliograf\'{i}a}
+\begin{thebibliography}{99}
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\bibitem{aylor96}
+%Autor:
+Aylor, James H. \textsl{et al}. 
+%  Año de publicación:
+  1996.
+% Título de la publicación:
+  \emph{The codesign of embedded systems: a unified hardware/software representation}
+%%%    [Co-diseño de sistemas empotrados: una representación unificada de hardware/software].
+% Edición:
+  Primera edición.
+% Editorial:
+  Kluwer Academic Publishers.
+% Lugar de publicación:
+  AH Dordrecht. The Netherlands.
+% Otros:
+  \texttt{ISBN~0-7923-9636-7}.
+  Capítulo~2. Páginas 11 y 12.
+% * * * * * * * * * * * * * *
+
+\bibitem{godson_processor}
+%Autor:
+Weiwu Hu. \textsl{et al}. 
+%  Año de publicación:
+  4 de Mayo del 2006.
+% Título de la publicación:
+  \emph{Microarchitecture and Performance Analysis of Godson-2 SMT Processor.}
+% Edición:
+%  Primera edición.
+% Editorial:
+  IEEE.
+% Lugar de publicación:
+  %
+  \url{http://www.cecs.uci.edu/~papers/iccd2006/papers/paper_38.pdf}
+% Otros:
+  %\texttt{ISBN?}.
+  %Capítulo~2. Páginas 11 y 12.
+% * * * * * * * * * * * * * *
+
+\bibitem{godson_500}
+%Autor:
+ Christopher Mims.
+% Año de publicación:
+  22 de Octubre de 2010.
+% Título de la publicación:
+  \emph{Chinese Chip Closes in on Intel, AMD.}
+% Edición:
+  Technology Review.
+% Editorial:
+  ACM.
+% Lugar de publicación:
+  %
+  \url{http://technews.acm.org/archives.cfm?searchterm=godson&fo=2010-10-oct/oct-22-2010.html}
+% Otros:
+% * * * * * * * * * * * * * *
+
+
+\end{thebibliography}

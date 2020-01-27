@@ -1,0 +1,86 @@
+% CAP 3
+\chapter{Análisis y diseño}% de las funciones hardware del sistema empotrado}
+El diseño del sistema\cite{MDE93} ...
+
+
+\section{Generar $\alpha$.}
+Pretende desarrollar una ...
+
+\subsection{Obtención de requerimientos}
+Los req....
+
+\subsection{Análisis de requerimientos}
+Se requiere ...
+
+\subsection{Diseño}
+Diseñar una 
+
+
+\subsection{Implementación}
+La implementación de 
+
+\section{Generación $\alpha 2$}
+Usar las herramientas de ...
+
+\subsection{Obtención de requerimientos}
+Configurar, integrar, compilar, generar e instalar ... de $\alpha$ ...
+
+
+
+\section{Desarrollo de $\beta$}
+Estos modelos de desarrollo para sistemas empotrados son válidos durante las construcción de prototipos de sistemas empotrados; para que estos  modelos de desarrollo puedan aplicarse a sistemas empotrados comerciales,  es necesario aumentar el nivel de detalle en cada etapa y la especificación de las relaciones inter-etapa; además es necesario incluir una metodología  de desarrollo para cada etapa, desde la recopilación de requerimientos hasta el mantenimiento del sistema. Todo ello con la finalidad de cumplir con los  estándares para el desarrollo de sistemas como los presentes en NMX-I-059/02-NYCE-2011 (MoProSoft) ,  ISO /IEC 15504 e ISO 9126.
+
+La tabla anterior muestra los parámetros más significativos para la configuración de POKY. Existen otros archivos de definición de parámetros necesarios para la configuración y compilación exitosa del kernel.
+
+Los  'meta-layer' de xilinx pueden clonarse del repositorio \\
+GIT: git://git.yoctoproject.org/meta-xilinx 
+
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=10cm]{fig/state-diag-reconfig-01.png} 
+  \caption[Esquema de operación de una función hardware.]%
+          {Esquema de operación de una función hardware con la capa software del kernel y con el programa de usuario.}
+  \label{sw-layer-01}
+\end{figure}
+
+Secuencia de operación del modelo de ejecución híbrido para una función hardware.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=14cm]{fig/seq-diag-01.png} 
+  \caption[Secuencia de operación del modelo de ejecución híbrido.]%
+          {Secuencia de operación del modelo de ejecución híbrido.}
+  \label{sw-layer-02}
+\end{figure}
+
+
+La ejecución de las funciones hardware puede ser bloqueante o no. En el primer modelo, la aplicación de usuario espera la terminación de la tarea, en el segundo caso, la aplicación se 'duerme' hasta recibir una señal para reanudar su ejecución. Sólo las funciones del tipo 2, es decir, las funciones de paso de argumentos por referencia soportarán la ejecución bloqueante La figura \ref{sw-layer-03} muestra esta funcionalidad.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=14cm]{fig/use-case-blocking-01.png} 
+  \caption[Modelo de ejecución.]%
+          {Modelo de ejecución de funciones hardware.}
+  \label{sw-layer-03}
+\end{figure}
+
+\subsection{Análisis y diseño de las funciones hardware con paso de parámetros por valor}
+Para ejemplificar el proceso de diseño se seleccionaron dos funciones la primera de ellas es un sumador completo de 32 bits con Carry Out y Carry In. La segunda función es un multiplicador de 8 bits con tres multiplicandos. Ambas funciones se conectarán al bus PLB dentro de la plataforma hardware usando un modelo estático de conexión, es decir, la función se integrará a la plataforma hardware la cual deberá regenerar los archivos de configuración para que incluyan a la nueva función.
+
+use-case-blocking-01
+
+
+\subsection{Análisis y diseño de las funciones hardware con paso de parámetros por referencia}
+
+
+\section{Desarrollo de capas de servicios software para la ejecución de funciones hardware.}
+
+\subsection{Comunicación a nivel kernel}
+Esta sección diseña una capa software a nivel de kernel que ofrece servicios de envío y recepción de datos para la función hardware.
+Para ello es necesario crear una receta en POKY para que a través de ella se acceda a la función hardware. 
+
+\subsubsection{Creación de receta} A continuación se presenta la receta de poky utilizada para la compilación de un módulo kernel en el que se desarrollará una  capa software para el acceso a los recursos hardware en la plataforma. Es necesario mencionar que el nombre de la receta está en función del nombre del paquete y la versión del mismo. De manera específica el archivo hello-agc-mod\_0.1.bb se muestra en el apéndice D:
+
+\subsection{Desarrollo de la biblioteca dinámica}
+Esta sección desarrolla una biblioteca dinámica encargada de atender las peticiones de llamadas  a función generadas por el programa de usuario. A su vez generará las llamadas al sistema que deberán configurar el hardware y enviar los datos para ser procesados.
+
+

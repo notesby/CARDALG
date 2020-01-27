@@ -1,0 +1,106 @@
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% portada.tex-- Portada para tesis de posgrado de la Facultad de Ingeniería. UNAM.
+% Realizada por Gengis Kanhg Toledo Ramírez (gengiskanhg.geo@yahoo.com)
+% Basada en la portada escrita por: Tim Rohrer, LT, USN--31 July 1996 del NPS, Monterey, California. USA.
+% y en el manual The Not So Short Introduction to LaTeX de Tobiaz Oetiker
+% Eres libe de modificar este archivo de acuerdo a tus necesidades.
+% 13 de Junio de 2007
+% 
+% Compile with:
+% pdflatex portada.tex
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% Modificada por Julio Fernando Jimenez Vielma  CIC-IPN
+% 2011
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% Adaptación para la maestría MCIC-CIC-IPN
+% Alejandro Gómez <alegzc@yahoo.com.mx>
+% 2012
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\documentclass{book}
+%\usepackage[latin1]{inputenc} ¿used in Windows?
+\usepackage[utf8]{inputenc} % Linux's text encoding scheme
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+
+\setlength{\voffset}{-0.5cm}
+\setlength{\hoffset}{0.7cm}
+\setlength{\headsep}{0pt}
+\setlength{\headheight}{0pt}
+\setlength{\oddsidemargin}{-0.8in}
+\setlength{\marginparwidth}{-0.5cm}
+\setlength{\textwidth}{19.5cm}
+\setlength{\footskip}{2pt}
+\setlength{\topmargin}{0in}
+\setlength{\textheight}{25cm}
+\setlength{\fboxrule}{3pt}
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{tabular}{p{3cm}p{15.0cm}}
+\includegraphics[width=2.5cm]{fig/ipn.png}
+\begin{center}
+\rule[1cm]{1.5mm}{14.5cm}%vertical
+\hspace{2pt}
+\rule[0cm]{0.7mm}{15.5cm}%vertical
+\hspace{2pt}
+\rule[1cm]{1.5mm}{14.5cm}%vertical
+\end{center}
+\includegraphics[width=3cm]{fig/cic.png}
+&
+\vspace{-3.4cm}
+\begin{center}
+\Large{ \bf{INSTITUTO POLITÉCNICO NACIONAL}}
+\\
+\rule[0mm]{15.0cm}{0.35mm}%horizontal
+\\
+\rule[3mm]{15.0cm}{1.2mm}%horizontal
+\\
+\textbf{CENTRO DE INVESTIGACIÓN EN COMPUTACIÓN}
+
+\vspace{2.8\baselineskip}
+
+Laboratorio de Microtecnología y Sistemas Embebidos
+
+\vspace{2.3\baselineskip}
+
+{\Large \bf{METODOLOGÍA DE DESARROLLO DE FUNCIONES HARDWARE PARA BIBLIOTECAS ESTÁTICAS}}
+
+%\vfill
+\vspace*{1.2cm}
+
+\huge{\bf TESIS}
+
+\vspace*{1.0cm}
+{\large QUE PARA OBTENER EL GRADO DE:}
+
+\vspace*{0.2cm}
+
+\Large{\bf MAESTRO EN CIENCIAS EN INGENIERÍA DE CÓMPUTO CON OPCIÓN EN SISTEMAS DIGITALES}
+
+%\vspace*{0.2cm}
+%\large{MEC�NICA - DISE�O MEC�NICO}
+
+\vspace*{0.2cm}
+P R E S E N T A:
+
+\vspace*{1.0cm} {\Large \bf{Alejandro Gómez Conde}}
+
+\vspace*{1.0cm}
+Directores de tesis:
+
+\large{\bf Dr. Marco Antonio Ramírez Salinas\\Dr. Hugo César Coyote Estrada}
+
+\vspace*{1.8cm}
+\Large{Mexico, D.F.}\hspace*{5cm}\Large{Octubre 2012}
+
+\end{center}
+
+\end{tabular}
+
+%\end{center}
+\newpage % La razón de esta página en blanco es la de mantener el orden (izq, derecha)
+%          en el resto del documento al que se adjuntará...
+\thispagestyle{empty}
+$ $ % junk
+\end{document}

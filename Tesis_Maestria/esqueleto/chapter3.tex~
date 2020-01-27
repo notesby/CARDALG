@@ -1,0 +1,44 @@
+% CAP 3
+\chapter{Análisis y diseño}% de las funciones hardware del sistema empotrado}
+El diseño del sistema\cite{MDE93} ...
+
+
+\section{Generar $\alpha$.}
+Pretende desarrollar una ...
+
+\subsection{Obtención de requerimientos}
+Los req....
+
+\subsection{Análisis de requerimientos}
+Se requiere ...
+
+\subsection{Diseño}
+Diseñar una 
+
+
+\subsection{Implementación}
+La implementación de 
+
+\section{Generación $\alpha 2$}
+Usar las herramientas de ...
+
+\subsection{Obtención de requerimientos}
+Configurar, integrar, compilar, generar e instalar ... de $\alpha$ ...
+
+
+
+\section{Desarrollo de $\beta$}
+Estos modelos ...
+
+\subsection{Análisis}
+Para ejemplificar el proceso de ...
+
+\subsection{Comunicación a nivel kernel para $\beta$}
+Esta sección diseña una ...
+
+\subsubsection{Creación de receta} A continuación se presenta la receta de poky utilizada para la compilación de un módulo kernel en el que se desarrollará una  capa software para el acceso a los recursos hardware en la plataforma. Es necesario mencionar que el nombre de la receta está en función del nombre del paquete y la versión del mismo. De manera específica el archivo hello-agc-mod\_0.1.bb se muestra en el apéndice D:
+
+\subsection{Desarrollo de la biblioteca dinámica}
+Esta sección desarrolla una biblioteca dinámica encargada de atender las peticiones de llamadas  a función generadas por el programa de usuario. A su vez generará las llamadas al sistema que deberán configurar el hardware y enviar los datos para ser procesados.
+
+

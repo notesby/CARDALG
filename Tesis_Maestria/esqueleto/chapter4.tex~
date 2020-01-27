@@ -1,0 +1,161 @@
+\chapter{Pruebas y resultados}
+Las pruebas se realizaron para la parte hardware y software del sistema empotrado.
+
+\section{Primera etapa}
+La primera etapa generó la plataforma hardware del sistema empotrado. 
+
+Xilinx provee módulos hardware que se pueden utilizar durante el proceso de integración de una plataforma hardware. Sólo para los módulos más básicos se puede garantizar en su totalidad que el módulo está libre de errores. Para el resto de ellos, Xilinx garantiza que tendrán un desempeño estable y apegado a la descripción comportamental de la hoja de especificación, sin embargo se hace énfasis en que el módulo no está libre de errores. Para los fines buscados en esta tesis, suponemos que los módulos hardware funcionarán dentro de las especificaciónes descritas para cada módulo hardware. En el caso específico de las funciones hardware se realizará un proyecto que instancia el componente hardware y lo simula usando las herramientas de Xilinx.
+
+En caso de requerir una validación completa del sistema, será necesario probar cada componente de la plataforma hardware. Al explorar el archivo de especificación hardware \texttt{system.mhs} se enumeran 22 componentes hardware por tanto la validación completa de la plataforma no se realizará por que llevaría mucho tiempo, además no se tiene acceso al código fuente o al software de simulación que acepta \textsl{net lists} como archivos de entrada.
+
+Para realizar las pruebas de la plataforma se utilizarán dos programas de prueba los cuales se compilarán y servirán como archivo de inicialización de los BRAMS del bitsream. La funcionalidad del primer programa es mostrado en el listado \ref{hw-plat-mem-test2}, la versión completa se encuentra en \ref{hw-plat-mem-test} como parte del apéndice C; este código probará la funcionalidad de la memoria DDR a través de una secuencia de escrituras y lecturas de datos. Una parte de la funcionalidad del segundo programa se muestra en el listado \ref{hw-plat-per-test2} en el que se muestran las pruebas de acceso a los periféricos, en específico a través de los push-buttons y los leds; la versión completa se encuentra en \ref{hw-plat-per-test} como parte del apéndice C.
+
+%\begin{center}
+%\begin{minipage}{10cm}
+\lstset{%
+	numbers=left, %
+	numberstyle=\tiny, %
+	stepnumber=1, %
+	numbersep=10pt, %
+	language=C,%
+%	linerange={49-50,71-100},
+	breaklines=true,                % sets automatic line breaking
+	breakatwhitespace=true,
+	title={Memory based test in C Code},
+	label=hw-plat-mem-test2, 
+	caption={[Prueba de la plataforma hardware para la memoria]Prueba de la plataforma hardware base donde se ejercitan el módulo de acceso a la memoria DDR.},
+	basicstyle=\footnotesize
+}
+\lstinputlisting[linerange={71-100}]{files/TestApp_Memory.c}
+%\end{minipage}
+%\end{center}
+
+
+En la consola serial de comunicaciones se obtuvo el siguiente resultado:
+\begin{verbatim}
+-- Entering main() --
+
+Starting MemoryTest for DDR2_SDRAM:
+  Running 32-bit test... PASSED!
+  Running 16-bit test... PASSED!
+  Running 8-bit test... PASSED!
+-- Exiting main() --
+\end{verbatim}
+
+
+%\begin{center}
+%\begin{minipage}{10cm}
+\lstset{%
+	numbers=left, %
+	numberstyle=\tiny, %
+	stepnumber=1, %
+	numbersep=10pt, %
+	language=C,%
+%	linerange={49-50,71-100},
+	breaklines=true,                % sets automatic line breaking
+	breakatwhitespace=true,
+	title={Peripheral based test in C Code},
+	label=hw-plat-per-test2, 
+	caption={[Prueba de la plataforma hardware con periféricos]Prueba de la plataforma hardware base donde se ejercitan los periféricos en especial los Leds y los Dip-Switches.},
+	basicstyle=\footnotesize
+}
+\lstinputlisting[linerange={75-76,118-131,150-165}]{files/TestApp_Peripheral.c}
+%\end{minipage}
+%\end{center}
+
+El resultado obtenido en la consola serial fue:
+\begin{verbatim}
+-- Entering main() --
+
+Running GpioOutputExample() for LEDs_8Bit...
+GpioOutputExample PASSED.
+
+Running GpioOutputExample() for LEDs_Positions...
+GpioOutputExample PASSED.
+
+Running GpioInputExample() for Push_Buttons_5Bit...
+GpioInputExample PASSED. Read data:0x0
+
+Running GpioInputExample() for DIP_Switches_8Bit...
+GpioInputExample PASSED. Read data:0x2
+
+-- Exiting main() --
+\end{verbatim}
+
+
+
+
+\section{Segunda etapa}
+La segunda etapa en el proceso de desarrollo generó el sistema operativo para la plataforma hardware. Se utilizó un kernel de Linux 2.6.37 compilado para PowerPC 440.
+
+El kernel de Linux contiene diversos subsistemas en conjunto suman 13.5 millones de líneas de código para la versión 2.6.35. Este trabajo no pretende realizar la prueba a los diversos subsistemas o al kernel en su conjunto.  Pero sí puede obtener pruebas de funcionamiento para la plataforma hardware diseñada en la etapa anterior. Al finalizar el proceso de compilación del kernel, las prueba en hardware, es decir la prueba del kernel corriendo sobre la plataforma hardware generó una salida en la consola de la cual se muestra un fragmento a continuación. 
+
+\begin{verbatim}
+U-Boot 1.3.4-00327-ge094f24-dirty (Jun 14 2011 - 02:15:17)
+
+CPU:   Xilinx PowerPC 440 UNKNOWN (PVR=7ff21912) at 400 MHz
+       32 kB I-Cache 32 kB D-Cache
+### No HW ID - assuming ML507
+DRAM:  256 MB
+FLASH: 32 MB
+In:    serial
+Out:   serial
+Err:   serial
+Hit any key to stop autoboot:  0 
+reading uimage.dtb
+
+24859 bytes read
+reading uimage.bin
+
+1994300 bytes reading
+
+## Booting kernel from Legacy Image at 03020000 ...
+   Image Name:   Linux-2.6.37+
+   Image Type:   PowerPC Linux Kernel Image (gzip compressed)
+   Data Size:    1994236 Bytes =  1.9 MB
+   Load Address: 00000000
+   Entry Point:  00000000
+   Verifying Checksum ... OK
+## Flattened Device Tree blob at 03000000
+   Booting using the fdt blob at 0x3000000
+   Uncompressing Kernel Image ... OK
+   Loading Device Tree to 007f6000, end 007ff11a ... OK
+
+\end{verbatim}
+
+
+\section{Tercera etapa}
+La tercera etapa genera funciones hardware de dos tipos; el primero de ellos utiliza funciones con paso de parámetros (argumentos) por valor y el segundo tipo utiliza funciones con paso de parámetros por referencia.
+
+Para el primer tipo se han diseñado dos funciones de prueba que serán intercambiadas de manera dinámica en tiempo de ejecución, pero de momento se realizará la prueba de forma estática, es decir, con la función hardware pegada al bus de la plataforma hardware; en el primer caso se tiene un sumador de 32 bits con acarreo de salida y como función complementaria, se tiene un multiplicador de 8 bits con tres multiplicandos. 
+
+A continuación se muestra una breve sección del código que implementa la funcionalidad del sumador. El código completo del sumador y la interfaz puede encontrarse en el apéndice C.
+%\begin{center}
+%\begin{minipage}{10cm}
+\lstset{%
+	numbers=left, %
+	numberstyle=\tiny, %
+	stepnumber=1, %
+	numbersep=10pt, %
+	language=C,%
+%	linerange={49-50,71-100},
+	breaklines=true,                % sets automatic line breaking
+	breakatwhitespace=true,
+%	title={Peripheral based test in C Code},
+	label=hw-fun1, 
+	caption={[Hardware function 1]Hardware function 1 implements a 32 bit full adder.},
+	basicstyle=\footnotesize
+}
+%\lstinputlisting[linerange={75-76,118-131,150-165}]{files/TestApp_Peripheral.c}
+\begin{lstlisting}
+  ra <= slv_reg0;
+  rb <= slv_reg1;
+  cin <= slv_reg2;
+  rss <= ra + rb + cin;
+  rs <= rss(0 to C_SLV_DWIDTH-1);
+  cout <= rss(C_SLV_DWIDTH);
+  slv_reg3 <= (others =>'0');
+\end{lstlisting}
+
+%\end{minipage}
+%\end{center}

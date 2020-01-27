@@ -1,0 +1,106 @@
+\chapter{Complete source code}
+The listing \ref{hw-plat-mem-test} show the C code for the memory-base test on the hardware platform.\\[0.5cm]
+
+%\begin{center}
+%\begin{minipage}{10cm}
+\lstset{%
+	numbers=left, %
+	numberstyle=\tiny, %
+	stepnumber=1, %
+	numbersep=10pt, %
+	language=C,%
+	breaklines=true,                % sets automatic line breaking
+	breakatwhitespace=true,
+	basicstyle=\footnotesize
+}
+\begin{lstlisting}[title={Memory-base test in C code},label=hw-plat-mem-test, caption={[Prueba de la plataforma hardware base]Prueba de la plataforma hardware base donde se ejercita el módulo DDR y el microprocesador principalmente.}]
+#include "xparameters.h"
+#include "xcache_l.h"
+#include "stdio.h"
+#include "xutil.h"
+#include "xuartns550_l.h"
+
+int main (void) {
+   XCache_EnableICache(0xc0000000);
+   XCache_EnableDCache(0xc0000000);
+
+   /* Initialize RS232_Uart_1 - Set baudrate and number of stop bits */
+   XUartNs550_SetBaud(XPAR_RS232_UART_1_BASEADDR, XPAR_XUARTNS550_CLOCK_HZ, 9600);
+   XUartNs550_mSetLineControlReg(XPAR_RS232_UART_1_BASEADDR, XUN_LCR_8_DATA_BITS);
+   print("-- Entering main() --\r\n");
+
+   /* 
+    * MemoryTest routine will not be run for the memory at 
+    * 0xffff0000 (xps_bram_if_cntlr_1)
+    * because it is being used to hold a part of this application program
+    */
+
+
+   /* 
+    * MemoryTest routine will not be run for the memory at 
+    * 0xfc000000 (FLASH)
+    * because it is a read-only memory
+    */
+
+
+   /* Testing Memory (DDR2_SDRAM)*/
+   {
+      XStatus status;
+
+      print("Starting MemoryTest for DDR2_SDRAM:\r\n");
+      print("  Running 32-bit test...");
+      status = XUtil_MemoryTest32((Xuint32*)XPAR_DDR2_SDRAM_MEM_BASEADDR, 1024, 0xAAAA5555, XUT_ALLMEMTESTS);
+      if (status == XST_SUCCESS) {
+         print("PASSED!\r\n");
+      }
+      else {
+         print("FAILED!\r\n");
+      }
+      print("  Running 16-bit test...");
+      status = XUtil_MemoryTest16((Xuint16*)XPAR_DDR2_SDRAM_MEM_BASEADDR, 2048, 0xAA55, XUT_ALLMEMTESTS);
+      if (status == XST_SUCCESS) {
+         print("PASSED!\r\n");
+      }
+      else {
+         print("FAILED!\r\n");
+      }
+      print("  Running 8-bit test...");
+      status = XUtil_MemoryTest8((Xuint8*)XPAR_DDR2_SDRAM_MEM_BASEADDR, 4096, 0xA5, XUT_ALLMEMTESTS);
+      if (status == XST_SUCCESS) {
+         print("PASSED!\r\n");
+      }
+      else {
+         print("FAILED!\r\n");
+      }
+   }
+
+   print("-- Exiting main() --\r\n");
+   XCache_DisableDCache();
+   XCache_DisableICache();
+   return 0;
+}
+\end{lstlisting}
+%\end{minipage}
+%\end{center}
+
+\clearpage
+
+
+The listing \ref{hw-plat-per-test} show the C code for the peripheral-based test on the hardware platform.\\[0.5cm]
+
+%\begin{center}
+%\begin{minipage}{10cm}
+\lstset{%
+	numbers=left, %
+	numberstyle=\tiny, %
+	stepnumber=1, %
+	numbersep=10pt, %
+	language=C,%
+	breaklines=true,                % sets automatic line breaking
+	breakatwhitespace=true,
+	basicstyle=\footnotesize
+}
+\begin{lstlisting}[title={Peripheral test C Code},label=hw-plat-per-test, caption={[Prueba de la plataforma hardware con periféricos]Prueba de la plataforma hardware base donde se ejercitan los periféricos en especial los Leds y los Dip-Switches.}]
+a
+\end{lstlisting}
+
