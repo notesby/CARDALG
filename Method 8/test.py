@@ -78,7 +78,7 @@ class Testing1():
         plt.plot(range(len(self.result)),self.result[:,0],label="Trivial (static behaviour)")
         plt.plot(range(len(self.result)),self.result[:,1],label="Not trivial (Not static behaviour)")
         plt.plot(range(len(self.result)),self.result[:,2],label="Accuracy (General behaviour)")
-        plt.yticks(np.arange(0, 1, step=0.05))
+        plt.yticks(np.arange(0, 1.05, step=0.05))
         plt.ylabel("Accuracy")
         plt.xlabel("Simulation step")
         plt.grid(True)
