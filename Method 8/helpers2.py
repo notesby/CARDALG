@@ -1,6 +1,7 @@
 import numpy as np
 import sys
 from copy import copy
+import math
 
 
 def getLearningProblem(data,target,removeConflicts=True):
@@ -110,3 +111,109 @@ def getBinaryStrings(problem,target,removeConflicts=False):
             bstrs[k][val] = 1
             bstrs["total"][val] = 1
     return bstrs,mn,mx,res,conflicts
+
+def getCorrelations2(data):
+    if len(data.shape) == 2:
+        mat = {}
+        for row in data:
+            mid = math.floor((len(row)-1)/2)
+            for j,col in enumerate(row):
+                key = row[mid]
+                if j != mid and j!=len(row)-1:
+                    if key not in mat:
+                        mat[key] = [{} for i in range(len(row)-1)]
+                    if col not in mat[key][j]:
+                        mat[key][j][col] = 0
+                    mat[key][j][col] += 1
+        return mat
+    elif len(data.shape) == 3:
+        for state in data:
+            pass
+    elif len(data.shape) == 4:
+        pass
+        
+
+def getCorrelations(data,target):
+    res = {}
+    for row in data:
+        for j,col in enumerate(row):
+            if j != target:
+                key = row[target]
+                if key not in res:
+                    res[key] = [{} for i in range(len(row)-1)]
+                if col not in res[key][j]:
+                    res[key][j][col] = 0
+                res[key][j][col] += 1
+    return res
+
+def getMatrixCorrelations(correlations):
+    res = {}
+    for key in correlations:
+        temp = correlations[key]
+        keys = set()
+        for j,col in enumerate(temp):
+            keys = keys.union( set(col.keys()))
+        orderKeys = sorted(list(keys))
+        res[key] = {"mat":np.zeros(shape=(len(keys),len(temp))),"rows":orderKeys,"cols":list(range(len(temp)))}
+        for i in range(len(orderKeys)):
+            for j,col in enumerate(temp):
+                k = orderKeys[i]
+                if k in col:
+                    res[key]["mat"][i][j] = col[k]
+    return res
+        
+
+def getTable(noVariables):
+    noRows=pow(2,noVariables)
+    table = np.zeros(shape=(noRows,noVariables),dtype=int)
+    print(noRows)
+    for j in range(noVariables):
+        temp = noRows // pow(2,j+1)
+        flip = 0
+        counter = 0
+        for i in range(noRows):
+            table[i,j] = flip
+            if flip == 1:
+                counter -= 1
+                if counter <= 0:
+                    flip = 0
+            else:
+                counter += 1
+                if counter >= temp:
+                    flip = 1
+    return table
+
+from itertools import combinations
+
+
+def place_ones(size, count):
+    for positions in combinations(range(size), count):
+        p = [0] * size
+
+        for i in positions:
+            p[i] = 1
+
+        yield p
+
+def getFunctions(table):
+    noFunctions = pow(2,table.shape[0])
+    print(noFunctions)
+    functions = list()
+    for i in range(table.shape[0]+1):
+        functions += place_ones(table.shape[0],i)
+    functions = np.array(functions,dtype=int)
+    return functions
+    
+def getNeighborhoodCombinations(noNeighbors,noActiveNeighbors):
+    return list(place_ones(noNeighbors,noActiveNeighbors))
+
+def createDB(ncomb,funcs):
+    db = {}
+    for j,row2 in enumerate(funcs):
+        key = str(row2)
+        db[key] = {}
+        for i,row in enumerate(ncomb):	
+            
+        
+            
+                    
