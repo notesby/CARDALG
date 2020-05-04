@@ -1,8 +1,0 @@
-\nomenclatureentry{aFPGA@[{FPGA}]\begingroup Field Programable Gate Array\nomeqref {1.0}|nompageref}{1}
-\nomenclatureentry{aABEL@[{ABEL}]\begingroup Advanced Boolean Expression Language\\(\textsl{Lenguaje avanzado de expresiones boleanas})\nomeqref {2.0}|nompageref}{7}
-\nomenclatureentry{aAHDL@[{AHDL}]\begingroup Altera HDL\nomeqref {2.0}|nompageref}{7}
-\nomenclatureentry{aHard Processor@[{Hard Processor}]\begingroup \textsl{Circuito integrado que contiene un procesador}\nomeqref {2.0}|nompageref}{7}
-\nomenclatureentry{aSoft Processor@[{Soft Processor}]\begingroup \textsl{Procesador sintetizado en un dispositivo reconfigurable}\nomeqref {2.0}|nompageref}{7}
-\nomenclatureentry{aHDL@[{HDL}]\begingroup Hardware Description Language \\(\textsl{Lenguaje de descripción hardware}) \nomeqref {2.0}|nompageref}{7}
-\nomenclatureentry{aVHDL@[{VHDL}]\begingroup VHSIC Hardware Description Language\\(\textsl{Lenguaje de descripción hardware para circuitos integrados de muy alta velocidad})\nomeqref {2.0}|nompageref}{7}
-\nomenclatureentry{aVerilog@[{Verilog}]\begingroup Lenguaje de descripción hardware\nomeqref {2.0}|nompageref}{7}

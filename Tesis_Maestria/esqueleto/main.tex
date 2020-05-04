@@ -9,21 +9,19 @@
 \usepackage{ucs}
 \usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[pdftex]{graphicx}
+\usepackage{graphicx}
+\usepackage{subfigure}
 \usepackage{rotating}
 \usepackage{float}
 \usepackage{url}
 \usepackage{verbatim}
 \usepackage{listings}
 \usepackage{pdfpages}
+\usepackage{natbib} % Referncias en formato APA
 \usepackage[refpage,intoc,spanish]{nomencl} % Acrónimos
 \usepackage[spanish]{babel}	% Titulos en español
-% Opciones
-\addto\captionsspanish{\def\tablename{Tabla}}
-\addto\captionsspanish{\def\listtablename{\'{I}ndice de tablas}}
-\addto\captionsspanish{\def\lstlistingname{Listado}}
-\addto\captionsspanish{\def\lstlistlistingname{\'{I}ndice de listados}}
-
+\usepackage[spanish,linesnumbered,boxed,onelanguage]{algorithm2e}
+\SetAlCapSkip{1em}
 % - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 %\usepackage[pdftex]{hyperref}
 %\hypersetup{%
@@ -54,26 +52,26 @@ y la página donde aparece citada por primera vez a fin de que el lector pueda c
 \begin{document}
 
 %\include{portada}
-\includepdf{PortadaTesis.pdf}
+\includepdf{../portada/portada.pdf}
 %\include{cesion_derechos} % Carta de cesión de derechos para publicación
 
 \include{abstract}  % to be generated
-\include{summary}   
+%\include{summary}   
 \include{thanks}    % to be completed
-\include{acronyms}  
+%\include{acronyms}  
 \include{indexes} 
-\printnomenclature
+%\printnomenclature
 \include{chapter1} % Introducción 
 \include{chapter2} % Marco teórico
-\include{chapter3} % Diseño e implementación
-\include{chapter4} % Pruebas y resultados
-\include{chapter5} % Conclusiones y trabajo futuro
-% 
-\include{bibliography}
+\include{chapter3} % Estado del arte
+%\include{chapter4} % Metodos y metodologia
+%\include{chapter5} % Resultados y analisis
+%\include{chapter6} % Conclusiones y trabajo futuro
+%
+\bibliographystyle{apalike}
+\bibliography{Referencias} 
+%\include{bibliography}
 \appendix
-\include{appendix_a}
-\include{appendix_b}
-\include{appendix_c}
-\include{appendix_d}
+%\include{appendix_a}
 
 \end{document}

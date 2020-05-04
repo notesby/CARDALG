@@ -8,7 +8,7 @@ from joblib import Parallel, delayed,parallel_backend
 import time
 
 class GGA(Experiment):
-    def __init__(self,data,target,name=None,path=None,verbose=0, mutationRate = 0.5,noChromosomes = 10,noIterations=100,paddingType =1,paddingValue = -1, noChilds = 5,tournaments=2):
+    def __init__(self,data,target,name=None,path=None,verbose=0, mutationRate = 0.05,noChromosomes = 50,noIterations=100,paddingType =1,paddingValue = -1, noChilds = 2,tournaments=2):
         self.data = data
         self.target = target
         self.mutationRate = mutationRate

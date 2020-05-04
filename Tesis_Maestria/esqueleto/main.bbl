@@ -1,0 +1,110 @@
+\begin{thebibliography}{}
+
+\bibitem[{$\!\!$}, 2002]{2002:NKS:513738}
+{$\!\!$} (2002).
+\newblock {\em A New Kind of Science}.
+\newblock Wolfram Media Inc., Champaign, Ilinois, US, United States.
+
+\bibitem[Bidlo, 2016]{bidlo2016routine}
+Bidlo, M. (2016).
+\newblock On routine evolution of complex cellular automata.
+\newblock {\em IEEE Transactions on Evolutionary Computation}, 20(5):742--754.
+
+\bibitem[Boerlijst, 1992]{boerlijstk}
+Boerlijst, M. (1992).
+\newblock k hogeweg, p.(1992). self-structuring and selection: Spiral waves as
+  a substrate for prebiotic evolution.
+\newblock {\em Artificial Life II. Addison Wesley, Reading, Mass}, page 255.
+
+\bibitem[Cook, 2004]{cook2004universality}
+Cook, M. (2004).
+\newblock Universality in elementary cellular automata.
+\newblock {\em Complex systems}, 15(1):1--40.
+
+\bibitem[Culik~II et~al., 1990]{culik1990computation}
+Culik~II, K., Hurd, L.~P., and Yu, S. (1990).
+\newblock Computation theoretic aspects of cellular automata.
+\newblock {\em Physica D: Nonlinear Phenomena}, 45(1-3):357--378.
+
+\bibitem[Deshpande and Triantaphyllou, 1998]{DESHPANDE199875}
+Deshpande, A. and Triantaphyllou, E. (1998).
+\newblock A greedy randomized adaptive search procedure (grasp) for inferring
+  logical clauses from examples in polynomial time and some extensions.
+\newblock {\em Mathematical and Computer Modelling}, 27(1):75 -- 99.
+
+\bibitem[Ermentrout and Edelstein-Keshet, 1993]{ermentrout1993cellular}
+Ermentrout, G.~B. and Edelstein-Keshet, L. (1993).
+\newblock Cellular automata approaches to biological modeling.
+\newblock {\em Journal of theoretical Biology}, 160(1):97--133.
+
+\bibitem[Gardner, 1970]{gardner1970mathematical}
+Gardner, M. (1970).
+\newblock Mathematical games.
+\newblock {\em Scientific American}, 222(6):132--140.
+
+\bibitem[Hillis, 1984]{hillis1984connection}
+Hillis, W.~D. (1984).
+\newblock The connection machine: A computer architecture based on cellular
+  automata.
+\newblock {\em Physica D: Nonlinear Phenomena}, 10(1-2):213--228.
+
+\bibitem[Ilachinski, 2001]{ilachinski2001cellular}
+Ilachinski, A. (2001).
+\newblock {\em Cellular automata: a discrete universe}.
+\newblock World Scientific Publishing Company.
+
+\bibitem[Kawaharada et~al., 2016]{kawaharada2016cellular}
+Kawaharada, A., Shoji, E., Nishimori, H., Awazu, A., Izumi, S., and Iima, M.
+  (2016).
+\newblock Cellular automata automatically constructed from a bioconvection
+  pattern.
+\newblock In {\em Recent Advances in Natural Computing}, pages 15--25.
+  Springer.
+
+\bibitem[Manneville et~al., 2012]{manneville2012cellular}
+Manneville, P., Boccara, N., Vichniac, G.~Y., and Bidaux, R. (2012).
+\newblock {\em Cellular Automata and Modeling of Complex Physical Systems:
+  Proceedings of the Winter School, Les Houches, France, February 21--28,
+  1989}, volume~46.
+\newblock Springer Science \& Business Media.
+
+\bibitem[Margolus et~al., 1986]{margolus1986cellular}
+Margolus, N., Toffoli, T., and Vichniac, G. (1986).
+\newblock Cellular-automata supercomputers for fluid-dynamics modeling.
+\newblock {\em Physical Review Letters}, 56(16):1694.
+
+\bibitem[Naghibi and Delavar, 2016]{naghibi2016discovery}
+Naghibi, F. and Delavar, M. (2016).
+\newblock Discovery of transition rules for cellular automata using artificial
+  bee colony and particle swarm optimization algorithms in urban growth
+  modeling.
+\newblock {\em ISPRS International Journal of Geo-Information}, 5(12):241.
+
+\bibitem[Nordahl, 1989]{nordahl1989formal}
+Nordahl, M.~G. (1989).
+\newblock Formal languages and finite cellular automata.
+\newblock {\em Complex Systems}, 3(1).
+
+\bibitem[Simon and Nagel, 1998]{simon1998simplified}
+Simon, P. and Nagel, K. (1998).
+\newblock Simplified cellular automaton model for city traffic.
+\newblock {\em Physical Review E}, 58(2):1286.
+
+\bibitem[Tamayo and Hartman, 1987]{tamayo1987cellular}
+Tamayo, P. and Hartman, H. (1987).
+\newblock Cellular automata, reaction-diffusion systems, and the origin of
+  life.
+\newblock In {\em ALIFE}, pages 105--124.
+
+\bibitem[Toffoli, 1984]{toffoli1984cellular}
+Toffoli, T. (1984).
+\newblock Cellular automata as an alternative to (rather than an approximation
+  of) differential equations in modeling physics.
+\newblock {\em Physica D: Nonlinear Phenomena}, 10(1-2):117--127.
+
+\bibitem[Vichniac, 1984]{vichniac1984simulating}
+Vichniac, G.~Y. (1984).
+\newblock Simulating physics with cellular automata.
+\newblock {\em Physica D: Nonlinear Phenomena}, 10(1-2):96--116.
+
+\end{thebibliography}

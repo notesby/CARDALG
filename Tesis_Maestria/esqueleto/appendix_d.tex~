@@ -1,8 +1,0 @@
-\chapter{Thesis recipes for Poky Framework}
-This appendix contains all the developed recipes that were used to generate a Dynamic Harware Execution Embeded System.
-
-Listing ** shows a recipe for compiling a kernel module.
-
-\begin{lstlisting}[label=labbell]
-
-\end{lstlisting}

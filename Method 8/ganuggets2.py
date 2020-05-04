@@ -428,9 +428,9 @@ def initialize(populationSize,antMinSize,antMaxSize,objAttrInd,domain,seed=-1):
         random.seed(seed)
     for i in range(populationSize):
         antSize = random.randint(antMinSize,antMaxSize)
-        ant = [[i,-1] for i in range(len(domain))]
+        ant = [[i,-1] for i in range(len(domain)-1)]
         for j in range(antSize):
-            attr = random.randint(0,len(domain)-1)
+            attr = random.randint(0,len(domain)-2)
             val = random.randint(-1,max(domain[attr]))
             ant[attr][1]= val
         valC = random.randint(min(domain[objAttrInd]),max(domain[objAttrInd]))
@@ -604,7 +604,7 @@ def binarizedToDomain(rules,domain):
                         ind -= bottom
                         break
                     bottom += len(domain[key])
-                relational = (">=" if val== 1 else "<")
+                relational = (">=" if val == 1 else "<")
                 t = "A[{}] {} {}".format(col,relational,domain[col][ind])
                 expr.append(t)
             prop.append("({})".format(" or ".join(expr)))

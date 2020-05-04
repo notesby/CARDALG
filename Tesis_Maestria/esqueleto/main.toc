@@ -1,52 +1,37 @@
-\select@language {spanish}
+\babel@toc {spanish}{}
 \contentsline {chapter}{Resumen}{\es@scroman {i}}
-\contentsline {paragraph}{Sistemas Empotrados.}{\es@scroman {i}}
 \contentsline {chapter}{Abstract}{\es@scroman {iii}}
-\contentsline {paragraph}{Embedded Systems.}{\es@scroman {iii}}
-\contentsline {chapter}{Summary}{\es@scroman {v}}
-\contentsline {chapter}{Thanks}{\es@scroman {vii}}
-\contentsline {chapter}{Acr\'onimos, abreviaturas y siglas}{\es@scroman {ix}}
-\contentsline {chapter}{Acr\'onimos, abreviaturas y siglas}{\es@scroman {ix}}
-\contentsline {chapter}{\'Indice de figuras}{\es@scroman {xiii}}
-\contentsline {chapter}{\'Indice de tablas}{\es@scroman {xv}}
-\contentsline {chapter}{\'Indice de listados}{\es@scroman {xvii}}
-\contentsline {chapter}{Acr\'onimos, abreviaturas y siglas}{\es@scroman {xix}}
+\contentsline {chapter}{Thanks}{\es@scroman {v}}
 \contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n}{1}
-\contentsline {section}{\numberline {1.1}Definiciones}{1}
-\contentsline {section}{\numberline {1.2}Antecedentes}{1}
-\contentsline {section}{\numberline {1.3}Planteamiento del problema}{1}
-\contentsline {section}{\numberline {1.4}Objetivos}{3}
-\contentsline {subsection}{\numberline {1.4.1}Objetivo general}{3}
-\contentsline {paragraph}{Metodolog\IeC {\'\i }a para el desarrollo de funciones hardware para bibliotecas est\IeC {\'a}ticas.}{3}
-\contentsline {subsection}{\numberline {1.4.2}Objetivos espec\IeC {\'\i }ficos}{3}
-\contentsline {section}{\numberline {1.5}Justificaci\IeC {\'o}n}{3}
-\contentsline {subsection}{\numberline {1.5.1}Beneficios esperados}{4}
-\contentsline {subsection}{\numberline {1.5.2}Alcances y l\IeC {\'\i }mites}{4}
-\contentsline {section}{\numberline {1.6}Organizaci\IeC {\'o}n de la tesis}{4}
-\contentsline {chapter}{\numberline {2}Fundamento te\IeC {\'o}rico}{7}
-\contentsline {section}{\numberline {2.1}Elemento te\IeC {\'o}rico A}{7}
-\contentsline {subsection}{\numberline {2.1.1}Teoria A.i}{7}
-\contentsline {subsubsection}{Teor\IeC {\'\i }a A.i.1}{9}
-\contentsline {paragraph}{Texto \IeC {\'e}nfasis.}{9}
-\contentsline {chapter}{\numberline {3}An\IeC {\'a}lisis y dise\IeC {\~n}o}{11}
-\contentsline {section}{\numberline {3.1}Generar $\alpha $.}{11}
-\contentsline {subsection}{\numberline {3.1.1}Obtenci\IeC {\'o}n de requerimientos}{11}
-\contentsline {subsection}{\numberline {3.1.2}An\IeC {\'a}lisis de requerimientos}{11}
-\contentsline {subsection}{\numberline {3.1.3}Dise\IeC {\~n}o}{11}
-\contentsline {subsection}{\numberline {3.1.4}Implementaci\IeC {\'o}n}{11}
-\contentsline {section}{\numberline {3.2}Generaci\IeC {\'o}n $\alpha 2$}{12}
-\contentsline {subsection}{\numberline {3.2.1}Obtenci\IeC {\'o}n de requerimientos}{12}
-\contentsline {section}{\numberline {3.3}Desarrollo de $\beta $}{12}
-\contentsline {subsection}{\numberline {3.3.1}An\IeC {\'a}lisis}{12}
-\contentsline {subsection}{\numberline {3.3.2}Comunicaci\IeC {\'o}n a nivel kernel para $\beta $}{12}
-\contentsline {chapter}{\numberline {4}Pruebas y resultados}{13}
-\contentsline {section}{\numberline {4.1}Primera etapa}{13}
-\contentsline {section}{\numberline {4.2}Segunda etapa}{14}
-\contentsline {section}{\numberline {4.3}Tercera etapa}{14}
-\contentsline {chapter}{\numberline {5}Conclusiones y trabajo futuro}{15}
-\contentsline {chapter}{Bibliograf\'{i}a}{17}
-\contentsline {chapter}{Ap\IeC {\'e}ndices}{19}
-\contentsline {chapter}{\numberline {A}Tarjeta ML507}{19}
-\contentsline {chapter}{\numberline {B}Hardware Platform Reference Design}{21}
-\contentsline {chapter}{\numberline {C}Complete source code}{23}
-\contentsline {chapter}{\numberline {D}Thesis recipes for Poky Framework}{27}
+\contentsline {section}{\numberline {1.1}Definiciones}{2}
+\contentsline {subsection}{\numberline {1.1.1}Aut\IeC {\'o}mata Celular}{2}
+\contentsline {subsection}{\numberline {1.1.2}Aprendizaje Autom\IeC {\'a}tico}{4}
+\contentsline {subsection}{\numberline {1.1.3}Algoritmos gen\IeC {\'e}ticos}{5}
+\contentsline {section}{\numberline {1.2}Antecedentes}{5}
+\contentsline {section}{\numberline {1.3}Planteamiento del problema}{5}
+\contentsline {section}{\numberline {1.4}Objetivos}{5}
+\contentsline {subsection}{\numberline {1.4.1}Objetivo general}{5}
+\contentsline {paragraph}{Dise\IeC {\~n}ar un nuevo (simb\IeC {\'o}lico o sub-simb\IeC {\'o}lico) algoritmo de aprendizaje para aprender reglas que gobiernan un fen\IeC {\'o}meno para las cuales nosotros solo tenemos como entrada rejillas estados en 2 dimensiones.}{5}
+\contentsline {subsection}{\numberline {1.4.2}Objetivos espec\IeC {\'\i }ficos}{5}
+\contentsline {section}{\numberline {1.5}Justificaci\IeC {\'o}n}{6}
+\contentsline {subsection}{\numberline {1.5.1}Beneficios esperados}{6}
+\contentsline {subsection}{\numberline {1.5.2}Alcances y l\IeC {\'\i }mites}{6}
+\contentsline {chapter}{\numberline {2}Marco te\IeC {\'o}rico}{7}
+\contentsline {section}{\numberline {2.1}Algoritmos Gen\IeC {\'e}ticos}{7}
+\contentsline {subsection}{\numberline {2.1.1}Representaci\IeC {\'o}n}{8}
+\contentsline {subsection}{\numberline {2.1.2}Funci\IeC {\'o}n de aptitud}{8}
+\contentsline {subsection}{\numberline {2.1.3}Poblaci\IeC {\'o}n}{8}
+\contentsline {subsection}{\numberline {2.1.4}Mecanismo de selecci\IeC {\'o}n de padres}{9}
+\contentsline {subsection}{\numberline {2.1.5}Recombinaci\IeC {\'o}n}{9}
+\contentsline {subsection}{\numberline {2.1.6}Mutaci\IeC {\'o}n}{9}
+\contentsline {subsection}{\numberline {2.1.7}Mecanismo de selecci\IeC {\'o}n de sobrevivientes}{9}
+\contentsline {section}{\numberline {2.2}GA-Nuggets}{10}
+\contentsline {subsection}{\numberline {2.2.1}Representaci\IeC {\'o}n de los individuos}{10}
+\contentsline {subsection}{\numberline {2.2.2}Funci\IeC {\'o}n de aptitud}{11}
+\contentsline {subsection}{\numberline {2.2.3}M\IeC {\'e}todo de selecci\IeC {\'o}n y operadores gen\IeC {\'e}ticos}{13}
+\contentsline {section}{\numberline {2.3}Enfoque OCAT (One Clause At a Time)}{13}
+\contentsline {subsection}{\numberline {2.3.1}Heuristica RA1}{14}
+\contentsline {chapter}{\numberline {3}Estado del Arte}{17}
+\contentsline {section}{\numberline {3.1}Cellular Automata Automatically Constructed from a Bioconvection Pattern}{17}
+\contentsline {section}{\numberline {3.2}Discovery of Transition Rules for Cellular Automata Using Artificial Bee Colony and Particle Swarm Optimization Algorithms in Urban Growth Modeling}{18}
+\contentsline {section}{\numberline {3.3}On Routine Evolution of Complex Cellular Automata}{18}
