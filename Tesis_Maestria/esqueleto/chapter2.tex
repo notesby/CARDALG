@@ -2,7 +2,7 @@
 \chapter{Marco teórico}
 
 
-\section{Algoritmos Genéticos}
+\section{Algoritmos genéticos}
 
 Los algoritmos genéticos fueron desarrollados por John Holland, sus colegas y estudiantes en la universidad de Michigan. Los objetivos de esta investigación eran los siguientes:
 \begin{enumerate}
@@ -147,7 +147,16 @@ Ademas de la cruza y la mutación, se agregan otros dos operadores: insertar-con
 
 \section{Enfoque OCAT (One Clause At a Time)}
 
-El algoritmo RA1 se basa en el enfoque una clausula a la vez o en ingles OCAT (One Clause At a Time), este enfoque esta basado en conceptos de lógica matemática y optimización discreta. El enfoque es de naturaleza avara en el sentido de que busca aceptar a todos los ejemplos positivos y rechazar tantos ejemplos negativos como pueda, y así sucesivamente para cada una de las clausulas que genera, hasta que ya no tenga mas ejemplos negativos para rechazar. El enfoque OCAT busca generar un conjunto de clausulas que pueden estar en forma normal conjuntiva (FNC) o forma normal disyuntiva (FND).
+El enfoque "Una Clausula A la Vez" u OCAT por sus siglas en ingles (One Clause At a Time) es un enfoque que trata de resolver dos debilidades con las técnicas de aprendizaje bayesianas y conexionistas como lo son las redes neuronales, estas debilidades son las siguientes:
+
+\begin{enumerate}
+	\item La forma en que estos métodos funcionan y producen recomendaciones pueden no ser atractivos por los expertos en el dominio. 
+	\item El conjunto de entrenamiento puede no contener suficientes ejemplos como para que garanticen resultados estadisticamente significantes. Como resultado estos métodos pueden no ser fidedignos para aplicaciones reales. 
+\end{enumerate}
+
+Este enfoque esta basado en conceptos de lógica matemática y optimización discreta. El enfoque es de naturaleza avara en el sentido de que busca aceptar a todos los ejemplos positivos y rechazar tantos ejemplos negativos como pueda, y así sucesivamente para cada una de las clausulas que genera, hasta que ya no tenga mas ejemplos negativos para rechazar.
+\\
+El enfoque OCAT busca generar un conjunto de clausulas que pueden estar en forma normal conjuntiva (FNC) o forma normal disyuntiva (FND). Es conocido \citep{peysakh1987fast} que cualquier función Booleana puede ser transformada en forma FNC o FND. 
 \\
 Algunas asumpciones que este enfoque toma son las siguientes:
 
@@ -179,7 +188,7 @@ El siguiente pseudocódigo ejemplifica el funcionamiento general del enfoque OCA
 \subsection{Heuristica RA1}
 El enfoque heuristico, denominado RA1 por Randomized Algorithm 1, fue propuesto en \citep{DESHPANDE199875}. El cual es un algoritmo que como se muestra en el algoritmo \ref{algorithmra1} selecciona deforma aleatoria dentro los mejores atributos candidatos, lo cual evita quedarse estancado en un mínimo local.
 
-\begin{algorithm}[h] %or another one check
+\begin{algorithm}[H] %or another one check
 	\caption{La heurística RA1 \citep{DESHPANDE199875}} \label{algorithmra1}
 	\SetAlgoLined
 	\While{$E^-\not = \emptyset$}{
@@ -205,3 +214,72 @@ El enfoque heuristico, denominado RA1 por Randomized Algorithm 1, fue propuesto 
 	\textbf{elegir} el sistema Booleano final que tenga el menor número de clausulas, de los sistemas ITRS anteriores.
 	
 \end{algorithm}
+\newpage
+\section{Algoritmo Quine–McCluskey}
+
+Este algoritmo es método utilizado para la simplificación de funciones Booleanas y fue desarrollado por Willard V.Quine 1955 y extendido Edward J. McCluskey  en 1956. Este método involucra dos pasos:
+\begin{enumerate}
+	\item Encontrar los implicantes primos de la función.
+	\item Usar esos implicantes primos para encontrar los implicantes primos esenciales de la función, así como los otros implicantes primos necesarios para realizar la cobertura de la función.
+\end{enumerate}
+
+El siguiente pseudocódigo ejemplifica este algoritmo.
+
+\begin{algorithm}[h]
+	\SetAlgoLined
+	\SetKwBlock{Begin}{inicio}{}
+	\Begin{
+		\SetKwBlock{Begin}{inicio}{fin}
+	Organizar los términos mínimos en orden ascendente\;
+	Formar como máximo $n+1$ grupos en función del número de unos presentes en sus representaciones binarias\footnotemark \;
+	\Begin{
+		Obtener los implicantes primos:
+	
+	\While{no se tengan todos los implicantes primos}{
+		comparar los términos mínimos presentes en grupos sucesivos  
+		\newline
+		\If{existe un cambio en la posición de un solo bit}{
+				Tomar ese par de dos términos mínimos\;
+				Colocar el símbolo ''\textunderscore'' en la posición del bit de cambio\;
+				Mantener el resto de los bits tal como están\;
+			
+	}}}
+
+}
+\end{algorithm}
+
+
+\begin{algorithm}[h]
+	  \LinesNumbered
+	\setcounter{AlgoLine}{14}
+
+\SetAlgoLined
+\SetKwBlock{Begin}{}{fin}
+\Begin{
+	\SetKwBlock{Begin}{inicio}{fin}
+	\Begin{
+		Formular la tabla de primos implicantes, que consiste en un conjunto de filas y columnas:
+		\newline
+		\Begin{
+			Los implicantes primos se colocan en sentido de las filas\;
+			Los términos mínimos se colocan en sentido de las columnas\;
+			Colocar un $``1"$ en las celdas correspondientes a los términos mínimos que se cubren en cada implicante primo\;
+		}
+	}
+	\Begin{Encontrar los implicantes primos esenciales:
+		\newline
+	\ForAll{término mínimo de la función Booleana}{
+		observar cada columna de la tabla de primos implicantes 
+		\newline
+		\If{el término mínimo está cubierto solo por un implicante primo}{
+			este término es un implicante esencial y formará parte de la función Booleana simplificada
+		}
+		eliminar la fila de cada implicante primo esencial y las columnas correspondientes a los términos mínimos que están cubiertos en ese implicante primo esencial
+	}
+	}
+	}
+	
+	\caption{Método Tabular Quine-McCluskey: para simplificar funciones Booleanas.}
+\end{algorithm}
+
+\footnotetext{Para $n$ variables Booleanas en una función Booleana, o para $n$ bits en su equivalente binario de términos mínimos.} 

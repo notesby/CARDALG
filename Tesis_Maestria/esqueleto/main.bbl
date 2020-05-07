@@ -1,10 +1,5 @@
 \begin{thebibliography}{}
 
-\bibitem[{$\!\!$}, 2002]{2002:NKS:513738}
-{$\!\!$} (2002).
-\newblock {\em A New Kind of Science}.
-\newblock Wolfram Media Inc., Champaign, Ilinois, US, United States.
-
 \bibitem[Bidlo, 2016]{bidlo2016routine}
 Bidlo, M. (2016).
 \newblock On routine evolution of complex cellular automata.
@@ -15,6 +10,11 @@ Boerlijst, M. (1992).
 \newblock k hogeweg, p.(1992). self-structuring and selection: Spiral waves as
   a substrate for prebiotic evolution.
 \newblock {\em Artificial Life II. Addison Wesley, Reading, Mass}, page 255.
+
+\bibitem[Byl, 1989]{BYL1989295}
+Byl, J. (1989).
+\newblock Self-reproduction in small cellular automata.
+\newblock {\em Physica D: Nonlinear Phenomena}, 34(1):295 -- 299.
 
 \bibitem[Cook, 2004]{cook2004universality}
 Cook, M. (2004).
@@ -84,6 +84,19 @@ Naghibi, F. and Delavar, M. (2016).
 Nordahl, M.~G. (1989).
 \newblock Formal languages and finite cellular automata.
 \newblock {\em Complex Systems}, 3(1).
+
+\bibitem[Peysakh, 1987]{peysakh1987fast}
+Peysakh, J. (1987).
+\newblock {\em Fast Algorithm to Convert Boolean Expression Into a DNF}.
+\newblock IBM Corporation, Thomas J. Watson Research Center.
+
+\bibitem[Rucker and Walker, ]{rucker_walker}
+Rucker, R. and Walker, J.
+
+\bibitem[Sayama, 1998]{Sayama1998ConstructingES}
+Sayama, H. (1998).
+\newblock Constructing evolutionary systems on a simple deterministic cellular
+  automata space.
 
 \bibitem[Simon and Nagel, 1998]{simon1998simplified}
 Simon, P. and Nagel, K. (1998).

@@ -3,7 +3,6 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: main.aux
 A level-1 auxiliary file: abstract.aux
 A level-1 auxiliary file: thanks.aux
-A level-1 auxiliary file: acronyms.aux
 A level-1 auxiliary file: indexes.aux
 A level-1 auxiliary file: chapter1.aux
 A level-1 auxiliary file: chapter2.aux
@@ -12,48 +11,48 @@ A level-1 auxiliary file: chapter4.aux
 A level-1 auxiliary file: chapter5.aux
 A level-1 auxiliary file: chapter6.aux
 The style file: apalike.bst
-A level-1 auxiliary file: appendix_a.aux
 Database file #1: Referencias.bib
-Warning--empty author and editor in 2002:NKS:513738
-You've used 19 entries,
+Warning--empty year in rucker_walker
+Warning--empty booktitle in Sayama1998ConstructingES
+You've used 22 entries,
             1935 wiz_defined-function locations,
-            610 strings with 6940 characters,
-and the built_in function-call counts, 7181 in all, are:
-= -- 714
-> -- 220
-< -- 18
-+ -- 76
-- -- 70
-* -- 594
-:= -- 1224
-add.period$ -- 58
-call.type$ -- 19
-change.case$ -- 128
-chr.to.int$ -- 19
-cite$ -- 20
-duplicate$ -- 298
-empty$ -- 552
-format.name$ -- 98
-if$ -- 1429
+            617 strings with 7198 characters,
+and the built_in function-call counts, 8122 in all, are:
+= -- 803
+> -- 254
+< -- 22
++ -- 84
+- -- 80
+* -- 660
+:= -- 1400
+add.period$ -- 64
+call.type$ -- 22
+change.case$ -- 146
+chr.to.int$ -- 22
+cite$ -- 24
+duplicate$ -- 337
+empty$ -- 619
+format.name$ -- 114
+if$ -- 1609
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 21
-newline$ -- 98
-num.names$ -- 54
-pop$ -- 104
+missing$ -- 24
+newline$ -- 110
+num.names$ -- 66
+pop$ -- 130
 preamble$ -- 1
-purify$ -- 131
+purify$ -- 150
 quote$ -- 0
-skip$ -- 231
+skip$ -- 258
 stack$ -- 0
-substring$ -- 535
-swap$ -- 43
+substring$ -- 596
+swap$ -- 44
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 108
-warning$ -- 1
-while$ -- 63
+type$ -- 126
+warning$ -- 2
+while$ -- 72
 width$ -- 0
-write$ -- 249
-(There was 1 warning)
+write$ -- 278
+(There were 2 warnings)

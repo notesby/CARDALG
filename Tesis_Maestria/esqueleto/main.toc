@@ -6,18 +6,17 @@
 \contentsline {section}{\numberline {1.1}Definiciones}{2}
 \contentsline {subsection}{\numberline {1.1.1}Aut\IeC {\'o}mata Celular}{2}
 \contentsline {subsection}{\numberline {1.1.2}Aprendizaje Autom\IeC {\'a}tico}{4}
-\contentsline {subsection}{\numberline {1.1.3}Algoritmos gen\IeC {\'e}ticos}{5}
-\contentsline {section}{\numberline {1.2}Antecedentes}{5}
-\contentsline {section}{\numberline {1.3}Planteamiento del problema}{5}
-\contentsline {section}{\numberline {1.4}Objetivos}{5}
-\contentsline {subsection}{\numberline {1.4.1}Objetivo general}{5}
+\contentsline {subsection}{\numberline {1.1.3}Algoritmos gen\IeC {\'e}ticos}{4}
+\contentsline {section}{\numberline {1.2}Planteamiento del problema}{5}
+\contentsline {section}{\numberline {1.3}Objetivos}{5}
+\contentsline {subsection}{\numberline {1.3.1}Objetivo general}{5}
 \contentsline {paragraph}{Dise\IeC {\~n}ar un nuevo (simb\IeC {\'o}lico o sub-simb\IeC {\'o}lico) algoritmo de aprendizaje para aprender reglas que gobiernan un fen\IeC {\'o}meno para las cuales nosotros solo tenemos como entrada rejillas estados en 2 dimensiones.}{5}
-\contentsline {subsection}{\numberline {1.4.2}Objetivos espec\IeC {\'\i }ficos}{5}
-\contentsline {section}{\numberline {1.5}Justificaci\IeC {\'o}n}{6}
-\contentsline {subsection}{\numberline {1.5.1}Beneficios esperados}{6}
-\contentsline {subsection}{\numberline {1.5.2}Alcances y l\IeC {\'\i }mites}{6}
+\contentsline {subsection}{\numberline {1.3.2}Objetivos espec\IeC {\'\i }ficos}{5}
+\contentsline {section}{\numberline {1.4}Justificaci\IeC {\'o}n}{6}
+\contentsline {subsection}{\numberline {1.4.1}Beneficios esperados}{6}
+\contentsline {subsection}{\numberline {1.4.2}Alcances y l\IeC {\'\i }mites}{6}
 \contentsline {chapter}{\numberline {2}Marco te\IeC {\'o}rico}{7}
-\contentsline {section}{\numberline {2.1}Algoritmos Gen\IeC {\'e}ticos}{7}
+\contentsline {section}{\numberline {2.1}Algoritmos gen\IeC {\'e}ticos}{7}
 \contentsline {subsection}{\numberline {2.1.1}Representaci\IeC {\'o}n}{8}
 \contentsline {subsection}{\numberline {2.1.2}Funci\IeC {\'o}n de aptitud}{8}
 \contentsline {subsection}{\numberline {2.1.3}Poblaci\IeC {\'o}n}{8}
@@ -30,8 +29,30 @@
 \contentsline {subsection}{\numberline {2.2.2}Funci\IeC {\'o}n de aptitud}{11}
 \contentsline {subsection}{\numberline {2.2.3}M\IeC {\'e}todo de selecci\IeC {\'o}n y operadores gen\IeC {\'e}ticos}{13}
 \contentsline {section}{\numberline {2.3}Enfoque OCAT (One Clause At a Time)}{13}
-\contentsline {subsection}{\numberline {2.3.1}Heuristica RA1}{14}
-\contentsline {chapter}{\numberline {3}Estado del Arte}{17}
-\contentsline {section}{\numberline {3.1}Cellular Automata Automatically Constructed from a Bioconvection Pattern}{17}
-\contentsline {section}{\numberline {3.2}Discovery of Transition Rules for Cellular Automata Using Artificial Bee Colony and Particle Swarm Optimization Algorithms in Urban Growth Modeling}{18}
-\contentsline {section}{\numberline {3.3}On Routine Evolution of Complex Cellular Automata}{18}
+\contentsline {subsection}{\numberline {2.3.1}Heuristica RA1}{15}
+\contentsline {section}{\numberline {2.4}Algoritmo Quine\IeC {\textendash }McCluskey}{16}
+\contentsline {chapter}{\numberline {3}Estado del Arte}{19}
+\contentsline {section}{\numberline {3.1}Cellular Automata Automatically Constructed from a Bioconvection Pattern}{19}
+\contentsline {section}{\numberline {3.2}Discovery of Transition Rules for Cellular Automata Using Artificial Bee Colony and Particle Swarm Optimization Algorithms in Urban Growth Modeling}{20}
+\contentsline {section}{\numberline {3.3}On Routine Evolution of Complex Cellular Automata}{25}
+\contentsline {chapter}{\numberline {4}M\IeC {\'e}todos y metodolog\IeC {\'\i }as}{27}
+\contentsline {section}{\numberline {4.1}Conjunto de datos}{27}
+\contentsline {subsection}{\numberline {4.1.1}Brain}{27}
+\contentsline {subsection}{\numberline {4.1.2}Byl}{28}
+\contentsline {subsection}{\numberline {4.1.3}Evoloops}{29}
+\contentsline {subsection}{\numberline {4.1.4}Mite}{30}
+\contentsline {section}{\numberline {4.2}Preprocesamiento}{31}
+\contentsline {subsection}{\numberline {4.2.1}Discretizaci\IeC {\'o}n}{31}
+\contentsline {subsection}{\numberline {4.2.2}Binarizaci\IeC {\'o}n}{32}
+\contentsline {section}{\numberline {4.3}Algoritmos de aprendizaje}{33}
+\contentsline {subsection}{\numberline {4.3.1}LRDEA (Local Rule Discovery Evolutive Algorithm)}{34}
+\contentsline {subsubsection}{Representaci\IeC {\'o}n}{34}
+\contentsline {subsubsection}{Funci\IeC {\'o}n de aptitud}{35}
+\contentsline {subsubsection}{Mecanismo de selecci\IeC {\'o}n de padres}{35}
+\contentsline {subsubsection}{Cruza}{36}
+\contentsline {subsubsection}{Mutaci\IeC {\'o}n}{36}
+\contentsline {subsubsection}{Mecanismo de selecci\IeC {\'o}n de sobrevivientes}{36}
+\contentsline {section}{\numberline {4.4}Simplificaci\IeC {\'o}n de reglas}{36}
+\contentsline {section}{\numberline {4.5}Evaluaci\IeC {\'o}n}{36}
+\contentsline {chapter}{\numberline {5}Resultados y an\IeC {\'a}lisis}{37}
+\contentsline {chapter}{\numberline {6}Conclusiones y trabajo futuro}{39}

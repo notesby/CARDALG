@@ -17,10 +17,12 @@
 \usepackage{verbatim}
 \usepackage{listings}
 \usepackage{pdfpages}
+\usepackage{amsmath}
 \usepackage{natbib} % Referncias en formato APA
 \usepackage[refpage,intoc,spanish]{nomencl} % Acrónimos
 \usepackage[spanish]{babel}	% Titulos en español
 \usepackage[spanish,linesnumbered,boxed,onelanguage]{algorithm2e}
+\usepackage{lineno}
 \SetAlCapSkip{1em}
 % - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 %\usepackage[pdftex]{hyperref}
@@ -51,6 +53,7 @@ y la página donde aparece citada por primera vez a fin de que el lector pueda c
 
 \begin{document}
 
+%\linenumbers %numerated lines in the document
 %\include{portada}
 \includepdf{../portada/portada.pdf}
 %\include{cesion_derechos} % Carta de cesión de derechos para publicación
@@ -64,9 +67,9 @@ y la página donde aparece citada por primera vez a fin de que el lector pueda c
 \include{chapter1} % Introducción 
 \include{chapter2} % Marco teórico
 \include{chapter3} % Estado del arte
-%\include{chapter4} % Metodos y metodologia
-%\include{chapter5} % Resultados y analisis
-%\include{chapter6} % Conclusiones y trabajo futuro
+\include{chapter4} % Metodos y metodologia
+\include{chapter5} % Resultados y analisis
+\include{chapter6} % Conclusiones y trabajo futuro
 %
 \bibliographystyle{apalike}
 \bibliography{Referencias} 
