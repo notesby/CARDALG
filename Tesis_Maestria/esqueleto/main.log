@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  6 MAY 2020 22:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  8 MAY 2020 13:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -372,24 +372,13 @@ Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \bframesep=\dimen137
 \bframebox=\box43
 LaTeX Info: Redefining \\ on input line 3056.
-)
-\@nomenclaturefile=\write3
-\openout3 = `main.nlo'.
-
-
-Writing nomenclature file main.nlo
-(./main.aux
+) (./main.aux
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
- (./abstract.aux) (./thanks.aux) (./indexes.aux) (./chapter1.aux)
-(./chapter2.aux) (./chapter3.aux) (./chapter4.aux
 
-LaTeX Warning: Label `tab:bylneigh' multiply defined.
-
-
-LaTeX Warning: Label `tab:bylneigh' multiply defined.
-
-) (./chapter5.aux) (./chapter6.aux)
+(./abstract.aux) (./thanks.aux) (./indexes.aux) (./chapter1.aux)
+(./chapter2.aux) (./chapter3.aux) (./chapter4.aux) (./chapter5.aux)
+(./chapter6.aux)
 
 ! Package natbib Error: Bibliography not compatible with author-year citations.
 
@@ -408,18 +397,18 @@ or select author-year BibTeX style, e.g. plainnat
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
@@ -496,39 +485,44 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 (/usr/local/texlive/2018/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 ))
-LaTeX Info: Redefining \. on input line 54.
-LaTeX Info: Redefining \% on input line 54.
+LaTeX Info: Redefining \. on input line 56.
+LaTeX Info: Redefining \% on input line 56.
+\@nomenclaturefile=\write3
+\openout3 = `main.nlo'.
+
+
+Writing nomenclature file main.nlo
 <../portada/portada.pdf, id=1, 614.295pt x 794.97pt>
 File: ../portada/portada.pdf Graphic file (type pdf)
 <use ../portada/portada.pdf>
-Package pdftex.def Info: ../portada/portada.pdf  used on input line 58.
+Package pdftex.def Info: ../portada/portada.pdf  used on input line 61.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: ../portada/portada.pdf Graphic file (type pdf)
 <use ../portada/portada.pdf>
-Package pdftex.def Info: ../portada/portada.pdf  used on input line 58.
+Package pdftex.def Info: ../portada/portada.pdf  used on input line 61.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 <../portada/portada.pdf, id=4, page=1, 614.295pt x 794.97pt>
 File: ../portada/portada.pdf Graphic file (type pdf)
 <use ../portada/portada.pdf, page 1>
-Package pdftex.def Info: ../portada/portada.pdf , page1 used on input line 58.
+Package pdftex.def Info: ../portada/portada.pdf , page1 used on input line 61.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: ../portada/portada.pdf Graphic file (type pdf)
 <use ../portada/portada.pdf, page 1>
-Package pdftex.def Info: ../portada/portada.pdf , page1 used on input line 58.
+Package pdftex.def Info: ../portada/portada.pdf , page1 used on input line 61.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: ../portada/portada.pdf Graphic file (type pdf)
 <use ../portada/portada.pdf, page 1>
-Package pdftex.def Info: ../portada/portada.pdf , page1 used on input line 58.
+Package pdftex.def Info: ../portada/portada.pdf , page1 used on input line 61.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: ../portada/portada.pdf Graphic file (type pdf)
 <use ../portada/portada.pdf, page 1>
-Package pdftex.def Info: ../portada/portada.pdf , page1 used on input line 58.
+Package pdftex.def Info: ../portada/portada.pdf , page1 used on input line 61.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: ../portada/portada.pdf Graphic file (type pdf)
 <use ../portada/portada.pdf, page 1>
-Package pdftex.def Info: ../portada/portada.pdf , page1 used on input line 58.
+Package pdftex.def Info: ../portada/portada.pdf , page1 used on input line 61.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
- [1
+[1
 
  <../portada/portada.pdf{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/upd
 map/pdftex.map}>]
@@ -570,70 +564,72 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ] (./main.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [7])
+ [7] [8])
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
-) [8]
+) [9]
 \openout2 = `chapter1.aux'.
 
- (./chapter1.tex
+ (./chapter1.tex [10
+
+
+
+]
 Cap\'{\i }tulo 1.
-[1
-
-
-
-
-] (/usr/local/texlive/2018/texmf-dist/tex/latex/ucs/data/uni-32.def
+(/usr/local/texlive/2018/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
-Underfull \hbox (badness 10000) in paragraph at lines 20--32
+Underfull \hbox (badness 10000) in paragraph at lines 21--33
+
+ []
+
+[1
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 42--46
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 41--45
-
- []
-
-
-Overfull \hbox (33.3187pt too wide) in paragraph at lines 41--45
+Overfull \hbox (33.3187pt too wide) in paragraph at lines 42--46
 \T1/cmr/m/n/12 La ma-yo-ría de los au-tó-ma-tas ce-lu-la-res po-seen las si-gui
 en-tes cin-co características([]): 
  []
 
-LaTeX Info: Redefining \. on input line 45.
-LaTeX Info: Redefining \% on input line 45.
+LaTeX Info: Redefining \. on input line 49.
+LaTeX Info: Redefining \% on input line 49.
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 64--69
+Underfull \hbox (badness 10000) in paragraph at lines 65--70
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--83
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--83
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--83
+
+ []
+
+LaTeX Info: Redefining \. on input line 83.
+LaTeX Info: Redefining \% on input line 83.
+[3]
+LaTeX Info: Redefining \. on input line 97.
+LaTeX Info: Redefining \% on input line 97.
+ [4]
+LaTeX Info: Redefining \. on input line 116.
+LaTeX Info: Redefining \% on input line 116.
+ [5])
 LaTeX Info: Redefining \. on input line 70.
 LaTeX Info: Redefining \% on input line 70.
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 72--82
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 72--82
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 72--82
-
- []
-
-LaTeX Info: Redefining \. on input line 88.
-LaTeX Info: Redefining \% on input line 88.
-[4]
-LaTeX Info: Redefining \. on input line 109.
-LaTeX Info: Redefining \% on input line 109.
- [5])
-LaTeX Info: Redefining \. on input line 67.
-LaTeX Info: Redefining \% on input line 67.
  [6]
 \openout2 = `chapter2.aux'.
 
@@ -675,11 +671,11 @@ LaTeX Info: Redefining \% on input line 217.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 )
-LaTeX Info: Redefining \. on input line 68.
-LaTeX Info: Redefining \% on input line 68.
+LaTeX Info: Redefining \. on input line 71.
+LaTeX Info: Redefining \% on input line 71.
  [16]
-LaTeX Info: Redefining \. on input line 68.
-LaTeX Info: Redefining \% on input line 68.
+LaTeX Info: Redefining \. on input line 71.
+LaTeX Info: Redefining \% on input line 71.
  [17]
 \openout2 = `chapter3.aux'.
 
@@ -701,7 +697,7 @@ Overfull \hbox (13.38307pt too wide) in paragraph at lines 12--12
 LaTeX Info: Redefining \. on input line 38.
 LaTeX Info: Redefining \% on input line 38.
  [20]
-<fig/abc.png, id=137, 447.6725pt x 451.6875pt>
+<fig/abc.png, id=144, 447.6725pt x 451.6875pt>
 File: fig/abc.png Graphic file (type png)
 <use fig/abc.png>
 Package pdftex.def Info: fig/abc.png  used on input line 60.
@@ -719,7 +715,7 @@ TH MODELING \T1/cmr/m/n/12 21
  []
 
 [21]
-<fig/pso.png, id=142, 444.66125pt x 521.95pt>
+<fig/pso.png, id=149, 444.66125pt x 521.95pt>
 File: fig/pso.png Graphic file (type png)
 <use fig/pso.png>
 Package pdftex.def Info: fig/pso.png  used on input line 67.
@@ -730,7 +726,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 71.
 LaTeX Info: Redefining \% on input line 71.
  [22 <./fig/abc.png>]
-<fig/evaluation.png, id=148, 514.92375pt x 224.84pt>
+<fig/evaluation.png, id=154, 514.92375pt x 224.84pt>
 File: fig/evaluation.png Graphic file (type png)
 <use fig/evaluation.png>
 Package pdftex.def Info: fig/evaluation.png  used on input line 74.
@@ -748,7 +744,7 @@ TH MODELING \T1/cmr/m/n/12 23
  []
 
 [23 <./fig/pso.png>]
-<fig/results.png, id=153, 576.1525pt x 259.97125pt>
+<fig/results.png, id=159, 576.1525pt x 259.97125pt>
 File: fig/results.png Graphic file (type png)
 <use fig/results.png>
 Package pdftex.def Info: fig/results.png  used on input line 81.
@@ -756,14 +752,14 @@ Package pdftex.def Info: fig/results.png  used on input line 81.
 LaTeX Info: Redefining \. on input line 91.
 LaTeX Info: Redefining \% on input line 91.
  [24 <./fig/evaluation.png> <./fig/results.png>]
-<fig/rulesencoding.png, id=159, 625.33624pt x 239.89626pt>
+<fig/rulesencoding.png, id=165, 625.33624pt x 239.89626pt>
 File: fig/rulesencoding.png Graphic file (type png)
 <use fig/rulesencoding.png>
 Package pdftex.def Info: fig/rulesencoding.png  used on input line 94.
 (pdftex.def)             Requested size: 390.0pt x 149.61998pt.
 )
-LaTeX Info: Redefining \. on input line 69.
-LaTeX Info: Redefining \% on input line 69.
+LaTeX Info: Redefining \. on input line 72.
+LaTeX Info: Redefining \% on input line 72.
 
 Overfull \hbox (18.93062pt too wide) has occurred while \output is active
 \T1/cmr/m/sl/12 3.3.  ON ROUTINE EVOLUTION OF COMPLEX CELLULAR AUTOMATA \T1/cmr
@@ -826,22 +822,19 @@ LaTeX Info: Redefining \% on input line 284.
  [34]
 LaTeX Info: Redefining \. on input line 332.
 LaTeX Info: Redefining \% on input line 332.
- [35])
-LaTeX Info: Redefining \. on input line 70.
-LaTeX Info: Redefining \% on input line 70.
- [36]
+ [35]
+Underfull \vbox (badness 1248) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 352.
+LaTeX Info: Redefining \% on input line 352.
+ [36])
+LaTeX Info: Redefining \. on input line 73.
+LaTeX Info: Redefining \% on input line 73.
+
+[37]
 \openout2 = `chapter5.aux'.
 
  (./chapter5.tex
-Cap\'{\i }tulo 5.
-) [37
-
-
-
-]
-\openout2 = `chapter6.aux'.
-
- (./chapter6.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
  [38
@@ -849,11 +842,23 @@ LaTeX Info: Redefining \% on input line 1.
 
 
 ]
+Cap\'{\i }tulo 5.
+) [39]
+LaTeX Info: Redefining \. on input line 74.
+LaTeX Info: Redefining \% on input line 74.
+ [40]
+\openout2 = `chapter6.aux'.
+
+ (./chapter6.tex
 Cap\'{\i }tulo 6.
-) [39] (./main.bbl
+) [41
+
+
+
+] (./main.bbl
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [40
+ [42
 
 
 ]
@@ -862,61 +867,63 @@ Underfull \hbox (badness 1215) in paragraph at lines 41--44
  Scien-ti-fic Ame-ri-can\T1/cmr/m/n/12 ,
  []
 
-[41]
+[43]
 LaTeX Info: Redefining \. on input line 122.
 LaTeX Info: Redefining \% on input line 122.
- [42])
-LaTeX Info: Redefining \. on input line 80.
-LaTeX Info: Redefining \% on input line 80.
- [43] (./main.aux
+ [44]) (./main.nls
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [45]
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [46
+
+]) [47] (./main.aux
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
- (./abstract.aux) (./thanks.aux) (./indexes.aux)
-(./chapter1.aux) (./chapter2.aux) (./chapter3.aux) (./chapter4.aux)
-(./chapter5.aux) (./chapter6.aux))
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+ (./abstract.aux)
+(./thanks.aux) (./indexes.aux) (./chapter1.aux) (./chapter2.aux)
+(./chapter3.aux) (./chapter4.aux) (./chapter5.aux) (./chapter6.aux)) ) 
 Here is how much of TeX's memory you used:
- 9239 strings out of 492649
- 130850 string characters out of 6129622
- 254737 words of memory out of 5000000
- 12867 multiletter control sequences out of 15000+600000
+ 9245 strings out of 492649
+ 130919 string characters out of 6129622
+ 255814 words of memory out of 5000000
+ 12870 multiletter control sequences out of 15000+600000
  21468 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,21n,43p,1141b,634s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
-/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
-usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
-sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></us
-r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/
-local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
-cal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loca
-l/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/t
-exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
-ive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
-ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive
-/2018/texmf-dist/fonts/type1/public/cm-super/sfbx0800.pfb></usr/local/texlive/2
-018/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/201
-8/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2018/
-texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2018/te
-xmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2018/texm
-f-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2018/texmf-
-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2018/texmf-di
-st/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2018/texmf-dist
-/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2018/texmf-dist/f
-onts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2018/texmf-dist/fon
-ts/type1/public/cm-super/sfsl1200.pfb></usr/local/texlive/2018/texmf-dist/fonts
-/type1/public/cm-super/sfss1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/t
-ype1/public/cm-super/sfti1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/typ
-e1/public/cm-super/sftt1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1
-/public/cm-super/sfxc1200.pfb>
-Output written on main.pdf (52 pages, 1051105 bytes).
+ 43i,21n,43p,1109b,634s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/loc
+al/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local
+/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/
+texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/t
+exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
+xlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/tex
+live/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texli
+ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive
+/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2
+018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/texmf
+-dist/fonts/type1/public/cm-super/sfbx0800.pfb></usr/local/texlive/2018/texmf-d
+ist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2018/texmf-dis
+t/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2018/texmf-dist/
+fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2018/texmf-dist/fo
+nts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2018/texmf-dist/font
+s/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/
+type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2018/texmf-dist/fonts/ty
+pe1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2018/texmf-dist/fonts/type
+1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/
+public/cm-super/sfrm1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/pu
+blic/cm-super/sfsl1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/publ
+ic/cm-super/sfss1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public
+/cm-super/sfti1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/c
+m-super/sftt1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-
+super/sfxc1200.pfb>
+Output written on main.pdf (58 pages, 1055768 bytes).
 PDF statistics:
- 306 PDF objects out of 1000 (max. 8388607)
- 205 compressed objects within 3 object streams
+ 325 PDF objects out of 1000 (max. 8388607)
+ 218 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

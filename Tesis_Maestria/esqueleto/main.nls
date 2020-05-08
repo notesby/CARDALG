@@ -2,20 +2,7 @@
 
  \nomgroup{A}
 
-  \item [{ABEL}]\begingroup Advanced Boolean Expression Language\\(\textsl{Lenguaje avanzado de expresiones boleanas})\nomeqref {2.0}
-		\nompageref{7}
-  \item [{AHDL}]\begingroup Altera HDL\nomeqref {2.0}\nompageref{7}
-  \item [{FPGA}]\begingroup Field Programable Gate Array\nomeqref {1.0}
-		\nompageref{1}
-  \item [{Hard Processor}]\begingroup \textsl{Circuito integrado que contiene un procesador}\nomeqref {2.0}
-		\nompageref{7}
-  \item [{HDL}]\begingroup Hardware Description Language \\(\textsl{Lenguaje de descripción hardware}) \nomeqref {2.0}
-		\nompageref{7}
-  \item [{Soft Processor}]\begingroup \textsl{Procesador sintetizado en un dispositivo reconfigurable}\nomeqref {2.0}
-		\nompageref{7}
-  \item [{Verilog}]\begingroup Lenguaje de descripción hardware\nomeqref {2.0}
-		\nompageref{7}
-  \item [{VHDL}]\begingroup VHSIC Hardware Description Language\\(\textsl{Lenguaje de descripción hardware para circuitos integrados de muy alta velocidad})\nomeqref {2.0}
-		\nompageref{7}
+  \item [{AC}]\begingroup Autómata celular\nomeqref {1.0}
+		\nompageref{6}
 
 \end{thenomenclature}

@@ -164,7 +164,7 @@ class GGA(Experiment):
         negProp = (totalNeg/totalExamples) 
         total = (countPosMatch * negProp) + (-1*countNegMatch * posProp)
         maxTotal = (totalPos * negProp)
-        res = total/maxTotal
+        res = total/maxTotal if maxTotal > 0 else 0
         return res
                     
     def fitness(self,phenotype,goal):
@@ -270,7 +270,7 @@ class GGA(Experiment):
         fileName = "{}.json".format(0)
         self.saveState(fileName)
         for i in range(1,self.noIterations):
-            print(f"iteration {i}")
+            if self.verbose >= 1: print(f"iteration {i}")
             fileName = "{}.json".format(i)
             self.world.nextGeneration()
             self.saveState(fileName)

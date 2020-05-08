@@ -98,7 +98,7 @@ class Population():
     
     def nextGeneration(self):
         start = time.time()
-        print(f"goal = {self.goal}")
+        #print(f"goal = {self.goal}")
         self.generation += 1
         backend = 'threading'
         #with parallel_backend(backend):
@@ -121,7 +121,7 @@ class Population():
             self.chromosomes.append(child) 
         #print(f"Fitness 2 elapsed time: {time.time()-start}")
         self.regulation(self)
-        print(f"goal {self.goal} elapsed time: {time.time()-start}")
+        #print(f"goal {self.goal} elapsed time: {time.time()-start}")
     
     def best(self):
         if len(self.chromosomes) == 0:

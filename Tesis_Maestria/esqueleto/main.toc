@@ -4,16 +4,16 @@
 \contentsline {chapter}{Thanks}{\es@scroman {v}}
 \contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n}{1}
 \contentsline {section}{\numberline {1.1}Definiciones}{2}
-\contentsline {subsection}{\numberline {1.1.1}Aut\IeC {\'o}mata Celular}{2}
-\contentsline {subsection}{\numberline {1.1.2}Aprendizaje Autom\IeC {\'a}tico}{4}
+\contentsline {subsection}{\numberline {1.1.1}Aut\IeC {\'o}mata celular}{2}
+\contentsline {subsection}{\numberline {1.1.2}Aprendizaje autom\IeC {\'a}tico}{4}
 \contentsline {subsection}{\numberline {1.1.3}Algoritmos gen\IeC {\'e}ticos}{4}
-\contentsline {section}{\numberline {1.2}Planteamiento del problema}{5}
+\contentsline {section}{\numberline {1.2}Planteamiento del problema}{4}
 \contentsline {section}{\numberline {1.3}Objetivos}{5}
 \contentsline {subsection}{\numberline {1.3.1}Objetivo general}{5}
 \contentsline {paragraph}{Dise\IeC {\~n}ar un nuevo (simb\IeC {\'o}lico o sub-simb\IeC {\'o}lico) algoritmo de aprendizaje para aprender reglas que gobiernan un fen\IeC {\'o}meno para las cuales nosotros solo tenemos como entrada rejillas estados en 2 dimensiones.}{5}
 \contentsline {subsection}{\numberline {1.3.2}Objetivos espec\IeC {\'\i }ficos}{5}
-\contentsline {section}{\numberline {1.4}Justificaci\IeC {\'o}n}{6}
-\contentsline {subsection}{\numberline {1.4.1}Beneficios esperados}{6}
+\contentsline {section}{\numberline {1.4}Justificaci\IeC {\'o}n}{5}
+\contentsline {subsection}{\numberline {1.4.1}Beneficios esperados}{5}
 \contentsline {subsection}{\numberline {1.4.2}Alcances y l\IeC {\'\i }mites}{6}
 \contentsline {chapter}{\numberline {2}Marco te\IeC {\'o}rico}{7}
 \contentsline {section}{\numberline {2.1}Algoritmos gen\IeC {\'e}ticos}{7}
@@ -53,6 +53,11 @@
 \contentsline {subsubsection}{Mutaci\IeC {\'o}n}{36}
 \contentsline {subsubsection}{Mecanismo de selecci\IeC {\'o}n de sobrevivientes}{36}
 \contentsline {section}{\numberline {4.4}Simplificaci\IeC {\'o}n de reglas}{36}
-\contentsline {section}{\numberline {4.5}Evaluaci\IeC {\'o}n}{36}
-\contentsline {chapter}{\numberline {5}Resultados y an\IeC {\'a}lisis}{37}
-\contentsline {chapter}{\numberline {6}Conclusiones y trabajo futuro}{39}
+\contentsline {section}{\numberline {4.5}Evaluaci\IeC {\'o}n}{37}
+\contentsline {chapter}{\numberline {5}Resultados y an\IeC {\'a}lisis}{39}
+\contentsline {section}{\numberline {5.1}Brain}{40}
+\contentsline {section}{\numberline {5.2}Byl}{40}
+\contentsline {section}{\numberline {5.3}Evoloops}{40}
+\contentsline {section}{\numberline {5.4}Mite}{40}
+\contentsline {chapter}{\numberline {6}Conclusiones y trabajo futuro}{41}
+\contentsline {chapter}{Acr\'onimos, abreviaturas y siglas}{47}

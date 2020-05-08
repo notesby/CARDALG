@@ -1,6 +1,6 @@
 \chapter{Métodos y metodologías}
 
-En esta sección detallamos cual fue la metodología empleada para llevar acabo los experimentos, en el siguiente diagrama podemos ver el panorama general de la metodología.
+En esta sección se detallan cual fue la metodología empleada para llevar acabo los experimentos, en el siguiente diagrama se puede ver el panorama general de la metodología.
 
 %diagrama%
 
@@ -240,7 +240,7 @@ Los algoritmos de aprendizaje utilizados en este trabajo consisten en los siguie
 \begin{itemize}
 	\item RA1
 	\item GA-Nuggets
-	\item LRDEA el algoritmo que estamos proponiendo.
+	\item LRDEA (propuesta de solución).
 \end{itemize}
 
 Debido a que no se encontraron la implementación de los algoritmos RA1 y GA-Nuggets, se realizo la tarea de realizar dicha implementación en el lenguaje de programación Python.
@@ -262,7 +262,7 @@ Al igual que el algoritmo GA-Nuggets la codificación para cada individuo repres
 			$n_6$&$n_7$&$n_8$&\\
 		\end{tabular}
 	\end{center}
-	\caption{\label{tab:bylneigh} Representación del vecindario.}
+	\caption{\label{tab:caneigh} Representación del vecindario.}
 \end{table}
 
 \begin{table}[H]
@@ -274,7 +274,7 @@ Al igual que el algoritmo GA-Nuggets la codificación para cada individuo repres
 			\hline
 		\end{tabular}}
 	\end{center}
-	\caption{\label{tab:bylneigh} Representación del la codificación.}
+	\caption{\label{tab:representation} Representación del la codificación.}
 \end{table}
 
 \subsubsection{Función de aptitud}
@@ -333,7 +333,7 @@ Para el proceso de cruce se seleccionó el método de cruce en un punto, esto es
 
 \subsubsection{Mutación}
 
-El operador de mutación consiste en dos partes, la primera es una probabilidad de ser mutado, la segunda es la selección del gen que se va a mutar. El gen mutado puede adquirir un nuevo valor en el conjunto de valores o puede removerse uno de estos valores.
+El operador de mutación consiste en dos partes, la primera es la probabilidad de realizar la mutación o no, la segunda es la selección del gen que se va a mutar. El gen mutado puede adquirir un nuevo valor en el conjunto de valores o puede removerse uno de estos valores.
 
 \subsubsection{Mecanismo de selección de sobrevivientes}
 
@@ -345,3 +345,10 @@ Para la simplificación de las reglas se utiliza el algoritmo desarrollado por W
 
 
 \section{Evaluación}
+
+En el proceso de evaluación se emplea la  ecuación de exactitud \ref{eq:exactitud} para calcular el error de aprendizaje y el error de generalización.
+
+
+\[
+exactitud = \frac{VP + VN}{VP+FP+VN+FN} \label{eq:exactitud} 
+\]

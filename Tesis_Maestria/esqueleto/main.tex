@@ -32,9 +32,11 @@
 % - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 \renewcommand{\nomname}{Acr\'onimos, abreviaturas y siglas}
-\makenomenclature
-\renewcommand{\nompreamble}{En éste apartado se listan los acrónimos, abreviaturas y siglas usadas en éste texto. Se incluye una descripción breve, la respectiva traducción en los casos que así lo requieren %entre paréntesis.
+%\makenomenclature
+\renewcommand{\nompreamble}{En éste apartado se listan los acrónimos, abreviaturas y siglas usadas en éste texto. Se incluye una descripción breve, la respectiva traducción en los casos que así lo requieren entre paréntesis.
 y la página donde aparece citada por primera vez a fin de que el lector pueda conocer el contexto en el que fue enunciada.}
+%\nomenclature{c}{Speed of light in a vacuum inertial frame}
+%\printnomenclature
 %\renewcommand{\nompostamble}{findenomenclatura}
 % - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 %\setlength{\parindent}{1.5cm}
@@ -52,7 +54,8 @@ y la página donde aparece citada por primera vez a fin de que el lector pueda c
 %\date{Dec 2011}
 
 \begin{document}
-
+\makenomenclature
+%\nomenclature{c}{Speed of light in a vacuum inertial frame}
 %\linenumbers %numerated lines in the document
 %\include{portada}
 \includepdf{../portada/portada.pdf}
@@ -76,5 +79,5 @@ y la página donde aparece citada por primera vez a fin de que el lector pueda c
 %\include{bibliography}
 \appendix
 %\include{appendix_a}
-
+\printnomenclature
 \end{document}

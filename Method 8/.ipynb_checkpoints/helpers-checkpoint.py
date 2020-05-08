@@ -90,7 +90,6 @@ def getExpr(size):
     return eval(val)
 
 dexpr = None
-
 #returns an array with the position in the flattened data
 #coords is an array with coordinate relative to the cell in the original dimensions
 # size = np.shape(data)

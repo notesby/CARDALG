@@ -2,6 +2,7 @@ import numpy as np
 import math
 import random
 from copy import copy
+from joblib import Parallel, delayed,parallel_backend
 
 def encodeKey(index,value):
     return "{},{}".format(index,value)
@@ -11,28 +12,32 @@ def decodeKey(key):
 
 #returns an expression to get the transformed coordinates 
 # from the original dimensions to the 1 dimension flattened data
+#returns an expression to get the transformed coordinates 
+# from the original dimensions to the 1 dimension flattened data
 def getExpr(size):
-    val = ""
+    val = "lambda x:"
     lst = []
     if len(size) > 1:
         for i in range(1,len(size)):
-            temp = "xi[{}]".format(i-1)
+            temp = "x[{}]".format(i-1)
             for j in range(i,len(size)):
                 temp += "*{}".format(size[j])
             lst.append(temp)
     else:
         i = 0
     val += "+".join(lst)
-    val += "+xi[{}]".format(i)
-    return val
-
+    val += "+x[{}]".format(i)
+    return eval(val)
 
 #returns an array with the position in the flattened data
 #coords is an array with coordinate relative to the cell in the original dimensions
 # size = np.shape(data)
+expr = None
 def getNeighbors(cell,coords,size):
+    global expr
     newCoords = []
-    expr = getExpr(size)
+    if expr == None:
+        expr = getExpr(size)
     for coord in coords:
         xi = []
         outOfBounds = False
@@ -52,7 +57,7 @@ def getNeighbors(cell,coords,size):
         if outOfBounds:
             newCoords.append(-1)
         else:
-            newCoord = eval(expr)
+            newCoord = expr(xi)
             newCoords.append(newCoord)
             
     return newCoords
@@ -510,7 +515,11 @@ def removePopulation(population,fitnessTbl,populationSize):
         fitnessTbl.remove(elite)
         if len(fitnessTbl) <= 0: break
     return newPopulation
-    
+
+def fitnessParallel(i,w1,w2,beta,population,domain,noEvents,dataset):
+    fit = gafitness(w1,w2,beta,population[i][0],population[i][1],domain,noEvents,dataset)
+    return [i,fit,population[i][1][1]]
+
 def ganuggets(populationSize,noOffsprings,antMinSize,antMaxSize,beta,w1,w2,mutationRate,crossprob,dataset,domain,goalAttr,noEvents,seed,maxIter = 0):
     population = initialize(populationSize,antMinSize,antMaxSize,goalAttr,domain,seed)
     fitnessTbl = []
@@ -521,7 +530,7 @@ def ganuggets(populationSize,noOffsprings,antMinSize,antMaxSize,beta,w1,w2,mutat
     fitGoalReached = False
     fitnessHistory = {}
     while it < maxIter and not fitGoalReached:
-        print(it)
+        if it %10 == 0: print(it)
         it += 1
         fitnessTbl = sorted(fitnessTbl,key = lambda x: x[1],reverse = True)
         
@@ -552,9 +561,12 @@ def ganuggets(populationSize,noOffsprings,antMinSize,antMaxSize,beta,w1,w2,mutat
             removeCondition(child[0],antMaxSize,domain)
         population = population+offsprings
         fitnessTbl = []
-        for i in range(len(population)):
-            fit = gafitness(w1,w2,beta,population[i][0],population[i][1],domain,noEvents,dataset)
-            fitnessTbl.append([i,fit,population[i][1][1]])
+        backend = 'threading'
+        with Parallel(n_jobs=4,backend=backend) as parallel:
+            fitnessTbl = parallel(delayed(fitnessParallel)(i,w1,w2,beta,population,domain,noEvents,dataset) for i in range(len(population)))
+        #for i in range(len(population)):
+        #    fit = gafitness(w1,w2,beta,population[i][0],population[i][1],domain,noEvents,dataset)
+        #    fitnessTbl.append([i,fit,population[i][1][1]])
         fitnessTbl = sorted(fitnessTbl,key = lambda x: x[1],reverse = True)
         groupedFitness = {}
         for fit in fitnessTbl:
