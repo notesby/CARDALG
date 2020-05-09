@@ -1,6 +1,6 @@
 \chapter{Estado del Arte}
 
-De los trabajos que existen en la actualidad, podemos mencionar tres que resultan de especial interés, cuyas metodologías se encuentran las siguientes:
+De los trabajos que existen en la actualidad, podemos mencionar tres que resultan de especial interés para este trabajo de investigación. Las tres metodologías de nuestro interés son las siguientes:
 \begin{itemize}
 	\item Búsqueda de reglas locales para un autómata celular mediante el análisis estadístico de las observaciones de un fenómeno.
 	\item Configuración de reglas locales para un autómata celular mediante el empleo de algoritmos evolutivos.
@@ -11,11 +11,13 @@ Estos son algunos de los enfoques para emplear los autómatas celulares como her
 
 \section{Cellular Automata Automatically Constructed from a Bioconvection Pattern}
 
-Esta investigación \citep{kawaharada2016cellular} se centra en realizar el descubrimiento de las reglas de evolución para un autómata celular unidimensional, empleando métodos de análisis estadísticos para determinar estas reglas a partir de los datos observados de los patrones de bioconvección generados como resultado de la respuesta a una estimulación luminosa de un tipo de alga unicelular llamada Euglena gracilis. 
+Esta investigación \citep{kawaharada2016cellular} se centra en descubrir reglas de evolución para un autómata celular unidimensional, empleando métodos de análisis estadísticos para determinar dichas reglas, a partir de los datos observados de los patrones de bioconvección que son generados como resultado de la respuesta a la estimulación luminosa de un tipo de alga unicelular llamada \emph{Euglena gracilis}.
 \\
-El experimento consistió en iluminar por la parte de abajo de un contenedor anular conteniendo una suspensión de E. gracilis con una fuerte intensidad de luz. Los individuos al ser alcanzados por la luz sufren de fototaxis negativa, lo cual hace que se acumulen cerca de la superficie. Como la densidad del E. gracilis es mas pesada que el agua, las regiones ricas en Euglena se precipitan al fondo para conducir el flujo local. Estas interacciones entre los individuos y el flujo eventualmente forma patrones de bioconvección.
+El experimento consistió en iluminar por la parte de abajo de un contenedor anular conteniendo una suspensión de E. gracilis con una fuerte intensidad de luz. Los individuos, al ser alcanzados por la luz, sufren de fototaxis negativa, lo cual provoca que se acumulen cerca de la superficie.
+
+Como la densidad del E. gracilis es mas pesada que el agua, las regiones ricas en esta alga se precipitan al fondo para conducir el flujo local. Estas interacciones entre los individuos y el flujo eventualmente forma patrones de bioconvección.
 \\
-El proceso lo realizan de la siguiente forma:
+El proceso se realizó de la siguiente forma:
 
 \begin{enumerate}
 	\item Recopilación de imágenes de los patrones de bioconvección.
@@ -29,13 +31,14 @@ El proceso lo realizan de la siguiente forma:
 
 \section{Discovery of Transition Rules for Cellular Automata Using Artificial Bee Colony and Particle Swarm Optimization Algorithms in Urban Growth Modeling}
 
-En este trabajo \citep{naghibi2016discovery} se muestra un método para descubrir las reglas de transición de un autómata celular de lattice bidimensional que modele el crecimiento urbano empleando un algoritmo de optimización de colonia de abejas artificiales. Para ello utilizan como datos de entrada información multitemporal sensada remotamente de el área urbana de la ciudad de Urmia, Iran.
+En este trabajo \citep{naghibi2016discovery} se muestra un método para descubrir las reglas de transición de un autómata celular de lattice bidimensional que modele el crecimiento urbano empleando un algoritmo de optimización de colonia de abejas artificiales. Para ello, se utilizan como datos de entrada información multitemporal sensada remotamente de el área urbana de la ciudad de Urmia, Irán.
 \\
 El autómata celular en este trabajo se define con la siguiente ecuación:
 
 \begin{equation} \label{eq:8}
-P^t_{ij} = S^t_{ij}\times\Omega^t_{ij}\times Con\times e_r
+P^t_{ij} = S^t_{ij}\times\Omega^t_{ij}\times Con\times e_r,
 \end{equation}
+
 donde:
 \begin{itemize}
 	\item $P^t_{ij} $ es el potencial de desarrollo de una celda $ij$.
@@ -45,7 +48,7 @@ donde:
 	\item $e_r$ es un termino para la perturbación estocástica por errores.
 \end{itemize}
 
-El potencial de desarrollo se compara con un valor umbral para determinar si una célula no urbanizada va a poder ser transformada en una célula urbanizada en el tiempo $t+1$. Entonces los valores a encontrar son los valores de umbral para los cuales transiciona una célula no urbanizada a una urbanizada.
+El potencial de desarrollo se compara con un valor umbral para determinar si una célula no urbanizada va a poder ser transformada en una célula urbanizada en el tiempo $t+1$. Entonces, los valores a encontrar son los valores de umbral para los cuales se produce la transición de una célula no urbanizada a una urbanizada.
 \\
 Como requerimiento para la evaluación del algoritmo, se emplean otras dos técnicas además de la colonia de abejas artificiales,las cuales son:
 \begin{itemize}
@@ -57,21 +60,21 @@ Los siguientes diagramas de continuación muestran el procedimiento que se sigui
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\linewidth]{fig/abc}
+	\includegraphics[width=\linewidth]{fig/abejas}
 	\caption{Modelo para la obtención de reglas del autómata celular empleando un algoritmo de optimización de colonia de abejas artificiales.}
 	\label{fig:abc}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\linewidth]{fig/pso}
+	\includegraphics[width=\linewidth]{fig/particulas}
 	\caption{Modelo para la obtención de reglas del autómata celular empleando un algoritmo de optimización de enjambre de partículas.}
 	\label{fig:pso}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\linewidth]{fig/evaluation}
+	\includegraphics[width=\linewidth]{fig/evaluacion}
 	\caption{Modelo de evaluación de los algoritmos.}
 	\label{fig:evaluation}
 \end{figure}
@@ -83,11 +86,11 @@ Los siguientes diagramas de continuación muestran el procedimiento que se sigui
 	\label{fig:results}
 \end{figure}
 
-Como podemos ver en la tabla de resultados el algoritmo de colonia de abejas fue capaz de obtener un mejor rendimiento sobre los otros métodos, lo cual ayudara a obtener un mejor despeño para la estimación correcta del crecimiento urbano. Sin embargo este método aquí planteado sigue teniendo ciertos obstáculos como lo es encontrar la definición correcta de la ecuación que define al autómata celular.
+Como podemos ver en la tabla de resultados, el algoritmo de colonia de abejas fue capaz de obtener un mejor rendimiento en comparación con los otros métodos. Esto ayudará a obtener un mejor despeño en la estimación correcta del crecimiento urbano. Sin embargo, el método aquí planteado sigue teniendo ciertos obstáculos como lo es encontrar una correcta definición de la ecuación que determine al autómata celular.
 
 \section{On Routine Evolution of Complex Cellular Automata}
 
-El enfoque de este trabajo \citep{bidlo2016routine} es la creación de un método para la obtención de un conjunto de reglas que puedan replicar un comportamiento, sin embargo no toman en cuenta conocimiento previo del fenómeno que se quiere replicar. Lo que se hace es utilizar un algoritmo evolutivo cuya función de aptitud es dependiente del resultado al que se quiere llegar y la codificación de las reglas viene dada de la siguiente forma:
+El aporte principal de este trabajo \citep{bidlo2016routine} es la creación de un método para la obtención de un conjunto de reglas que puedan replicar un comportamiento específico. Sin embargo, es importante resaltar que no se toma en cuenta conocimiento previo del fenómeno que se quiere replicar. Lo que se utiliza es un algoritmo evolutivo, cuya función de aptitud es dependiente del resultado al que se quiere llegar. La codificación de las reglas viene dada de la siguiente forma:
 
 \begin{figure}[H]
 	\centering

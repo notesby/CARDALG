@@ -1,48 +1,42 @@
 \pagebreak  % Fin de numeración romana
 \cleardoublepage
-\pagestyle{headings}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\leftmark}
+\rhead{\thepage}
 \pagenumbering{arabic}
 
 \chapter{Introducción}
 %
-Desde hace ya varios siglos los seres humanos se han beneficiado de la modelación y simulación de sistemas dinámicos para entender la naturaleza. En la actualidad existe una amplia gama de métodos de simulación y modelado;  uno de ellos son los autómatas celulares. 
+Desde hace algunos siglos, los seres humanos se han beneficiado de la simulación y el modelado de sistemas dinámicos que permiten estudiar y entender algunos fenómenos de la naturaleza. En la actualidad, existe una amplia gama de métodos de simulación y modelado, uno de ellos es el método de los autómatas celulares. 
 
-Los autómatas celulares son sistemas dinámicos en el que el espacio y el tiempo son discretos. Los estados de las células de una lattice regular, son
-actualizados en base a reglas de evolución de interacción local.Las reglas de evolución local son obtenidas en base a la experiencia, experimentos, o análisis de la información del problema de tal forma que las restricciones del problema se cumplan.
+Los autómatas celulares son sistemas dinámicos en los cuales el espacio y el tiempo son discretos. Los estados de las células de una lattice regular, son actualizados con base en reglas de evolución de interacción local. Las reglas de evolución local son obtenidas con base en la experiencia, experimentos, o análisis de la información del problema de tal forma que las restricciones del problema se cumplan.
 
-Hoy en día este problema ya está siendo investigado desde distintos aspectos, sin embargo muchos de ellos se centran en crear métodos específicos para el área de estudio en el que se está realizando la modelación del fenómeno, por ejemplo, la búsqueda de reglas para modelar la conversión de un área rural a un área urbana, o la búsqueda de reglas para modelar patrones de bioconvección en algas unicelulares; y otros trabajos de propósito más general que emplean algoritmos evolutivos para la generación de reglas donde el comportamiento específico no es conocido, esto es, llegar de un estado inicial a un estado final sin tomar en cuenta lo que suceda en los estados intermedios.
-Este último trabajo es el más apegado a lo que se busca en esta tesis, sin embargo, un punto importante en el que se diferencian los dos trabajos es que a nosotros nos interesa tomar en cuenta la información del fenómeno de principio a fin, para crear un conjunto de reglas que repliquen este fenómeno lo más preciso posible, esto es, pasando por cada uno los estados de los que tenemos información.
+Hoy en día, este problema se está abordado desde distintos enfoques, sin embargo, muchos de ellos se centran en crear métodos específicos para el área de estudio en el que se está realizando la modelación del fenómeno. Como ejemplo tenemos la búsqueda de reglas para modelar la conversión de un área rural a un área urbana, o la búsqueda de reglas para modelar patrones de bioconvección en algas unicelulares. Existen otros trabajos de propósito más general que emplean algoritmos evolutivos para la generación de reglas, donde el comportamiento específico no es conocido, es decir, se trata de llegar de un estado inicial a un estado final sin tomar en cuenta lo que suceda en los estados intermedios.
+
+Este último trabajo es el más apegado a los objetivos de esta tesis, no obstante, la diferencia principal entre los trabajos es que a nosotros nos interesa tomar en cuenta la información del fenómeno de principio a fin, para crear un conjunto de reglas que repliquen este fenómeno con la mayor presición posible, esto es, pasando por cada uno los estados de los cuales poseemos información.
 
 \section{Definiciones}
 
 \subsection{Autómata celular}
 
-
 Los autómatas celulares son sistemas dinámicos y discretos en espacio, estado y tiempo. Propuestos por los matemáticos John von Neumann y Stanislaw Ulam como un sistema discreto para crear un modelo reduccionista de la auto-replicación, creando así en 1950 el primer autómata celular como método para calcular el movimiento de un líquido. 
 \\
-En 1970 el autómata celular “Game of Life” inventado por John Conway \citep{gardner1970mathematical}, que consiste de dos dimensiones y dos estados, se volvió ampliamente conocido, sobre todo en la comunidad computacional.
+Para 1970, el autómata celular “Game of Life” inventado por John Conway \citep{gardner1970mathematical}, que consiste de dos dimensiones y dos estados, se volvió ampliamente conocido, sobre todo en la comunidad computacional.
 \\
-En 1981 Stephen Wolfram empezó a trabajar independientemente en autómatas celulares, en 1985 conjeturo que la regla 110 de un autómata celular elemental era equivalente a una máquina de Turing, cosa que demostró Matthew Cook en el 2004 \citep{cook2004universality}.
+En 1981, Stephen Wolfram empezó a trabajar independientemente en autómatas celulares, y en 1985 conjeturó que la regla 110 de un autómata celular elemental era equivalente a una máquina de Turing, cosa que demostró Matthew Cook en el 2004 \citep{cook2004universality}.
 \\
-Como podemos ver a través de los años con el incremento de poder de cómputo y el trabajo que se ha ido realizando alrededor de los autómatas celulares, ha ido incrementado el interés por utilizarlos para modelar sistemas naturales y artificiales.
+Como podemos ver, a través de los años con el incremento del poder de cómputo y del trabajo que se ha ido realizando alrededor de los autómatas celulares, también ha ido en aumento el interés por utilizarlos para modelar sistemas naturales y artificiales.
 \\
 Los autómatas celulares pueden ser empleados como una alternativa a las ecuaciones diferenciales para modelar sistemas físicos \citep{toffoli1984cellular}, y como un modelo de cómputo paralelo y distribuido \citep{hillis1984connection}.
 \\
 \\
-El uso exitoso de los autómatas celulares en distintos campos, tales como:
+El uso de los autómatas celulares ha sido exitoso en distintos campos, tales como la simulación de tránsito \citep{simon1998simplified}, la dinámica de fluidos  \citep{margolus1986cellular} y la formación de patrones \citep{tamayo1987cellular,boerlijstk}. Asímismo, se ha tenido éxito en las conexiones con los lenguajes formales \citep{nordahl1989formal,culik1990computation} y, como se mencionó anteriormente, en el modelado y simulación de diversos sistemas físicos \citep{vichniac1984simulating,manneville2012cellular} y biológicos \citep{ermentrout1993cellular}.
 
-\begin{itemize}
-	\item Simulación de tránsito \citep{simon1998simplified}
-	\item Dinámica de fluidos  \citep{margolus1986cellular}
-	\item Formación de patrones \citep{tamayo1987cellular,boerlijstk}
-	\item Conexiones con los lenguajes formales \citep{nordahl1989formal,culik1990computation}
-	\item Modelación y simulación de diversos sistemas físicos \citep{vichniac1984simulating,manneville2012cellular} y biológicos \citep{ermentrout1993cellular}
-\end{itemize}
-
-es una de las razones por las cuales este trabajo de tesis es de importancia.
+Como podemos observar, los autómatas celulares tienen un gran alcance en la resolución de diversos problemas. Esta es una de las razones por las cuales este trabajo de tesis es de importancia.
 \\
 \\
-La mayoría de los autómatas celulares poseen las siguientes cinco características\citep{ilachinski2001cellular}:
+La mayoría de los autómatas celulares poseen las siguientes cinco características \citep{ilachinski2001cellular}:
 
 \begin{itemize}
 	\item{\textbf{Una lattice de células discretas}: El sistema consiste de una estructura llamada lattice la cual puede ser de dimensionalidad  $\mathnormal{d}$, donde $\mathnormal{d\; \epsilon\; \aleph\cup\{0\}}$}
@@ -52,25 +46,24 @@ La mayoría de los autómatas celulares poseen las siguientes cinco característ
 	\item{\textbf{Sistemas dinámicos discretos}: En cada paso de tiempo discreto, cada célula actualiza su estado actual de acuerdo a una función o regla de evolución que toma como entrada los estados de las células vecinas y da como salida un estado del conjunto de estados.}
 \end{itemize}
 
-\textbf{Definición 1.1.1} Un autómata celular es una 5-tupla $\mathnormal{(L, D, S, H, f)}$ donde:
+\textbf{Definición 1.1.1} Un autómata celular es una 5-tupla $\mathnormal{(L, D, S, H, f)}$, donde:
 \begin{itemize}
 	\item $\mathnormal{L}$ es una matriz de dimensión $\mathnormal{d}$
-	\item $\mathnormal{D\; \epsilon\; \aleph\cup\{0\}}$ y es la dimensión del autómata.
+	\item $\mathnormal{D\; \epsilon\; \aleph\cup\{0\}}$ y es la dimensión del autómata
 	\item $\mathnormal{S}$ es un conjunto finito de elementos llamados estados y es denotado por:
 	\\
 	$\mathnormal{S=\{s_{k}:k \epsilon \{0,\dots,|S|-1\}\}}$, donde $\mathnormal{|S|}$ es la cardinalidad del conjunto de estados $S$
 	\item $H$ es un subconjunto finito de $Z^{d}$ llamado vecindad y es denotado por $\{v_{j}:x_{1,j},\dots,x_{d,j}:j\epsilon1,\dots,|H|\}$, donde los elementos $v_{j}$ son llamados vectores vecindad.
-	\item $f$ es una función de $S^{|H|}$ en $S$, llamada la función de evolución o regla.
+	\item $f$ es una función de $S^{|H|}$ en $S$, llamada la función de evolución o regla
 \end{itemize}
-\textbf{Definición 1.1.2} En un autómata celular se dice que posee fronteras nulas, si el vecino de la izquierda (o de la derecha) de la célula del extremo izquierdo (o derecho) se considera siempre como cero.
+\textbf{Definición 1.1.2} Se dice que un autómata celular posee fronteras nulas, si el vecino de la izquierda (o de la derecha) de la célula del extremo izquierdo (o derecho) se considera siempre como cero.
 \\
 \\
-\textbf{Definición 1.1.3} En un autómata celular se dice que posee fronteras periódicas, si los extremos derecho
-e izquierdo son adyacente el uno del otro.
+\textbf{Definición 1.1.3} Se dice que un autómata celular posee fronteras periódicas, si los extremos derecho e izquierdo son adyacente el uno del otro.
 
 \subsection{Aprendizaje automático}
 
-El área de aprendizaje automático es un sub-area de la Inteligencia Artificial (AI), que se basa en distintos enfoques para mejorar en el desempeño de un programa computacional sobre una tarea utilizando la experiencia que se tiene sobre la tarea. El aprendizaje puede ser de distintos tipos, los principales siendo: aprendizaje supervisado, aprendizaje no supervisado y aprendizaje reforzado.
+El área de aprendizaje automático es una sub-área de la Inteligencia Artificial (AI), que se basa en distintos enfoques para mejorar en el desempeño de un programa computacional sobre una tarea, utilizando la experiencia que se tiene sobre esa tarea. El aprendizaje puede ser de distintos tipos, los principales son: aprendizaje supervisado, aprendizaje no supervisado y aprendizaje reforzado.
 \\
 \\
 \textbf{Aprendizaje supervisado}: Consiste en el uso de un conjunto de entrenamiento para mejorar el desempeño en el programa computacional utilizando como entrada pares $(x,y)$ y la tarea es encontrar una funcion $f$ que al ingresar $x$ produzca $y$ como salida. 
@@ -79,40 +72,39 @@ El área de aprendizaje automático es un sub-area de la Inteligencia Artificial
 \textbf{Aprendizaje no supervisado}: Consiste en el uso de un conjunto de entrenamiento donde se conocen valores de entrada $x$, pero estos datos no están etiquetados. La tarea entonces es encontrar una función $f$ tal, que al ingresar $x$ como entrada produzca como salida $y$ de tal forma que $y$ sea igual para todas las entradas $x$ que compartan cierta medida de similitud.
 \\
 \\
-\textbf{Aprendizaje reforzado}: En este tipo de aprendizaje no tenemos conocimiento previo sobre la tarea, si no que se va obteniendo experiencia sobre la tarea como se va realizando, y se va ajustando nuestro programa computacional con respecto a la métrica de desempeño obtenida sobre la tarea en cada iteración.
+\textbf{Aprendizaje reforzado}: En este tipo de aprendizaje no tenemos conocimiento previo sobre la tarea, sino que se va obteniendo experiencia sobre la tarea conforme se va realizando. En este tipo de aprendizaje,se va ajustando el programa computacional con respecto a la métrica de desempeño obtenida de la tarea en cada iteración.
 
-\subsection{Algoritmos genéticos}
+\subsection{Algoritmos Genéticos}
 
-Los algoritmos genéticos son algoritmos de búsqueda basados en las mecánicas de la selección natural. Combinan el supervivencia del mas apto con el intercambio de información para formar un algoritmo de búsqueda con el novedoso instinto de búsqueda humana.  
-
+Los Algoritmos Genéticos (GA) son un conjunto de algoritmos de búsqueda que se basan en las mecánicas de la selección natural. Combinan la supervivencia del más apto con el intercambio de información para formar algoritmos de búsqueda con el novedoso instinto de búsqueda humana.  
 
 \section{Planteamiento del problema}
 
-Dada una secuencia de estados bidimensionales, encontrar un conjunto de reglas que al ingresarlas a un autómata celular puedan reproducir estos estados.
+Dada una secuencia de estados bidimensionales, encontrar un conjunto de reglas tales que, al ingresarlas a un autómata celular, este sea capaz de reproducir los estados de entrada.
 
 \section{Objetivos}
 %Esta sección describe el objetivo general y los objetívos específicos de esta tesis.
 %
 \subsection{Objetivo general}
-\noindent \paragraph{Diseñar un nuevo (simbólico o sub-simbólico) algoritmo de aprendizaje para aprender reglas que gobiernan un fenómeno para las cuales nosotros solo tenemos como entrada rejillas estados en 2 dimensiones.}
+\noindent \paragraph{Diseñar un nuevo algoritmo de aprendizaje (simbólico o sub-simbólico) con el fin de aprender reglas que gobiernan un fenómeno para las cuales se tienen rejillas estados en 2 dimensiones como entrada.}
 
 \subsection{Objetivos específicos}
 \begin{itemize}
 \item Revisar y seleccionar algunos algoritmos de aprendizaje de reglas para el problema planteado.
-\item Proponer un nuevo algoritmo de aprendizaje.
+\item Proponer un nuevo algoritmo de aprendizaje simbólico o sub-simbólico.
 \item Diseñar procedimientos específicos para la simplificación de locales a globales de los conjuntos de reglas.
 \item Construir el modelo de autómata celular que reproduce el fenómeno cuando es alimentado con las reglas aprendidas.
 \item Usar errores de aprendizaje y generalización para evaluar los resultados de cada experimento. 
 \end{itemize}
 
 \section{Justificación}
-La búsqueda de reglas para que un autómata celular pueda reproducir un fenómeno es compleja debido a que el espacio de búsqueda crece exponencialmente tomando en cuenta la cardinalidad del vecindario y la cardinalidad del espacio de estados. Es por esto que se requiere una búsqueda que pueda mejorar el desempeño en este espacio de búsqueda tomando en consideración información adicional.
+La búsqueda de las reglas que son utilizadas para que un autómata celular pueda reproducir un fenómeno es una tarea compleja. Esto se debe a que el espacio de búsqueda crece exponencialmente si se toman en cuenta la cardinalidad del vecindario y la cardinalidad del espacio de estados. Es por esta razón que se requiere de una búsqueda tal, que permita mejorar el desempeño en este espacio de búsqueda tomando en consideración información adicional.
 
 \subsection{Beneficios esperados}
-Esta tesis pretende generar una propuesta de algoritmo genético multi-poblacional distribuido el cual pueda solucionar el problema planteado.
+Esta tesis pretende generar una propuesta de algoritmo genético multi-poblacional distribuido, el cual pueda solucionar el problema planteado.
 
 \subsection{Alcances y límites}
-En este trabajo se pretende encontrar un algoritmo que pueda aprender un fenómeno del cual solo se cuenta con un conjunto de estados 2-dimensional las reglas de evolución para que al ingresarlas a un autómata celular pueda replicar el fenómeno completo, para esto utilizamos los estados obtenidos de la evolución de autómatas celulares, ya que obtener estados de la forma requerida de fenómenos reales era una tarea ardua, la cual no se pudo realizar con los recursos de tiempo que se tenían disponibles.
+En este trabajo de investigación se pretende encontrar un algoritmo que sea capaz de aprender un fenómeno del cual solo se cuenta con un conjunto de estados 2-dimensional. Como resultado se tendrán las reglas de evolución necesarias para que, al ingresarlas a un autómata celular, este pueda replicar el fenómeno completo. Para lo cual, se utilizan los estados obtenidos de la evolución de autómatas celulares; esto se debe a que la ardua tarea de obtener estados de la forma requerida de fenómenos reales, no se pudo completar con los recursos de tiempo que se tenían disponibles.
 
 \nomenclature{AC}{Autómata celular}
 \

@@ -121,14 +121,14 @@ class OCAT():
     
     def getIndexes(self,data,domain,target):
         indexes = {}
-        print("dindex")
+        #print("dindex")
         for val in domain[target]:
             indexes[val] = {"pos":set(),"neg":set()}
-        print("pos index")
+        #print("pos index")
         for i,row in enumerate(data):
             val = row[2]
             indexes[val]["pos"].add((i,row[1]))
-        print("neg index")
+        #print("neg index")
         for key in indexes:
             neg = set()
             for key2 in indexes:
@@ -146,21 +146,21 @@ class OCAT():
         return terms
         
     def preprocessing(self):
-        print("problem")
+        #print("problem")
         problem,self.conflicts = self.getLearningProblem(self.data,self.target)
-        print("matrix")
+        #print("matrix")
         matrix = self.dictToMat(problem)
-        print("domain")
+        #print("domain")
         self.domain = self.getDomain(matrix,self.target)
-        print("binarized")
+        #print("binarized")
         binarized = self.binarize(matrix,self.domain)
-        print("bdomains")
+        #print("bdomains")
         self.bdomains = self.getBinaryDomain(binarized)
-        print("indexes")
+        #print("indexes")
         self.indexes = self.getIndexes(binarized,self.domain,self.target)
-        print("auxiliar")
+        #print("auxiliar")
         self.auxiliar = self.getPosNeg(self.domain,binarized,self.indexes,self.target)
-        print("terms")
+        #print("terms")
         self.terms = self.getTerms(self.bdomains,self.target)
         
     def getFitnessValue(self,term,auxiliar,removedPos,removedNeg):
@@ -221,7 +221,7 @@ class OCAT():
         backend = 'threading'
         with Parallel(n_jobs=4,backend=backend) as parallel:
             while(len(neg.difference(removedNeg))>0):
-                if count % 10 == 0:
+                if count % 500 == 0:
                     print(len(neg.difference(removedNeg)))
                 removedPos = set()
                 termsTemp = [term for term in terms]
@@ -271,7 +271,7 @@ class OCAT():
     def train(self):
         rules = []
         for val in self.indexes:
-            print(f"training for value {val}")
+            #print(f"training for value {val}")
             rules.append([val,self.obtainRules(self.indexes[val]["pos"],self.indexes[val]["neg"],self.auxiliar[val],self.terms)])
         self.rules = rules
         self.rules = self.unbinarize(rules)

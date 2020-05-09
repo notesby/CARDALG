@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  8 MAY 2020 13:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  9 MAY 2020 01:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -267,10 +267,23 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
 )
+(/usr/local/texlive/2018/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip57
+\f@nch@O@elh=\skip58
+\f@nch@O@erh=\skip59
+\f@nch@O@olh=\skip60
+\f@nch@O@orh=\skip61
+\f@nch@O@elf=\skip62
+\f@nch@O@erf=\skip63
+\f@nch@O@olf=\skip64
+\f@nch@O@orf=\skip65
+)
 (/usr/local/texlive/2018/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip57
-\bibsep=\skip58
+\bibhang=\skip66
+\bibsep=\skip67
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count120
 )
@@ -278,7 +291,7 @@ LaTeX Info: Redefining \cite on input line 694.
 Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
 \nomlabelwidth=\dimen124
 \nom@tempdim=\dimen125
-\nomitemsep=\skip59
+\nomitemsep=\skip68
 )
 (/usr/local/texlive/2018/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2018/02/14 3.18 The Babel package
@@ -307,7 +320,7 @@ Package babel Info: Making > an active character on input line 707.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
 Package: algorithm2e 2017/07/18 v5.2 algorithms environments
 \c@AlgoLine=\count124
-\algocf@hangindent=\skip60
+\algocf@hangindent=\skip69
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
@@ -319,36 +332,36 @@ Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 (/usr/local/texlive/2018/texmf-dist/tex/latex/relsize/relsize.sty
 Package: relsize 2013/03/29 ver 4.1
 )
-\skiptotal=\skip61
-\skiplinenumber=\skip62
-\skiprule=\skip63
-\skiphlne=\skip64
-\skiptext=\skip65
-\skiplength=\skip66
-\algomargin=\skip67
-\skipalgocfslide=\skip68
+\skiptotal=\skip70
+\skiplinenumber=\skip71
+\skiprule=\skip72
+\skiphlne=\skip73
+\skiptext=\skip74
+\skiplength=\skip75
+\algomargin=\skip76
+\skipalgocfslide=\skip77
 \algowidth=\dimen127
 \inoutsize=\dimen128
 \inoutindent=\dimen129
 \interspacetitleruled=\dimen130
 \interspacealgoruled=\dimen131
 \interspacetitleboxruled=\dimen132
-\algocf@ruledwidth=\skip69
+\algocf@ruledwidth=\skip78
 \algocf@inoutbox=\box35
 \algocf@inputbox=\box36
-\AlCapSkip=\skip70
-\AlCapHSkip=\skip71
-\algoskipindent=\skip72
+\AlCapSkip=\skip79
+\AlCapHSkip=\skip80
+\algoskipindent=\skip81
 \algocf@nlbox=\box37
 \algocf@hangingbox=\box38
 \algocf@untilbox=\box39
-\algocf@skipuntil=\skip73
+\algocf@skipuntil=\skip82
 \algocf@capbox=\box40
-\algocf@lcaptionbox=\skip74
-\algoheightruledefault=\skip75
-\algoheightrule=\skip76
-\algotitleheightruledefault=\skip77
-\algotitleheightrule=\skip78
+\algocf@lcaptionbox=\skip83
+\algoheightruledefault=\skip84
+\algoheightrule=\skip85
+\algotitleheightruledefault=\skip86
+\algotitleheightrule=\skip87
 \c@algocfline=\count126
 \c@algocfproc=\count127
 \c@algocf=\count128
@@ -377,39 +390,30 @@ LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
 
 (./abstract.aux) (./thanks.aux) (./indexes.aux) (./chapter1.aux)
-(./chapter2.aux) (./chapter3.aux) (./chapter4.aux) (./chapter5.aux)
-(./chapter6.aux)
+(./chapter2.aux) (./chapter3.aux) (./chapter4.aux
 
-! Package natbib Error: Bibliography not compatible with author-year citations.
-
-(natbib)                Press <return> to continue in numerical citation style.
+LaTeX Warning: Label `tab:bylneigh' multiply defined.
 
 
-See the natbib package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.41 ...mand\NAT@force@numbers{}\NAT@force@numbers
-                                                  
-Check the bibliography entries for non-compliant syntax,
-or select author-year BibTeX style, e.g. plainnat
+LaTeX Warning: Label `tab:bylneigh' multiply defined.
 
-)
+) (./chapter5.aux) (./chapter6.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
- (/usr/local/texlive/2018/texmf-dist/tex/latex/ucs/ucsencs.def
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -485,8 +489,8 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 (/usr/local/texlive/2018/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 ))
-LaTeX Info: Redefining \. on input line 56.
-LaTeX Info: Redefining \% on input line 56.
+LaTeX Info: Redefining \. on input line 57.
+LaTeX Info: Redefining \% on input line 57.
 \@nomenclaturefile=\write3
 \openout3 = `main.nlo'.
 
@@ -495,32 +499,32 @@ Writing nomenclature file main.nlo
 <../portada/portada.pdf, id=1, 614.295pt x 794.97pt>
 File: ../portada/portada.pdf Graphic file (type pdf)
 <use ../portada/portada.pdf>
-Package pdftex.def Info: ../portada/portada.pdf  used on input line 61.
+Package pdftex.def Info: ../portada/portada.pdf  used on input line 62.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: ../portada/portada.pdf Graphic file (type pdf)
 <use ../portada/portada.pdf>
-Package pdftex.def Info: ../portada/portada.pdf  used on input line 61.
+Package pdftex.def Info: ../portada/portada.pdf  used on input line 62.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 <../portada/portada.pdf, id=4, page=1, 614.295pt x 794.97pt>
 File: ../portada/portada.pdf Graphic file (type pdf)
 <use ../portada/portada.pdf, page 1>
-Package pdftex.def Info: ../portada/portada.pdf , page1 used on input line 61.
+Package pdftex.def Info: ../portada/portada.pdf , page1 used on input line 62.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: ../portada/portada.pdf Graphic file (type pdf)
 <use ../portada/portada.pdf, page 1>
-Package pdftex.def Info: ../portada/portada.pdf , page1 used on input line 61.
+Package pdftex.def Info: ../portada/portada.pdf , page1 used on input line 62.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: ../portada/portada.pdf Graphic file (type pdf)
 <use ../portada/portada.pdf, page 1>
-Package pdftex.def Info: ../portada/portada.pdf , page1 used on input line 61.
+Package pdftex.def Info: ../portada/portada.pdf , page1 used on input line 62.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: ../portada/portada.pdf Graphic file (type pdf)
 <use ../portada/portada.pdf, page 1>
-Package pdftex.def Info: ../portada/portada.pdf , page1 used on input line 61.
+Package pdftex.def Info: ../portada/portada.pdf , page1 used on input line 62.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: ../portada/portada.pdf Graphic file (type pdf)
 <use ../portada/portada.pdf, page 1>
-Package pdftex.def Info: ../portada/portada.pdf , page1 used on input line 61.
+Package pdftex.def Info: ../portada/portada.pdf , page1 used on input line 62.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 [1
 
@@ -577,60 +581,89 @@ LaTeX Info: Redefining \% on input line 1.
 
 ]
 Cap\'{\i }tulo 1.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/ucs/data/uni-32.def
-File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-)
-Underfull \hbox (badness 10000) in paragraph at lines 21--33
-
- []
-
 [1
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 42--46
+] (/usr/local/texlive/2018/texmf-dist/tex/latex/ucs/data/uni-32.def
+File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
+)
+Underfull \hbox (badness 10000) in paragraph at lines 23--35
 
  []
 
 
-Overfull \hbox (33.3187pt too wide) in paragraph at lines 42--46
-\T1/cmr/m/n/12 La ma-yo-ría de los au-tó-ma-tas ce-lu-la-res po-seen las si-gui
-en-tes cin-co características([]): 
+Underfull \hbox (badness 10000) in paragraph at lines 36--40
+
  []
 
-LaTeX Info: Redefining \. on input line 49.
-LaTeX Info: Redefining \% on input line 49.
+LaTeX Info: Redefining \. on input line 40.
+LaTeX Info: Redefining \% on input line 40.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 65--70
+Underfull \hbox (badness 10000) in paragraph at lines 59--63
 
  []
 
+LaTeX Info: Redefining \. on input line 63.
+LaTeX Info: Redefining \% on input line 63.
 
-Underfull \hbox (badness 10000) in paragraph at lines 73--83
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 73--83
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 73--83
-
- []
-
-LaTeX Info: Redefining \. on input line 83.
-LaTeX Info: Redefining \% on input line 83.
 [3]
-LaTeX Info: Redefining \. on input line 97.
-LaTeX Info: Redefining \% on input line 97.
- [4]
-LaTeX Info: Redefining \. on input line 116.
-LaTeX Info: Redefining \% on input line 116.
- [5])
-LaTeX Info: Redefining \. on input line 70.
-LaTeX Info: Redefining \% on input line 70.
- [6]
+Underfull \hbox (badness 10000) in paragraph at lines 66--76
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--76
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--76
+
+ []
+
+LaTeX Info: Redefining \. on input line 81.
+LaTeX Info: Redefining \% on input line 81.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[4]
+Overfull \hbox (18.1377pt too wide) in paragraph at lines 91--91
+ \T1/cmr/bx/n/12 Di-se-ñar un nue-vo al-go-rit-mo de apren-di-za-je (sim-bó-li-
+co o sub-simbólico)
+ []
+
+LaTeX Info: Redefining \. on input line 102.
+LaTeX Info: Redefining \% on input line 102.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[5])
+LaTeX Info: Redefining \. on input line 71.
+LaTeX Info: Redefining \% on input line 71.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[6]
 \openout2 = `chapter2.aux'.
 
  (./chapter2.tex
@@ -640,131 +673,231 @@ Cap\'{\i }tulo 2.
 
 
 ]
-LaTeX Info: Redefining \. on input line 54.
-LaTeX Info: Redefining \% on input line 54.
- [8]
-LaTeX Info: Redefining \. on input line 74.
-LaTeX Info: Redefining \% on input line 74.
- [9]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Info: Redefining \. on input line 59.
+LaTeX Info: Redefining \% on input line 59.
 
-LaTeX Info: Redefining \. on input line 87.
-LaTeX Info: Redefining \% on input line 87.
- [10]
-LaTeX Info: Redefining \. on input line 120.
-LaTeX Info: Redefining \% on input line 120.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[8]
+LaTeX Info: Redefining \. on input line 81.
+LaTeX Info: Redefining \% on input line 81.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[9]
+LaTeX Info: Redefining \. on input line 98.
+LaTeX Info: Redefining \% on input line 98.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[10]
+LaTeX Info: Redefining \. on input line 131.
+LaTeX Info: Redefining \% on input line 131.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
 
 [11]
-LaTeX Info: Redefining \. on input line 147.
-LaTeX Info: Redefining \% on input line 147.
- [12]
-LaTeX Info: Redefining \. on input line 162.
-LaTeX Info: Redefining \% on input line 162.
- [13]
-LaTeX Info: Redefining \. on input line 190.
-LaTeX Info: Redefining \% on input line 190.
- [14]
-LaTeX Info: Redefining \. on input line 217.
-LaTeX Info: Redefining \% on input line 217.
- [15]
+LaTeX Info: Redefining \. on input line 157.
+LaTeX Info: Redefining \% on input line 157.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[12]
+LaTeX Info: Redefining \. on input line 174.
+LaTeX Info: Redefining \% on input line 174.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[13]
+LaTeX Info: Redefining \. on input line 189.
+LaTeX Info: Redefining \% on input line 189.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 208--236
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 237.
+LaTeX Info: Redefining \% on input line 237.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[15]
+LaTeX Info: Redefining \. on input line 237.
+LaTeX Info: Redefining \% on input line 237.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[16]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 )
-LaTeX Info: Redefining \. on input line 71.
-LaTeX Info: Redefining \% on input line 71.
- [16]
-LaTeX Info: Redefining \. on input line 71.
-LaTeX Info: Redefining \% on input line 71.
- [17]
+LaTeX Info: Redefining \. on input line 72.
+LaTeX Info: Redefining \% on input line 72.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[17]
+LaTeX Info: Redefining \. on input line 72.
+LaTeX Info: Redefining \% on input line 72.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[18]
 \openout2 = `chapter3.aux'.
 
  (./chapter3.tex
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
- [18
-
-
-
-]
 Cap\'{\i }tulo 3.
 
 Overfull \hbox (13.38307pt too wide) in paragraph at lines 12--12
 []\T1/cmr/bx/n/17.28 Cellular Au-to-ma-ta Au-to-ma-ti-cally Cons-truc-
  []
 
-[19]
+[19
+
+
+
+]
 LaTeX Info: Redefining \. on input line 38.
 LaTeX Info: Redefining \% on input line 38.
- [20]
-<fig/abc.png, id=144, 447.6725pt x 451.6875pt>
-File: fig/abc.png Graphic file (type png)
-<use fig/abc.png>
-Package pdftex.def Info: fig/abc.png  used on input line 60.
-(pdftex.def)             Requested size: 390.0pt x 393.50943pt.
 
-Underfull \vbox (badness 1817) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 64.
-LaTeX Info: Redefining \% on input line 64.
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
 
-Overfull \hbox (723.53725pt too wide) has occurred while \output is active
-\T1/cmr/m/sl/12 3.2.  DISCOVERY OF TRANSITION RULES FOR CELLULAR AUTOMATA USING
- ARTIFICIAL BEE COLONY AND PARTICLE SWARM OPTIMIZATION ALGORITHMS IN URBAN GROW
-TH MODELING \T1/cmr/m/n/12 21
- []
+[20]
+<fig/abejas.png, id=143, 794.97pt x 794.97pt>
+File: fig/abejas.png Graphic file (type png)
+<use fig/abejas.png>
+Package pdftex.def Info: fig/abejas.png  used on input line 63.
+(pdftex.def)             Requested size: 390.0pt x 390.0118pt.
+LaTeX Info: Redefining \. on input line 67.
+LaTeX Info: Redefining \% on input line 67.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
 
 [21]
-<fig/pso.png, id=149, 444.66125pt x 521.95pt>
-File: fig/pso.png Graphic file (type png)
-<use fig/pso.png>
-Package pdftex.def Info: fig/pso.png  used on input line 67.
-(pdftex.def)             Requested size: 390.0pt x 457.78827pt.
+<fig/particulas.png, id=148, 794.97pt x 1005.7575pt>
+File: fig/particulas.png Graphic file (type png)
+<use fig/particulas.png>
+Package pdftex.def Info: fig/particulas.png  used on input line 70.
+(pdftex.def)             Requested size: 390.0pt x 493.42401pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 71.
-LaTeX Info: Redefining \% on input line 71.
- [22 <./fig/abc.png>]
-<fig/evaluation.png, id=154, 514.92375pt x 224.84pt>
-File: fig/evaluation.png Graphic file (type png)
-<use fig/evaluation.png>
-Package pdftex.def Info: fig/evaluation.png  used on input line 74.
-(pdftex.def)             Requested size: 390.0pt x 170.29694pt.
+LaTeX Info: Redefining \. on input line 74.
+LaTeX Info: Redefining \% on input line 74.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[22 <./fig/abejas.png>]
+<fig/evaluacion.png, id=153, 703.62875pt x 334.24875pt>
+File: fig/evaluacion.png Graphic file (type png)
+<use fig/evaluacion.png>
+Package pdftex.def Info: fig/evaluacion.png  used on input line 77.
+(pdftex.def)             Requested size: 390.0pt x 185.26033pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 78.
-LaTeX Info: Redefining \% on input line 78.
+LaTeX Info: Redefining \. on input line 81.
+LaTeX Info: Redefining \% on input line 81.
 
-Overfull \hbox (723.53725pt too wide) has occurred while \output is active
-\T1/cmr/m/sl/12 3.2.  DISCOVERY OF TRANSITION RULES FOR CELLULAR AUTOMATA USING
- ARTIFICIAL BEE COLONY AND PARTICLE SWARM OPTIMIZATION ALGORITHMS IN URBAN GROW
-TH MODELING \T1/cmr/m/n/12 23
- []
 
-[23 <./fig/pso.png>]
-<fig/results.png, id=159, 576.1525pt x 259.97125pt>
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[23 <./fig/particulas.png>]
+<fig/results.png, id=158, 576.1525pt x 259.97125pt>
 File: fig/results.png Graphic file (type png)
 <use fig/results.png>
-Package pdftex.def Info: fig/results.png  used on input line 81.
+Package pdftex.def Info: fig/results.png  used on input line 84.
 (pdftex.def)             Requested size: 390.0pt x 175.98077pt.
-LaTeX Info: Redefining \. on input line 91.
-LaTeX Info: Redefining \% on input line 91.
- [24 <./fig/evaluation.png> <./fig/results.png>]
-<fig/rulesencoding.png, id=165, 625.33624pt x 239.89626pt>
+LaTeX Info: Redefining \. on input line 94.
+LaTeX Info: Redefining \% on input line 94.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[24 <./fig/evaluacion.png> <./fig/results.png>]
+<fig/rulesencoding.png, id=164, 625.33624pt x 239.89626pt>
 File: fig/rulesencoding.png Graphic file (type png)
 <use fig/rulesencoding.png>
-Package pdftex.def Info: fig/rulesencoding.png  used on input line 94.
+Package pdftex.def Info: fig/rulesencoding.png  used on input line 97.
 (pdftex.def)             Requested size: 390.0pt x 149.61998pt.
 )
-LaTeX Info: Redefining \. on input line 72.
-LaTeX Info: Redefining \% on input line 72.
+LaTeX Info: Redefining \. on input line 73.
+LaTeX Info: Redefining \% on input line 73.
 
-Overfull \hbox (18.93062pt too wide) has occurred while \output is active
-\T1/cmr/m/sl/12 3.3.  ON ROUTINE EVOLUTION OF COMPLEX CELLULAR AUTOMATA \T1/cmr
-/m/n/12 25
- []
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
 
 [25 <./fig/rulesencoding.png>]
 \openout2 = `chapter4.aux'.
@@ -772,158 +905,443 @@ Overfull \hbox (18.93062pt too wide) has occurred while \output is active
  (./chapter4.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [26
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[26
 
 
 
 ]
 Cap\'{\i }tulo 4.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 21.
+<fig/metodologia.png, id=173, 867.24pt x 382.42876pt>
+File: fig/metodologia.png Graphic file (type png)
+<use fig/metodologia.png>
+Package pdftex.def Info: fig/metodologia.png  used on input line 7.
+(pdftex.def)             Requested size: 390.0pt x 171.98047pt.
+[27 <./fig/metodologia.png>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 26.
+
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 21.
- [27]
-Overfull \hbox (22.41394pt too wide) in paragraph at lines 46--63
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 26.
+
+Overfull \hbox (22.41394pt too wide) in paragraph at lines 51--68
  [] 
  []
 
-LaTeX Info: Redefining \. on input line 77.
-LaTeX Info: Redefining \% on input line 77.
+LaTeX Info: Redefining \. on input line 71.
+LaTeX Info: Redefining \% on input line 71.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
 [28]
-LaTeX Info: Redefining \. on input line 150.
-LaTeX Info: Redefining \% on input line 150.
- [29]
-LaTeX Info: Redefining \. on input line 162.
-LaTeX Info: Redefining \% on input line 162.
- [30]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 183.
+LaTeX Info: Redefining \. on input line 154.
+LaTeX Info: Redefining \% on input line 154.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[29]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 155.
+LaTeX Info: Redefining \% on input line 155.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[30]
+LaTeX Info: Redefining \. on input line 167.
+LaTeX Info: Redefining \% on input line 167.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[31]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 188.
 
  (/usr/local/texlive/2018/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 207.
-LaTeX Info: Redefining \% on input line 207.
- [31]
+LaTeX Info: Redefining \. on input line 212.
+LaTeX Info: Redefining \% on input line 212.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[32]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 238.
-LaTeX Info: Redefining \% on input line 238.
- [32]
-LaTeX Info: Redefining \. on input line 251.
-LaTeX Info: Redefining \% on input line 251.
+LaTeX Info: Redefining \. on input line 243.
+LaTeX Info: Redefining \% on input line 243.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
 
 [33]
-LaTeX Info: Redefining \. on input line 284.
-LaTeX Info: Redefining \% on input line 284.
- [34]
-LaTeX Info: Redefining \. on input line 332.
-LaTeX Info: Redefining \% on input line 332.
- [35]
+LaTeX Info: Redefining \. on input line 256.
+LaTeX Info: Redefining \% on input line 256.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[34]
+LaTeX Info: Redefining \. on input line 291.
+LaTeX Info: Redefining \% on input line 291.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[35]
+LaTeX Info: Redefining \. on input line 339.
+LaTeX Info: Redefining \% on input line 339.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[36]
+Underfull \hbox (badness 10000) in paragraph at lines 355--372
+
+ []
+
+
 Underfull \vbox (badness 1248) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 352.
-LaTeX Info: Redefining \% on input line 352.
- [36])
-LaTeX Info: Redefining \. on input line 73.
-LaTeX Info: Redefining \% on input line 73.
+LaTeX Info: Redefining \. on input line 372.
+LaTeX Info: Redefining \% on input line 372.
 
-[37]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[37])
+LaTeX Info: Redefining \. on input line 74.
+LaTeX Info: Redefining \% on input line 74.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[38]
 \openout2 = `chapter5.aux'.
 
  (./chapter5.tex
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
- [38
+Cap\'{\i }tulo 5.
+[39
 
 
 
 ]
-Cap\'{\i }tulo 5.
-) [39]
-LaTeX Info: Redefining \. on input line 74.
-LaTeX Info: Redefining \% on input line 74.
- [40]
+<fig/ra1_0.png, id=219, 1445.4pt x 722.7pt>
+File: fig/ra1_0.png Graphic file (type png)
+<use fig/ra1_0.png>
+Package pdftex.def Info: fig/ra1_0.png  used on input line 34.
+(pdftex.def)             Requested size: 390.0pt x 194.99927pt.
+<fig/LRDEA_1.png, id=220, 1445.4pt x 722.7pt>
+File: fig/LRDEA_1.png Graphic file (type png)
+<use fig/LRDEA_1.png>
+Package pdftex.def Info: fig/LRDEA_1.png  used on input line 41.
+(pdftex.def)             Requested size: 390.0pt x 194.99927pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 45.
+LaTeX Info: Redefining \% on input line 45.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[40 <./fig/ra1_0.png>]
+<fig/GA-nuggets_2.png, id=225, 1445.4pt x 722.7pt>
+File: fig/GA-nuggets_2.png Graphic file (type png)
+<use fig/GA-nuggets_2.png>
+Package pdftex.def Info: fig/GA-nuggets_2.png  used on input line 48.
+(pdftex.def)             Requested size: 390.0pt x 194.99927pt.
+<fig/ra1_3.png, id=226, 1445.4pt x 722.7pt>
+File: fig/ra1_3.png Graphic file (type png)
+<use fig/ra1_3.png>
+Package pdftex.def Info: fig/ra1_3.png  used on input line 58.
+(pdftex.def)             Requested size: 390.0pt x 194.99927pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 61.
+LaTeX Info: Redefining \% on input line 61.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[41 <./fig/LRDEA_1.png> <./fig/GA-nuggets_2.png>]
+<fig/LRDEA_4.png, id=232, 1445.4pt x 722.7pt>
+File: fig/LRDEA_4.png Graphic file (type png)
+<use fig/LRDEA_4.png>
+Package pdftex.def Info: fig/LRDEA_4.png  used on input line 66.
+(pdftex.def)             Requested size: 390.0pt x 194.99927pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[42 <./fig/ra1_3.png>]
+<fig/GA-nuggets_5.png, id=237, 1445.4pt x 722.7pt>
+File: fig/GA-nuggets_5.png Graphic file (type png)
+<use fig/GA-nuggets_5.png>
+Package pdftex.def Info: fig/GA-nuggets_5.png  used on input line 73.
+(pdftex.def)             Requested size: 390.0pt x 194.99927pt.
+<fig/ra1_6.png, id=238, 1445.4pt x 722.7pt>
+File: fig/ra1_6.png Graphic file (type png)
+<use fig/ra1_6.png>
+Package pdftex.def Info: fig/ra1_6.png  used on input line 82.
+(pdftex.def)             Requested size: 390.0pt x 194.99927pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 85.
+LaTeX Info: Redefining \% on input line 85.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[43 <./fig/LRDEA_4.png> <./fig/GA-nuggets_5.png>]
+<fig/LRDEA_7.png, id=244, 1445.4pt x 722.7pt>
+File: fig/LRDEA_7.png Graphic file (type png)
+<use fig/LRDEA_7.png>
+Package pdftex.def Info: fig/LRDEA_7.png  used on input line 88.
+(pdftex.def)             Requested size: 390.0pt x 194.99927pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 92.
+LaTeX Info: Redefining \% on input line 92.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[44 <./fig/ra1_6.png>]
+<fig/GA-nuggets_8.png, id=250, 1445.4pt x 722.7pt>
+File: fig/GA-nuggets_8.png Graphic file (type png)
+<use fig/GA-nuggets_8.png>
+Package pdftex.def Info: fig/GA-nuggets_8.png  used on input line 97.
+(pdftex.def)             Requested size: 390.0pt x 194.99927pt.
+<fig/ra1_9.png, id=251, 1445.4pt x 722.7pt>
+File: fig/ra1_9.png Graphic file (type png)
+<use fig/ra1_9.png>
+Package pdftex.def Info: fig/ra1_9.png  used on input line 105.
+(pdftex.def)             Requested size: 390.0pt x 194.99927pt.
+LaTeX Info: Redefining \. on input line 108.
+LaTeX Info: Redefining \% on input line 108.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[45 <./fig/LRDEA_7.png> <./fig/GA-nuggets_8.png>]
+<fig/LRDEA_10.png, id=257, 1445.4pt x 722.7pt>
+File: fig/LRDEA_10.png Graphic file (type png)
+<use fig/LRDEA_10.png>
+Package pdftex.def Info: fig/LRDEA_10.png  used on input line 111.
+(pdftex.def)             Requested size: 390.0pt x 194.99927pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 115.
+LaTeX Info: Redefining \% on input line 115.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[46 <./fig/ra1_9.png>]
+<fig/GA-nuggets_11.png, id=262, 1445.4pt x 722.7pt>
+File: fig/GA-nuggets_11.png Graphic file (type png)
+<use fig/GA-nuggets_11.png>
+Package pdftex.def Info: fig/GA-nuggets_11.png  used on input line 118.
+(pdftex.def)             Requested size: 390.0pt x 194.99927pt.
+)
+LaTeX Info: Redefining \. on input line 75.
+LaTeX Info: Redefining \% on input line 75.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[47 <./fig/LRDEA_10.png> <./fig/GA-nuggets_11.png>]
 \openout2 = `chapter6.aux'.
 
  (./chapter6.tex
-Cap\'{\i }tulo 6.
-) [41
-
-
-
-] (./main.bbl
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [42
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[48
+
 
 
 ]
-Underfull \hbox (badness 1215) in paragraph at lines 41--44
-[]\T1/cmr/m/n/12 Gardner, M. (1970).  Mat-he-ma-ti-cal ga-mes.  \T1/cmr/m/it/12
- Scien-ti-fic Ame-ri-can\T1/cmr/m/n/12 ,
- []
-
-[43]
-LaTeX Info: Redefining \. on input line 122.
-LaTeX Info: Redefining \% on input line 122.
- [44]) (./main.nls
+Cap\'{\i }tulo 6.
+) [49] (./main.bbl
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [45]
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[50
+
+
+] [51]
+LaTeX Info: Redefining \. on input line 123.
+LaTeX Info: Redefining \% on input line 123.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[52]) (./main.nls
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [46
 
-]) [47] (./main.aux
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[53]
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.61858pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[54
+
+]) [55] (./main.aux
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
- (./abstract.aux)
-(./thanks.aux) (./indexes.aux) (./chapter1.aux) (./chapter2.aux)
-(./chapter3.aux) (./chapter4.aux) (./chapter5.aux) (./chapter6.aux)) ) 
+ (./abstract.aux) (./thanks.aux) (./indexes.aux)
+(./chapter1.aux) (./chapter2.aux) (./chapter3.aux) (./chapter4.aux)
+(./chapter5.aux) (./chapter6.aux))
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 9245 strings out of 492649
- 130919 string characters out of 6129622
- 255814 words of memory out of 5000000
- 12870 multiletter control sequences out of 15000+600000
- 21468 words of font info for 47 fonts, out of 8000000 for 9000
+ 9449 strings out of 492649
+ 133943 string characters out of 6129622
+ 262124 words of memory out of 5000000
+ 13058 multiletter control sequences out of 15000+600000
+ 20647 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,21n,43p,1109b,634s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/loc
-al/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local
-/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/
-texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/t
-exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
-xlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/tex
-live/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texli
-ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive
-/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2
-018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/texmf
--dist/fonts/type1/public/cm-super/sfbx0800.pfb></usr/local/texlive/2018/texmf-d
-ist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2018/texmf-dis
-t/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2018/texmf-dist/
-fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2018/texmf-dist/fo
-nts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2018/texmf-dist/font
-s/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/
-type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2018/texmf-dist/fonts/ty
-pe1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2018/texmf-dist/fonts/type
-1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/
-public/cm-super/sfrm1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/pu
-blic/cm-super/sfsl1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/publ
-ic/cm-super/sfss1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public
-/cm-super/sfti1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/c
-m-super/sftt1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-
-super/sfxc1200.pfb>
-Output written on main.pdf (58 pages, 1055768 bytes).
+ 43i,21n,43p,1144b,634s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
+/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></us
+r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/
+local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
+cal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loca
+l/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/t
+exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
+ive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
+ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive
+/2018/texmf-dist/fonts/type1/public/cm-super/sfbx0800.pfb></usr/local/texlive/2
+018/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/201
+8/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2018/
+texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2018/te
+xmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2018/texm
+f-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2018/texmf-
+dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2018/texmf-di
+st/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2018/texmf-dist
+/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2018/texmf-dist/f
+onts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2018/texmf-dist/fon
+ts/type1/public/cm-super/sfss1200.pfb></usr/local/texlive/2018/texmf-dist/fonts
+/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/t
+ype1/public/cm-super/sftt1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/typ
+e1/public/cm-super/sfxc1200.pfb>
+Output written on main.pdf (66 pages, 1895120 bytes).
 PDF statistics:
- 325 PDF objects out of 1000 (max. 8388607)
- 218 compressed objects within 3 object streams
+ 372 PDF objects out of 1000 (max. 8388607)
+ 232 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 111 words of extra memory for PDF output out of 10000 (max. 10000000)
 

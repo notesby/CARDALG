@@ -12,24 +12,23 @@ A level-1 auxiliary file: chapter5.aux
 A level-1 auxiliary file: chapter6.aux
 The style file: apalike.bst
 Database file #1: Referencias.bib
-Warning--empty year in rucker_walker
 Warning--empty booktitle in Sayama1998ConstructingES
 You've used 22 entries,
             1935 wiz_defined-function locations,
-            617 strings with 7198 characters,
-and the built_in function-call counts, 8122 in all, are:
+            618 strings with 7202 characters,
+and the built_in function-call counts, 8124 in all, are:
 = -- 803
 > -- 254
 < -- 22
 + -- 84
 - -- 80
-* -- 660
-:= -- 1400
+* -- 662
+:= -- 1401
 add.period$ -- 64
 call.type$ -- 22
 change.case$ -- 146
 chr.to.int$ -- 22
-cite$ -- 24
+cite$ -- 23
 duplicate$ -- 337
 empty$ -- 619
 format.name$ -- 114
@@ -39,11 +38,11 @@ int.to.str$ -- 0
 missing$ -- 24
 newline$ -- 110
 num.names$ -- 66
-pop$ -- 130
+pop$ -- 128
 preamble$ -- 1
 purify$ -- 150
 quote$ -- 0
-skip$ -- 258
+skip$ -- 260
 stack$ -- 0
 substring$ -- 596
 swap$ -- 44
@@ -51,8 +50,8 @@ text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 126
-warning$ -- 2
+warning$ -- 1
 while$ -- 72
 width$ -- 0
-write$ -- 278
-(There were 2 warnings)
+write$ -- 279
+(There was 1 warning)

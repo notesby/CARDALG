@@ -1,16 +1,15 @@
 % CAP 2
 \chapter{Marco teórico}
 
-
 \section{Algoritmos genéticos}
 
-Los algoritmos genéticos fueron desarrollados por John Holland, sus colegas y estudiantes en la universidad de Michigan. Los objetivos de esta investigación eran los siguientes:
+Los algoritmos genéticos fueron desarrollados por John Holland, sus colegas y estudiantes en la Universidad de Michigan. Los objetivos de esta investigación fueron los que se enlistan a continuación.
 \begin{enumerate}
 	\item Abstraer y explicar rigurosamente los procesos adaptativos de los sistemas naturales.
 	\item Diseñar sistemas artificiales de software que retuvieran los mecanismos importantes de los sistemas naturales.
 \end{enumerate}
 
-El tema central de investigación en los algoritmos genéticos ha sido la robustez, el balance entre la eficiencia y la eficacia necesaria para sobrevivir en distintos ambientes. Los algoritmos genéticos han probado teórica y experimentalmente que proveen una búsqueda robusta en espacios complejos.
+El tema central de la investigación sobre los algoritmos genéticos ha sido la robustez, el balance entre la eficiencia y la eficacia necesaria para sobrevivir en distintos ambientes. Los algoritmos genéticos han probado teórica y experimentalmente que proveen una búsqueda robusta en espacios complejos.
 
 La implementación de un algoritmo genético consta de la definición de:
 
@@ -22,7 +21,7 @@ La implementación de un algoritmo genético consta de la definición de:
 	\item Los valores de probabilidad con la que se aplican los operadores genéticos.
 \end{itemize}
 
-El siguiente pseudocódigo ilustra el funcionamiento de un algoritmo genético simple.
+El pseudocódigo del Algoritmo 1, ilustra el funcionamiento de un algoritmo genético simple.
 
 \begin{algorithm}[h] 
 	
@@ -40,50 +39,67 @@ El siguiente pseudocódigo ilustra el funcionamiento de un algoritmo genético s
 	\caption{Pseudocódigo de un algoritmo genético simple.}
 \end{algorithm}
 
+A continuación, se explican de manera general los requerimientos de los algoritmos genéticos y, posteriormente, se precisan detalles para cada algoritmo genético implementado en este trabajo de investigación.
+
 \subsection{Representación}
 
-Este paso consiste en hacer un vinculo entre el contexto original del problema y espacio de solución del problema donde la evolución se lleva acabo. Esto se lleva acabo decidiendo como las soluciones deben ser especificadas y guardadas para que puedan ser manipuladas por una computadora. Los objetos formando posibles soluciones en el contexto original son llamadas fenotipos, mientras que su codificación en el espacio de solución son llamados genotipos.
+Este paso consiste en crear un vínculo entre el contexto original del problema y espacio de solución del problema, donde la evolución se lleva acabo. Esto se realiza definiendo cómo es que las soluciones serán especificadas y guardadas para que puedan ser manipuladas por una computadora.
+
+Los objetos que forman posibles soluciones en el contexto original, son llamados fenotipos; mientras que su codificación en el espacio de solución se denominan genotipos.
 
 \subsection{Función de aptitud}
 
-El rol de la función de aptitud es representar los requerimientos a los que se debe adaptar la población. Desde el punto de la perspectiva de resolución de problemas, representa la tarea a ser resuelta en el contexto evolutivo. Y técnicamente  es una función o procedimiento que le asigna una medida cualitativa a los genotipos.
+El rol de la función de aptitud es representar los requerimientos a los que se debe adaptar la población. Desde la perspectiva de resolución de problemas, representa la tarea a ser resuelta en el contexto evolutivo.
+
+Técnicamente  es una función o procedimiento que le asigna una medida cualitativa a los genotipos.
 
 \subsection{Población}
 
-La población forma la unidad básica de evolución, los individuos son objetos estáticos que no cambian o se adaptan, es la población la que lo hace. La diversidad de la población que indica las diferentes soluciones que hay presentes.
+La población forma la unidad básica de evolución, los individuos son objetos estáticos que no cambian o se adaptan, es la población la que lo hace. La diversidad de la población es la que indica las diferentes soluciones que hay presentes.
 
 \subsection{Mecanismo de selección de padres}
 
-Este mecanismo tiene como rol distinguir de entre los individuos basándose en su calidad, para permitir que los mejores individuos sean los padres para la siguiente generación. Este mecanismo junto con el mecanismo de selección de sobrevivientes son los responsables por ingresar mejoras en la calidad de las soluciones.
+Este mecanismo tiene como objetivo distinguir a los mejores individuos para que sean los padres de la siguiente generación, con base en su calidad. Este mecanismo, junto con el mecanismo de selección de sobrevivientes, son los responsables de generar mejoras en la calidad de las soluciones.
 
 \subsection{Recombinación}
 
-Como el nombre indica este operador, es un operador de variacional que recombina la información de dos padres en uno o mas genotipos descendientes. la recombinación es una operación estocástica esto es, como se eligen los genes de los padres y como los combinas depende del azar. El principio detrás de la recombinación es sencillo - al aparear a dos individuos con diferentes pero deseables atributos, podemos obtener una descendencia que combine ambas características. 
+Como el nombre lo indica, este operador es un operador variacional que recombina la información de dos padres en uno o más genotipos descendientes. La recombinación es una operación estocástica, esto significa que cómo se eligen los genes de los padres y cómo se combinan, depende del azar.
+
+El principio detrás de la recombinación es sencillo - al aparear a dos individuos con diferentes pero deseables atributos, se puede obtener una descendencia que combine ambas características. 
 
 \subsection{Mutación}
 
-Este operador variacional unario es aplicado a un genotipo, que resulta en mutante ligeramente modificado. El operador de mutación siempre es un operador aleatorio. Este operador es el causante de ingresar ''sangre fresca''  a la población.
+Este operador variacional unario, cuando es aplicado a un genotipo, resulta en un mutante ligeramente modificado. El operador de mutación siempre es un operador aleatorio y es el causante de ingresar ''sangre fresca'' a la población.
 
 \subsection{Mecanismo de selección de sobrevivientes}
 
-Este mecanismo toma la decisión de que individuos serán los elegidos para pasar a la siguiente población, esta decisión es frecuentemente basada en sus valores de aptitud. Al contrario del mecanismo de selección de padres que es aleatorio, este mecanismo es frecuentemente determinista. 
+Este mecanismo toma la decisión de qué individuos serán los elegidos para pasar a la siguiente población; esta decisión se basa frecuentemente en sus valores de aptitud. Al contrario del mecanismo de selección de padres, que es aleatorio, este mecanismo es frecuentemente determinista. 
 
 \section{GA-Nuggets}
 
-El GA-Nuggets fue diseñado para la modelación de dependencias en dos versiones, la primera una población centralizada de individuos donde diferentes individuos pueden representar reglas de predicción para diferentes atributos objetivo, La segunda versión mantiene una población distribuida de muchas sub-poblaciones donde cada una de ellas evoluciona de manera independiente pero con la posibilidad de que algunos individuos puedan migrar entre las sub-poblaciones, en esta versión cada población tiene asociado un atributo objetivo a predecir, es por esto que todos los individuos de cada sub-población representan reglas para predecir el mismo atributo objetivo.
+El GA-Nuggets (\textit{Genetic Algorithm- Nuggets}), fue diseñado para el modelado de dependencias en dos versiones: la primera versión es de una población centralizada de individuos, donde diferentes individuos pueden representar reglas de predicción para diferentes atributos objetivo. La segunda versión mantiene una población distribuida de muchas sub-poblaciones, donde cada una de ellas evoluciona de manera independiente, pero con la posibilidad de que algunos individuos puedan migrar entre las sub-poblaciones. En esta segunda versión, cada población tiene asociado un atributo objetivo a predecir, es por esto que todos los individuos de cada sub-población representan reglas para predecir el mismo atributo objetivo.
 
 \subsection{Representación de los individuos}
 
-Cada individuo representa una regla de predicción candidata de la forma IF $Ant$ THEN $Cons$, donde $Ant$ es el antecedente de la regla y $Cons$ es el consecuente. El antecedente $Ant$ consiste en una conjunción de condiciones, donde cada condición es un par atributo valor de la forma $A_i = V_{ij}$, donde $A_i$ es el i-ésimo atributo y $V_{ij}$ es el j-ésimo valor del atributo $A_i$. El algoritmo solo maneja valores categóricos, por lo que es necesario discretizar los valores. El consecuente $Cons$ consiste en un solo par atributo-valor de la forma $G_k = V_{kl}$, donde $G_k$ es el k-ésimo atributo objetivo y $V_{kl}$ es el l-ésimo valor del atributo $G_k$. El conjunto de atributos objetivos son seleccionados por el usuario entre todos los atributos del conjunto de datos y el resto de los atributos se utiliza como atributos predictivos.
+Cada individuo representa una regla de predicción candidata de la forma IF $Ant$ THEN $Cons$, donde $Ant$ es el antecedente de la regla y $Cons$ es el consecuente.
+
+El antecedente $Ant$ consiste en una conjunción de condiciones, donde cada condición es un par atributo valor de la forma $A_i = V_{ij}$, donde $A_i$ es el i-ésimo atributo y $V_{ij}$ es el j-ésimo valor del atributo $A_i$.
+
+Es importante mencionar que el algoritmo solo maneja valores categóricos, por lo que es necesario discretizar los valores.
+
+El consecuente $Cons$ consiste en un solo par atributo-valor de la forma $G_k = V_{kl}$, donde $G_k$ es el k-ésimo atributo objetivo y $V_{kl}$ es el l-ésimo valor del atributo $G_k$. El conjunto de atributos objetivos son seleccionados por el usuario entre todos los atributos del conjunto de datos y el resto de los atributos se utiliza como atributos predictivos.
 \\
-Un individuo es codificado en una cadena de longitud fija conteniendo $z$ genes, donde $z$ es el numero de atributos considerando los atributos predictivos y objetivo. De los valores de los atributos codificados en el genoma solo un subconjunto de los valores de los atributos sera decodificado, para realizar esto se utiliza un valor que no se encuentre entre los posibles valores de los atributos por ejemplo -1, para indicar que ese gen no sera decodificado en un antecedente para la regla, gracias a esto a pesar de que la longitud de la cadena sea fija, podemos tener un antecedente de longitud variable.
+Un individuo es codificado en una cadena de longitud fija conteniendo $z$ genes, donde $z$ es el número de atributos considerando los atributos predictivos y objetivo.
+
+De los valores de los atributos codificados en el genoma, solo un subconjunto de los valores de los atributos sera decodificado. Para realizar esto, se utiliza un valor que no se encuentre entre los posibles valores de los atributos, por ejemplo $-1$, para indicar que ese gen no sera decodificado en un antecedente para la regla; gracias a esto, a pesar de que la longitud de la cadena sea fija, podemos tener un antecedente de longitud variable.
 \\
-Una vez que se genero el antecedente de la regla, el algoritmo selecciona el atributo objetivo que incremente la aptitud del individuo.
+Una vez que se generó el antecedente de la regla, el algoritmo selecciona el atributo objetivo que incremente la aptitud del individuo.
 
 \subsection{Función de aptitud}
 
-La función de aptitud consiste de dos partes, la primera mide el grado de interés de la regla, y la segunda mide su certeza de predicción. El grado de interés de la regla en dos términos, el primero se refiere al antecedente y el segundo al consecuente de la regla.
-El grado de interés de la regla se mide con una métrica de teoría de la información. Donde el grado de interés para el antecedente de la regla esta dada por:
+La función de aptitud consiste de dos partes: la primera mide el grado de interés de la regla, y la segunda mide su certeza de predicción. El grado de interés de la regla se en dos términos, el primero se refiere al antecedente y el segundo al consecuente de la regla.
+
+El grado de interés de la regla se evalúa con una métrica de teoría de la información, donde el grado de interés para el antecedente de la regla está dado por:
 
 \begin{equation} 
 \label{eq:1}
@@ -94,7 +110,6 @@ AntInt = 1- \left( \frac{\sum\limits_{i=1}^n InfoGain(A_i)/n}
 
 \noindent
 donde $n$ es el número de atributos que ocurren en el antecedente de la regla y $|dom(G_k)|$ es la cardinalidad del dominio (es decir, el número de valores posibles) del atributo de destino $G_k$ que se produce en el consecuente. El término $log$ se incluye en la fórmula \ref{eq:1} para normalizar el valor de $AntInt$, de modo que esta medida tenga un valor entre $0$ y $1$. El $InfoGain$ viene dado por:
-
 
 \begin{equation} \label{eq:2}
 InfoGain(A_i)=Info(G_k)-Info(\left.G_k\right| A_i),
@@ -110,55 +125,59 @@ y
 Info(\left. G_k \right| A_i)=\sum\limits_{i=1}^{n_i}\left( Pr(V_{ij})\left(-\sum\limits_{j=1}^{mk} Pr\begin{pmatrix}V_{kl}|V_{ij}\end{pmatrix} log_2 \begin{pmatrix}Pr\begin{pmatrix}V_{kl}|V_{ij}\end{pmatrix}\end{pmatrix}\right)  \right).
 \end{equation}
 \\
-Donde $m_k$ es el numero de posibles valores que puede tomar el atributo objetivo $G_k$, $n_i$ es el numero de posibles valores para el atributo $A_i$, $Pr(X)$ denota la probabilidad de $X$ y $Pr(X|Y)$ denota la probabilidad de $X$ dado $Y$.
+Donde $m_k$ es el número de posibles valores que puede tomar el atributo objetivo $G_k$, $n_i$ es el número de posibles valores para el atributo $A_i$, $Pr(X)$ denota la probabilidad de $X$ y $Pr(X|Y)$ denota la probabilidad de $X$ dado $Y$.
 \\
-La métrica que proporciona AntInt puede ser justificada de la siguiente forma, en general dado un atributo predictor $A_i$ cuya ganancia de información sea alta con respecto a $G_k$, nos lleva a considerar que $A_i$ es un buen predictor de $G_k$ cuando se considera individualmente, ignorando sus interacciones con otros atributos predictivos. Por esto, si se considera que el usuario ya conoce los atributos que son buenos predictores del atributo objetivo $G_k$ por lo que estos atributos podrían no parecerle interesantes al usuario. Sin embargo, los atributos que tienen baja ganancia de información y aparecen en el antecedente de la regla, el usuario los podría considerar como irrelevantes por si solos, pero cuando interaccionan con los otros atributos podrían generar que estos se vuelvan relevantes y esto los haría interesantes para el usuario.
+La métrica que proporciona $AntInt$ puede ser justificada porque, en general, dado un atributo predictor $A_i$, cuya ganancia de información sea alta con respecto a $G_k$, nos lleva a considerar que $A_i$ es un buen predictor de $G_k$ cuando se considera individualmente, ignorando sus interacciones con otros atributos predictivos.
+
+Por lo anterior, si se considera que el usuario ya conoce los atributos que son buenos predictores del atributo objetivo $G_k$, estos atributos podrían no parecerle interesantes al usuario.
+
+Adicionalmente, a los atributos que tienen baja ganancia de información y que aparecen en el antecedente de la regla, el usuario podría considerarlos como irrelevantes por sí solos, sin embargo, cuando interaccionan con los otros atributos podrían generar que éstos aumenten su relevancia, lo que los haría interesantes para el usuario.
 \\
-La computación del grado de interés del consecuente de la regla esta basada en la idea de que mientras mas raro sea el valor de un atributo objetivo con respecto a un valor común del atributo, mas interesante sera para el usuario. En otras palabras, mientras mas grande sea la frecuencia relativa en el conjunto de entrenamiento del valor predicho por el consecuente, menos interesante sera para el usuario.
+La computación del grado de interés del consecuente de la regla está basada en la idea de que mientras más raro sea el valor de un atributo objetivo con respecto a un valor común del atributo, más interesante será para el usuario. En otras palabras, mientras mas grande sea la frecuencia relativa en el conjunto de entrenamiento del valor predicho por el consecuente, menos interesante será para el usuario.
 \\
-Mas precisamente la regla para predecir el grado de interés del consecuente de la regla es:
+Puntualmente, la regla para predecir el grado de interés del consecuente de la regla es:
 
 \begin{equation} \label{eq:5}
-ConsInt= (1-Pr(G_{kl}))^{1/\beta}
+ConsInt= (1-Pr(G_{kl}))^{1/\beta},
 \end{equation}
 
-Donde $Pr(G_{kl})$ es la frecuencia relativa del valor del atributo objetivo $G_{kl}$, $\beta$ es un parámetro especificado por el usuario.
+donde $Pr(G_{kl})$ es la frecuencia relativa del valor del atributo objetivo $G_{kl}$, y $\beta$ es un parámetro especificado por el usuario.
 \\
-La segunda parte de la función de aptitud mide la exactitud predictiva de la regla, y esta dada por:
+La segunda parte de la función de aptitud mide la exactitud predictiva de la regla, y está dada por:
 
 \begin{equation} \label{eq:6}
-PredAcc= \frac{|A\&C|-1/2}{|A|}
+PredAcc= \frac{|A\&C|-1/2}{|A|},
 \end{equation}
 
-Donde $|A\&C|$ es el numero de ejemplos que satisfacen tanto el antecedente como el consecuente de la regla, y $|A|$ es el numero de ejemplos que satisfacen solo el antecedente. El termino $1/2$ es para penalizar las reglas que cubren pocos ejemplos de entrenamiento.
+donde $|A\&C|$ es el número de ejemplos que satisfacen tanto el antecedente como el consecuente de la regla, y $|A|$ es el número de ejemplos que satisfacen solo el antecedente. El término $1/2$ es para penalizar las reglas que cubren pocos ejemplos de entrenamiento.
 \\
-Finalmente, la función de aptitud seria:
+Finalmente, la función de aptitud sería:
 \begin{equation} \label{eq:7}
 Fitness= \frac{w_1(AntInt+ConsInt)/2+w_2PredAcc}{w_1+w_2},
 \end{equation}
 
-Donde $w_1$ y $w_2$ son pesos definidos por el usuario.
+donde $w_1$ y $w_2$ son pesos definidos por el usuario.
 
 \subsection{Método de selección y operadores genéticos}
 
-GA-Nuggets utiliza el bien conocido selección por torneo con un tamaño de torneo de 2, y utiliza una cruza uniforme extendida con un procedimiento de reparación. En la cruza uniforme existe una probabilidad de aplicar cruza a dos individuos y otra probabilidad para intercambiar cada gen. Después de que se realizo la cruza el algoritmo verifica si se genero un individuo invalido. Si es así, se inicia un procedimiento de reparación para generar individuos validos. El operador de mutación transforma de forma aleatoria el valor de un atributo en otro dentro del mismo dominio del atributo.
+GA-Nuggets utiliza el bien conocido ``selección por torneo" con un tamaño de torneo de 2, y utiliza una cruza uniforme extendida con un procedimiento de reparación. En la cruza uniforme existe una probabilidad de aplicar cruza a dos individuos y otra probabilidad para intercambiar cada gen. Después de que se realiza la cruza, el algoritmo verifica si se generó un individuo inválido. Si es así, se inicia un procedimiento de reparación para generar individuos validos. El operador de mutación transforma de forma aleatoria el valor de un atributo en otro, dentro del mismo dominio del atributo.
 \\
-Ademas de la cruza y la mutación, se agregan otros dos operadores: insertar-condición y eliminar-condición, que controlan el tamaño de las reglas que están siendo evolucionadas, de la siguiente forma: mientras mas mayor sea el numero de condiciones en el antecedente de la regla actual, menor sera la probabilidad de aplicar el operador insertar-condición y este operador no se aplicara si el antecedente ya tiene el máximo numero de condiciones especificado por el usuario. En cambio, la probabilidad de aplicar el operador eliminar-condición sera mayor mientras menor sea el numero de condiciones en el antecedente de la regla, y este operador no se aplicara si el antecedente solo tiene una condición.
+Además de la cruza y la mutación, se agregan otros dos operadores: insertar-condición y eliminar-condición, que controlan el tamaño de las reglas que están siendo evolucionadas, de la siguiente forma: mientras mayor sea el número de condiciones en el antecedente de la regla actual, menor será la probabilidad de aplicar el operador insertar-condición; y este operador no se aplicará si el antecedente ya tiene el máximo número de condiciones especificado por el usuario. En cambio, la probabilidad de aplicar el operador eliminar-condición será mayor mientras menor sea el número de condiciones en el antecedente de la regla; y este operador no se aplicará si el antecedente solo tiene una condición.
 
 \section{Enfoque OCAT (One Clause At a Time)}
 
-El enfoque "Una Clausula A la Vez" u OCAT por sus siglas en ingles (One Clause At a Time) es un enfoque que trata de resolver dos debilidades con las técnicas de aprendizaje bayesianas y conexionistas como lo son las redes neuronales, estas debilidades son las siguientes:
+El enfoque "Una Cláusula A la Vez" u OCAT por sus siglas en inglés (One Clause At a Time) es un enfoque que trata de resolver dos debilidades con las técnicas de aprendizaje bayesianas y conexionistas como lo son las redes neuronales, estas debilidades son las siguientes:
 
 \begin{enumerate}
-	\item La forma en que estos métodos funcionan y producen recomendaciones pueden no ser atractivos por los expertos en el dominio. 
+	\item Las formas en que estos métodos funcionan y producen recomendaciones pueden no ser atractivos por los expertos en el dominio. 
 	\item El conjunto de entrenamiento puede no contener suficientes ejemplos como para que garanticen resultados estadisticamente significantes. Como resultado estos métodos pueden no ser fidedignos para aplicaciones reales. 
 \end{enumerate}
 
-Este enfoque esta basado en conceptos de lógica matemática y optimización discreta. El enfoque es de naturaleza avara en el sentido de que busca aceptar a todos los ejemplos positivos y rechazar tantos ejemplos negativos como pueda, y así sucesivamente para cada una de las clausulas que genera, hasta que ya no tenga mas ejemplos negativos para rechazar.
+Este enfoque está basado en conceptos de lógica matemática y optimización discreta. El enfoque es de naturaleza ``avara", en el sentido de que busca aceptar a todos los ejemplos positivos y rechazar tantos ejemplos negativos como sea posible. Esto se realiza sucesivamente para cada una de las cláusulas que genera, hasta que ya no tenga más ejemplos negativos para rechazar.
 \\
-El enfoque OCAT busca generar un conjunto de clausulas que pueden estar en forma normal conjuntiva (FNC) o forma normal disyuntiva (FND). Es conocido \citep{peysakh1987fast} que cualquier función Booleana puede ser transformada en forma FNC o FND. 
+El enfoque OCAT busca generar un conjunto de cláusulas que pueden estar en forma normal conjuntiva (FNC) o forma normal disyuntiva (FND). Es conocido \citep{peysakh1987fast} que cualquier función Booleana puede ser transformada en forma FNC o FND. 
 \\
-Algunas asumpciones que este enfoque toma son las siguientes:
+Algunas asunciones que este enfoque toma son las siguientes:
 
 \begin{itemize}
 	\item Se tienen observaciones que describen el comportamiento del sistema a aprender.
@@ -167,9 +186,9 @@ Algunas asumpciones que este enfoque toma son las siguientes:
 	\item Que las observaciones están libres de ruido.
 	\item También asume que la clase a la que pertenece la observación es la correcta. 
 \end{itemize}
-
+\newpage
 El siguiente pseudocódigo ejemplifica el funcionamiento general del enfoque OCAT.
-
+\\
 \begin{algorithm}[H] 
 	
 	\SetAlgoLined
@@ -186,8 +205,9 @@ El siguiente pseudocódigo ejemplifica el funcionamiento general del enfoque OCA
 \end{algorithm}
 
 \subsection{Heuristica RA1}
-El enfoque heuristico, denominado RA1 por Randomized Algorithm 1, fue propuesto en \citep{DESHPANDE199875}. El cual es un algoritmo que como se muestra en el algoritmo \ref{algorithmra1} selecciona deforma aleatoria dentro los mejores atributos candidatos, lo cual evita quedarse estancado en un mínimo local.
-
+El enfoque heuristico, denominado RA1 por \textit{Randomized Algorithm 1}, fue propuesto en \citep{DESHPANDE199875} y es un algoritmo que selecciona de forma aleatoria dentro los mejores atributos candidatos, tal cual se muestra en el algoritmo \ref{algorithmra1}. De esta manera se evita el estancamiento del algoritmo en un mínimo local. 
+\\
+\\
 \begin{algorithm}[H] %or another one check
 	\caption{La heurística RA1 \citep{DESHPANDE199875}} \label{algorithmra1}
 	\SetAlgoLined
@@ -217,7 +237,7 @@ El enfoque heuristico, denominado RA1 por Randomized Algorithm 1, fue propuesto 
 \newpage
 \section{Algoritmo Quine–McCluskey}
 
-Este algoritmo es método utilizado para la simplificación de funciones Booleanas y fue desarrollado por Willard V.Quine 1955 y extendido Edward J. McCluskey  en 1956. Este método involucra dos pasos:
+Este algoritmo es un método utilizado para la simplificación de funciones Booleanas y fue desarrollado por Willard V.Quine 1955 y extendido por Edward J. McCluskey en 1956. Este método involucra dos pasos:
 \begin{enumerate}
 	\item Encontrar los implicantes primos de la función.
 	\item Usar esos implicantes primos para encontrar los implicantes primos esenciales de la función, así como los otros implicantes primos necesarios para realizar la cobertura de la función.

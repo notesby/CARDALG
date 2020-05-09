@@ -2,13 +2,18 @@
 
 En esta sección se detallan cual fue la metodología empleada para llevar acabo los experimentos, en el siguiente diagrama se puede ver el panorama general de la metodología.
 
-%diagrama%
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{fig/metodologia}
+	\caption{Diagrama general de la metodología.}
+	\label{fig:metodologia}
+\end{figure}
 
 \section{Conjunto de datos}
 
-Para realizar nuestros experimentos se opto por adquirir un conjunto de datos que consiste de los estados de la evolución de 4 diferentes autómatas celulares bidimensionales, los cuales fueron obtenidos de \cite{rucker_walker}.
+Para realizar los experimentos, se optó por adquirir un conjunto de datos que consiste de los estados de la evolución de 4 diferentes autómatas celulares bidimensionales, los cuales fueron obtenidos de \cite{rucker_walker}.
 \\
-Para cada uno de los autómatas se obtuvo 200 imágenes de 50x50 pixeles en escala rgb.
+Para cada uno de los autómatas se obtuvieron 200 imágenes de 50x50 pixeles en escala RGB.
 
 \subsection{Brain}
 
@@ -17,17 +22,17 @@ Es un autómata celular bidimensional, desarrollado por Brian Silverman, que con
 \begin{itemize}
 	\item \textbf{Vecindario:} es de tipo Moore con 8 vecinos.
 	\item \textbf{Espacio de estados:} 3 estados
-		\begin{itemize}
-			\item 0 que representa el estado apagado
-			\item 1 que representa el estado encendido
-			\item 2 que representa el estado muriendo.
-		\end{itemize}
+	\begin{itemize}
+		\item 0 que representa el estado apagado
+		\item 1 que representa el estado encendido
+		\item 2 que representa el estado muriendo.
+	\end{itemize}
 	\item \textbf{Función de evolución:} 
-		\begin{itemize}
-			\item 1 si se encuentra apagado y si dos o mas vecinos se encuentran encendidos.
-			\item 2 si en el estado anterior estaba encendido.
-			\item 0 si en el estado anterior estaba muriendo.
-		\end{itemize}
+	\begin{itemize}
+		\item 1 si se encuentra apagado y si dos o mas vecinos se encuentran encendidos.
+		\item 2 si en el estado anterior estaba encendido.
+		\item 0 si en el estado anterior estaba muriendo.
+	\end{itemize}
 \end{itemize}
 
 \subsection{Byl}
@@ -43,25 +48,25 @@ Es un autómata celular bidimensional, desarrollado por Jhon Byl \citep{BYL19892
 \begin{table}[H]
 	\begin{center}
 		\renewcommand{\arraystretch}{1.3}
-	\begin{tabular}{ c c c c c}
-		\hline
-		CTRBL $\rightarrow$ I & CTRBL $\rightarrow$ I & CTRBL $\rightarrow$ I & CTRBL $\rightarrow$ I & CTRBL $\rightarrow$ I \\ 
-		\hline
-		00003\quad\quad\quad 1& 10003\quad\quad\quad 3 & 20215\quad\quad\quad 5 & 31215\quad\quad\quad 1 & 40242\quad\quad\quad 4 \\  
-		00012\quad\quad\quad 2& 10004\quad\quad\quad 0 & 20235\quad\quad\quad 3 & 31223\quad\quad\quad 1 & 40252\quad\quad\quad 0 \\
-		00013\quad\quad\quad 1& 10033\quad\quad\quad 0 & 20252\quad\quad\quad 5 & 31233\quad\quad\quad 1 & 40325\quad\quad\quad 5  \\
-		00015\quad\quad\quad 2& 10043\quad\quad\quad 1 & 2 - - - - \quad\quad 2 & 31235\quad\quad\quad 5 & 4 - - - - \quad\quad 3  \\
-		00025\quad\quad\quad 5& 10321\quad\quad\quad 3 & 30001\quad\quad\quad 0 & 31432\quad\quad\quad 1 & 50022\quad\quad\quad 5 \\
-		00031\quad\quad\quad 5& 11253\quad\quad\quad 1 & 30003\quad\quad\quad 0 & 31452\quad\quad\quad 5 & 50032\quad\quad\quad 5  \\
-		00032\quad\quad\quad 3& 12453\quad\quad\quad 3 & 30011\quad\quad\quad 0 & 3 - - - - \quad\quad 3 & 50212\quad\quad\quad 4  \\
-		00042\quad\quad\quad 2& 1 - - - - \quad\quad 4 & 30012\quad\quad\quad 1 & & 50222\quad\quad\quad 0 \\
-		0 - - - - \quad\quad 0 & 20000\quad\quad\quad 0 & 30121\quad\quad\quad 1 & 40003\quad\quad\quad 0 & 50322\quad\quad\quad 0  \\
-		& 20015\quad\quad\quad 5 & 30123\quad\quad\quad 1 & 40043\quad\quad\quad 0 & 5 - - - - \quad\quad 2  \\
-		10000\quad\quad\quad 0& 20022\quad\quad\quad 0 & 31122\quad\quad\quad 1 & 40212\quad\quad\quad 0 & \\
-		10001\quad\quad\quad 0& 20202\quad\quad\quad 0 & 31123\quad\quad\quad 1 & 40232\quad\quad\quad 0 &
-	\end{tabular}
-	\caption{\label{tab:byltransfunction} Función de evolución de Byl CA \citep{BYL1989295}.}
-\end{center}
+		\begin{tabular}{ c c c c c}
+			\hline
+			CTRBL $\rightarrow$ I & CTRBL $\rightarrow$ I & CTRBL $\rightarrow$ I & CTRBL $\rightarrow$ I & CTRBL $\rightarrow$ I \\ 
+			\hline
+			00003\quad\quad\quad 1& 10003\quad\quad\quad 3 & 20215\quad\quad\quad 5 & 31215\quad\quad\quad 1 & 40242\quad\quad\quad 4 \\  
+			00012\quad\quad\quad 2& 10004\quad\quad\quad 0 & 20235\quad\quad\quad 3 & 31223\quad\quad\quad 1 & 40252\quad\quad\quad 0 \\
+			00013\quad\quad\quad 1& 10033\quad\quad\quad 0 & 20252\quad\quad\quad 5 & 31233\quad\quad\quad 1 & 40325\quad\quad\quad 5  \\
+			00015\quad\quad\quad 2& 10043\quad\quad\quad 1 & 2 - - - - \quad\quad 2 & 31235\quad\quad\quad 5 & 4 - - - - \quad\quad 3  \\
+			00025\quad\quad\quad 5& 10321\quad\quad\quad 3 & 30001\quad\quad\quad 0 & 31432\quad\quad\quad 1 & 50022\quad\quad\quad 5 \\
+			00031\quad\quad\quad 5& 11253\quad\quad\quad 1 & 30003\quad\quad\quad 0 & 31452\quad\quad\quad 5 & 50032\quad\quad\quad 5  \\
+			00032\quad\quad\quad 3& 12453\quad\quad\quad 3 & 30011\quad\quad\quad 0 & 3 - - - - \quad\quad 3 & 50212\quad\quad\quad 4  \\
+			00042\quad\quad\quad 2& 1 - - - - \quad\quad 4 & 30012\quad\quad\quad 1 & & 50222\quad\quad\quad 0 \\
+			0 - - - - \quad\quad 0 & 20000\quad\quad\quad 0 & 30121\quad\quad\quad 1 & 40003\quad\quad\quad 0 & 50322\quad\quad\quad 0  \\
+			& 20015\quad\quad\quad 5 & 30123\quad\quad\quad 1 & 40043\quad\quad\quad 0 & 5 - - - - \quad\quad 2  \\
+			10000\quad\quad\quad 0& 20022\quad\quad\quad 0 & 31122\quad\quad\quad 1 & 40212\quad\quad\quad 0 & \\
+			10001\quad\quad\quad 0& 20202\quad\quad\quad 0 & 31123\quad\quad\quad 1 & 40232\quad\quad\quad 0 &
+		\end{tabular}
+		\caption{\label{tab:byltransfunction} Función de evolución de Byl CA \citep{BYL1989295}.}
+	\end{center}
 \end{table}
 
 \begin{table}[H]
@@ -87,62 +92,62 @@ Es un autómata bidimensional, desarrollado por Hiroki Sayama \citep{Sayama1998C
 	\begin{center}
 		\renewcommand{\arraystretch}{1.2}
 		\resizebox{\textwidth}{!}{%
-		\begin{tabular}{ c c c c c c}
-			\hline
-			CTRBL $\rightarrow$ I & CTRBL $\rightarrow$ I & CTRBL $\rightarrow$ I & CTRBL $\rightarrow$ I & CTRBL $\rightarrow$ I & CTRBL $\rightarrow$ I \\ 
-			\hline
-			00001\quad\quad\quad2& 10202\quad\quad\quad1& 11272\quad\quad\quad7& 20172\quad\quad\quad2& 21322\quad\quad\quad2& 40125\quad\quad\quad0\\
-			00004\quad\quad\quad3& 10211\quad\quad\quad1& 11273\quad\quad\quad5& 20202\quad\quad\quad2& 21422\quad\quad\quad2& 40162\quad\quad\quad0\\
-			00012\quad\quad\quad2& 10212\quad\quad\quad1& 11322\quad\quad\quad1& 20203\quad\quad\quad2& 21622\quad\quad\quad2& 40212\quad\quad\quad0\\
-			00015\quad\quad\quad2& 10213\quad\quad\quad1& 11332\quad\quad\quad1& 20205\quad\quad\quad2& 21722\quad\quad\quad2& 40215\quad\quad\quad0\\
-			00021\quad\quad\quad2& 10221\quad\quad\quad1& 11542\quad\quad\quad4& 20206\quad\quad\quad5& 22224\quad\quad\quad2& 40222\quad\quad\quad1\\
-			00024\quad\quad\quad2& 10224\quad\quad\quad4& 11572\quad\quad\quad7& 20207\quad\quad\quad3& 22227\quad\quad\quad2& 40232\quad\quad\quad1\\
-			00042\quad\quad\quad2& 10227\quad\quad\quad7& 11624\quad\quad\quad4& 20212\quad\quad\quad2& 22234\quad\quad\quad2& 40262\quad\quad\quad6\\
-			00045\quad\quad\quad2& 10232\quad\quad\quad4& 11627\quad\quad\quad7& 20215\quad\quad\quad2& 22237\quad\quad\quad2& 40312\quad\quad\quad0\\
-			00075\quad\quad\quad2& 10241\quad\quad\quad4& 12224\quad\quad\quad4& 20221\quad\quad\quad2& 22243\quad\quad\quad2& 40322\quad\quad\quad1\\
-			00102\quad\quad\quad2& 10242\quad\quad\quad4& 12227\quad\quad\quad7& 20222\quad\quad\quad2& 22244\quad\quad\quad2& 50002\quad\quad\quad5\\
-			00214\quad\quad\quad1& 10243\quad\quad\quad4& 12243\quad\quad\quad4& 20223\quad\quad\quad2& 22273\quad\quad\quad2& 50012\quad\quad\quad5\\
-			00217\quad\quad\quad1& 10251\quad\quad\quad1& 12273\quad\quad\quad7& 20232\quad\quad\quad3& 22277\quad\quad\quad2& 50021\quad\quad\quad5\\
-			00232\quad\quad\quad2& 10252\quad\quad\quad7& 12324\quad\quad\quad4& 20242\quad\quad\quad2& 22324\quad\quad\quad3& 50023\quad\quad\quad2\\
-			01122\quad\quad\quad1& 10254\quad\quad\quad3& 12327\quad\quad\quad7& 20245\quad\quad\quad2& 22327\quad\quad\quad3& 50024\quad\quad\quad5\\
-			01212\quad\quad\quad1& 10257\quad\quad\quad7& 12426\quad\quad\quad6& 20252\quad\quad\quad5& 30001\quad\quad\quad3& 50027\quad\quad\quad5\\
-			01232\quad\quad\quad1& 10271\quad\quad\quad7& 12433\quad\quad\quad3& 20262\quad\quad\quad0& 30002\quad\quad\quad2& 50042\quad\quad\quad5\\
-			01242\quad\quad\quad1& 10272\quad\quad\quad7& 12627\quad\quad\quad6& 20265\quad\quad\quad0& 30003\quad\quad\quad2& 50072\quad\quad\quad5\\
-			01245\quad\quad\quad1& 10273\quad\quad\quad5& 20001\quad\quad\quad2& 20272\quad\quad\quad2& 30004\quad\quad\quad3& 50202\quad\quad\quad2\\
-			01252\quad\quad\quad6& 10512\quad\quad\quad1& 20002\quad\quad\quad2& 20275\quad\quad\quad2& 30007\quad\quad\quad4& 50205\quad\quad\quad2\\
-			01262\quad\quad\quad6& 10542\quad\quad\quad4& 20004\quad\quad\quad2& 20312\quad\quad\quad2& 30012\quad\quad\quad3& 50212\quad\quad\quad5\\
-			
-	\end{tabular}}
-\end{center}
+			\begin{tabular}{ c c c c c c}
+				\hline
+				CTRBL $\rightarrow$ I & CTRBL $\rightarrow$ I & CTRBL $\rightarrow$ I & CTRBL $\rightarrow$ I & CTRBL $\rightarrow$ I & CTRBL $\rightarrow$ I \\ 
+				\hline
+				00001\quad\quad\quad2& 10202\quad\quad\quad1& 11272\quad\quad\quad7& 20172\quad\quad\quad2& 21322\quad\quad\quad2& 40125\quad\quad\quad0\\
+				00004\quad\quad\quad3& 10211\quad\quad\quad1& 11273\quad\quad\quad5& 20202\quad\quad\quad2& 21422\quad\quad\quad2& 40162\quad\quad\quad0\\
+				00012\quad\quad\quad2& 10212\quad\quad\quad1& 11322\quad\quad\quad1& 20203\quad\quad\quad2& 21622\quad\quad\quad2& 40212\quad\quad\quad0\\
+				00015\quad\quad\quad2& 10213\quad\quad\quad1& 11332\quad\quad\quad1& 20205\quad\quad\quad2& 21722\quad\quad\quad2& 40215\quad\quad\quad0\\
+				00021\quad\quad\quad2& 10221\quad\quad\quad1& 11542\quad\quad\quad4& 20206\quad\quad\quad5& 22224\quad\quad\quad2& 40222\quad\quad\quad1\\
+				00024\quad\quad\quad2& 10224\quad\quad\quad4& 11572\quad\quad\quad7& 20207\quad\quad\quad3& 22227\quad\quad\quad2& 40232\quad\quad\quad1\\
+				00042\quad\quad\quad2& 10227\quad\quad\quad7& 11624\quad\quad\quad4& 20212\quad\quad\quad2& 22234\quad\quad\quad2& 40262\quad\quad\quad6\\
+				00045\quad\quad\quad2& 10232\quad\quad\quad4& 11627\quad\quad\quad7& 20215\quad\quad\quad2& 22237\quad\quad\quad2& 40312\quad\quad\quad0\\
+				00075\quad\quad\quad2& 10241\quad\quad\quad4& 12224\quad\quad\quad4& 20221\quad\quad\quad2& 22243\quad\quad\quad2& 40322\quad\quad\quad1\\
+				00102\quad\quad\quad2& 10242\quad\quad\quad4& 12227\quad\quad\quad7& 20222\quad\quad\quad2& 22244\quad\quad\quad2& 50002\quad\quad\quad5\\
+				00214\quad\quad\quad1& 10243\quad\quad\quad4& 12243\quad\quad\quad4& 20223\quad\quad\quad2& 22273\quad\quad\quad2& 50012\quad\quad\quad5\\
+				00217\quad\quad\quad1& 10251\quad\quad\quad1& 12273\quad\quad\quad7& 20232\quad\quad\quad3& 22277\quad\quad\quad2& 50021\quad\quad\quad5\\
+				00232\quad\quad\quad2& 10252\quad\quad\quad7& 12324\quad\quad\quad4& 20242\quad\quad\quad2& 22324\quad\quad\quad3& 50023\quad\quad\quad2\\
+				01122\quad\quad\quad1& 10254\quad\quad\quad3& 12327\quad\quad\quad7& 20245\quad\quad\quad2& 22327\quad\quad\quad3& 50024\quad\quad\quad5\\
+				01212\quad\quad\quad1& 10257\quad\quad\quad7& 12426\quad\quad\quad6& 20252\quad\quad\quad5& 30001\quad\quad\quad3& 50027\quad\quad\quad5\\
+				01232\quad\quad\quad1& 10271\quad\quad\quad7& 12433\quad\quad\quad3& 20262\quad\quad\quad0& 30002\quad\quad\quad2& 50042\quad\quad\quad5\\
+				01242\quad\quad\quad1& 10272\quad\quad\quad7& 12627\quad\quad\quad6& 20265\quad\quad\quad0& 30003\quad\quad\quad2& 50072\quad\quad\quad5\\
+				01245\quad\quad\quad1& 10273\quad\quad\quad5& 20001\quad\quad\quad2& 20272\quad\quad\quad2& 30004\quad\quad\quad3& 50202\quad\quad\quad2\\
+				01252\quad\quad\quad6& 10512\quad\quad\quad1& 20002\quad\quad\quad2& 20275\quad\quad\quad2& 30007\quad\quad\quad4& 50205\quad\quad\quad2\\
+				01262\quad\quad\quad6& 10542\quad\quad\quad4& 20004\quad\quad\quad2& 20312\quad\quad\quad2& 30012\quad\quad\quad3& 50212\quad\quad\quad5\\
+				
+		\end{tabular}}
+	\end{center}
 \end{table}
 \begin{table}[H]
 	\begin{center}
 		\renewcommand{\arraystretch}{1.2}
 		\resizebox{\textwidth}{!}{%
 			\begin{tabular}{ c c c c c c}
-			01272\quad\quad\quad1& 10572\quad\quad\quad7& 20005\quad\quad\quad2& 20322\quad\quad\quad2& 30032\quad\quad\quad2& 50215\quad\quad\quad2\\
-			01275\quad\quad\quad1& 10621\quad\quad\quad1& 20006\quad\quad\quad0& 20342\quad\quad\quad2& 30042\quad\quad\quad1& 50242\quad\quad\quad5\\
-			01342\quad\quad\quad1& 10624\quad\quad\quad4& 20007\quad\quad\quad1& 20345\quad\quad\quad2& 30102\quad\quad\quad1& 50272\quad\quad\quad5\\
-			01372\quad\quad\quad1& 10627\quad\quad\quad7& 20012\quad\quad\quad2& 20372\quad\quad\quad2& 30125\quad\quad\quad0& 50312\quad\quad\quad0\\
-			01422\quad\quad\quad1& 11112\quad\quad\quad1& 20015\quad\quad\quad2& 20412\quad\quad\quad2& 30212\quad\quad\quad3& 60202\quad\quad\quad2\\
-			01425\quad\quad\quad1& 11122\quad\quad\quad1& 20021\quad\quad\quad2& 20422\quad\quad\quad2& 30242\quad\quad\quad3& 60212\quad\quad\quad2\\
-			01432\quad\quad\quad1& 11124\quad\quad\quad4& 20022\quad\quad\quad2& 20442\quad\quad\quad2& 30252\quad\quad\quad1& 60222\quad\quad\quad0\\
-			01435\quad\quad\quad1& 11125\quad\quad\quad1& 20023\quad\quad\quad2& 20512\quad\quad\quad2& 30272\quad\quad\quad3& 60242\quad\quad\quad2\\
-			01442\quad\quad\quad1& 11127\quad\quad\quad7& 20024\quad\quad\quad2& 20542\quad\quad\quad5& 30332\quad\quad\quad1& 60272\quad\quad\quad2\\
-			01462\quad\quad\quad1& 11162\quad\quad\quad1& 20026\quad\quad\quad0& 20572\quad\quad\quad5& 31212\quad\quad\quad3& 61222\quad\quad\quad0\\
-			01722\quad\quad\quad1& 11212\quad\quad\quad1& 20027\quad\quad\quad2& 20612\quad\quad\quad5& 31242\quad\quad\quad3& 62224\quad\quad\quad0\\
-			01725\quad\quad\quad1& 11213\quad\quad\quad1& 20032\quad\quad\quad4& 20621\quad\quad\quad2& 31252\quad\quad\quad1& 62227\quad\quad\quad0\\
-			01756\quad\quad\quad1& 11215\quad\quad\quad1& 20042\quad\quad\quad3& 20642\quad\quad\quad5& 31272\quad\quad\quad3& 70102\quad\quad\quad0\\
-			01762\quad\quad\quad1& 11222\quad\quad\quad1& 20045\quad\quad\quad2& 20672\quad\quad\quad5& 32424\quad\quad\quad3& 70112\quad\quad\quad0\\
-			01772\quad\quad\quad1& 11224\quad\quad\quad4& 20054\quad\quad\quad5& 20712\quad\quad\quad2& 32425\quad\quad\quad1& 70122\quad\quad\quad0\\
-			10001\quad\quad\quad1& 11227\quad\quad\quad7& 20057\quad\quad\quad5& 20722\quad\quad\quad2& 32427\quad\quad\quad3& 70125\quad\quad\quad0\\
-			10012\quad\quad\quad1& 11232\quad\quad\quad1& 20062\quad\quad\quad0& 20772\quad\quad\quad2& 32527\quad\quad\quad1& 70162\quad\quad\quad0\\
-			10021\quad\quad\quad1& 11242\quad\quad\quad4& 20072\quad\quad\quad2& 21122\quad\quad\quad2& 32727\quad\quad\quad3& 70212\quad\quad\quad0\\
-			10024\quad\quad\quad4& 11243\quad\quad\quad4& 20075\quad\quad\quad2& 21222\quad\quad\quad2& 40000\quad\quad\quad1& 70215\quad\quad\quad0\\
-			10027\quad\quad\quad7& 11252\quad\quad\quad7& 20102\quad\quad\quad2& 21223\quad\quad\quad2& 40002\quad\quad\quad1& 70222\quad\quad\quad1\\
-			10121\quad\quad\quad1& 11254\quad\quad\quad3& 20112\quad\quad\quad2& 21224\quad\quad\quad2& 40102\quad\quad\quad0& 70232\quad\quad\quad0\\
-			10124\quad\quad\quad4& 11257\quad\quad\quad7& 20122\quad\quad\quad2& 21227\quad\quad\quad2& 40112\quad\quad\quad0& 70262\quad\quad\quad6\\
-			10127\quad\quad\quad7& 11262\quad\quad\quad6& 20142\quad\quad\quad2& 21232\quad\quad\quad3& 40122\quad\quad\quad0& 70312\quad\quad\quad0
+				01272\quad\quad\quad1& 10572\quad\quad\quad7& 20005\quad\quad\quad2& 20322\quad\quad\quad2& 30032\quad\quad\quad2& 50215\quad\quad\quad2\\
+				01275\quad\quad\quad1& 10621\quad\quad\quad1& 20006\quad\quad\quad0& 20342\quad\quad\quad2& 30042\quad\quad\quad1& 50242\quad\quad\quad5\\
+				01342\quad\quad\quad1& 10624\quad\quad\quad4& 20007\quad\quad\quad1& 20345\quad\quad\quad2& 30102\quad\quad\quad1& 50272\quad\quad\quad5\\
+				01372\quad\quad\quad1& 10627\quad\quad\quad7& 20012\quad\quad\quad2& 20372\quad\quad\quad2& 30125\quad\quad\quad0& 50312\quad\quad\quad0\\
+				01422\quad\quad\quad1& 11112\quad\quad\quad1& 20015\quad\quad\quad2& 20412\quad\quad\quad2& 30212\quad\quad\quad3& 60202\quad\quad\quad2\\
+				01425\quad\quad\quad1& 11122\quad\quad\quad1& 20021\quad\quad\quad2& 20422\quad\quad\quad2& 30242\quad\quad\quad3& 60212\quad\quad\quad2\\
+				01432\quad\quad\quad1& 11124\quad\quad\quad4& 20022\quad\quad\quad2& 20442\quad\quad\quad2& 30252\quad\quad\quad1& 60222\quad\quad\quad0\\
+				01435\quad\quad\quad1& 11125\quad\quad\quad1& 20023\quad\quad\quad2& 20512\quad\quad\quad2& 30272\quad\quad\quad3& 60242\quad\quad\quad2\\
+				01442\quad\quad\quad1& 11127\quad\quad\quad7& 20024\quad\quad\quad2& 20542\quad\quad\quad5& 30332\quad\quad\quad1& 60272\quad\quad\quad2\\
+				01462\quad\quad\quad1& 11162\quad\quad\quad1& 20026\quad\quad\quad0& 20572\quad\quad\quad5& 31212\quad\quad\quad3& 61222\quad\quad\quad0\\
+				01722\quad\quad\quad1& 11212\quad\quad\quad1& 20027\quad\quad\quad2& 20612\quad\quad\quad5& 31242\quad\quad\quad3& 62224\quad\quad\quad0\\
+				01725\quad\quad\quad1& 11213\quad\quad\quad1& 20032\quad\quad\quad4& 20621\quad\quad\quad2& 31252\quad\quad\quad1& 62227\quad\quad\quad0\\
+				01756\quad\quad\quad1& 11215\quad\quad\quad1& 20042\quad\quad\quad3& 20642\quad\quad\quad5& 31272\quad\quad\quad3& 70102\quad\quad\quad0\\
+				01762\quad\quad\quad1& 11222\quad\quad\quad1& 20045\quad\quad\quad2& 20672\quad\quad\quad5& 32424\quad\quad\quad3& 70112\quad\quad\quad0\\
+				01772\quad\quad\quad1& 11224\quad\quad\quad4& 20054\quad\quad\quad5& 20712\quad\quad\quad2& 32425\quad\quad\quad1& 70122\quad\quad\quad0\\
+				10001\quad\quad\quad1& 11227\quad\quad\quad7& 20057\quad\quad\quad5& 20722\quad\quad\quad2& 32427\quad\quad\quad3& 70125\quad\quad\quad0\\
+				10012\quad\quad\quad1& 11232\quad\quad\quad1& 20062\quad\quad\quad0& 20772\quad\quad\quad2& 32527\quad\quad\quad1& 70162\quad\quad\quad0\\
+				10021\quad\quad\quad1& 11242\quad\quad\quad4& 20072\quad\quad\quad2& 21122\quad\quad\quad2& 32727\quad\quad\quad3& 70212\quad\quad\quad0\\
+				10024\quad\quad\quad4& 11243\quad\quad\quad4& 20075\quad\quad\quad2& 21222\quad\quad\quad2& 40000\quad\quad\quad1& 70215\quad\quad\quad0\\
+				10027\quad\quad\quad7& 11252\quad\quad\quad7& 20102\quad\quad\quad2& 21223\quad\quad\quad2& 40002\quad\quad\quad1& 70222\quad\quad\quad1\\
+				10121\quad\quad\quad1& 11254\quad\quad\quad3& 20112\quad\quad\quad2& 21224\quad\quad\quad2& 40102\quad\quad\quad0& 70232\quad\quad\quad0\\
+				10124\quad\quad\quad4& 11257\quad\quad\quad7& 20122\quad\quad\quad2& 21227\quad\quad\quad2& 40112\quad\quad\quad0& 70262\quad\quad\quad6\\
+				10127\quad\quad\quad7& 11262\quad\quad\quad6& 20142\quad\quad\quad2& 21232\quad\quad\quad3& 40122\quad\quad\quad0& 70312\quad\quad\quad0
 		\end{tabular}}
 		\caption{\label{tab:evoloopstransfunction} Función de evolución de Evoloops CA \citep{Sayama1998ConstructingES} .}
 	\end{center}
@@ -164,15 +169,15 @@ Es un autómata bidimensional, desarrollado por Dan Drake, que consiste en lo si
 \end{itemize}
 
 \section{Preprocesamiento}
-Una vez adquiridas las secuencias de imágenes de cada autómata celular, se procede a realizar los siguientes preprocesamientos:
+Una vez adquiridas las secuencias de imágenes de cada autómata celular, se procede a realizar los procesos de discretización y binarización que se explican a continuación.
 \begin{itemize}
-	\item \textbf{Discretización}.- pasar las imágenes de los canales rgb a valores discretos.
-	\item \textbf{Binarización}.- este paso solo se realiza para los datos que se van a ingresar al algoritmo RA1.
+	\item \textbf{Discretización}.- Consta en pasar las imágenes de los canales RGB a valores discretos.
+	\item \textbf{Binarización}.- Este proceso solo se realiza para los datos que se van a ingresar al algoritmo RA1.
 \end{itemize}
 
 \subsection{Discretización}
 
-La implementación de este procedimiento se realizo con el lenguaje Python y se ejemplifica mejor con el siguiente pseudocódigo.
+La implementación de este procedimiento se realizó en el lenguaje Python y se ejemplifica con el siguiente pseudocódigo.
 
 \begin{algorithm}[H] 
 	\SetKwInOut{Input}{entrada}
@@ -196,7 +201,7 @@ La implementación de este procedimiento se realizo con el lenguaje Python y se 
 				}
 				\textbf{Paso 4:} nuevaFila.agregar(diccionario[pixel])\;
 			}
-		\textbf{Paso 5:} nuevaImagen.agregar(nuevaFila)\;
+			\textbf{Paso 5:} nuevaImagen.agregar(nuevaFila)\;
 		}
 		\textbf{Paso 6:} imagenes.agregar(nuevaImagen)\;
 	}
@@ -206,7 +211,7 @@ La implementación de este procedimiento se realizo con el lenguaje Python y se 
 
 \subsection{Binarización}
 
-Este proceso se realiza solamente para los datos de entrada que se van a ingresar al algoritmo RA1 ya que este algoritmo solo es capaz de aprender de datos categóricos. El siguiente pseudocódigo ejemplifica este proceso.
+Este proceso se realiza solamente para los datos que ingresarán al algoritmo RA1 debido a que este algoritmo solo es capaz de aprender de datos categóricos. El siguiente pseudocódigo ejemplifica este proceso.
 
 \begin{algorithm}[H] 
 	\SetKwInOut{Input}{entrada}
@@ -232,26 +237,28 @@ Este proceso se realiza solamente para los datos de entrada que se van a ingresa
 		\textbf{Paso 4:} nuevoEstado.agregar(nuevaFila)\;
 	}
 	
-	\caption{Pseudocódigo para la discretización de las imágenes.}
+	\caption{Pseudocódigo para la binarización de las imágenes.}
 \end{algorithm}
 
 \section{Algoritmos de aprendizaje}
-Los algoritmos de aprendizaje utilizados en este trabajo consisten en los siguientes:
+Los algoritmos de aprendizaje utilizados en este trabajo de investigación son los siguientes:
 \begin{itemize}
 	\item RA1
 	\item GA-Nuggets
-	\item LRDEA (propuesta de solución).
+	\item LRDEA el algoritmo que estamos proponiendo.
 \end{itemize}
 
-Debido a que no se encontraron la implementación de los algoritmos RA1 y GA-Nuggets, se realizo la tarea de realizar dicha implementación en el lenguaje de programación Python.
+Cabe mencionar que, debido a que no se encontraron las implementaciones de los algoritmos RA1 y GA-Nuggets, fue necesario realizarlas en el lenguaje de programación Python.
 
 \subsection{LRDEA (Local Rule Discovery Evolutive Algorithm)}
 
-Nuestra propuesta de solución para este problema se basa en un algoritmo genético distribuido, cuyo funcionamiento combina el principio del algoritmo RA1 que es ir generando clausulas que cubran a los ejemplos positivos y rechace a los ejemplos negativos, y el principio de un algoritmo genético que es tener recombinación entre un conjunto de individuos para explorar el espacio de búsqueda.  El algoritmo maneja una subpoblación por cada una de los valores en el espacio de estado del autómata celular.
+Nuestra propuesta de solución para el problema, se basa en un algoritmo genético distribuido cuyo funcionamiento combina el principio del algoritmo RA1 ---que equivale a ir generando cláusulas que cubran a los ejemplos positivos y rechace a los ejemplos negativos---, y el principio de un algoritmo genético ---que implica tener recombinación entre un conjunto de individuos para explorar el espacio de búsqueda---.  El algoritmo propuesto maneja una subpoblación por cada uno de los valores en el espacio de estado del autómata celular.
 
 \subsubsection{Representación}
 
-Al igual que el algoritmo GA-Nuggets la codificación para cada individuo representa una regla de predicción candidata de la forma IF $Ant$ THEN $Cons$, donde $Ant$ es el antecedente de la regla y $Cons$ es el consecuente. El antecedente $Ant$ consiste en una conjunción de condiciones, donde cada condición es un par vecino valor de la forma $n_i = V_i$, donde $n_i$ es el i-ésimo vecino y $n_{i}$ es un conjunto de los posibles valores que puede tener $n_i$ de la forma $\{v_{0},\dots,v_{n}\}$ donde $v$ es un valor dentro del dominio del vecino $n_i$. El algoritmo solo maneja valores categóricos, por lo que es necesario discretizar los valores. El consecuente $Cons$ consiste en un solo valor en el dominio que puede tomar la celda que se esta evaluando $c$. Se utiliza el valor -1 para indicar que el par vecino valor no va a formar parte de la regla.
+Al igual que el algoritmo GA-Nuggets, la codificación para cada individuo representa una regla de predicción candidata de la forma IF $Ant$ THEN $Cons$, donde $Ant$ es el antecedente de la regla y $Cons$ es el consecuente. El antecedente $Ant$ consiste en una conjunción de condiciones, donde cada condición es un par vecino valor de la forma $n_i = V_i$, donde $n_i$ es el i-ésimo vecino y $n_{i}$ es un conjunto de los posibles valores que puede tener $n_i$ de la forma $\{v_{0},\dots,v_{n}\}$ donde $v$ es un valor dentro del dominio del vecino $n_i$.
+
+El algoritmo solo maneja valores categóricos, por lo que es necesario discretizar los valores. El consecuente $Cons$ consiste en un solo valor en el dominio que puede tomar la celda que se esta evaluando $c$. Se utiliza el valor -1 para indicar que el par vecino valor no va a formar parte de la regla.
 
 
 \begin{table}[H]
@@ -262,24 +269,24 @@ Al igual que el algoritmo GA-Nuggets la codificación para cada individuo repres
 			$n_6$&$n_7$&$n_8$&\\
 		\end{tabular}
 	\end{center}
-	\caption{\label{tab:caneigh} Representación del vecindario.}
+	\caption{\label{tab:bylneigh} Representación del vecindario.}
 \end{table}
 
 \begin{table}[H]
 	\begin{center}
 		\resizebox{\textwidth}{!}{%
-		\begin{tabular}{ |c| c| c| c| c| c| c| c| c| c|}
-			\hline
-			$n_1 = V_1$&$n_2 =  V_2$&$n_3=  V_3$& $n_4=  V_4$&$c =  V_c$&$n_5 =  V_5$& $n_6 =  V_6$&$n_7 =  V_7$&$n_8 =  V_8$& Cons\\
-			\hline
+			\begin{tabular}{ |c| c| c| c| c| c| c| c| c| c|}
+				\hline
+				$n_1 = V_1$&$n_2 =  V_2$&$n_3=  V_3$& $n_4=  V_4$&$c =  V_c$&$n_5 =  V_5$& $n_6 =  V_6$&$n_7 =  V_7$&$n_8 =  V_8$& Cons\\
+				\hline
 		\end{tabular}}
 	\end{center}
-	\caption{\label{tab:representation} Representación del la codificación.}
+	\caption{\label{tab:bylneigh} Representación del la codificación.}
 \end{table}
 
 \subsubsection{Función de aptitud}
 
-Nuestra función de aptitud esta definida por la siguiente ecuación:
+La función de aptitud propuesta se define por la siguiente ecuación:
 
 \[Fitness(C,E^{+})=\sum_{i=1}^{|E^{+}|} \left(\frac{1}{|C|}\sum_{j=1}^{|C|} Eq(E^{+}_{ij},C_{j}) \right)\]
 
@@ -303,7 +310,7 @@ donde:
 
 \subsubsection{Mecanismo de selección de padres}
 
-Para el mecanismo de selección de padres se escogió la selección por torneo, que consiste en lo siguiente:
+Para el mecanismo de selección de padres se eligió la selección por torneo, que consiste en lo siguiente:
 
 \begin{algorithm}[H] 
 	\SetKwInOut{Input}{entrada}
@@ -333,7 +340,7 @@ Para el proceso de cruce se seleccionó el método de cruce en un punto, esto es
 
 \subsubsection{Mutación}
 
-El operador de mutación consiste en dos partes, la primera es la probabilidad de realizar la mutación o no, la segunda es la selección del gen que se va a mutar. El gen mutado puede adquirir un nuevo valor en el conjunto de valores o puede removerse uno de estos valores.
+El operador de mutación consiste en dos partes, la primera es la probabilidad de realizar la mutación o no, y la segunda es la selección del gen que se va a mutar. El gen mutado puede adquirir un nuevo valor en el conjunto de valores o puede removerse uno de estos valores.
 
 \subsubsection{Mecanismo de selección de sobrevivientes}
 
@@ -343,12 +350,36 @@ Para el mecanismo de selección de sobrevivientes se ordenan los individuos de c
 
 Para la simplificación de las reglas se utiliza el algoritmo desarrollado por Willard V.Quine 1955 y extendido Edward J. McCluskey  en 1956. Este mecanismo solo se emplea para la simplificación de las reglas generadas por el algoritmo RA1.
 
-
 \section{Evaluación}
 
-En el proceso de evaluación se emplea la  ecuación de exactitud \ref{eq:exactitud} para calcular el error de aprendizaje y el error de generalización.
+En el proceso de evaluación se emplea la validación camina hacia adelante  (Walk-Fordward) y como métrica la exactitud (ecuación \ref{eq:exactitud}) para calcular el error de aprendizaje y el error de generalización.
+\\
+\\
+\begin{algorithm}[H] 
+	\SetAlgoLined
+	\tcc{el rango va del 80\% del total de datos al 100\%}
+	\ForEach{i en rango(160,200) }{
+		\tcc{tomamos un subconjunto del conjunto de datos}
+		\textbf{Paso 1:} entrenamiento = datos[0:(i-1)]\; 
+		\tcc{tomamos un elemento adicional del conjunto de datos}
+		\textbf{Paso 2:} testing = datos[i] \;
+		\tcc{aprendemos del conjunto de entrenamiento}
+		\textbf{Paso 3:} aprender(entrenamiento)\;
+		\textbf{Paso 4:} vExactitud = exactitud(entrenamiento[i-1])\;
+		\textbf{Paso 5:} tExactitud = exactitud(testing)\;
+	}
+	\caption{Pseudocódigo de validación camina hacia adelante (Walk-Fordward).}
+\end{algorithm}
 
 
 \[
 exactitud = \frac{VP + VN}{VP+FP+VN+FN} \label{eq:exactitud} 
 \]
+
+donde:
+\begin{itemize}
+	\item $VP:$ verdaderos positivos.
+	\item $VN:$ verdaderos negativos.
+	\item $FP:$ falsos positivos.
+	\item $FN:$ falsos negativos. 
+\end{itemize}
