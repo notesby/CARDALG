@@ -1,6 +1,6 @@
 \chapter{Métodos y metodologías}
 
-En esta sección se detallan cual fue la metodología empleada para llevar acabo los experimentos, en el siguiente diagrama se puede ver el panorama general de la metodología.
+En esta sección se detalla cuál fue la metodología empleada para llevar acabo los experimentos. En la figura \ref{fig:metodologia} a continuación, se puede ver el panorama general de dicha metodología experimental.
 
 \begin{figure}[H]
 	\centering
@@ -11,9 +11,38 @@ En esta sección se detallan cual fue la metodología empleada para llevar acabo
 
 \section{Conjunto de datos}
 
-Para realizar los experimentos, se optó por adquirir un conjunto de datos que consiste de los estados de la evolución de 4 diferentes autómatas celulares bidimensionales, los cuales fueron obtenidos de \cite{rucker_walker}.
+Para realizar los experimentos, se optó por adquirir un conjunto de datos que consiste en los estados de la evolución de 4 diferentes autómatas celulares bidimensionales, los cuales fueron obtenidos de \cite{rucker_walker}.
 \\
-Para cada uno de los autómatas se obtuvieron 200 imágenes de 50x50 pixeles en escala RGB.
+Para cada uno de los autómatas se obtuvieron 200 imágenes de 50x50 pixeles en escala RGB, que se ejemplifican en las imágenes de la Figura \ref{caexamples} a continuación.
+
+\begin{figure}[h]
+	
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[width=0.9\linewidth, height=5cm]{fig/brain_1} 
+		\caption{Brain estado 1}
+		\label{fig:brain1}
+	\end{subfigure}
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[width=0.9\linewidth, height=5cm]{fig/brain_200}
+		\caption{Brain estado 200}
+		\label{fig:brain200}
+	\end{subfigure}
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[width=0.9\linewidth, height=5cm]{fig/mite_1}
+		\caption{Mite estado 1}
+		\label{fig:mite100}
+	\end{subfigure}
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[width=0.9\linewidth, height=5cm]{fig/mite_200}
+		\caption{Mite estado 200}
+		\label{fig:mite200}
+	\end{subfigure}
+	
+	\caption{Ejemplo del conjunto de datos}
+	\label{fig:caexamples}
+\end{figure}
+
+A continuación, se mencionan los autómatas celulares en los cuales se implementaron este tipo de imágenes.
 
 \subsection{Brain}
 
@@ -21,7 +50,7 @@ Es un autómata celular bidimensional, desarrollado por Brian Silverman, que con
 
 \begin{itemize}
 	\item \textbf{Vecindario:} es de tipo Moore con 8 vecinos.
-	\item \textbf{Espacio de estados:} 3 estados
+	\item \textbf{Espacio de estados:} 3 estados.
 	\begin{itemize}
 		\item 0 que representa el estado apagado
 		\item 1 que representa el estado encendido
@@ -40,9 +69,9 @@ Es un autómata celular bidimensional, desarrollado por Brian Silverman, que con
 Es un autómata celular bidimensional, desarrollado por Jhon Byl \citep{BYL1989295}, que consiste en lo siguiente:
 
 \begin{itemize}
-	\item \textbf{Vecindario:} es de tipo Von Neumann con 5 vecinos.
-	\item \textbf{Espacio de estados:} consiste de 6 estados del 0 al 6.
-	\item \textbf{Función de evolución:} 
+	\item \textbf{Vecindario:} es de tipo Von Neumann con 5 vecinos, en el cuadro \ref{tab:bylneigh} podemos ver como se codifica el vecindario.
+	\item \textbf{Espacio de estados:} consiste de 6 estados del 0 al 5.
+	\item \textbf{Función de evolución:} se muestra en el cuadro \ref{tab:byltransfunction}
 \end{itemize}
 
 \begin{table}[H]
@@ -77,14 +106,14 @@ Es un autómata celular bidimensional, desarrollado por Jhon Byl \citep{BYL19892
 			&B&\\
 		\end{tabular}
 	\end{center}
-	\caption{\label{tab:bylneigh} Vecindario.}
+	\caption{\label{tab:bylneigh} Codificación del vecindario.}
 \end{table}
 
 \subsection{Evoloops}
 Es un autómata bidimensional, desarrollado por Hiroki Sayama \citep{Sayama1998ConstructingES}, que consiste en lo siguiente:
 \begin{itemize}
-	\item \textbf{Vecindario:} es de tipo Von Neumann con 5 vecinos.
-	\item \textbf{Espacio de estados:} consiste de 8 estados del 0 al 8.
+	\item \textbf{Vecindario:} es de tipo Von Neumann con 5 vecinos, en el cuadro \ref{tab:bylneigh} podemos ver como se codifica el vecindario.
+	\item \textbf{Espacio de estados:} consiste de 8 estados del 0 al 7.
 	\item \textbf{Función de evolución:} se muestra en el cuadro \ref{tab:evoloopstransfunction}
 \end{itemize}
 
@@ -157,23 +186,21 @@ Es un autómata bidimensional, desarrollado por Hiroki Sayama \citep{Sayama1998C
 
 Es un autómata bidimensional, desarrollado por Dan Drake, que consiste en lo siguiente:
 \begin{itemize}
-	\item \textbf{Vecindario:} es de tipo Von Neumann con 8 vecinos.
-	\item \textbf{Espacio de estados:} consiste de 3 estados del 0 al 3.
+	\item \textbf{Vecindario:} es de tipo Moore con 8 vecinos.
+	\item \textbf{Espacio de estados:} consiste de 3 estados del 0 al 2.
 	\item \textbf{Función de evolución:} 
 	\begin{itemize}
 		\item mover la posición del predador de manera aleatoria dentro de su vecindario local.
 		\item si no hay presa en su posición el predador muere.
-		\item si hay suficientes presas en su posición se incrementa el numero de predadores.
-		\item si hay dos presas juntas se incrementa el numero de presas.
+		\item si hay suficientes presas en su posición se incrementa el número de predadores.
+		\item si hay dos presas juntas se incrementa el número de presas.
 	\end{itemize}
 \end{itemize}
 
 \section{Preprocesamiento}
-Una vez adquiridas las secuencias de imágenes de cada autómata celular, se procede a realizar los procesos de discretización y binarización que se explican a continuación.
-\begin{itemize}
-	\item \textbf{Discretización}.- Consta en pasar las imágenes de los canales RGB a valores discretos.
-	\item \textbf{Binarización}.- Este proceso solo se realiza para los datos que se van a ingresar al algoritmo RA1.
-\end{itemize}
+Una vez adquiridas las secuencias de imágenes de cada autómata celular, se continúa con los procesos de discretización y binarización que se explican en las subsecciones siguientes.
+
+En términos generales, la discretización consta en pasar las imágenes de los canales RGB a valores discretos, mientras que el proceso de binarización solo se realiza para los datos que se van a ingresar al algoritmo RA1. De cualquier manera, se mencionan a continuación algunas características específicas de cada proceso.
 
 \subsection{Discretización}
 
@@ -245,7 +272,7 @@ Los algoritmos de aprendizaje utilizados en este trabajo de investigación son l
 \begin{itemize}
 	\item RA1
 	\item GA-Nuggets
-	\item LRDEA el algoritmo que estamos proponiendo.
+	\item LRDEA el algoritmo diseñado en este trabajo.
 \end{itemize}
 
 Cabe mencionar que, debido a que no se encontraron las implementaciones de los algoritmos RA1 y GA-Nuggets, fue necesario realizarlas en el lenguaje de programación Python.
@@ -256,8 +283,8 @@ Nuestra propuesta de solución para el problema, se basa en un algoritmo genéti
 
 \subsubsection{Representación}
 
-Al igual que el algoritmo GA-Nuggets, la codificación para cada individuo representa una regla de predicción candidata de la forma IF $Ant$ THEN $Cons$, donde $Ant$ es el antecedente de la regla y $Cons$ es el consecuente. El antecedente $Ant$ consiste en una conjunción de condiciones, donde cada condición es un par vecino valor de la forma $n_i = V_i$, donde $n_i$ es el i-ésimo vecino y $n_{i}$ es un conjunto de los posibles valores que puede tener $n_i$ de la forma $\{v_{0},\dots,v_{n}\}$ donde $v$ es un valor dentro del dominio del vecino $n_i$.
-
+Al igual que el algoritmo GA-Nuggets, la codificación para cada individuo representa una regla de predicción candidata de la forma IF $Ant$ THEN $Cons$, donde $Ant$ es el antecedente de la regla y $Cons$ es el consecuente. El antecedente $Ant$ consiste en una conjunción de condiciones, donde cada condición es un par vecino valor de la forma $n_i = V_i$, donde $n_i$ es el i-ésimo vecino y $V_{i}$ es un conjunto de los posibles valores que puede tener $n_i$ de la forma $\{v_{0},\dots,v_{n}\}$ donde $v$ es un valor dentro del dominio del vecino $n_i$.
+\\
 El algoritmo solo maneja valores categóricos, por lo que es necesario discretizar los valores. El consecuente $Cons$ consiste en un solo valor en el dominio que puede tomar la celda que se esta evaluando $c$. Se utiliza el valor -1 para indicar que el par vecino valor no va a formar parte de la regla.
 
 
@@ -269,8 +296,10 @@ El algoritmo solo maneja valores categóricos, por lo que es necesario discretiz
 			$n_6$&$n_7$&$n_8$&\\
 		\end{tabular}
 	\end{center}
-	\caption{\label{tab:bylneigh} Representación del vecindario.}
+	\caption{\label{tab:lrdeaneigh} Representación del vecindario.}
 \end{table}
+
+Finalmente, conviene mostrar una representación de la codificación de un vecindario como el propuesto en el Cuadro \ref{tab:lrdeaneigh}.
 
 \begin{table}[H]
 	\begin{center}
@@ -281,22 +310,25 @@ El algoritmo solo maneja valores categóricos, por lo que es necesario discretiz
 				\hline
 		\end{tabular}}
 	\end{center}
-	\caption{\label{tab:bylneigh} Representación del la codificación.}
+	\caption{\label{tab:lredeacod} Representación de la codificación.}
 \end{table}
 
 \subsubsection{Función de aptitud}
 
 La función de aptitud propuesta se define por la siguiente ecuación:
 
-\[Fitness(C,E^{+})=\sum_{i=1}^{|E^{+}|} \left(\frac{1}{|C|}\sum_{j=1}^{|C|} Eq(E^{+}_{ij},C_{j}) \right)\]
+\begin{equation}\label{eq:fitness1}
+	Fitness(C,E^{+})=\sum_{i=1}^{|E^{+}|} \left(\frac{1}{|C|}\sum_{j=1}^{|C|} Eq(E^{+}_{ij},C_{j}) \right) 
+\end{equation}
 
-\[
+
+\begin{equation}\label{eq:fitness2}
 Eq(x,y)=
 \begin{cases}
 \text1 &\qquad if\ x=y \\
 \text0 &\qquad otherwise
 \end{cases}
-\]
+\end{equation}
 
 donde:
 \begin{itemize}
@@ -310,7 +342,7 @@ donde:
 
 \subsubsection{Mecanismo de selección de padres}
 
-Para el mecanismo de selección de padres se eligió la selección por torneo, que consiste en lo siguiente:
+Para el mecanismo de selección de padres se eligió la \emph{selección por torneo}, que consiste en lo siguiente:
 
 \begin{algorithm}[H] 
 	\SetKwInOut{Input}{entrada}
@@ -325,7 +357,7 @@ Para el mecanismo de selección de padres se eligió la selección por torneo, q
 
 \subsubsection{Cruza}
 
-Para el proceso de cruce se seleccionó el método de cruce en un punto, esto es de la siguiente manera.
+Para el proceso de cruce se seleccionó el método de \emph{cruce en un punto} y se lleva a cabo de la siguiente manera.
 \\
 \begin{algorithm}[H] 
 	\SetKwInOut{Input}{entrada}
@@ -340,21 +372,40 @@ Para el proceso de cruce se seleccionó el método de cruce en un punto, esto es
 
 \subsubsection{Mutación}
 
-El operador de mutación consiste en dos partes, la primera es la probabilidad de realizar la mutación o no, y la segunda es la selección del gen que se va a mutar. El gen mutado puede adquirir un nuevo valor en el conjunto de valores o puede removerse uno de estos valores.
+El operador de mutación consiste en dos partes, la primera es la probabilidad de realizar la mutación o no, y la segunda es la selección del gen que se va a mutar.
+\\
+Finalmente, el gen mutado puede adquirir un nuevo valor en el conjunto de valores o puede removerse uno de estos valores.
 
 \subsubsection{Mecanismo de selección de sobrevivientes}
 
-Para el mecanismo de selección de sobrevivientes se ordenan los individuos de cada subpoblación y se dividen en dos, se toman los primeros $n$ elementos de cada una de las mitades, y se descarta el resto.
+Para el mecanismo de selección de sobrevivientes es necesario ordenar los individuos de cada subpoblación y se dividen en dos; se procede a tomar los primeros $n$ elementos de cada una de las mitades, y se descarta el resto.
 
 \section{Simplificación de reglas}
 
-Para la simplificación de las reglas se utiliza el algoritmo desarrollado por Willard V.Quine 1955 y extendido Edward J. McCluskey  en 1956. Este mecanismo solo se emplea para la simplificación de las reglas generadas por el algoritmo RA1.
+El proceso de simplificación de reglas se divide en dos partes:
+\begin{enumerate}
+	\item remover redundancia en las cláusulas.
+	\item emplear el algoritmo Quine–McCluskey para minimizar las cláusulas.
+\end{enumerate}
+
+El primer método de simplificación sirve para eliminar términos que no aportan aportan nueva información, esto es por que otros términos contienen a estos. En el siguiente ejemplo podemos ver como es este proceso.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{fig/clausulas}
+	\caption{Proceso de simplificación 1.}
+	\label{fig:simp1}
+\end{figure}
+
+En el diagrama de la figura \ref{fig:simp1} vemos cómo, en la cláusula \emph{a}, los términos 1 y 2 pueden ser reducidos a los términos 4 y 5 de la cláusula \emph{b}, respectivamente. Asimismo, podemos ver cómo el término 3 de \emph{a} no se puede reducir, por lo que pasa a \emph{b} directamente.
+\\
+\\
+Para la simplificación 2 de las reglas se utiliza el algoritmo desarrollado por Willard V.Quine 1955 y extendido Edward J. McCluskey en 1956. Este mecanismo solo se emplea para la simplificación de las reglas generadas por el algoritmo RA1.
 
 \section{Evaluación}
 
-En el proceso de evaluación se emplea la validación camina hacia adelante  (Walk-Fordward) y como métrica la exactitud (ecuación \ref{eq:exactitud}) para calcular el error de aprendizaje y el error de generalización.
-\\
-\\
+En el proceso de evaluación se emplea la validación \emph{camina hacia adelante} o \emph{Walk-Fordward}, que se ejemplifica en el Algoritmo \ref{walkforward}.
+
 \begin{algorithm}[H] 
 	\SetAlgoLined
 	\tcc{el rango va del 80\% del total de datos al 100\%}
@@ -368,13 +419,23 @@ En el proceso de evaluación se emplea la validación camina hacia adelante  (Wa
 		\textbf{Paso 4:} vExactitud = exactitud(entrenamiento[i-1])\;
 		\textbf{Paso 5:} tExactitud = exactitud(testing)\;
 	}
-	\caption{Pseudocódigo de validación camina hacia adelante (Walk-Fordward).}
+	\caption{Pseudocódigo de validación camina hacia adelante (Walk-Fordward).} \label{walkforward}
 \end{algorithm}
 
+La toma de los subconjuntos de datos se representa en la Figura \ref{fig:walkforward}, donde podemos observar la dinámica de ''caminar'' hacia adelante.
 
-\[
-exactitud = \frac{VP + VN}{VP+FP+VN+FN} \label{eq:exactitud} 
-\]
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{fig/walkforward}
+	\caption{Diagrama de evaluación camina hacia adelante (Walk-Fordward) obtenida de \cite{hyndman2018forecasting}.}
+	\label{fig:walkforward}
+\end{figure}
+
+Por último, como métrica de desempeño del autómata propuesto, se emplea la \emph{exactitud} (ecuación \ref{eq:exactitud}) para calcular el error de aprendizaje y el error de generalización.
+
+\begin{equation} \label{eq:exactitud}
+exactitud = \frac{VP + VN}{VP+FP+VN+FN} 
+\end{equation}
 
 donde:
 \begin{itemize}
@@ -383,3 +444,11 @@ donde:
 	\item $FP:$ falsos positivos.
 	\item $FN:$ falsos negativos. 
 \end{itemize}
+
+
+\nomenclature{VP}{Verdaderos Positivos}
+\nomenclature{VN}{Verdaderos Negativos}
+\nomenclature{FP}{Falsos Positivos}
+\nomenclature{FN}{Falsos Negativos}
+\nomenclature{LRDEA}{Local Rule Discovery Evolutive Algorithm}
+\nomenclature{RGB}{Red Green Blue}

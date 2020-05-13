@@ -2,7 +2,36 @@
 
  \nomgroup{A}
 
+  \item [{ABC}]\begingroup Artificial Bees Colony\nomeqref {3.1}
+		\nompageref{27}
   \item [{AC}]\begingroup Autómata celular\nomeqref {1.0}
-		\nompageref{6}
+		\nompageref{5}
+  \item [{AG}]\begingroup Algoritmo Genetico\nomeqref {1.0}
+		\nompageref{5}
+  \item [{FN}]\begingroup Falsos Negativos\nomeqref {4.0}
+		\nompageref{41}
+  \item [{FNC}]\begingroup Forma Normal Conjuntiva\nomeqref {1.0}
+		\nompageref{5}
+  \item [{FND}]\begingroup Forma Normal Disyuntiva\nomeqref {2.7}
+		\nompageref{19}
+  \item [{FP}]\begingroup Falsos Positivos\nomeqref {4.0}
+		\nompageref{41}
+  \item [{GA-Nuggets}]\begingroup Genetic Algorithm- Nuggets\nomeqref {2.7}
+		\nompageref{19}
+  \item [{IA}]\begingroup Inteligencia Artificial\nomeqref {1.0}
+		\nompageref{5}
+  \item [{LRDEA}]\begingroup Local Rule Discovery Evolutive Algorithm\nomeqref {4.0}
+		\nompageref{41}
+  \item [{OCAT}]\begingroup One Clause At a Time\nomeqref {2.7}
+		\nompageref{19}
+  \item [{PSO}]\begingroup Particle Swarm Optimization\nomeqref {3.1}
+		\nompageref{27}
+  \item [{RA1}]\begingroup Randomized Algorithm 1\nomeqref {2.7}
+		\nompageref{19}
+  \item [{RGB}]\begingroup Red Green Blue\nomeqref {4.0}\nompageref{41}
+  \item [{VN}]\begingroup Verdaderos Negativos\nomeqref {4.0}
+		\nompageref{41}
+  \item [{VP}]\begingroup Verdaderos Positivos\nomeqref {4.0}
+		\nompageref{41}
 
 \end{thenomenclature}

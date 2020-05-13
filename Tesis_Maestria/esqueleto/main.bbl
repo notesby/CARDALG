@@ -1,5 +1,10 @@
 \begin{thebibliography}{}
 
+\bibitem[Biaynicki-Birula and Biaynicka-Birula, 2012]{biaynicki2012}
+Biaynicki-Birula, I. and Biaynicka-Birula, I. (2012).
+\newblock {\em Modeling reality: how computers mirror life}.
+\newblock Oxford University Press.
+
 \bibitem[Bidlo, 2016]{bidlo2016routine}
 Bidlo, M. (2016).
 \newblock On routine evolution of complex cellular automata.
@@ -48,6 +53,11 @@ Hillis, W.~D. (1984).
   automata.
 \newblock {\em Physica D: Nonlinear Phenomena}, 10(1-2):213--228.
 
+\bibitem[Hyndman and Athanasopoulos, 2018]{hyndman2018forecasting}
+Hyndman, R.~J. and Athanasopoulos, G. (2018).
+\newblock {\em Forecasting: principles and practice}.
+\newblock OTexts.
+
 \bibitem[Ilachinski, 2001]{ilachinski2001cellular}
 Ilachinski, A. (2001).
 \newblock {\em Cellular automata: a discrete universe}.
@@ -72,6 +82,11 @@ Manneville, P., Boccara, N., Vichniac, G.~Y., and Bidaux, R. (2012).
 Margolus, N., Toffoli, T., and Vichniac, G. (1986).
 \newblock Cellular-automata supercomputers for fluid-dynamics modeling.
 \newblock {\em Physical Review Letters}, 56(16):1694.
+
+\bibitem[Nagel and Schreckenberg, 1992]{nagel1992cellular}
+Nagel, K. and Schreckenberg, M. (1992).
+\newblock A cellular automaton model for freeway traffic.
+\newblock {\em Journal de physique I}, 2(12):2221--2229.
 
 \bibitem[Naghibi and Delavar, 2016]{naghibi2016discovery}
 Naghibi, F. and Delavar, M. (2016).
@@ -119,5 +134,10 @@ Toffoli, T. (1984).
 Vichniac, G.~Y. (1984).
 \newblock Simulating physics with cellular automata.
 \newblock {\em Physica D: Nonlinear Phenomena}, 10(1-2):96--116.
+
+\bibitem[Wolfram, 1984]{WOLFRAM19841}
+Wolfram, S. (1984).
+\newblock Universality and complexity in cellular automata.
+\newblock {\em Physica D: Nonlinear Phenomena}, 10(1):1 -- 35.
 
 \end{thebibliography}

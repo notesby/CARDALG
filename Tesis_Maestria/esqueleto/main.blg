@@ -13,45 +13,45 @@ A level-1 auxiliary file: chapter6.aux
 The style file: apalike.bst
 Database file #1: Referencias.bib
 Warning--empty booktitle in Sayama1998ConstructingES
-You've used 22 entries,
+You've used 26 entries,
             1935 wiz_defined-function locations,
-            618 strings with 7202 characters,
-and the built_in function-call counts, 8124 in all, are:
-= -- 803
-> -- 254
-< -- 22
-+ -- 84
-- -- 80
-* -- 662
-:= -- 1401
-add.period$ -- 64
-call.type$ -- 22
-change.case$ -- 146
-chr.to.int$ -- 22
-cite$ -- 23
-duplicate$ -- 337
-empty$ -- 619
-format.name$ -- 114
-if$ -- 1609
+            638 strings with 7675 characters,
+and the built_in function-call counts, 9526 in all, are:
+= -- 939
+> -- 300
+< -- 26
++ -- 100
+- -- 94
+* -- 776
+:= -- 1645
+add.period$ -- 76
+call.type$ -- 26
+change.case$ -- 171
+chr.to.int$ -- 26
+cite$ -- 27
+duplicate$ -- 393
+empty$ -- 726
+format.name$ -- 138
+if$ -- 1885
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 24
-newline$ -- 110
-num.names$ -- 66
-pop$ -- 128
+missing$ -- 30
+newline$ -- 130
+num.names$ -- 78
+pop$ -- 153
 preamble$ -- 1
-purify$ -- 150
+purify$ -- 177
 quote$ -- 0
-skip$ -- 260
+skip$ -- 302
 stack$ -- 0
-substring$ -- 596
-swap$ -- 44
+substring$ -- 695
+swap$ -- 48
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 126
+type$ -- 146
 warning$ -- 1
-while$ -- 72
+while$ -- 83
 width$ -- 0
-write$ -- 279
+write$ -- 329
 (There was 1 warning)

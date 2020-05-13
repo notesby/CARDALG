@@ -9,9 +9,9 @@ De los trabajos que existen en la actualidad, podemos mencionar tres que resulta
 
 Estos son algunos de los enfoques para emplear los autómatas celulares como herramienta para modelar fenómenos, que si bien tienen relación con este trabajo de tesis, no se conectan directamente con el.
 
-\section{Cellular Automata Automatically Constructed from a Bioconvection Pattern}
+\section{Análisis estadístico para el descubrimiento de reglas }
 
-Esta investigación \citep{kawaharada2016cellular} se centra en descubrir reglas de evolución para un autómata celular unidimensional, empleando métodos de análisis estadísticos para determinar dichas reglas, a partir de los datos observados de los patrones de bioconvección que son generados como resultado de la respuesta a la estimulación luminosa de un tipo de alga unicelular llamada \emph{Euglena gracilis}.
+Uno de los enfoques como se ve en \citep{kawaharada2016cellular}, se centra en descubrir reglas de evolución para un autómata celular unidimensional, empleando métodos de análisis estadísticos para determinar dichas reglas, a partir de los datos observados de los patrones de bioconvección que son generados como resultado de la respuesta a la estimulación luminosa de un tipo de alga unicelular llamada \emph{Euglena gracilis}.
 \\
 El experimento consistió en iluminar por la parte de abajo de un contenedor anular conteniendo una suspensión de E. gracilis con una fuerte intensidad de luz. Los individuos, al ser alcanzados por la luz, sufren de fototaxis negativa, lo cual provoca que se acumulen cerca de la superficie.
 
@@ -29,9 +29,9 @@ El proceso se realizó de la siguiente forma:
 	\item Con base en esta frecuencia se determinan las reglas locales para el AC.
 \end{enumerate}
 
-\section{Discovery of Transition Rules for Cellular Automata Using Artificial Bee Colony and Particle Swarm Optimization Algorithms in Urban Growth Modeling}
+\section{Configuración de reglas para un AC con algoritmos evolutivos}
 
-En este trabajo \citep{naghibi2016discovery} se muestra un método para descubrir las reglas de transición de un autómata celular de lattice bidimensional que modele el crecimiento urbano empleando un algoritmo de optimización de colonia de abejas artificiales. Para ello, se utilizan como datos de entrada información multitemporal sensada remotamente de el área urbana de la ciudad de Urmia, Irán.
+En \cite{naghibi2016discovery} se muestra un método para descubrir las reglas de transición de un autómata celular de lattice bidimensional que modele el crecimiento urbano empleando un algoritmo de optimización de colonia de abejas artificiales. Para ello, se utilizan como datos de entrada información multitemporal sensada remotamente de el área urbana de la ciudad de Urmia, Irán.
 \\
 El autómata celular en este trabajo se define con la siguiente ecuación:
 
@@ -56,41 +56,45 @@ Como requerimiento para la evaluación del algoritmo, se emplean otras dos técn
 	\item Logistic Regression
 \end{itemize}
 
-Los siguientes diagramas de continuación muestran el procedimiento que se siguió con cada uno de los algoritmos para la calibración de las reglas para el autómata celular.
+El diagrama \ref{fig:abc} muestra el procedimiento que se siguió para la calibración de las reglas del autómata celular, utilizando un algoritmo de optimización de colonia de abejas artificiales.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{fig/abejas}
-	\caption{Modelo para la obtención de reglas del autómata celular empleando un algoritmo de optimización de colonia de abejas artificiales.}
+	\caption{Modelo para la obtención de reglas del autómata celular empleando un algoritmo de optimización de colonia de abejas artificiales. Diagrama traducido de \cite{naghibi2016discovery}.}
 	\label{fig:abc}
 \end{figure}
+
+Como vemos en el diagrama \ref{fig:pso} y en el anterior, son similares los procesos si no tomamos en cuenta las particularidades de cada algoritmo, un proceso de simulación, uno de evaluación, y por ultimo un proceso de actualización, son las partes que identifican un proceso general de aprendizaje.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{fig/particulas}
-	\caption{Modelo para la obtención de reglas del autómata celular empleando un algoritmo de optimización de enjambre de partículas.}
+	\caption{Modelo para la obtención de reglas del autómata celular empleando un algoritmo de optimización de enjambre de partículas. Diagrama traducido de \cite{naghibi2016discovery}.}
 	\label{fig:pso}
 \end{figure}
+
+En diagrama \ref{fig:evaluation} vemos el proceso que se siguió para realizar la evaluación de los 3 algoritmos, simulando cada uno por separado, después comparando el resultado de la simulación con la realidad y entonces obteniendo el porcentaje de exactitud de la simulación.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{fig/evaluacion}
-	\caption{Modelo de evaluación de los algoritmos.}
+	\caption{Modelo de evaluación de los algoritmos. Diagrama traducido de \cite{naghibi2016discovery}.}
 	\label{fig:evaluation}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{fig/results}
-	\caption{Resultados de la evaluación de los algoritmos. }
+	\caption{Resultados de la evaluación de los algoritmos. Tabla obtenida de \cite{naghibi2016discovery}. }
 	\label{fig:results}
 \end{figure}
 
-Como podemos ver en la tabla de resultados, el algoritmo de colonia de abejas fue capaz de obtener un mejor rendimiento en comparación con los otros métodos. Esto ayudará a obtener un mejor despeño en la estimación correcta del crecimiento urbano. Sin embargo, el método aquí planteado sigue teniendo ciertos obstáculos como lo es encontrar una correcta definición de la ecuación que determine al autómata celular.
+Como podemos ver en la tabla de resultados \ref{fig:results}, el algoritmo de colonia de abejas fue capaz de obtener un mejor rendimiento en comparación con los otros métodos. Esto ayudará a obtener un mejor despeño en la estimación correcta del crecimiento urbano. Sin embargo, el método aquí planteado sigue teniendo ciertos obstáculos como lo es encontrar una correcta definición de la ecuación que determine al autómata celular, por ejemplo la ecuación \ref{eq:8} que se usa en este trabajo.
 
-\section{On Routine Evolution of Complex Cellular Automata}
+\section{Búsqueda de reglas de evolución para replicar estructuras}
 
-El aporte principal de este trabajo \citep{bidlo2016routine} es la creación de un método para la obtención de un conjunto de reglas que puedan replicar un comportamiento específico. Sin embargo, es importante resaltar que no se toma en cuenta conocimiento previo del fenómeno que se quiere replicar. Lo que se utiliza es un algoritmo evolutivo, cuya función de aptitud es dependiente del resultado al que se quiere llegar. La codificación de las reglas viene dada de la siguiente forma:
+El aporte principal de \cite{bidlo2016routine} es la creación de un método para la obtención de un conjunto de reglas que puedan replicar un comportamiento específico. Sin embargo, es importante resaltar que no se toma en cuenta conocimiento previo del fenómeno que se quiere replicar. Lo que se utiliza es un algoritmo evolutivo, cuya función de aptitud es dependiente del resultado al que se quiere llegar. La codificación de las reglas viene dada de la siguiente forma:
 
 \begin{figure}[H]
 	\centering
@@ -98,3 +102,6 @@ El aporte principal de este trabajo \citep{bidlo2016routine} es la creación de 
 	\caption{Ejemplo de la codificación de las reglas de evolución del autómata con un vecindario de tipo Moore.}
 	\label{fig:rulesencoding}
 \end{figure}
+
+\nomenclature{PSO}{Particle Swarm Optimization}
+\nomenclature{ABC}{Artificial Bees Colony}

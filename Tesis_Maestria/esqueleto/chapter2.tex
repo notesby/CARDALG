@@ -1,9 +1,37 @@
 % CAP 2
 \chapter{Marco teórico}
 
+\section{Autómata celular}
+Los autómatas celulares son sistemas dinámicos y discretos en espacio, estado y tiempo. Propuestos por los matemáticos John von Neumann y Stanislaw Marcin Ulam como un sistema discreto para crear un modelo reduccionista de la auto-replicación, creando así en 1950 el primer autómata celular como método para calcular el movimiento de un líquido \citep{biaynicki2012}. 
+
+En 1970, John Horton Coway invento un autómata celular llamado “Game theory” \citep{gardner1970mathematical}, el cual consiste de dos dimensiones y dos estados, y que se hizo popular a partir de su publicación
+(octubre de 1970) en la columna: Mathematical Games de Martin Gardner en la revista Scientific American.
+\\
+En 1984, Stephen Wolfram clasifica a los autómatas celulares lineales en cuatro clases \citep{WOLFRAM19841}. Y en 1985 conjeturó que la regla 110 de un autómata celular elemental era equivalente a una máquina de Turing, cosa que demostró Matthew Cook en el 2004 \citep{cook2004universality}.
+\\
+Como podemos ver, a través de los años con el incremento del poder de cómputo y del trabajo que se ha ido realizando alrededor de los autómatas celulares, también ha ido en aumento el interés por utilizarlos para modelar sistemas naturales y artificiales.
+\\
+Los autómatas celulares pueden ser empleados como una alternativa a las ecuaciones diferenciales para modelar sistemas físicos \citep{toffoli1984cellular}, y como un modelo de cómputo paralelo y distribuido \citep{hillis1984connection}.
+\\
+\\
+Los autómatas celulares han sido aplicados exitosamente en diferentes áreas del conocimiento, tales como: la simulación de tránsito \citep{nagel1992cellular,simon1998simplified}, la dinámica de fluidos  \citep{margolus1986cellular} y la formación de patrones \citep{tamayo1987cellular,boerlijstk}. Asimismo, se ha tenido éxito en las conexiones con los lenguajes formales \citep{nordahl1989formal,culik1990computation} y, como se mencionó anteriormente, en el modelado y simulación de diversos sistemas físicos \citep{vichniac1984simulating,manneville2012cellular} y biológicos \citep{ermentrout1993cellular}.
+
+Como podemos observar, los autómatas celulares tienen un gran alcance en la resolución de diversos problemas.
+\\
+\\
+Los autómatas celulares clásicos poseen las siguientes cinco características \citep{ilachinski2001cellular}:
+
+\begin{itemize}
+	\item{\textbf{Una lattice de células discretas}: El sistema consiste de una estructura llamada lattice la cual puede ser de dimensionalidad  $\mathnormal{d}$, donde $\mathnormal{d\; \epsilon\; N\cup\{0\}}$}
+	\item{\textbf{Homogeneidad}: Todas las células son equivalentes.}
+	\item{\textbf{Estados discretos}: Cada célula toma un estado de un conjunto finito de estados discretos.}
+	\item{\textbf{Interacciones locales}: Cada célula interactúa solo con las células que están en su vecindad.}
+	\item{\textbf{Sistemas dinámicos discretos}: En cada paso de tiempo discreto, cada célula actualiza su estado actual de acuerdo a una función o regla de evolución que toma como entrada los estados de las células vecinas y da como salida un estado del conjunto de estados.}
+\end{itemize}
+
 \section{Algoritmos genéticos}
 
-Los algoritmos genéticos fueron desarrollados por John Holland, sus colegas y estudiantes en la Universidad de Michigan. Los objetivos de esta investigación fueron los que se enlistan a continuación.
+Los algoritmos genéticos fueron desarrollados por John Holland, sus colegas y estudiantes en la Universidad de Michigan. Los objetivos de esta investigación fueron los que se en listan a continuación.
 \begin{enumerate}
 	\item Abstraer y explicar rigurosamente los procesos adaptativos de los sistemas naturales.
 	\item Diseñar sistemas artificiales de software que retuvieran los mecanismos importantes de los sistemas naturales.
@@ -160,20 +188,20 @@ donde $w_1$ y $w_2$ son pesos definidos por el usuario.
 
 \subsection{Método de selección y operadores genéticos}
 
-GA-Nuggets utiliza el bien conocido ``selección por torneo" con un tamaño de torneo de 2, y utiliza una cruza uniforme extendida con un procedimiento de reparación. En la cruza uniforme existe una probabilidad de aplicar cruza a dos individuos y otra probabilidad para intercambiar cada gen. Después de que se realiza la cruza, el algoritmo verifica si se generó un individuo inválido. Si es así, se inicia un procedimiento de reparación para generar individuos validos. El operador de mutación transforma de forma aleatoria el valor de un atributo en otro, dentro del mismo dominio del atributo.
+GA-Nuggets utiliza el bien conocido ''selección por torneo'' con un tamaño de torneo de 2, y utiliza una cruza uniforme extendida con un procedimiento de reparación. En la cruza uniforme existe una probabilidad de aplicar cruza a dos individuos y otra probabilidad para intercambiar cada gen. Después de que se realiza la cruza, el algoritmo verifica si se generó un individuo inválido. Si es así, se inicia un procedimiento de reparación para generar individuos validos. El operador de mutación transforma de forma aleatoria el valor de un atributo en otro, dentro del mismo dominio del atributo.
 \\
 Además de la cruza y la mutación, se agregan otros dos operadores: insertar-condición y eliminar-condición, que controlan el tamaño de las reglas que están siendo evolucionadas, de la siguiente forma: mientras mayor sea el número de condiciones en el antecedente de la regla actual, menor será la probabilidad de aplicar el operador insertar-condición; y este operador no se aplicará si el antecedente ya tiene el máximo número de condiciones especificado por el usuario. En cambio, la probabilidad de aplicar el operador eliminar-condición será mayor mientras menor sea el número de condiciones en el antecedente de la regla; y este operador no se aplicará si el antecedente solo tiene una condición.
 
 \section{Enfoque OCAT (One Clause At a Time)}
 
-El enfoque "Una Cláusula A la Vez" u OCAT por sus siglas en inglés (One Clause At a Time) es un enfoque que trata de resolver dos debilidades con las técnicas de aprendizaje bayesianas y conexionistas como lo son las redes neuronales, estas debilidades son las siguientes:
+El enfoque ''Una Cláusula A la Vez'' u OCAT, por sus siglas en inglés (One Clause At a Time) es un enfoque que trata de resolver dos debilidades con las técnicas de aprendizaje bayesianas y conexionistas como lo son las redes neuronales, estas debilidades son las siguientes:
 
 \begin{enumerate}
 	\item Las formas en que estos métodos funcionan y producen recomendaciones pueden no ser atractivos por los expertos en el dominio. 
 	\item El conjunto de entrenamiento puede no contener suficientes ejemplos como para que garanticen resultados estadisticamente significantes. Como resultado estos métodos pueden no ser fidedignos para aplicaciones reales. 
 \end{enumerate}
 
-Este enfoque está basado en conceptos de lógica matemática y optimización discreta. El enfoque es de naturaleza ``avara", en el sentido de que busca aceptar a todos los ejemplos positivos y rechazar tantos ejemplos negativos como sea posible. Esto se realiza sucesivamente para cada una de las cláusulas que genera, hasta que ya no tenga más ejemplos negativos para rechazar.
+Este enfoque está basado en conceptos de lógica matemática y optimización discreta. El enfoque es de naturaleza ''avara'', en el sentido de que busca aceptar a todos los ejemplos positivos y rechazar tantos ejemplos negativos como sea posible. Esto se realiza sucesivamente para cada una de las cláusulas que genera, hasta que ya no tenga más ejemplos negativos para rechazar.
 \\
 El enfoque OCAT busca generar un conjunto de cláusulas que pueden estar en forma normal conjuntiva (FNC) o forma normal disyuntiva (FND). Es conocido \citep{peysakh1987fast} que cualquier función Booleana puede ser transformada en forma FNC o FND. 
 \\
@@ -186,7 +214,7 @@ Algunas asunciones que este enfoque toma son las siguientes:
 	\item Que las observaciones están libres de ruido.
 	\item También asume que la clase a la que pertenece la observación es la correcta. 
 \end{itemize}
-\newpage
+
 El siguiente pseudocódigo ejemplifica el funcionamiento general del enfoque OCAT.
 \\
 \begin{algorithm}[H] 
@@ -195,13 +223,13 @@ El siguiente pseudocódigo ejemplifica el funcionamiento general del enfoque OCA
 	$i = 0; C=\emptyset;$\{Inicializaciónes\}\;
 	\While{$E^- \neq \emptyset $}{
 		\textbf{Paso 1:} $i \leftarrow i+1$\;
-		\textbf{Paso 2:} Encontrar una clausula $c_i$ que acepte todos los miembros de $E^+$ mientras rechaza tantos miembros sea posible de $E^-$\;
+		\textbf{Paso 2:} Encontrar una cláusula $c_i$ que acepte todos los miembros de $E^+$ mientras rechaza tantos miembros sea posible de $E^-$\;
 		\textbf{Paso 3:} $Sea E^-(c_i)$ el conjunto de miembros de $E^-$ que son rechazados por $c_i$\;
 		\textbf{Paso 4:} Sea $ C \leftarrow C \land c_i$\;
 		\textbf{Paso 5:} Sea $ E^- \leftarrow E^- - E^- (c_i)$\;
 	}
 	
-	\caption{Pseudocódigo de enfoque OCAT para generar clausulas en forma normal conjuntiva.}
+	\caption{Pseudocódigo de enfoque OCAT para generar cláusulas en forma normal conjuntiva.}
 \end{algorithm}
 
 \subsection{Heuristica RA1}
@@ -231,7 +259,7 @@ El enfoque heuristico, denominado RA1 por \textit{Randomized Algorithm 1}, fue p
 			\textbf{Paso 11:} Reiniciar $E^+$\;
 	
 	}
-	\textbf{elegir} el sistema Booleano final que tenga el menor número de clausulas, de los sistemas ITRS anteriores.
+	\textbf{elegir} el sistema Booleano final que tenga el menor número de cláusulas, de los sistemas ITRS anteriores.
 	
 \end{algorithm}
 \newpage
@@ -283,7 +311,7 @@ El siguiente pseudocódigo ejemplifica este algoritmo.
 		\Begin{
 			Los implicantes primos se colocan en sentido de las filas\;
 			Los términos mínimos se colocan en sentido de las columnas\;
-			Colocar un $``1"$ en las celdas correspondientes a los términos mínimos que se cubren en cada implicante primo\;
+			Colocar un $''1''$ en las celdas correspondientes a los términos mínimos que se cubren en cada implicante primo\;
 		}
 	}
 	\Begin{Encontrar los implicantes primos esenciales:
@@ -303,3 +331,8 @@ El siguiente pseudocódigo ejemplifica este algoritmo.
 \end{algorithm}
 
 \footnotetext{Para $n$ variables Booleanas en una función Booleana, o para $n$ bits en su equivalente binario de términos mínimos.} 
+
+\nomenclature{FND}{Forma Normal Disyuntiva}
+\nomenclature{RA1}{Randomized Algorithm 1}
+\nomenclature{GA-Nuggets}{Genetic Algorithm- Nuggets}
+\nomenclature{OCAT}{One Clause At a Time}

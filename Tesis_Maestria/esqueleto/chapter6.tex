@@ -1,6 +1,15 @@
 \chapter{Conclusiones y trabajo futuro}
-En base a los resultados obtenidos en los experimentos realizados, podemos concluir que el algoritmo LRDEA es capaz de aprender a partir del conjunto de datos brindado y que lo hace con un porcentaje de exactitud que sobrepasa al algoritmo GA-Nuggets, sin embargo como vemos en las figuras \ref{fig:lrdeabrain}, \ref{fig:lrdeabyl}, \ref{fig:lrdeaevoloops} y \ref{fig:lrdeamite} que todavía es posible mejorar el algoritmo debido a que puede llegar a tener variaciones muy grandes entre la exactitud dentro del conjunto del entrenamiento y fuera de entrenamiento, en comparación con el algoritmo RA1 que es tiene un comportamiento mas estable. 
+
+Con la realización de este trabajo de investigación se lograron cumplir con los objetivos propuestos, es decir, se diseñó e implementó un nuevo algoritmo de aprendizaje sub-simbólico que es capaz de aprender un conjunto de reglas de la forma IF $Ant$ THEN $Cons$, y estas reglas son capaces de reproducir el fenómeno aprendido, con una exactitud arriba del 80\%.
+
+Con base en los resultados obtenidos en los experimentos realizados, se puede concluir que el algoritmo LRDEA es capaz de aprender a partir de un cierto conjunto de datos proporcionado; además de que lo hace con un porcentaje de exactitud que sobrepasa al algoritmo GA-Nuggets. Sin embargo, como se puede observar en las figuras \ref{fig:lrdeabrain}, \ref{fig:lrdeabyl}, \ref{fig:lrdeaevoloops} y \ref{fig:lrdeamite}, es evidente que todavía es posible mejorar esta propuesta.
+
+Esto se debe principalmente a que la propuesta (LRDEA) puede llegar a tener variaciones muy grandes entre la exactitud dentro del conjunto del entrenamiento y fuera de entrenamiento, en comparación con el algoritmo RA1, que se caracteriza por tener un comportamiento más estable, al menos en los experimentos realizados.
 
 \section{Trabajo a futuro}
 
-Como trabajo a futuro, se propone realizar la experimentación utilizando otro conjunto de datos, como por ejemplo: imágenes aéreas de áreas urbanas para el aprendizaje de reglas que simulen el crecimiento de población. Investigar una mejor función de aptitud, que nos ayude a reducir la variación entre la exactitud dentro y fuera de entrenamiento.
+Como trabajo a futuro próximo, se propone realizar la experimentación utilizando otros conjuntos de datos, como por ejemplo: imágenes aéreas de áreas urbanas para el aprendizaje de reglas que simulen el crecimiento de población u otros conjuntos de datos cuya representación de estados sea un conjunto de lattices bidimensionales.
+
+De igual manera, se propone investigar una función de aptitud diferente, con la cual sea posible a reducir la variación entre la exactitud dentro y fuera de entrenamiento.
+
+Finalmente, se propone la implementación de otras métricas de evaluación que incluyan tomar en cuenta el tiempo de cómputo que cada algoritmo tomó para llevar a cabo estos u otros experimentos, o bien, diversos métodos de evaluación estadística.
