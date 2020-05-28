@@ -7,61 +7,61 @@
 \contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n}{13}
 \contentsline {section}{\numberline {1.1}Definiciones}{14}
 \contentsline {subsection}{\numberline {1.1.1}Aut\IeC {\'o}mata celular}{14}
-\contentsline {subsection}{\numberline {1.1.2}Aprendizaje autom\IeC {\'a}tico}{14}
+\contentsline {subsection}{\numberline {1.1.2}Aprendizaje autom\IeC {\'a}tico}{15}
 \contentsline {subsection}{\numberline {1.1.3}Algoritmos Gen\IeC {\'e}ticos}{15}
-\contentsline {section}{\numberline {1.2}Planteamiento del problema}{15}
+\contentsline {subsubsection}{Algoritmo Gen\IeC {\'e}tico Multi-poblacional}{16}
+\contentsline {section}{\numberline {1.2}Planteamiento del problema}{16}
 \contentsline {section}{\numberline {1.3}Objetivos}{16}
 \contentsline {subsection}{\numberline {1.3.1}Objetivo general}{16}
-\contentsline {paragraph}{Dise\IeC {\~n}ar un algoritmo nuevo de aprendizaje (simb\IeC {\'o}lico o sub-simb\IeC {\'o}lico) con el fin de aprender reglas que gobiernan un fen\IeC {\'o}meno para las cuales se tienen rejillas de estados en 2 dimensiones como entrada.}{16}
 \contentsline {subsection}{\numberline {1.3.2}Objetivos espec\IeC {\'\i }ficos}{16}
-\contentsline {section}{\numberline {1.4}Justificaci\IeC {\'o}n}{16}
-\contentsline {subsection}{\numberline {1.4.1}Beneficios esperados}{16}
+\contentsline {section}{\numberline {1.4}Justificaci\IeC {\'o}n}{17}
+\contentsline {subsection}{\numberline {1.4.1}Beneficios esperados}{17}
 \contentsline {subsection}{\numberline {1.4.2}Alcances y l\IeC {\'\i }mites}{17}
 \contentsline {chapter}{\numberline {2}Marco te\IeC {\'o}rico}{19}
 \contentsline {section}{\numberline {2.1}Aut\IeC {\'o}mata celular}{19}
-\contentsline {section}{\numberline {2.2}Algoritmos gen\IeC {\'e}ticos}{20}
+\contentsline {section}{\numberline {2.2}Algoritmos gen\IeC {\'e}ticos}{21}
 \contentsline {subsection}{\numberline {2.2.1}Representaci\IeC {\'o}n}{22}
 \contentsline {subsection}{\numberline {2.2.2}Funci\IeC {\'o}n de aptitud}{22}
 \contentsline {subsection}{\numberline {2.2.3}Poblaci\IeC {\'o}n}{22}
-\contentsline {subsection}{\numberline {2.2.4}Mecanismo de selecci\IeC {\'o}n de padres}{22}
-\contentsline {subsection}{\numberline {2.2.5}Recombinaci\IeC {\'o}n}{22}
+\contentsline {subsection}{\numberline {2.2.4}Mecanismo de selecci\IeC {\'o}n de padres}{23}
+\contentsline {subsection}{\numberline {2.2.5}Recombinaci\IeC {\'o}n}{23}
 \contentsline {subsection}{\numberline {2.2.6}Mutaci\IeC {\'o}n}{23}
 \contentsline {subsection}{\numberline {2.2.7}Mecanismo de selecci\IeC {\'o}n de sobrevivientes}{23}
 \contentsline {section}{\numberline {2.3}GA-Nuggets}{23}
-\contentsline {subsection}{\numberline {2.3.1}Representaci\IeC {\'o}n de los individuos}{23}
-\contentsline {subsection}{\numberline {2.3.2}Funci\IeC {\'o}n de aptitud}{24}
-\contentsline {subsection}{\numberline {2.3.3}M\IeC {\'e}todo de selecci\IeC {\'o}n y operadores gen\IeC {\'e}ticos}{26}
-\contentsline {section}{\numberline {2.4}Enfoque OCAT (One Clause At a Time)}{27}
-\contentsline {subsection}{\numberline {2.4.1}Heuristica RA1}{28}
-\contentsline {section}{\numberline {2.5}Algoritmo Quine\IeC {\textendash }McCluskey}{30}
+\contentsline {subsection}{\numberline {2.3.1}Representaci\IeC {\'o}n de los individuos}{24}
+\contentsline {subsection}{\numberline {2.3.2}Funci\IeC {\'o}n de aptitud}{25}
+\contentsline {subsection}{\numberline {2.3.3}M\IeC {\'e}todo de selecci\IeC {\'o}n y operadores gen\IeC {\'e}ticos}{27}
+\contentsline {section}{\numberline {2.4}Enfoque OCAT (One Clause At a Time)}{28}
+\contentsline {subsection}{\numberline {2.4.1}Heur\IeC {\'\i }stica RA1}{29}
+\contentsline {section}{\numberline {2.5}Algoritmo Quine\IeC {\textendash }McCluskey}{31}
 \contentsline {chapter}{\numberline {3}Estado del Arte}{33}
 \contentsline {section}{\numberline {3.1}An\IeC {\'a}lisis estad\IeC {\'\i }stico para el descubrimiento de reglas }{33}
-\contentsline {section}{\numberline {3.2}Configuraci\IeC {\'o}n de reglas para un AC con algoritmos evolutivos}{34}
-\contentsline {section}{\numberline {3.3}B\IeC {\'u}squeda de reglas de evoluci\IeC {\'o}n para replicar estructuras}{39}
-\contentsline {chapter}{\numberline {4}M\IeC {\'e}todos y metodolog\IeC {\'\i }as}{41}
-\contentsline {section}{\numberline {4.1}Conjunto de datos}{41}
-\contentsline {subsection}{\numberline {4.1.1}Brain}{42}
-\contentsline {subsection}{\numberline {4.1.2}Byl}{43}
-\contentsline {subsection}{\numberline {4.1.3}Evoloops}{44}
-\contentsline {subsection}{\numberline {4.1.4}Mite}{46}
-\contentsline {section}{\numberline {4.2}Preprocesamiento}{47}
-\contentsline {subsection}{\numberline {4.2.1}Discretizaci\IeC {\'o}n}{47}
-\contentsline {subsection}{\numberline {4.2.2}Binarizaci\IeC {\'o}n}{48}
-\contentsline {section}{\numberline {4.3}Algoritmos de aprendizaje}{49}
-\contentsline {subsection}{\numberline {4.3.1}LRDEA (Local Rule Discovery Evolutive Algorithm)}{50}
-\contentsline {subsubsection}{Representaci\IeC {\'o}n}{50}
-\contentsline {subsubsection}{Funci\IeC {\'o}n de aptitud}{51}
-\contentsline {subsubsection}{Mecanismo de selecci\IeC {\'o}n de padres}{51}
-\contentsline {subsubsection}{Cruza}{52}
-\contentsline {subsubsection}{Mutaci\IeC {\'o}n}{52}
-\contentsline {subsubsection}{Mecanismo de selecci\IeC {\'o}n de sobrevivientes}{52}
-\contentsline {section}{\numberline {4.4}Simplificaci\IeC {\'o}n de reglas}{53}
-\contentsline {section}{\numberline {4.5}Evaluaci\IeC {\'o}n}{54}
-\contentsline {chapter}{\numberline {5}Resultados y an\IeC {\'a}lisis}{57}
-\contentsline {section}{\numberline {5.1}Brain}{58}
-\contentsline {section}{\numberline {5.2}Byl}{60}
-\contentsline {section}{\numberline {5.3}Evoloops}{63}
-\contentsline {section}{\numberline {5.4}Mite}{65}
-\contentsline {chapter}{\numberline {6}Conclusiones y trabajo futuro}{67}
-\contentsline {section}{\numberline {6.1}Trabajo a futuro}{67}
-\contentsline {chapter}{Acr\'onimos, abreviaturas y siglas}{69}
+\contentsline {section}{\numberline {3.2}Configuraci\IeC {\'o}n de reglas para un AC con algoritmos evolutivos}{35}
+\contentsline {section}{\numberline {3.3}B\IeC {\'u}squeda de reglas de evoluci\IeC {\'o}n para replicar estructuras}{40}
+\contentsline {chapter}{\numberline {4}Propuesta de soluci\IeC {\'o}n: LRDEA (Local Rule Discovery Evolutive Algorithm)}{43}
+\contentsline {section}{\numberline {4.1}Representaci\IeC {\'o}n}{43}
+\contentsline {section}{\numberline {4.2}Funci\IeC {\'o}n de aptitud}{44}
+\contentsline {section}{\numberline {4.3}Mecanismo de selecci\IeC {\'o}n de padres}{45}
+\contentsline {section}{\numberline {4.4}Cruza}{45}
+\contentsline {section}{\numberline {4.5}Mutaci\IeC {\'o}n}{46}
+\contentsline {section}{\numberline {4.6}Mecanismo de selecci\IeC {\'o}n de sobrevivientes}{46}
+\contentsline {chapter}{\numberline {5}Experimentaci\IeC {\'o}n}{47}
+\contentsline {section}{\numberline {5.1}Conjunto de datos}{47}
+\contentsline {subsection}{\numberline {5.1.1}Brain}{48}
+\contentsline {subsection}{\numberline {5.1.2}Byl}{49}
+\contentsline {subsection}{\numberline {5.1.3}Evoloops}{50}
+\contentsline {subsection}{\numberline {5.1.4}Mite}{52}
+\contentsline {section}{\numberline {5.2}Preprocesamiento}{53}
+\contentsline {subsection}{\numberline {5.2.1}Discretizaci\IeC {\'o}n}{53}
+\contentsline {subsection}{\numberline {5.2.2}Binarizaci\IeC {\'o}n}{54}
+\contentsline {section}{\numberline {5.3}Algoritmos de aprendizaje}{55}
+\contentsline {section}{\numberline {5.4}Simplificaci\IeC {\'o}n de reglas}{55}
+\contentsline {section}{\numberline {5.5}Evaluaci\IeC {\'o}n}{56}
+\contentsline {chapter}{\numberline {6}Resultados y an\IeC {\'a}lisis}{59}
+\contentsline {section}{\numberline {6.1}Brain}{60}
+\contentsline {section}{\numberline {6.2}Byl}{63}
+\contentsline {section}{\numberline {6.3}Evoloops}{65}
+\contentsline {section}{\numberline {6.4}Mite}{67}
+\contentsline {chapter}{\numberline {7}Conclusiones y trabajo futuro}{71}
+\contentsline {section}{\numberline {7.1}Trabajo a futuro}{72}
+\contentsline {chapter}{Acr\'onimos, abreviaturas y siglas}{75}

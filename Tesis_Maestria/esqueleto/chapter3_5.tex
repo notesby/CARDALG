@@ -1,0 +1,106 @@
+\chapter{Propuesta de solución: LRDEA (Local Rule Discovery Evolutive Algorithm)}
+\label{LRDEA}
+
+La propuesta de solución para el problema, se basa en un algoritmo genético distribuido cuyo funcionamiento combina el principio del algoritmo RA1 ---que equivale a ir generando cláusulas que cubran a los ejemplos positivos y rechace a los ejemplos negativos---, y el principio de un algoritmo genético ---que implica tener recombinación entre un conjunto de individuos para explorar el espacio de búsqueda---.  El algoritmo propuesto maneja una subpoblación por cada uno de los valores en el espacio de estado del autómata celular.
+
+\section{Representación}
+
+Al igual que el algoritmo GA-Nuggets, la codificación para cada individuo representa una regla de predicción candidata de la forma IF $Ant$ THEN $Cons$, donde $Ant$ es el antecedente de la regla y $Cons$ es el consecuente. El antecedente $Ant$ consiste en una conjunción de condiciones, donde cada condición es un par vecino-valor de la forma $n_i = V_i$, donde $n_i$ es el i-ésimo vecino y $V_{i}$ es un conjunto de los posibles valores que puede tener $n_i$ de la forma $\{v_{0},\dots,v_{n}\}$ donde $v$ es un valor dentro del dominio del vecino $n_i$.
+\\
+
+El algoritmo solo maneja valores categóricos, por lo que es necesario discretizar los valores. El consecuente $Cons$ consiste en un solo valor en el dominio que puede tomar la celda que se esta evaluando $c$. Se utiliza el valor -1 para indicar que el par vecino-valor no va a formar parte de la regla.
+
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{ c c c c}
+			$n_1$&$n_2$&$n_3$&\\
+			$n_4$&$c$&$n_5$& $\rightarrow$ Cons\\
+			$n_6$&$n_7$&$n_8$&\\
+		\end{tabular}
+	\end{center}
+	\caption{\label{tab:lrdeaneigh} Representación del vecindario.}
+\end{table}
+
+Finalmente, conviene mostrar una representación de la codificación de un vecindario como el propuesto en el Cuadro \ref{tab:lrdeaneigh}.
+
+\begin{table}[H]
+	\begin{center}
+		\resizebox{\textwidth}{!}{%
+			\begin{tabular}{ |c| c| c| c| c| c| c| c| c| c|}
+				\hline
+				$n_1 = V_1$&$n_2 =  V_2$&$n_3=  V_3$& $n_4=  V_4$&$c =  V_c$&$n_5 =  V_5$& $n_6 =  V_6$&$n_7 =  V_7$&$n_8 =  V_8$& Cons\\
+				\hline
+		\end{tabular}}
+	\end{center}
+	\caption{\label{tab:lredeacod} Representación de la codificación.}
+\end{table}
+
+\section{Función de aptitud}
+
+La función de aptitud propuesta se define por la siguiente ecuación:
+
+\begin{equation}\label{eq:fitness1}
+Fitness(C,E^{+})=\sum_{i=1}^{|E^{+}|} \left(\frac{1}{|C|}\sum_{j=1}^{|C|} Eq(E^{+}_{ij},C_{j}) \right) 
+\end{equation}
+
+
+\begin{equation}\label{eq:fitness2}
+Eq(x,y)=
+\begin{cases}
+\text1 &\qquad Sí\ x=y \\
+\text0 &\qquad \text{de otra manera}
+\end{cases}
+\end{equation}
+
+donde:
+\begin{itemize}
+	\item \(C\) es el cromosoma.
+	\item \(|C|\) es la cardinalidad del cromosoma.
+	\item \(E^{+}\) es un subconjunto de los ejemplos que pertenece a la clase para la cual se esta evaluando la aptitud del cromosoma.
+	\item \(|E^{+}|\) es la cardinalidad de $E^+$.
+	\item \(E^{+}_{i,j}\) es un valor en la posición j del elemento en la posicion i de $E^+$.
+	\item \(C_{j}\) es el valor del cromosoma en la posición j.
+\end{itemize}
+
+\section{Mecanismo de selección de padres}
+
+Para el mecanismo de selección de padres se eligió la \emph{selección por torneo}, cuyo pseudocódigo se muestra en el algoritmo \ref{algtorneo}:
+
+\begin{algorithm}[H] 
+	\SetKwInOut{Input}{entrada}
+	\Input{k (la cantidad de individuos participantes en el torneo)}
+	\SetAlgoLined
+	\textbf{Paso 1:} Escoger k individuos de la población aleatoriamente\;
+	\textbf{Paso 2:} Escoger el individuo más apto del torneo con probabilidad p\;
+	\textbf{Paso 3:} Escoger el segundo individuo más apto con probabilidad $p(1-p)$\;
+	\textbf{Paso 4:} Escoger el k-esimo individuo más apto con probabilidad $p(1-p)^k$\;
+	\caption{Pseudocódigo de selección por torneo.} \label{algtorneo}
+\end{algorithm}
+
+\section{Cruza}
+
+Para el proceso de cruce se seleccionó el método de \emph{cruce en un punto} y se lleva a cabo como se muestra en el algoritmo \ref{algcruza}.
+\\
+\begin{algorithm}[H] 
+	\SetKwInOut{Input}{entrada}
+	\Input{padre1, padre2}
+	\SetAlgoLined
+	\textbf{Paso 1:} Escoger de forma aleatoria el punto p donde p es menor a la cardinalidad de padre1 y padre2\;
+	\textbf{Paso 2:} Partir el cromosoma del padre1 y el padre2 en el punto p\;
+	\textbf{Paso 3:} Recombinar la primera mitad del padre1 con la segunda mitad del padre2 para generar al hijo1\;
+	\textbf{Paso 4:} Recombinar la segunda mitad del padre1 con la primera mitad del padre2 para generar al hijo2\;
+	\caption{Pseudocódigo de cruce en un punto.} \label{algcruza}
+\end{algorithm}
+
+
+\section{Mutación}
+
+El operador de mutación consiste en dos partes, la primera es la probabilidad de realizar la mutación o no, esta probabilidad es un parámetro definido por el usuario, y la segunda es la selección del gen que se va a mutar, para la selección primero se decide con base en el numero de atributos con valor si se va agregar o se va a remover un valor, si se va a agregar se ordenan los genes de menor a mayor numero de valores, y entonces se selecciona de forma aleatoria proporcional al numero de valores, se se va a eliminar se ordenan de mayor a menor y se selecciona de forma aleatoria proporcional al numero de valores.
+\\
+
+Finalmente, el gen mutado puede adquirir un nuevo valor en el conjunto de valores o puede removerse uno de estos valores.
+
+\section{Mecanismo de selección de sobrevivientes}
+
+Para el mecanismo de selección de sobrevivientes es necesario ordenar los individuos de cada subpoblación y se dividen en dos; se procede a tomar los primeros $n$ elementos de cada una de las mitades, y se descarta el resto.

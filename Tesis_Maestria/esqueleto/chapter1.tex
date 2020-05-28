@@ -9,32 +9,38 @@
 \setcounter{page}{\thesavepage}
 \chapter{Introducción}
 %
-Desde hace algunos siglos, los seres humanos se han beneficiado de la simulación y el modelado de sistemas dinámicos que permiten estudiar y entender algunos fenómenos de la naturaleza. En la actualidad, existe una amplia gama de métodos de simulación y modelado, uno de ellos es el método de los autómatas celulares. 
+Desde hace algunos siglos, los seres humanos se han beneficiado del modelado y la simulación de sistemas dinámicos que permiten estudiar y entender algunos fenómenos de la naturaleza. En la actualidad, existe una amplia gama de métodos de modelado y simulación, uno de ellos es el método de los autómatas celulares. 
+\\
 
 Los autómatas celulares son sistemas dinámicos en los cuales el espacio y el tiempo son discretos. Los estados de las células de una lattice regular, son actualizados con base en reglas de evolución de interacción local. Las reglas de evolución local son obtenidas con base en la experiencia, experimentos, o análisis de la información del problema de tal forma que las restricciones del problema se cumplan.
+\\
 
-Hoy en día, este problema se está abordado desde distintos enfoques, sin embargo, muchos de ellos se centran en crear métodos específicos para el área de estudio en el que se está realizando la modelación del fenómeno. Como ejemplo tenemos la búsqueda de reglas para modelar la conversión de un área rural a un área urbana, o la búsqueda de reglas para modelar patrones de bioconvección en algas unicelulares. Existen otros trabajos de propósito más general que emplean algoritmos evolutivos para la generación de reglas, donde el comportamiento específico no es conocido, es decir, se trata de llegar de un estado inicial a un estado final sin tomar en cuenta lo que suceda en los estados intermedios.
+Hoy en día, este problema se está abordando desde distintos enfoques, sin embargo, muchos de ellos se centran en crear métodos específicos para el área de estudio en el que se está realizando la modelación del fenómeno. Como ejemplo tenemos la búsqueda de reglas para modelar el crecimiento urbano \citep{naghibi2016discovery}, o la búsqueda de reglas para modelar patrones de bioconvección en algas unicelulares \citep{kawaharada2016cellular}. Existen otros trabajos de propósito más general que emplean algoritmos evolutivos para la generación de reglas, donde el comportamiento específico no es conocido, es decir, se trata de llegar de un estado inicial a un estado final sin tomar en cuenta lo que suceda en los estados intermedios.
+\\
 
-Este último trabajo es el más apegado a los objetivos de esta tesis, no obstante, la diferencia principal entre los trabajos es que a nosotros nos interesa tomar en cuenta la información del fenómeno de principio a fin, para crear un conjunto de reglas que repliquen este fenómeno con la mayor presición posible, esto es, el autómata celular, debe evolucionar por los estados de los cuales tenemos información.
+El trabajo realizado en \cite{kawaharada2016cellular} es el más apegado a los objetivos de esta tesis, no obstante, la diferencia principal entre los trabajos es que a nosotros nos interesa tomar en cuenta la información del fenómeno de principio a fin, pasando por cada uno de los estados intermedios, para poder crear un conjunto de reglas que repliquen un fenómeno con la mayor precisión posible. Con esto nos referimos a que el autómata celular debe evolucionar por todos los estados de los cuales tenemos información.
 
 \section{Definiciones}
+
+En esta sección definiremos lo que es un autómata celular ya que, en el presente trabajo, se utilizan como herramienta de modelación para realizar la simulación y predicción, de el conjunto de datos que se obtuvo para realizar la experimentación. Así mismo, se define que es el aprendizaje automático, con el fin de dar al lector los conceptos clave de esta área de estudio, la cual es relevante para este trabajo de tesis y, por ultimo, se describen los algoritmos genéticos brevemente, debido a que esta es la clase de algoritmos a la que pertenece nuestra propuesta de resolución del problema planteado.
+
 
 \subsection{Autómata celular}
 
 \textbf{Definición 1.1.1} Un autómata celular es una 5-tupla $\mathnormal{(L, d, S, H, f)}$, donde:
 \begin{itemize}
 	\item $\mathnormal{L}$ es una matriz de dimensión $\mathnormal{d}$
-	\item $\mathnormal{d\; \epsilon\; N\cup\{0\}}$ y es la dimensión del autómata
+	\item ${d\; \epsilon\; N\cup\{0\}}$ y es la dimensión del autómata
 	\item $\mathnormal{S}$ es un conjunto finito de elementos llamados estados y es denotado por:
 	\\
-	$\mathnormal{S=\{s_{k}:k \epsilon \{0,\dots,|S|-1\}\}}$, donde $\mathnormal{|S|}$ es la cardinalidad del conjunto de estados $S$
+	${S=\{s_{k}:k \epsilon \{0,\dots,|S|-1\}\}}$, donde $\mathnormal{|S|}$ es la cardinalidad del conjunto de estados $S$
 	\item $H$ es un subconjunto finito de $Z^{d}$ llamado vecindad y es denotado por $\{v_{j}:x_{1,j},\dots,x_{d,j}:j\epsilon1,\dots,|H|\}$, donde los elementos $v_{j}$ son llamados vectores vecindad.
 	\item $f$ es una función de $S^{|H|}$ en $S$, llamada la función de evolución o regla
 \end{itemize}
 \textbf{Definición 1.1.2} Se dice que un autómata celular posee fronteras nulas, si el vecino de la izquierda (o de la derecha) de la célula del extremo izquierdo (o derecho) se considera siempre como cero.
 \\
 \\
-\textbf{Definición 1.1.3} Se dice que un autómata celular posee fronteras periódicas, si los extremos derecho e izquierdo son adyacente el uno del otro.
+\textbf{Definición 1.1.3} Se dice que un autómata celular posee fronteras periódicas, si los extremos derecho e izquierdo son adyacentes el uno del otro.
 
 \subsection{Aprendizaje automático}
 
@@ -47,44 +53,45 @@ El área de aprendizaje automático es una sub-área de la Inteligencia Artifici
 \textbf{Aprendizaje no supervisado}: Consiste en el uso de un conjunto de entrenamiento donde se conocen valores de entrada $x$, pero estos datos no están etiquetados. La tarea entonces es encontrar una función $f$, tal que al ingresar $x$ como entrada produzca como salida $y$ de tal forma que $y$ sea igual para todas las entradas $x$ que compartan cierta medida de similitud.
 \\
 \\
-\textbf{Aprendizaje reforzado}: En este tipo de aprendizaje no tenemos conocimiento previo sobre la tarea, sino que se va obteniendo experiencia sobre la tarea conforme se va realizando. En este tipo de aprendizaje,se va ajustando el programa computacional con respecto a la métrica de desempeño obtenida de la tarea en cada iteración.
+\textbf{Aprendizaje reforzado}: En este tipo de aprendizaje no tenemos conocimiento previo sobre la tarea, sino que se va obteniendo experiencia sobre la tarea conforme se va realizando. En este tipo de aprendizaje, el programa computacional se va ajustando  con respecto a la métrica de desempeño obtenida de la tarea en cada iteración.
 
 \subsection{Algoritmos Genéticos}
 
-Los Algoritmos Genéticos (AG) son un conjunto de algoritmos de búsqueda que se basan en las mecánicas de la selección natural. Combinan la supervivencia del más apto con el intercambio de información para formar algoritmos de búsqueda con el novedoso instinto de búsqueda humana.  
+Los Algoritmos Genéticos (AG) son un conjunto de algoritmos de búsqueda que se basan en las mecánicas de la selección natural. Combinan la supervivencia del más apto con el intercambio de información para formar algoritmos de búsqueda con el novedoso instinto de búsqueda humana. A causa de éstas características, se optó por el diseño de un algoritmo genético para realizar la búsqueda de las reglas que gobiernen un fenómeno --en este caso, los datos utilizados de los autómatas celulares con los que se realizaron los experimentos--, que es el objetivo de esta tesis. 
+
+\subsubsection{Algoritmo Genético Multi-poblacional}
+
+Los Algoritmos Genéticos (AG) son una clase especial de los algoritmos genéticos, ya que estos cuentan con una población compuesta por subpoblaciones, las cuales cada una de ellas evoluciona independientemente la una de la otra. Este tipo de algoritmos pueden contar o no, con un mecanismo de migración entre las subpoblaciones.
+
 
 \section{Planteamiento del problema}
 
-Dada una secuencia de estados, representados cada uno de ellos como una lattice bidimensional, encontrar un conjunto de reglas de la forma IF $Ant$ THEN $Cons$, donde $Ant$ es una cláusula en forma normal conjuntiva (FNC) y $Cons$ es un valor dentro del dominio del espacio de estados del autómata, tales que, al ingresarlas a un autómata celular, este sea capaz de reproducir los estados de entrada.
+Dada una secuencia de estados, representados cada uno de ellos como una lattice bidimensional, encontrar un conjunto de reglas de la forma IF $Ant$ THEN $Cons$, donde $Ant$ es una cláusula en forma normal conjuntiva (FNC) y $Cons$ es un valor dentro del dominio del espacio de estados del autómata, tales que, al ingresarlas a un autómata celular, éste sea capaz de reproducir los estados de entrada.
 
 \section{Objetivos}
 %Esta sección describe el objetivo general y los objetívos específicos de esta tesis.
 %
 \subsection{Objetivo general}
-\noindent \paragraph{Diseñar un algoritmo nuevo de aprendizaje (simbólico o sub-simbólico) con el fin de aprender reglas que gobiernan un fenómeno para las cuales se tienen rejillas de estados en 2 dimensiones como entrada.}
+Diseñar un algoritmo nuevo de aprendizaje sub-simbólico con el fin de aprender reglas que gobiernan un fenómeno para las cuales se tienen rejillas de estados en 2 dimensiones como entrada.
 
 \subsection{Objetivos específicos}
 \begin{itemize}
 \item Revisar y seleccionar algoritmos de aprendizaje de reglas, que sirvan de base para resolver el problema planteado.
-\item Diseñar un nuevo algoritmo de aprendizaje simbólico o sub-simbólico.
-\item Diseñar procedimientos específicos para la simplificación de los conjuntos de reglas.
-\item Diseñar el modelo de autómata celular que sea capaz de reproducir el fenómeno planteado en esta tesis, cuando es alimentado con las reglas aprendidas.
+\item Diseñar un algoritmo genético multi-poblacional de aprendizaje.
+\item Diseñar procedimientos específicos para la simplificación del conjunto de reglas.
+\item Diseñar el modelo de autómata celular que sea capaz de reproducir los estados obtenidos a partir del conjunto de datos obtenido de la simulación de los autómatas seleccionados (Mite, Brain, Evoloops y Byl), cuando es alimentado con las reglas aprendidas.
 \item Usar los errores de aprendizaje y generalización para evaluar los resultados de cada experimento. 
 \end{itemize}
 
 \section{Justificación}
 La búsqueda de las reglas que son utilizadas para que un autómata celular pueda reproducir un fenómeno es una tarea compleja. Esto se debe a que el espacio de búsqueda crece exponencialmente, en la medida que aumenta el
-numero de estados y el tamaño de la vecindad del autómata. Es por esta razón que se requiere tomar en consideración información adicional, que permita ejecutar una búsqueda eficiente en este espacio.
+número de estados y el tamaño de la vecindad del autómata. Es por esta razón que se requiere tomar en consideración información adicional, que permita ejecutar una búsqueda eficiente en este espacio.
 
 \subsection{Beneficios esperados}
-Esta tesis genera:
-\begin{itemize}
-	\item un algoritmo genético multi-poblacional distribuido, el cual soluciona el problema planteado.
-	\item un sistema que implementa el algoritmo diseñado en esta tesis.
-\end{itemize}
+Esta tesis genera un algoritmo genético multi-poblacional distribuido, que soluciona el problema planteado.
 
 \subsection{Alcances y límites}
-Este trabajo de tesis, diseño e implemento un algoritmo que aprende un conjunto de reglas de la forma IF $Ant$ THEN $Cons$, donde $Ant$ es una cláusula en forma normal conjuntiva (FNC) y $Cons$ es valor en el dominio de los estados del autómata. Para esta tarea, se utilizan los estados obtenidos de la evolución de autómatas celulares; esto se debe a que la ardua tarea de obtener estados de la forma requerida de fenómenos reales es una tarea compleja; dicha tarea, no se pudo realizar, por falta de tiempo.
+Este trabajo de tesis, se diseña e implementa un algoritmo que aprende un conjunto de reglas de la forma IF $Ant$ THEN $Cons$, donde $Ant$ es una cláusula en forma normal conjuntiva (FNC) y $Cons$ es valor en el dominio de los estados del autómata. Para esta tarea, se utilizan los estados obtenidos de la evolución de autómatas celulares; esto se debe a que la ardua tarea de obtener estados de la forma requerida de fenómenos reales es una tarea compleja.
 
 \nomenclature{AC}{Autómata celular}
 \nomenclature{FNC}{Forma Normal Conjuntiva}

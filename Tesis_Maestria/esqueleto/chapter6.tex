@@ -1,15 +1,37 @@
 \chapter{Conclusiones y trabajo futuro}
 
-Con la realización de este trabajo de investigación se lograron cumplir con los objetivos propuestos, es decir, se diseñó e implementó un nuevo algoritmo de aprendizaje sub-simbólico que es capaz de aprender un conjunto de reglas de la forma IF $Ant$ THEN $Cons$, y estas reglas son capaces de reproducir el fenómeno aprendido, con una exactitud arriba del 80\%.
+Con la realización de este trabajo de investigación, se diseñó e implementó el nuevo algoritmo de aprendizaje sub-simbólico LRDEA (Local Rule Discovery Evolutive Algorithm), que es capaz de aprender un conjunto de reglas de la forma IF $Ant$ THEN $Cons$, y estas reglas son capaces de reproducir ciertos fenómenos aprendidos.
+\\
 
-Con base en los resultados obtenidos en los experimentos realizados, se puede concluir que el algoritmo LRDEA es capaz de aprender a partir de un cierto conjunto de datos proporcionado; además de que lo hace con un porcentaje de exactitud que sobrepasa al algoritmo GA-Nuggets. Sin embargo, como se puede observar en las figuras \ref{fig:lrdeabrain}, \ref{fig:lrdeabyl}, \ref{fig:lrdeaevoloops} y \ref{fig:lrdeamite}, es evidente que todavía es posible mejorar esta propuesta.
+De igual manera, se seleccionaron e implementaron los algoritmos de aprendizaje de reglas (RA1 y GA-Nuggets) que fueron parcialmente la base del algoritmo propuesto (LRDEA), esto se debe a que cada algoritmo tiene un funcionamiento diferente y, consigo, un comportamiento también diferente.
+\\
 
-Esto se debe principalmente a que la propuesta (LRDEA) puede llegar a tener variaciones muy grandes entre la exactitud dentro del conjunto del entrenamiento y fuera de entrenamiento, en comparación con el algoritmo RA1, que se caracteriza por tener un comportamiento más estable, al menos en los experimentos realizados.
+Se diseñó un modelo de autómata celular con el fin de evaluar los conjuntos de reglas de aprendizaje que se obtuvieron con los algoritmos RA1, GA-Nuggets y LRDEA.
+\\
+
+Adicionalmente, se diseñaron procedimientos específicos para la simplificación de los conjuntos de reglas, tal es el caso del proceso que se ejemplifica en la figura \ref{fig:simp1}. Este método elimina la redundancia de las reglas, mientras que el algoritmo Quine-McCluskey colabora en la simplificación de reglas al minimizar las cláusulas generadas por el algoritmo RA1.
+\\
+
+Se seleccionaron también los autómatas celulares que reproducen ciertos fenómenos (simulación de la actividad cerebral, el sistema presa-depredador y la autoreplicación) con el fin de obtener datos bidimensionales para ingresarlos a los algoritmos de aprendizaje de reglas y poder compararlos entre sí.
+\\
+
+Además, se implementó el algoritmo de evaluación camina hacia adelante, con el cual se lograron obtener los errores de aprendizaje y generalización para cada experimento realizado.
+\\
+
+Con base en los resultados de los experimentos realizados, se puede concluir que el algoritmo LRDEA es capaz de aprender un fenómeno a partir de un cierto conjunto de datos proporcionado. Este aprendizaje se realizó con un porcentaje de exactitud que sobrepasa al algoritmo GA-Nuggets en todos los casos. Sin embargo, como se puede observar en las figuras \ref{fig:lrdeabrain}, \ref{fig:lrdeabyl}, \ref{fig:lrdeaevoloops} y \ref{fig:lrdeamite}, es evidente que todavía es posible mejorar la propuesta.
+\\
+
+Este espacio de mejora se observa principalmente en que el algoritmo LRDEA puede llegar a tener variaciones muy grandes entre la exactitud dentro del conjunto del entrenamiento y fuera de entrenamiento, en comparación con el algoritmo RA1, que se caracteriza por tener un comportamiento más estable, al menos en los experimentos realizados.
+\\
+
+Otra conclusión que es  importante resaltar es que los algoritmos genéticos mutli-poblacionales, como el LRDEA, realizan búsquedas robustas en espacios complejos y, como en este caso se realizó una búsqueda de reglas de aprendizaje a partir de un conjunto de lattices bidimensionales, esta complejidad se incrementa. A pesar de esto, el algoritmo propuesto realiza la búsqueda de reglas de una manera eficiente, lo cual posiciona al LRDEA como un algoritmo genético competitivo en esta tarea, al menos en exactitud, en comparación con el GA-Nuggets y el RA1.
 
 \section{Trabajo a futuro}
 
 Como trabajo a futuro próximo, se propone realizar la experimentación utilizando otros conjuntos de datos, como por ejemplo: imágenes aéreas de áreas urbanas para el aprendizaje de reglas que simulen el crecimiento de población u otros conjuntos de datos cuya representación de estados sea un conjunto de lattices bidimensionales.
+\\
 
 De igual manera, se propone investigar una función de aptitud diferente, con la cual sea posible a reducir la variación entre la exactitud dentro y fuera de entrenamiento.
+\\
 
 Finalmente, se propone la implementación de otras métricas de evaluación que incluyan tomar en cuenta el tiempo de cómputo que cada algoritmo tomó para llevar a cabo estos u otros experimentos, o bien, diversos métodos de evaluación estadística.

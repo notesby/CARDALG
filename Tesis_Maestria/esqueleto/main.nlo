@@ -2,15 +2,16 @@
 \nomenclatureentry{aFNC@[{FNC}]\begingroup Forma Normal Conjuntiva\nomeqref {1.0}|nompageref}{17}
 \nomenclatureentry{aAG@[{AG}]\begingroup Algoritmo Genetico\nomeqref {1.0}|nompageref}{17}
 \nomenclatureentry{aIA@[{IA}]\begingroup Inteligencia Artificial\nomeqref {1.0}|nompageref}{17}
-\nomenclatureentry{aFND@[{FND}]\begingroup Forma Normal Disyuntiva\nomeqref {2.7}|nompageref}{30}
-\nomenclatureentry{aRA1@[{RA1}]\begingroup Randomized Algorithm 1\nomeqref {2.7}|nompageref}{30}
-\nomenclatureentry{aGA-Nuggets@[{GA-Nuggets}]\begingroup Genetic Algorithm- Nuggets\nomeqref {2.7}|nompageref}{30}
-\nomenclatureentry{aOCAT@[{OCAT}]\begingroup One Clause At a Time\nomeqref {2.7}|nompageref}{30}
-\nomenclatureentry{aPSO@[{PSO}]\begingroup Particle Swarm Optimization\nomeqref {3.1}|nompageref}{39}
-\nomenclatureentry{aABC@[{ABC}]\begingroup Artificial Bees Colony\nomeqref {3.1}|nompageref}{39}
-\nomenclatureentry{aVP@[{VP}]\begingroup Verdaderos Positivos\nomeqref {4.3}|nompageref}{55}
-\nomenclatureentry{aVN@[{VN}]\begingroup Verdaderos Negativos\nomeqref {4.3}|nompageref}{55}
-\nomenclatureentry{aFP@[{FP}]\begingroup Falsos Positivos\nomeqref {4.3}|nompageref}{55}
-\nomenclatureentry{aFN@[{FN}]\begingroup Falsos Negativos\nomeqref {4.3}|nompageref}{55}
-\nomenclatureentry{aLRDEA@[{LRDEA}]\begingroup Local Rule Discovery Evolutive Algorithm\nomeqref {4.3}|nompageref}{55}
-\nomenclatureentry{aRGB@[{RGB}]\begingroup Red Green Blue\nomeqref {4.3}|nompageref}{55}
+\nomenclatureentry{aFND@[{FND}]\begingroup Forma Normal Disyuntiva\nomeqref {2.7}|nompageref}{31}
+\nomenclatureentry{aRA1@[{RA1}]\begingroup Randomized Algorithm 1\nomeqref {2.7}|nompageref}{31}
+\nomenclatureentry{aGA-Nuggets@[{GA-Nuggets}]\begingroup Genetic Algorithm- Nuggets\nomeqref {2.7}|nompageref}{31}
+\nomenclatureentry{aOCAT@[{OCAT}]\begingroup One Clause At a Time\nomeqref {2.7}|nompageref}{31}
+\nomenclatureentry{aAC@[{AC}]\begingroup Autómata Celular\nomeqref {3.1}|nompageref}{41}
+\nomenclatureentry{aPSO@[{PSO}]\begingroup Particle Swarm Optimization\nomeqref {3.1}|nompageref}{41}
+\nomenclatureentry{aABC@[{ABC}]\begingroup Artificial Bees Colony\nomeqref {3.1}|nompageref}{41}
+\nomenclatureentry{aVP@[{VP}]\begingroup Verdaderos Positivos\nomeqref {5.1}|nompageref}{58}
+\nomenclatureentry{aVN@[{VN}]\begingroup Verdaderos Negativos\nomeqref {5.1}|nompageref}{58}
+\nomenclatureentry{aFP@[{FP}]\begingroup Falsos Positivos\nomeqref {5.1}|nompageref}{58}
+\nomenclatureentry{aFN@[{FN}]\begingroup Falsos Negativos\nomeqref {5.1}|nompageref}{58}
+\nomenclatureentry{aLRDEA@[{LRDEA}]\begingroup Local Rule Discovery Evolutive Algorithm\nomeqref {5.1}|nompageref}{58}
+\nomenclatureentry{aRGB@[{RGB}]\begingroup Red Green Blue\nomeqref {5.1}|nompageref}{58}

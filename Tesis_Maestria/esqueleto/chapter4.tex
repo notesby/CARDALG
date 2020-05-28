@@ -1,6 +1,6 @@
-\chapter{Métodos y metodologías}
+\chapter{Experimentación}
 
-En esta sección se detalla cuál fue la metodología empleada para llevar acabo los experimentos. En la figura \ref{fig:metodologia} a continuación, se puede ver el panorama general de dicha metodología experimental.
+En esta sección se detalla cuál fue la metodología empleada para llevar a cabo los experimentos y se detalla el algoritmo propuesto como solución. En la figura \ref{fig:metodologia} a continuación, se puede ver el panorama general de dicha metodología experimental.\\
 
 \begin{figure}[H]
 	\centering
@@ -11,9 +11,10 @@ En esta sección se detalla cuál fue la metodología empleada para llevar acabo
 
 \section{Conjunto de datos}
 
-Para realizar los experimentos, se optó por adquirir un conjunto de datos que consiste en los estados de la evolución de 4 diferentes autómatas celulares bidimensionales, los cuales fueron obtenidos de \cite{rucker_walker}.
+Para realizar los experimentos, se optó por integrar un conjunto de datos que consiste en los estados de la evolución de cuatro diferentes autómatas celulares bidimensionales que fueron obtenidos de \cite{rucker_walker}.
 \\
-Para cada uno de los autómatas se obtuvieron 200 imágenes de 50x50 pixeles en escala RGB, que se ejemplifican en las imágenes de la Figura \ref{caexamples} a continuación.
+
+Para cada uno de los autómatas se obtuvieron 200 imágenes de 50x50 pixeles en escala RGB, que se ejemplifican en las imágenes de la Figura \ref{fig:caexamples} a continuación.
 
 \begin{figure}[h]
 	
@@ -46,7 +47,7 @@ A continuación, se mencionan los autómatas celulares en los cuales se implemen
 
 \subsection{Brain}
 
-Es un autómata celular bidimensional, desarrollado por Brian Silverman, que consiste en lo siguiente:
+Es un autómata celular bidimensional, desarrollado por Brian Silverman, que modela la evolución de conjuntos de neuronas y sus interacciones. En otras palabras, el AC Brain modela cierto nivel de actividad cerebral en escenarios simples y consiste en lo siguiente:
 
 \begin{itemize}
 	\item \textbf{Vecindario:} es de tipo Moore con 8 vecinos.
@@ -66,12 +67,12 @@ Es un autómata celular bidimensional, desarrollado por Brian Silverman, que con
 
 \subsection{Byl}
 
-Es un autómata celular bidimensional, desarrollado por Jhon Byl \citep{BYL1989295}, que consiste en lo siguiente:
+El AC Byl \citep{BYL1989295} es un autómata celular bidimensional que fue desarrollado por Jhon Byl en 1989 con la capacidad de autoreplicarse. Este AC consiste en lo siguiente:
 
 \begin{itemize}
 	\item \textbf{Vecindario:} es de tipo Von Neumann con 5 vecinos, en el cuadro \ref{tab:bylneigh} podemos ver como se codifica el vecindario.
 	\item \textbf{Espacio de estados:} consiste de 6 estados del 0 al 5.
-	\item \textbf{Función de evolución:} se muestra en el cuadro \ref{tab:byltransfunction}
+	\item \textbf{Función de evolución:} se muestra en el cuadro \ref{tab:byltransfunction}.
 \end{itemize}
 
 \begin{table}[H]
@@ -110,11 +111,11 @@ Es un autómata celular bidimensional, desarrollado por Jhon Byl \citep{BYL19892
 \end{table}
 
 \subsection{Evoloops}
-Es un autómata bidimensional, desarrollado por Hiroki Sayama \citep{Sayama1998ConstructingES}, que consiste en lo siguiente:
+El AC Evoloops \citep{Sayama1998ConstructingES} es un autómata celular bidimensional, desarrollado por Hiroki Sayama para autoreplicarse, consiste en lo siguiente:
 \begin{itemize}
 	\item \textbf{Vecindario:} es de tipo Von Neumann con 5 vecinos, en el cuadro \ref{tab:bylneigh} podemos ver como se codifica el vecindario.
 	\item \textbf{Espacio de estados:} consiste de 8 estados del 0 al 7.
-	\item \textbf{Función de evolución:} se muestra en el cuadro \ref{tab:evoloopstransfunction}
+	\item \textbf{Función de evolución:} se muestra en el cuadro \ref{tab:evoloopstransfunction}.
 \end{itemize}
 
 \begin{table}[H]
@@ -178,13 +179,13 @@ Es un autómata bidimensional, desarrollado por Hiroki Sayama \citep{Sayama1998C
 				10124\quad\quad\quad4& 11257\quad\quad\quad7& 20122\quad\quad\quad2& 21227\quad\quad\quad2& 40112\quad\quad\quad0& 70262\quad\quad\quad6\\
 				10127\quad\quad\quad7& 11262\quad\quad\quad6& 20142\quad\quad\quad2& 21232\quad\quad\quad3& 40122\quad\quad\quad0& 70312\quad\quad\quad0
 		\end{tabular}}
-		\caption{\label{tab:evoloopstransfunction} Función de evolución de Evoloops CA \citep{Sayama1998ConstructingES} .}
+		\caption{\label{tab:evoloopstransfunction} Función de evolución de Evoloops CA \citep{Sayama1998ConstructingES}.}
 	\end{center}
 \end{table}
 
 \subsection{Mite}
 
-Es un autómata bidimensional, desarrollado por Dan Drake, que consiste en lo siguiente:
+El AC Mite es un autómata celular bidimensional, desarrollado por Dan Drake en 1990, que modela el sistema presa-depredador y consiste en lo siguiente:
 \begin{itemize}
 	\item \textbf{Vecindario:} es de tipo Moore con 8 vecinos.
 	\item \textbf{Espacio de estados:} consiste de 3 estados del 0 al 2.
@@ -212,7 +213,7 @@ La implementación de este procedimiento se realizó en el lenguaje Python y se 
 	\Input{La ruta de la carpeta donde se encuentran las imágenes}
 	\Output{Un archivo con formato .pkl que contiene las imágenes procesadas.}
 	\SetAlgoLined
-	diccionario = \{\} ; contador = 0; imágenes=[ ] \tcc*{inicializaciónes}
+	diccionario = \{\} ; contador = 0; imágenes=[ ] \tcc*{inicializaciones}
 	\ForEach{$Imagen$ en $carpeta$}{
 		\textbf{Paso 1:}$Imagen'=$   Transformar imagen a escala de grises\;
 		\tcc{Se considera a la imagen como una matriz de pixeles}
@@ -277,109 +278,6 @@ Los algoritmos de aprendizaje utilizados en este trabajo de investigación son l
 
 Cabe mencionar que, debido a que no se encontraron las implementaciones de los algoritmos RA1 y GA-Nuggets, fue necesario realizarlas en el lenguaje de programación Python.
 
-\subsection{LRDEA (Local Rule Discovery Evolutive Algorithm)}
-
-Nuestra propuesta de solución para el problema, se basa en un algoritmo genético distribuido cuyo funcionamiento combina el principio del algoritmo RA1 ---que equivale a ir generando cláusulas que cubran a los ejemplos positivos y rechace a los ejemplos negativos---, y el principio de un algoritmo genético ---que implica tener recombinación entre un conjunto de individuos para explorar el espacio de búsqueda---.  El algoritmo propuesto maneja una subpoblación por cada uno de los valores en el espacio de estado del autómata celular.
-
-\subsubsection{Representación}
-
-Al igual que el algoritmo GA-Nuggets, la codificación para cada individuo representa una regla de predicción candidata de la forma IF $Ant$ THEN $Cons$, donde $Ant$ es el antecedente de la regla y $Cons$ es el consecuente. El antecedente $Ant$ consiste en una conjunción de condiciones, donde cada condición es un par vecino valor de la forma $n_i = V_i$, donde $n_i$ es el i-ésimo vecino y $V_{i}$ es un conjunto de los posibles valores que puede tener $n_i$ de la forma $\{v_{0},\dots,v_{n}\}$ donde $v$ es un valor dentro del dominio del vecino $n_i$.
-\\
-El algoritmo solo maneja valores categóricos, por lo que es necesario discretizar los valores. El consecuente $Cons$ consiste en un solo valor en el dominio que puede tomar la celda que se esta evaluando $c$. Se utiliza el valor -1 para indicar que el par vecino valor no va a formar parte de la regla.
-
-
-\begin{table}[H]
-	\begin{center}
-		\begin{tabular}{ c c c c}
-			$n_1$&$n_2$&$n_3$&\\
-			$n_4$&$c$&$n_5$& $\rightarrow$ Cons\\
-			$n_6$&$n_7$&$n_8$&\\
-		\end{tabular}
-	\end{center}
-	\caption{\label{tab:lrdeaneigh} Representación del vecindario.}
-\end{table}
-
-Finalmente, conviene mostrar una representación de la codificación de un vecindario como el propuesto en el Cuadro \ref{tab:lrdeaneigh}.
-
-\begin{table}[H]
-	\begin{center}
-		\resizebox{\textwidth}{!}{%
-			\begin{tabular}{ |c| c| c| c| c| c| c| c| c| c|}
-				\hline
-				$n_1 = V_1$&$n_2 =  V_2$&$n_3=  V_3$& $n_4=  V_4$&$c =  V_c$&$n_5 =  V_5$& $n_6 =  V_6$&$n_7 =  V_7$&$n_8 =  V_8$& Cons\\
-				\hline
-		\end{tabular}}
-	\end{center}
-	\caption{\label{tab:lredeacod} Representación de la codificación.}
-\end{table}
-
-\subsubsection{Función de aptitud}
-
-La función de aptitud propuesta se define por la siguiente ecuación:
-
-\begin{equation}\label{eq:fitness1}
-	Fitness(C,E^{+})=\sum_{i=1}^{|E^{+}|} \left(\frac{1}{|C|}\sum_{j=1}^{|C|} Eq(E^{+}_{ij},C_{j}) \right) 
-\end{equation}
-
-
-\begin{equation}\label{eq:fitness2}
-Eq(x,y)=
-\begin{cases}
-\text1 &\qquad if\ x=y \\
-\text0 &\qquad otherwise
-\end{cases}
-\end{equation}
-
-donde:
-\begin{itemize}
-	\item \(C\) es el cromosoma.
-	\item \(|C|\) es la cardinalidad del cromosoma.
-	\item \(E^{+}\) es un subconjunto de los ejemplos que pertenece a la clase para la cual se esta evaluando la aptitud del cromosoma.
-	\item \(|E^{+}|\) es la cardinalidad de $E^+$.
-	\item \(E^{+}_{i,j}\) es un valor en la posición j del elemento en la posicion i de $E^+$.
-	\item \(C_{j}\) es el valor del cromosoma en la posición j.
-\end{itemize}
-
-\subsubsection{Mecanismo de selección de padres}
-
-Para el mecanismo de selección de padres se eligió la \emph{selección por torneo}, que consiste en lo siguiente:
-
-\begin{algorithm}[H] 
-	\SetKwInOut{Input}{entrada}
-	\Input{k (la cantidad de individuos participantes en el torneo)}
-	\SetAlgoLined
-	\textbf{Paso 1:} Escoger k individuos de la población aleatoriamente\;
-	\textbf{Paso 2:} Escoger el individuo más apto del torneo con probabilidad p\;
-	\textbf{Paso 3:} Escoger el segundo individuo más apto con probabilidad p(1-p) \;
-	\textbf{Paso 4:} Escoger el k-esimo individuo más apto con probabilidad $p(1-p)^k$ \;
-	\caption{Pseudocódigo de selección por torneo.}
-\end{algorithm}
-
-\subsubsection{Cruza}
-
-Para el proceso de cruce se seleccionó el método de \emph{cruce en un punto} y se lleva a cabo de la siguiente manera.
-\\
-\begin{algorithm}[H] 
-	\SetKwInOut{Input}{entrada}
-	\Input{padre1, padre2}
-	\SetAlgoLined
-	\textbf{Paso 1:} Escoger de forma aleatoria el punto p donde p es menor a la cardinalidad de padre1 y padre2\;
-	\textbf{Paso 2:} Partir el cromosoma del padre1 y el padre2 en el punto p\;
-	\textbf{Paso 3:} Recombinar la primera mitad del padre1 con la segunda mitad del padre2 para generar al hijo1\;
-	\textbf{Paso 4:} Recombinar la segunda mitad del padre1 con la primera mitad del padre2 para generar al hijo2\;
-	\caption{Pseudocódigo de cruce en un punto.}
-\end{algorithm}
-
-\subsubsection{Mutación}
-
-El operador de mutación consiste en dos partes, la primera es la probabilidad de realizar la mutación o no, y la segunda es la selección del gen que se va a mutar.
-\\
-Finalmente, el gen mutado puede adquirir un nuevo valor en el conjunto de valores o puede removerse uno de estos valores.
-
-\subsubsection{Mecanismo de selección de sobrevivientes}
-
-Para el mecanismo de selección de sobrevivientes es necesario ordenar los individuos de cada subpoblación y se dividen en dos; se procede a tomar los primeros $n$ elementos de cada una de las mitades, y se descarta el resto.
-
 \section{Simplificación de reglas}
 
 El proceso de simplificación de reglas se divide en dos partes:
@@ -393,18 +291,18 @@ El primer método de simplificación sirve para eliminar términos que no aporta
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{fig/clausulas}
-	\caption{Proceso de simplificación 1.}
+	\caption{Ejemplo del proceso de simplificación 1.}
 	\label{fig:simp1}
 \end{figure}
 
 En el diagrama de la figura \ref{fig:simp1} vemos cómo, en la cláusula \emph{a}, los términos 1 y 2 pueden ser reducidos a los términos 4 y 5 de la cláusula \emph{b}, respectivamente. Asimismo, podemos ver cómo el término 3 de \emph{a} no se puede reducir, por lo que pasa a \emph{b} directamente.
 \\
-\\
+
 Para la simplificación 2 de las reglas se utiliza el algoritmo desarrollado por Willard V.Quine 1955 y extendido Edward J. McCluskey en 1956. Este mecanismo solo se emplea para la simplificación de las reglas generadas por el algoritmo RA1.
 
 \section{Evaluación}
 
-En el proceso de evaluación se emplea la validación \emph{camina hacia adelante} o \emph{Walk-Fordward}, que se ejemplifica en el Algoritmo \ref{walkforward}.
+En el proceso de evaluación se emplea la validación \emph{camina hacia adelante} o \emph{Walk-Forward}, que se ejemplifica en el Algoritmo \ref{walkforward}.
 
 \begin{algorithm}[H] 
 	\SetAlgoLined
@@ -419,15 +317,16 @@ En el proceso de evaluación se emplea la validación \emph{camina hacia adelant
 		\textbf{Paso 4:} vExactitud = exactitud(entrenamiento[i-1])\;
 		\textbf{Paso 5:} tExactitud = exactitud(testing)\;
 	}
-	\caption{Pseudocódigo de validación camina hacia adelante (Walk-Fordward).} \label{walkforward}
+	\caption{Pseudocódigo de validación de caminata hacia adelante (Walk-Forward). } \label{walkforward}
 \end{algorithm}
 
-La toma de los subconjuntos de datos se representa en la Figura \ref{fig:walkforward}, donde podemos observar la dinámica de ''caminar'' hacia adelante.
+\vspace{0.5cm}
+La toma de los subconjuntos de datos se representa en la figura \ref{fig:walkforward}, donde podemos observar la dinámica de ''caminar'' hacia adelante.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{fig/walkforward}
-	\caption{Diagrama de evaluación camina hacia adelante (Walk-Fordward) obtenida de \cite{hyndman2018forecasting}.}
+	\caption{Diagrama de evaluación camina hacia adelante (Walk-Forward) obtenida de \cite{hyndman2018forecasting}.}
 	\label{fig:walkforward}
 \end{figure}
 
@@ -444,6 +343,8 @@ donde:
 	\item $FP:$ falsos positivos.
 	\item $FN:$ falsos negativos. 
 \end{itemize}
+
+Esta técnica de evaluación, es comúnmente utilizada para la evaluación de series de tiempo, debido a permite evaluar cómo se comportaría el sistema de forma general en ventanas de tiempo. Adicionalmente, en específico para este trabajo, esta técnica evalúa cómo se comportarían las reglas aprendidas por el algoritmo LRDEA, una vez que se ingresen al autómata celular y se realice la simulación del fenómeno por un periodo de tiempo.
 
 
 \nomenclature{VP}{Verdaderos Positivos}

@@ -4,18 +4,22 @@ The top-level auxiliary file: main.aux
 A level-1 auxiliary file: abstract.aux
 A level-1 auxiliary file: thanks.aux
 A level-1 auxiliary file: indexes.aux
+A level-1 auxiliary file: Glosario.aux
 A level-1 auxiliary file: chapter1.aux
 A level-1 auxiliary file: chapter2.aux
 A level-1 auxiliary file: chapter3.aux
+A level-1 auxiliary file: chapter3_5.aux
 A level-1 auxiliary file: chapter4.aux
 A level-1 auxiliary file: chapter5.aux
 A level-1 auxiliary file: chapter6.aux
 The style file: apalike.bst
 Database file #1: Referencias.bib
+Warning--I didn't find a database entry for "goldberg_2012"
+Warning--I didn't find a database entry for "book_data_mining"
 Warning--empty booktitle in Sayama1998ConstructingES
 You've used 26 entries,
             1935 wiz_defined-function locations,
-            638 strings with 7675 characters,
+            642 strings with 7730 characters,
 and the built_in function-call counts, 9526 in all, are:
 = -- 939
 > -- 300
@@ -54,4 +58,4 @@ warning$ -- 1
 while$ -- 83
 width$ -- 0
 write$ -- 329
-(There was 1 warning)
+(There were 3 warnings)
